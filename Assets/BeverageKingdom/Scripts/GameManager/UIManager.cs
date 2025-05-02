@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] List<Transform> _spawnOnStart;
+    [SerializeField] MainCanvas _mainCanvasPrefab;
+
+    public MainCanvas MainCanvas { get; private set; }
 
     public static UIManager Instance { get; private set; }
 
@@ -23,9 +25,7 @@ public class UIManager : MonoBehaviour
 
     void InitGame()
     {
-        foreach (Transform obj in _spawnOnStart)
-        {
-            Instantiate(obj.gameObject);
-        }
+        GameObject mainCanvas = Instantiate(_mainCanvasPrefab.gameObject);
+        MainCanvas = mainCanvas.GetComponent<MainCanvas>();
     }
 }

@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    [SerializeField] List<Transform> _spawnOnStart;
+    [SerializeField] Transform _playerPrefab;
+    [SerializeField] Transform _envPrefab;
+
+    public Transform Player { get; private set; }
 
     public static Controller Instance { get; private set; }
 
@@ -23,9 +26,12 @@ public class Controller : MonoBehaviour
 
     void InitGame()
     {
-        foreach (Transform obj in _spawnOnStart)
-        {
-            Instantiate(obj.gameObject);
-        }
+        Player = Instantiate(_playerPrefab.gameObject).transform;
+        Instantiate(_envPrefab.gameObject);
+    }
+
+    void Start()
+    {
+        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.MainCanvas.GetJoystick());
     }
 }

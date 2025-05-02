@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708ed7b8cd695a42a4b15bf5009643c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnOnStart:
-  - {fileID: 7850902235935181470, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
+  _mainCanvasPrefab: {fileID: 6963734709210465887, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,9 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9deb5aa6a413ab34082cc17fe73d65a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnOnStart:
-  - {fileID: 6831704392356177135, guid: 7731ddee1c5f82b44aefac387474df59, type: 3}
-  - {fileID: 50163657437851169, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
+  _playerPrefab: {fileID: 50163657437851169, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
+  _envPrefab: {fileID: 6831704392356177135, guid: 7731ddee1c5f82b44aefac387474df59, type: 3}
 --- !u!1 &1502749804
 GameObject:
   m_ObjectHideFlags: 0
