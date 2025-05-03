@@ -6,10 +6,10 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _playerPrefab;
     [SerializeField] Transform _envPrefab;
     [SerializeField] Transform _spawnEnemy;
-    [SerializeField] Transform _comboController;
-    [SerializeField] Transform _spawnProjectile;
+    [SerializeField] Transform _spawnVillager;
 
     public Transform Player { get; private set; }
+    public Transform Env { get; private set; }
 
     public static Controller Instance { get; private set; }
 
@@ -29,11 +29,10 @@ public class Controller : MonoBehaviour
 
     void InitGame()
     {
-        Instantiate(_envPrefab.gameObject);
-        Instantiate(_spawnEnemy.gameObject);
-        Instantiate(_comboController.gameObject);
-        Instantiate(_spawnProjectile.gameObject);
         Player = Instantiate(_playerPrefab.gameObject).transform;
+        Env = Instantiate(_envPrefab.gameObject).transform;
+        Instantiate(_spawnEnemy.gameObject);
+        Instantiate(_spawnVillager.gameObject);
     }
 
     void Start()

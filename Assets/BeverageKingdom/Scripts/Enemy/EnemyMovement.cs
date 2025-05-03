@@ -5,28 +5,23 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float moveSpeed = 2f;
-    public float detectionRange = 5f;
-    private Transform player;
+    [HideInInspector]
+    public Transform Target;
+    [HideInInspector]
+    public bool IsFriendlyInRange;
+    public DetectionRange DetectionRange;
 
-    void Start()
+    void Awake()
     {
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject != null)
-        {
-            player = playerObject.transform;
-        }
-        else
-        {
-            Debug.LogWarning("Không tìm thấy đối tượng có tag 'Player'");
-        }
+        DetectionRange.OnInRange += SetFriendlyInRange;
+        DetectionRange.OnOutRange += SetFriendlyOutRange;
     }
 
     void Update()
     {
-        if (player != null && IsPlayerInRange())
+        if (Target != null && IsFriendlyInRange == true)
         {
-            // Di chuyển về phía người chơi
-            Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            Vector3 directionToPlayer = (Target.position - transform.position).normalized;
             transform.parent.position += directionToPlayer * moveSpeed * Time.deltaTime;
         }
         else
@@ -36,8 +31,15 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    bool IsPlayerInRange()
+    void SetFriendlyInRange(Transform transform)
     {
-        return Vector3.Distance(transform.parent.position, player.position) <= detectionRange;
+        IsFriendlyInRange = true;
+        Target = transform;
+    }
+
+    void SetFriendlyOutRange()
+    {
+        IsFriendlyInRange = false;
+        Target = null;
     }
 }

@@ -1,6 +1,7 @@
 ﻿// WeaponController.cs
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WeaponController : MonoBehaviour
 {
@@ -30,12 +31,8 @@ public class WeaponController : MonoBehaviour
         // Fire khi bấm chuột trái
         if (Input.GetButton("Fire1") && CurrentWeapon != null)
         {
-            CurrentWeapon.Attack(firePoint);
+            // CurrentWeapon.Attack(firePoint);
         }
-    }
-    public void Attack()
-    {
-        weapons[currentIndex].Attack(firePoint);
     }
 
     public void SwitchWeapon(int dir)
@@ -43,6 +40,6 @@ public class WeaponController : MonoBehaviour
         if (weapons == null || weapons.Count == 0) return;
 
         currentIndex = (currentIndex + dir + weapons.Count) % weapons.Count;
-       // Debug.Log($"Switched to weapon: {weapons[currentIndex].weaponName}");
+        Debug.Log($"Switched to weapon: {weapons[currentIndex].weaponName}");
     }
 }
