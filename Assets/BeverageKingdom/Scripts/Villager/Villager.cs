@@ -5,7 +5,7 @@ public class Villager : MonoBehaviour
     private Vector3 targetPosition;
     bool moveOnSpawn = false;
 
-    public Movement VillagerMovement;
+    public VillagerMovement VillagerMovement;
 
     public int HP = 3;
 
@@ -42,7 +42,7 @@ public class Villager : MonoBehaviour
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 targetPosition,
-                VillagerMovement.MoveSpeed * 5 * Time.deltaTime
+                VillagerMovement.MoveSpeed * 4 * Time.deltaTime
             );
         }
 

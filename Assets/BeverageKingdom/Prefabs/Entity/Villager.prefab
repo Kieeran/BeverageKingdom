@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fac66dff78458458e3735f70bc6223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VillagerMovement: {fileID: 7963116049216019115}
+  VillagerMovement: {fileID: 7558576715593562775}
   HP: 3
   animator: {fileID: 7785667035142545142}
 --- !u!50 &6308924408376525321
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 811874467483366521}
-  - component: {fileID: 7963116049216019115}
+  - component: {fileID: 7558576715593562775}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -217,7 +217,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1065858905010002018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7963116049216019115
+--- !u!114 &7558576715593562775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,11 +226,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6688669550623590742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42961c0fa46f574bbbc643bdb4c0aab, type: 3}
+  m_Script: {fileID: 11500000, guid: 46808e72cb13a0c4b85cb3f2b2e2bd8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnemy: 0
-  MoveSpeed: 1
+  MoveSpeed: 1.5
   Target: {fileID: 0}
   IsEntityInRange: 0
   DetectionRange: {fileID: 3299361434542059082}
