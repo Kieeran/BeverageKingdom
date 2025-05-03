@@ -26,9 +26,13 @@ public class PlayerStateMove : PlayerGroundState
         {
             stateMachine.ChangeState(player.idleState);
         }
-        if (player.rb.velocity.x > 0)
+        /*if (player.rb.velocity.x > 0)
         {
-            
+            player.Flip();
         }
+        else
+        {
+            player.Flip();
+        }*/
     }
 }

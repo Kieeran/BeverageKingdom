@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
 
     public static Player instance;
 
-    public float moveSpeed;
+    public float moveSpeed; 
+    private bool facingRight = true;
     #region Component
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
@@ -53,10 +54,22 @@ public class Player : MonoBehaviour
             WeaponController.Attack();
         }
         stateMachine.currentState.Update();
+        Flip();
     }
     public void SetVelocity(float xInput, float yInput)
     {
         rb.velocity = new Vector2(xInput, yInput);
         //PlayerCtrl.Instance.flipController.CheckFlip();
     }
+    public void Flip()
+    {
+        if ((rb.velocity.x > 0 && !facingRight) || (rb.velocity.x < 0 && facingRight))
+         {
+             facingRight = !facingRight;
+             Vector3 s = transform.localScale;
+             s.x *= -1;            // đảo ngược scale X
+             transform.localScale = s;
+         }
+    }
+
 }
