@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class JoystickMove : MonoBehaviour
 {
-    [SerializeField] float _playerSpeed;
-    [SerializeField] Rigidbody2D _rb2d;
+    public Vector2 move;
 
-    Joystick _joystick;
+    public Joystick Joystick;
 
     public void SetJoystick(Joystick joystick)
     {
-        _joystick = joystick;
+        Joystick = joystick;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (_joystick == null) return;
+        if (Joystick == null) return;
 
-        if (_joystick.Direction.y != 0)
+        if (Joystick.Direction.y != 0)
         {
-            _rb2d.velocity = new Vector2(
-                _joystick.Direction.x * _playerSpeed,
-                _joystick.Direction.y * _playerSpeed
+            move = new Vector2(
+                Joystick.Direction.x,
+                Joystick.Direction.y
             );
         }
 
         else
         {
-            _rb2d.velocity = Vector2.zero;
+            move = Vector2.zero;
         }
     }
 }

@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : TriBehaviour
 {
     [SerializeField] private int maxHealth = 10;
-    private int currentHealth; 
+    private int currentHealth;
     public Rigidbody2D rb;
     public Animator ani;
 

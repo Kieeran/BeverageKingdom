@@ -684,10 +684,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 50163657437851169}
+  - component: {fileID: 7184173532152428892}
   - component: {fileID: 3667071518967296704}
   - component: {fileID: 3195346775243935806}
   - component: {fileID: 1728684838077248029}
-  - component: {fileID: 7184173532152428892}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -708,12 +708,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6774230677360384067}
   - {fileID: 8611832706929631458}
   - {fileID: 4684424836428179757}
   - {fileID: 3996528971548036216}
-  - {fileID: 6774230677360384067}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7184173532152428892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013626676635541162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840d1b288f90021479c9bea42ad14587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponController: {fileID: 8029644660301429030}
+  inputMangager: {fileID: 0}
+  moveSpeed: 5
+  JoystickMove: {fileID: 3667071518967296704}
 --- !u!114 &3667071518967296704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,13 +737,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9013626676635541162}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfdc441ae2106074db437e32e9051647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSpeed: 5
-  _rb2d: {fileID: 3195346775243935806}
+  move: {x: 0, y: 0}
+  Joystick: {fileID: 0}
 --- !u!50 &3195346775243935806
 Rigidbody2D:
   serializedVersion: 4
@@ -790,18 +806,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7184173532152428892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9013626676635541162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840d1b288f90021479c9bea42ad14587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponController: {fileID: 8029644660301429030}
-  inputMangager: {fileID: 0}
-  moveSpeed: 5

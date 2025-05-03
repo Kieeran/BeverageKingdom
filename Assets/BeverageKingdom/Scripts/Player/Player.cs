@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public static Player instance;
     public InputMangager inputMangager;
 
-    public float moveSpeed; 
+    public float moveSpeed;
     private bool facingRight = true;
     #region Component
     public Animator anim { get; private set; }
@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public PlayerStateDead dead { get; private set; }
     public PlayerStateHit hit { get; private set; }
     #endregion
+
+    public JoystickMove JoystickMove;
 
     private void Awake()
     {
@@ -46,13 +48,14 @@ public class Player : MonoBehaviour
     private void Start()
     {
         anim = transform.Find("Model").GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
         stateMachine.Initialize(idleState);
         inputMangager = InputMangager.Instance;
     }
     void Update()
     {
-        SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
+        //Uncomment this line to use WSAD, keep comment to use joystick
+        // SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
 
         if (inputMangager.GetKeyToAttack())
         {
@@ -60,24 +63,31 @@ public class Player : MonoBehaviour
             stateMachine.ChangeState(attack);
         }
         stateMachine.currentState.Update();
+        // Flip();
+    }
+
+    ////Comment this line to use WSAD
+    void FixedUpdate()
+    {
+        SetVelocity(JoystickMove.move.x * moveSpeed, JoystickMove.move.y * moveSpeed);
         Flip();
     }
+
     public void SetVelocity(float xInput, float yInput)
     {
         rb.velocity = new Vector2(xInput, yInput);
-
-
-        //PlayerCtrl.Instance.flipController.CheckFlip();
     }
     public void Flip()
     {
-        if ((rb.velocity.x > 0 && !facingRight) || (rb.velocity.x < 0 && facingRight))
-         {
-             facingRight = !facingRight;
-             Vector3 s = transform.localScale;
-             s.x *= -1;            // đảo ngược scale X
-             transform.localScale = s;
-         }
+        //Uncomment this line to use WSAD, keep comment to use joystick
+        // if ((rb.velocity.x > 0 && !facingRight) || (rb.velocity.x < 0 && facingRight))
+        if ((JoystickMove.move.x > 0 && !facingRight) || (JoystickMove.move.x < 0 && facingRight))
+        {
+            facingRight = !facingRight;
+            Vector3 s = transform.localScale;
+            s.x *= -1;            // đảo ngược scale X
+            transform.localScale = s;
+        }
     }
 
 }
