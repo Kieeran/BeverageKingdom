@@ -13,7 +13,6 @@ public class PlayerAnimator : MonoBehaviour
     {
         player.stateMachine.ChangeState(player.idleState);
 
-        Debug.Log("asdasd");
          
     }
 }
