@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : TriBehaviour
 {
-    [Header("Thiết lập máu")]
     [SerializeField] private int maxHealth = 10;
     private int currentHealth;
 
@@ -21,7 +20,6 @@ public class Enemy : TriBehaviour
     public void Deduct(int amount)
     {
         currentHealth -= amount;
-        Debug.Log($"{gameObject.name} nhận {amount} damage, còn {currentHealth} HP");
 
         if (currentHealth <= 0)
         {
@@ -31,7 +29,6 @@ public class Enemy : TriBehaviour
 
     private void Die()
     {
-        Debug.Log($"{gameObject.name} đã chết!");
         Destroy(gameObject);
     }
 }

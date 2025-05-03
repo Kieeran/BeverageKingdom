@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8611832706929631458}
   - component: {fileID: 8029644660301429030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6221364662406565911}
+  - {fileID: 8075187356376819084}
   m_Father: {fileID: 50163657437851169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8029644660301429030
@@ -46,8 +47,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 621738811406434394}
+  - {fileID: 1655997575154066073}
   firePoint: {fileID: 50163657437851169}
+--- !u!1 &1624083664658007103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8075187356376819084}
+  - component: {fileID: 1655997575154066073}
+  m_Layer: 9
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8075187356376819084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624083664658007103}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8611832706929631458}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655997575154066073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624083664658007103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc53e67aecd11d45977f2b273df9533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Gun
+  damage: 3
+  fireCooldown: 0.5
 --- !u!1 &5467681874336310765
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +107,7 @@ GameObject:
   - component: {fileID: 4684424836428179757}
   - component: {fileID: 1418075460779281547}
   - component: {fileID: 803717409612988096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DetectionRange
   m_TagString: Range
   m_Icon: {fileID: 0}
@@ -140,7 +188,7 @@ GameObject:
   - component: {fileID: 5413559097696978188}
   - component: {fileID: 5743406251364529543}
   - component: {fileID: 621738811406434394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElectricGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +250,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 477692355
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -376,8 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: 
   damage: 3
-  projectilePrefab: {fileID: 0}
-  projectileSpeed: 20
+  fireCooldown: 0.5
   maxDistance: 50
   lineRenderer: {fileID: 5413559097696978188}
   textures:
@@ -392,6 +439,7 @@ MonoBehaviour:
   dame: 3
   timeBetweenDamage: 0.2
   timeDameElectric: 0.3
+  shootDuration: 1
 --- !u!1 &9013626676635541162
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +453,8 @@ GameObject:
   - component: {fileID: 3667071518967296704}
   - component: {fileID: 3195346775243935806}
   - component: {fileID: 1728684838077248029}
-  m_Layer: 0
+  - component: {fileID: 7184173532152428892}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -557,3 +606,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7184173532152428892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013626676635541162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840d1b288f90021479c9bea42ad14587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponController: {fileID: 8029644660301429030}

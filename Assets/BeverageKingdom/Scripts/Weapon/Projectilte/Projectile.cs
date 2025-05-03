@@ -25,7 +25,6 @@ public class Projectile : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
-
         lifeTimer -= Time.deltaTime;
         if (lifeTimer <= 0f)
             Destroy(gameObject);
@@ -33,9 +32,10 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        Debug.Log(other.name);
-
+        if (other.gameObject.name == "DetectionRange")
+        {
+            return;
+        }
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy")
 )
@@ -50,9 +50,5 @@ public class Projectile : MonoBehaviour
 
             Destroy(gameObject);
         }
-       /* else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            Destroy(gameObject);
-        }*/
     }
 }

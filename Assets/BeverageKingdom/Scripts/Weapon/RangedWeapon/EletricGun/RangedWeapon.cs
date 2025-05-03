@@ -1,22 +1,23 @@
 ﻿// RangedWeapon.cs
 using UnityEngine;
 
-// [CreateAssetMenu(menuName = "Weapons/Ranged Weapon")]
 public class RangedWeapon : Weapon
 {
-    [Header("Prefab đạn và tốc độ bắn")]
-    public GameObject projectilePrefab;
-    public float projectileSpeed = 20f;
+   // public float projectileSpeed = 20f;
+
+    [SerializeField] private float fireCooldown = 0.5f;
+    private float nextFireTime = 0f;
 
     public override void Attack(Transform fireOrigin)
     {
-        // Spawn viên đạn
-        GameObject proj = Instantiate(projectilePrefab, fireOrigin.position, fireOrigin.rotation);
-        // Gán velocity
-        if (proj.TryGetComponent<Rigidbody>(out var rb))
-            rb.velocity = fireOrigin.forward * projectileSpeed;
+        if (Time.time < nextFireTime)
+            return;
 
-       /* if (proj.TryGetComponent<Projectile>(out var p))
-            p.damage = damage;*/
+        nextFireTime = Time.time + fireCooldown;
+
+        // Spawn viên đạn
+        ProjectileSpawner.Instance
+                       .Spawn(ProjectileSpawner.Bullet, fireOrigin.position, fireOrigin.rotation);
+
     }
 }
