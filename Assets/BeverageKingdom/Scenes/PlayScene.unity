@@ -425,17 +425,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &653497546 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1655997575154066073, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
-  m_PrefabInstance: {fileID: 1890056545}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc53e67aecd11d45977f2b273df9533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1108026436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,6 +655,32 @@ MonoBehaviour:
   _spawnVillager: {fileID: 8658250607024624497, guid: e5763547f2865714db1c439e706df353, type: 3}
   _comboController: {fileID: 2237165565382079234, guid: 7b8c92610858d0246b9343fe2fa11971, type: 3}
   _projectileSpawner: {fileID: 3593831422830620481, guid: 347b94742f5e1cc45be8d8d8241a521d, type: 3}
+--- !u!1 &1465389088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372701464308867127, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+  m_PrefabInstance: {fileID: 1523496782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1465389091
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465389088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbf6367d116fec0499b17dcfd433f6a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1502749804
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +757,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320528723114657328, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.86
+      objectReference: {fileID: 0}
     - target: {fileID: 354607299746329337, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
@@ -794,10 +813,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4099246942199263474, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249058237692546369, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 596093048, guid: 288a85ae164b8444ab3efdd438cb6c00, type: 3}
+    - target: {fileID: 6249058237692546369, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249058237692546369, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249058237692546369, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 372701464308867127, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1465389091}
   m_SourcePrefab: {fileID: 100100000, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
 --- !u!1 &1594881439
 GameObject:
@@ -1171,10 +1213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8029644660301429030, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
-      propertyPath: weapons.Array.data[0]
+    - target: {fileID: 7184173532152428892, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
+      propertyPath: inputMangager
       value: 
-      objectReference: {fileID: 653497546}
+      objectReference: {fileID: 267953601}
     - target: {fileID: 9013626676635541162, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
       propertyPath: m_Name
       value: Player

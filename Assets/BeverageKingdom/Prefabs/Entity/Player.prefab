@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 6476630804634491545}
   - component: {fileID: 1794610502377375709}
   - component: {fileID: 3872018274052402086}
+  - component: {fileID: 153054942792365585}
   m_Layer: 9
   m_Name: Anim
   m_TagString: Untagged
@@ -346,6 +347,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &153054942792365585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450935557674306603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c121b29f563cf4b48bbc4230b422b424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6653364163135211865
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +721,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9013626676635541162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfdc441ae2106074db437e32e9051647, type: 3}
   m_Name: 
@@ -790,4 +803,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponController: {fileID: 8029644660301429030}
-  moveSpeed: 0
+  inputMangager: {fileID: 0}
+  moveSpeed: 5

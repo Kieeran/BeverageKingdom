@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private WeaponController WeaponController;
 
     public static Player instance;
+    public InputMangager inputMangager;
 
     public float moveSpeed; 
     private bool facingRight = true;
@@ -46,12 +48,16 @@ public class Player : MonoBehaviour
         anim = transform.Find("Model").GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>(); 
         stateMachine.Initialize(idleState);
+        inputMangager = InputMangager.Instance;
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
+
+        if (inputMangager.GetKeyToAttack())
         {
             WeaponController.Attack();
+            stateMachine.ChangeState(attack);
         }
         stateMachine.currentState.Update();
         Flip();
@@ -59,6 +65,8 @@ public class Player : MonoBehaviour
     public void SetVelocity(float xInput, float yInput)
     {
         rb.velocity = new Vector2(xInput, yInput);
+
+
         //PlayerCtrl.Instance.flipController.CheckFlip();
     }
     public void Flip()
