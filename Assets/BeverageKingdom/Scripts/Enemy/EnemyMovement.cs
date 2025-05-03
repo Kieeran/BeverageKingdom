@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class VillagerMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float MoveSpeed;
     [HideInInspector]
@@ -9,15 +9,11 @@ public class VillagerMovement : MonoBehaviour
     [HideInInspector]
     public bool IsEntityInRange;
     public DetectionRange DetectionRange;
-    public Villager Villager;
 
     public Action<int> OnStageChange;
 
-    [HideInInspector]
     public bool IsWalking;
-    [HideInInspector]
     public bool IsIdling;
-    [HideInInspector]
     public bool IsAttacking;
 
     void Awake()
@@ -25,14 +21,34 @@ public class VillagerMovement : MonoBehaviour
         DetectionRange.OnInRange += SetEntityInRange;
         DetectionRange.OnOutRange += SetEntityOutRange;
 
-        SetStage(1);
+        SetStage(2);
+    }
+
+    void Update()
+    {
+        // SetStage(1);
+        // if (Target != null && IsEntityInRange == true)
+        // {
+        //     Vector3 directionToPlayer = (Target.position - transform.position).normalized;
+        //     transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
+        //     SetStage(2);
+        // }
+        // else
+        // {
+        //     transform.parent.position += Vector3.left * MoveSpeed * Time.deltaTime;
+        //     SetStage(2);
+        // }
     }
 
     public void Walk()
     {
         Vector3 directionToPlayer = (Target.position - transform.position).normalized;
-        transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
-        SetStage(2);
+        transform.parent.position += MoveSpeed * Time.deltaTime * directionToPlayer;
+    }
+
+    public void GoToKindom()
+    {
+        transform.parent.position += MoveSpeed * Time.deltaTime * Vector3.left;
     }
 
     public void SetStage(int index)

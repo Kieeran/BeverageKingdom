@@ -156,14 +156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42961c0fa46f574bbbc643bdb4c0aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnemy: 1
   MoveSpeed: 2
   Target: {fileID: 0}
   IsEntityInRange: 0
   DetectionRange: {fileID: 3919812992736525623}
   IsWalking: 0
   IsIdling: 0
-  IsHitting: 0
+  IsAttacking: 0
 --- !u!1 &4887401757434989689
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,9 +212,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a090d5037c0d7349ab8414ac4754ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
+  EnemyMovement: {fileID: 7614361190701215873}
+  EnemyAnimation: {fileID: 910250489033305400}
   maxHealth: 10
-  rb: {fileID: 1581289313147508839}
-  ani: {fileID: 2996638185219542788}
+  animator: {fileID: 2996638185219542788}
+  AttackRange: 2
+  AttackCoolDown: 1
 --- !u!50 &1581289313147508839
 Rigidbody2D:
   serializedVersion: 4
@@ -334,6 +337,7 @@ GameObject:
   - component: {fileID: 1896931848292339235}
   - component: {fileID: 2996638185219542788}
   - component: {fileID: 6485496549687972400}
+  - component: {fileID: 910250489033305400}
   m_Layer: 6
   m_Name: Ani
   m_TagString: Untagged
@@ -429,3 +433,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &910250489033305400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087388154507893948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db502e04aa3f8034eb520ee9ded2f04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

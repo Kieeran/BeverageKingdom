@@ -28,9 +28,13 @@ public class Villager : MonoBehaviour
 
     void Awake()
     {
-        currentState = VillagerState.Idle;
         VillagerMovement.OnStageChange += SetAnimator;
         VillagerAnimation.OnDoneAttack += OnDoneAttack;
+    }
+
+    void Start()
+    {
+        ChangeState(VillagerState.Idle);
     }
 
     void SetAnimator(int index)
@@ -75,14 +79,17 @@ public class Villager : MonoBehaviour
         switch (currentState)
         {
             case VillagerState.Idle:
+                VillagerMovement.SetStage(1);
                 HandleIdle();
                 break;
 
             case VillagerState.Walk:
+                VillagerMovement.SetStage(2);
                 HandleWalk();
                 break;
 
             case VillagerState.Attack:
+                VillagerMovement.SetStage(3);
                 HandleAttack();
                 break;
         }
@@ -137,7 +144,6 @@ public class Villager : MonoBehaviour
 
     void HandleAttack()
     {
-        VillagerMovement.SetStage(3);
         if (IsDoneAttack == true)
         {
             _coolDownTimer += Time.deltaTime;
@@ -147,7 +153,6 @@ public class Villager : MonoBehaviour
                 _coolDownTimer = 0;
 
                 ChangeState(VillagerState.Idle);
-                VillagerMovement.SetStage(1);
                 IsDoneAttack = false;
             }
         }

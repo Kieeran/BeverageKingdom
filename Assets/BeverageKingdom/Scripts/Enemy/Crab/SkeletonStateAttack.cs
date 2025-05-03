@@ -13,7 +13,7 @@ public class SkeletonStateAttack : SkeletonState
     public override void Enter()
     {   
         base.Enter();
-        skeleton.rb.velocity = Vector2.zero;
+        // skeleton.rb.velocity = Vector2.zero;
         GetDir();
         /*if (skeleton.enemyCtrl.flipController.facingDir != dirAttack)
             skeleton.enemyCtrl.flipController.FLip();*/
