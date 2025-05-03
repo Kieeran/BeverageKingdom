@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class DetectionRange : MonoBehaviour
 {
-    public Action OnInRange;
+    public Action<Transform> OnInRange;
     public Action OnOutRange;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Range"))
         {
-            OnInRange?.Invoke();
+            OnInRange?.Invoke(collision.transform);
             Debug.Log("In range with other entity");
         }
     }
