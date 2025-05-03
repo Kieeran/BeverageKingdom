@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Windows;
 
@@ -13,6 +14,11 @@ public class Player : MonoBehaviour
     public float moveSpeed; 
     private bool facingRight = true;
     #region Component
+    public AnimatorOverrideController playerSword;
+    public AnimatorOverrideController playerGun;
+    [SerializeField] private Sprite playerSwordSpr;
+    [SerializeField] private Sprite playerGunSpr;
+    [SerializeField] private SpriteRenderer playerSpr;
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
     #endregion
@@ -72,12 +78,25 @@ public class Player : MonoBehaviour
     public void Flip()
     {
         if ((rb.velocity.x > 0 && !facingRight) || (rb.velocity.x < 0 && facingRight))
-         {
-             facingRight = !facingRight;
-             Vector3 s = transform.localScale;
-             s.x *= -1;            // đảo ngược scale X
-             transform.localScale = s;
-         }
+        {
+            facingRight = !facingRight;
+            Transform model = transform.Find("Model");
+            float yRot = facingRight ? 0f : 180f;
+            model.rotation = Quaternion.Euler(0f, yRot, 0f);
+        }
+    }
+    public void SwapAnimatorController(int i)
+    {
+        if (i == 0)
+        {
+            anim.runtimeAnimatorController = playerSword;
+            playerSpr.sprite = playerSwordSpr;
+        }
+        else if (i == 1)
+        {
+            anim.runtimeAnimatorController = playerGun;
+            playerSpr.sprite = playerGunSpr;
+        }
     }
 
 }

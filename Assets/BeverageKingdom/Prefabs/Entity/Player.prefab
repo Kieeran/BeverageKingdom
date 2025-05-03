@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810224830598246572}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 50163657437851169}
+  m_Father: {fileID: 6774230677360384067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430377909421730463
 GameObject:
@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 6521871922233845937}
+  - {fileID: 1655997575154066073}
   firePoint: {fileID: 50163657437851169}
 --- !u!1 &1624083664658007103
 GameObject:
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Gun
   damage: 3
+  fireOrigin: {fileID: 3996528971548036216}
   fireCooldown: 0.5
 --- !u!1 &2856416212674666027
 GameObject:
@@ -158,6 +160,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6476630804634491545}
+  - {fileID: 3996528971548036216}
   m_Father: {fileID: 50163657437851169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5467681874336310765
@@ -284,7 +287,7 @@ Animator:
   m_GameObject: {fileID: 6450935557674306603}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 51127c24f2bb02547a2f8d8ac11de832, type: 2}
+  m_Controller: {fileID: 22100000, guid: 61ed2d81f8d9ed244990d4b7c6c0a25f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -405,6 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: 
   damage: 4
+  fireOrigin: {fileID: 3996528971548036216}
   attackLength: 1
   attackWidth: 2
   hitLayers:
@@ -659,6 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: 
   damage: 3
+  fireOrigin: {fileID: 0}
   fireCooldown: 0.5
   maxDistance: 50
   lineRenderer: {fileID: 5413559097696978188}
@@ -710,7 +715,6 @@ Transform:
   m_Children:
   - {fileID: 8611832706929631458}
   - {fileID: 4684424836428179757}
-  - {fileID: 3996528971548036216}
   - {fileID: 6774230677360384067}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -805,3 +809,8 @@ MonoBehaviour:
   WeaponController: {fileID: 8029644660301429030}
   inputMangager: {fileID: 0}
   moveSpeed: 5
+  playerSword: {fileID: 22100000, guid: 61ed2d81f8d9ed244990d4b7c6c0a25f, type: 2}
+  playerGun: {fileID: 22100000, guid: 1884c9b546c8c794f9f461b39ebd15eb, type: 2}
+  playerSwordSpr: {fileID: -309207110, guid: b2929214a1c71434389a55af0c807214, type: 3}
+  playerGunSpr: {fileID: 569212532, guid: a99195cdd24165840b91a01567f67384, type: 3}
+  playerSpr: {fileID: 3872018274052402086}

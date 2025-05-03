@@ -11,7 +11,6 @@ public class DetectionRange : MonoBehaviour
         if (collision.CompareTag("Range"))
         {
             OnInRange?.Invoke(collision.transform);
-            Debug.Log("In range with other entity");
         }
     }
 
@@ -20,7 +19,6 @@ public class DetectionRange : MonoBehaviour
         if (collision.CompareTag("Range"))
         {
             OnOutRange?.Invoke();
-            Debug.Log("Out range with other entity");
         }
     }
 }
