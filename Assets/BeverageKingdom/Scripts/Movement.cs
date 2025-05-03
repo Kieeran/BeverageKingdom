@@ -1,8 +1,11 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class VillagerMovement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
+    public bool IsEnemy;
     public float MoveSpeed;
     [HideInInspector]
     public Transform Target;
@@ -11,12 +14,9 @@ public class VillagerMovement : MonoBehaviour
     public DetectionRange DetectionRange;
 
     public Action<int> OnStageChange;
-    
-    [HideInInspector]
+
     public bool IsWalking;
-    [HideInInspector]
     public bool IsIdling;
-    [HideInInspector]
     public bool IsHitting;
 
     void Awake()
@@ -29,6 +29,7 @@ public class VillagerMovement : MonoBehaviour
 
     void Update()
     {
+        SetStage(1);
         if (Target != null && IsEntityInRange == true)
         {
             Vector3 directionToPlayer = (Target.position - transform.position).normalized;
@@ -37,7 +38,11 @@ public class VillagerMovement : MonoBehaviour
         }
         else
         {
-            SetStage(1);
+            if (IsEnemy == true)
+            {
+                transform.parent.position += Vector3.left * MoveSpeed * Time.deltaTime;
+                SetStage(2);
+            }
         }
     }
 

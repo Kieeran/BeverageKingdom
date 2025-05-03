@@ -6,8 +6,8 @@ public class EffectSpawner : Spawner
 {
     public static EffectSpawner instance;
 
-    public static string Slash= "Slash";
-    private void Awake()
+    public static string Slash = "Slash";
+    protected override void Awake()
     {
         if (instance == null)
         {
