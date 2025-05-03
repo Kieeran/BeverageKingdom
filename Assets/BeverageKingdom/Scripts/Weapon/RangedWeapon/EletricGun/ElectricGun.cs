@@ -80,6 +80,8 @@ public class ElectricGun : RangedWeapon
             {
                 if (hit.collider.TryGetComponent<Enemy>(out var enemy))
                 {
+                    enemy.Deduct(dame); 
+                    ComboController.Instance.AddCombo();
                     enemy.Deduct(dame);
                 }
                 damageTimer = timeBetweenDamage;
