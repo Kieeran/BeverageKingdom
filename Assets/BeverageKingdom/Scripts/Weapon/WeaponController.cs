@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class WeaponController : MonoBehaviour
-{
+{   
     [Header("Danh sách ScriptableObject Weapon")]
     public List<Weapon> weapons;
     private int currentIndex = 0;
@@ -14,6 +14,7 @@ public class WeaponController : MonoBehaviour
 
     public Weapon CurrentWeapon => weapons.Count > 0 ? weapons[currentIndex] : null;
 
+  
     void Start()
     {
         if (weapons == null || weapons.Count == 0)
@@ -30,7 +31,7 @@ public class WeaponController : MonoBehaviour
         // Fire khi bấm chuột trái
         if (Input.GetButton("Fire1") && CurrentWeapon != null)
         {
-            // CurrentWeapon.Attack(firePoint);
+             CurrentWeapon.Attack();
         }
     }
 
@@ -39,10 +40,10 @@ public class WeaponController : MonoBehaviour
         if (weapons == null || weapons.Count == 0) return;
 
         currentIndex = (currentIndex + dir + weapons.Count) % weapons.Count;
-        // Debug.Log($"Switched to weapon: {weapons[currentIndex].weaponName}");
+        Player.instance.SwapAnimatorController(currentIndex);
     }
     public void Attack()
     {
-        weapons[currentIndex].Attack(firePoint);
+        weapons[currentIndex].Attack();
     }
 }

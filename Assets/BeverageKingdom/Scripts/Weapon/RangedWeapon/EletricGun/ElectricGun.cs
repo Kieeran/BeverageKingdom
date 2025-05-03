@@ -87,7 +87,7 @@ public class ElectricGun : RangedWeapon
         lineRenderer.enabled = false;
     }
 
-    public override void Attack(Transform fireOrigin)
+    public override void Attack()
     {
         // Nếu chưa đang bắn, khi lần đầu Attack kích hoạt bắn
         if (!isShooting)

@@ -10,14 +10,14 @@ public class MeleeWeapon : Weapon
     public float attackCooldown = 0.5f;
     private float nextAttackTime = 0f;
 
-    public override void Attack(Transform fireOrigin)
+    public override void Attack()
     {
         if (Time.time < nextAttackTime) return;
         nextAttackTime = Time.time + attackCooldown;
 
-        Vector2 origin = transform.position + Vector3.right;
-        Vector2 forward = fireOrigin.right.normalized;
-        Vector2 boxCenter = origin + forward * (attackLength * 0.5f);
+        Vector2 origin = fireOrigin.position;
+       // Vector2 forward = fireOrigin.right.normalized;
+        Vector2 boxCenter = origin /*+ forward * (attackLength * 0.5f)*/;
 
         Vector2 boxSize = new Vector2(attackLength, attackWidth);
 
@@ -42,9 +42,9 @@ public class MeleeWeapon : Weapon
     {
         if (transform == null) return;
 
-        Vector2 origin = transform.position + Vector3.right;
-        Vector2 forward = transform.right.normalized;
-        Vector2 boxCenter = origin + forward * (attackLength * 0.5f);
+        Vector2 origin = fireOrigin.position;
+        // Vector2 forward = transform.right.normalized;
+        Vector2 boxCenter = origin;
         Vector2 boxSize = new Vector2(attackLength, attackWidth);
         float angle = transform.eulerAngles.z;
 

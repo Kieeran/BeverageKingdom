@@ -158,6 +158,8 @@ public class Enemy : TriBehaviour
     {
         currentHealth -= amount;
 
+        Debug.Log("asdasd");
+
         if (currentHealth <= 0)
         {
             Die();

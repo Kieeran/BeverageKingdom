@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: a99195cdd24165840b91a01567f67384
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 256
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41372940b9f3a2141bec11ceecb2d7bd
+      internalID: 569212532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 256
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c7cf851b527114597bfbe220657114
+      internalID: -1278937348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 256
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec84286c0c0f014bb17d34a3e697c7d
+      internalID: -2662162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 256
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefa52d25b5fbdc4d9b11364e311b387
+      internalID: -1007664871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 256
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1144c0e82fb9ebc49b995c0c8e76ec94
+      internalID: -474689286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 256
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d883867bc4005ea43bf6ea4fcd82e915
+      internalID: -1329146698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 192
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafca2198aa4707499ecc950bc7faf76
+      internalID: -599998188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 192
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd927df2c69472e469ecd635ef304fea
+      internalID: -1687498701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 192
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1017026ac4de1048aeb223a6752213c
+      internalID: 1838245395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_9
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 192
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ffcecb8335b4847b3b84c56385c479
+      internalID: -2048313657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 192
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61ee3902c4cf9f4bb5e01539fc7386b
+      internalID: 1780895910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 192
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f14ca482df9b241a22fec68a3f6725
+      internalID: 1555407101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 128
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b850545907b52841a2a100e6dd11068
+      internalID: 1728178786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 128
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02382b21ff3ca4448e2475574120773
+      internalID: 1501594094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_14
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 64
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedd88bd6b9bc5f47aab9c62c6ae7225
+      internalID: -588438067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 67
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbe0bc3763baef4dbdf5f0024380039
+      internalID: -972785951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 68
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b87428e8be7784fbd72e2634cbf24c
+      internalID: -1845083904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 64
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60edf78f6e502940a13d1e0ac14a985
+      internalID: 1496176518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_18
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 64
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ad276f7e359fb49b6b16d993176ecf
+      internalID: 1322978575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_19
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 64
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a53479d536151418546fe6213f2fca
+      internalID: 1421536983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 64
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6581f6655d54fee4ea2f25d8e51eeb8b
+      internalID: -2114499213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_21
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5318fcc391e406b4fa97ebb63d461e43
+      internalID: -1198843864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_22
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95404f531430a9245a11c1b3f1dfdb97
+      internalID: 1453835778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ecf92ed21bece44bcce494148437d6
+      internalID: 1076478633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_24
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79bdc8e62cf57740b197990d48cc540
+      internalID: -1914645017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_25
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dbe80358b8fb4428392c1d0c292c4a
+      internalID: -2145133671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_26
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8859266f6cdee89428ceea25bd54c960
+      internalID: 925229087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_27
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe856ef5ec00a1a4592b87ee81faee50
+      internalID: 1826355700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-gun_28
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e935054b71c81f45851690516714781
+      internalID: 2029343909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PumpkingAdeventurer-Sheet-gun_0: 569212532
+      PumpkingAdeventurer-Sheet-gun_1: -1278937348
+      PumpkingAdeventurer-Sheet-gun_10: 1780895910
+      PumpkingAdeventurer-Sheet-gun_11: 1555407101
+      PumpkingAdeventurer-Sheet-gun_12: 1728178786
+      PumpkingAdeventurer-Sheet-gun_13: 1501594094
+      PumpkingAdeventurer-Sheet-gun_14: -588438067
+      PumpkingAdeventurer-Sheet-gun_15: -972785951
+      PumpkingAdeventurer-Sheet-gun_16: -1845083904
+      PumpkingAdeventurer-Sheet-gun_17: 1496176518
+      PumpkingAdeventurer-Sheet-gun_18: 1322978575
+      PumpkingAdeventurer-Sheet-gun_19: 1421536983
+      PumpkingAdeventurer-Sheet-gun_2: -2662162
+      PumpkingAdeventurer-Sheet-gun_20: -2114499213
+      PumpkingAdeventurer-Sheet-gun_21: -1198843864
+      PumpkingAdeventurer-Sheet-gun_22: 1453835778
+      PumpkingAdeventurer-Sheet-gun_23: 1076478633
+      PumpkingAdeventurer-Sheet-gun_24: -1914645017
+      PumpkingAdeventurer-Sheet-gun_25: -2145133671
+      PumpkingAdeventurer-Sheet-gun_26: 925229087
+      PumpkingAdeventurer-Sheet-gun_27: 1826355700
+      PumpkingAdeventurer-Sheet-gun_28: 2029343909
+      PumpkingAdeventurer-Sheet-gun_3: -1007664871
+      PumpkingAdeventurer-Sheet-gun_4: -474689286
+      PumpkingAdeventurer-Sheet-gun_5: -1329146698
+      PumpkingAdeventurer-Sheet-gun_6: -599998188
+      PumpkingAdeventurer-Sheet-gun_7: -1687498701
+      PumpkingAdeventurer-Sheet-gun_8: 1838245395
+      PumpkingAdeventurer-Sheet-gun_9: -2048313657
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
