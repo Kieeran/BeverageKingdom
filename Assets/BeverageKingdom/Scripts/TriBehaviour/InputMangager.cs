@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +8,9 @@ public class InputMangager : MonoBehaviour
     public static InputMangager Instance { get => instance; }
 
     [SerializeField] private Vector2 mousePos;
-    public  Vector2 MousePos { get => mousePos; }
+    public Vector2 MousePos { get => mousePos; }
     [SerializeField] private float onfiring;
-    public  float OnFiring { get => onfiring; }
+    public float OnFiring { get => onfiring; }
 
     [SerializeField] private float horizontal, vertical;
     public float Horizontal { get => horizontal; }
@@ -28,7 +28,7 @@ public class InputMangager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
     void FixedUpdate()
     {
         this.GetMousePosition();

@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] private WeaponController WeaponController;
 
     public static Player instance;
-    public InputMangager inputMangager;
+
+    [HideInInspector]
+    InputMangager _inputMangager;
 
     public float moveSpeed;
     private bool facingRight = true;
@@ -26,6 +28,8 @@ public class Player : MonoBehaviour
     #endregion
 
     public JoystickMove JoystickMove;
+    public float AttackCoolDown = 1f;
+    float _coolDownTimer = 0f;
 
     private void Awake()
     {
@@ -50,20 +54,30 @@ public class Player : MonoBehaviour
         anim = transform.Find("Model").GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         stateMachine.Initialize(idleState);
-        inputMangager = InputMangager.Instance;
+        _inputMangager = InputMangager.Instance;
     }
     void Update()
     {
         //Uncomment this line to use WSAD, keep comment to use joystick
         // SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
+        // if (inputMangager.GetKeyToAttack())
+        // {
+        //     WeaponController.Attack();
+        //     stateMachine.ChangeState(attack);
+        // }
+        // stateMachine.currentState.Update();
+        // Flip();
 
-        if (inputMangager.GetKeyToAttack())
+        _coolDownTimer += Time.deltaTime;
+
+        if (_coolDownTimer >= AttackCoolDown)
         {
+            _coolDownTimer = 0f;
+
             WeaponController.Attack();
             stateMachine.ChangeState(attack);
+            stateMachine.currentState.Update();
         }
-        stateMachine.currentState.Update();
-        // Flip();
     }
 
     ////Comment this line to use WSAD
@@ -89,5 +103,4 @@ public class Player : MonoBehaviour
             transform.localScale = s;
         }
     }
-
 }

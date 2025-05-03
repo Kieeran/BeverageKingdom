@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class JoystickMove : MonoBehaviour
 {
+    [HideInInspector]
     public Vector2 move;
-
+    [HideInInspector]
     public Joystick Joystick;
 
     public void SetJoystick(Joystick joystick)

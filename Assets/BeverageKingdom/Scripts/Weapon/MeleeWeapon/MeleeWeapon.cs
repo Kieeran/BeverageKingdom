@@ -27,8 +27,7 @@ public class MeleeWeapon : Weapon
 
         foreach (var hit in hits)
         {
-
-            if (hit.TryGetComponent<Enemy>(out var enemy))
+            if (hit.transform.parent.TryGetComponent<Enemy>(out var enemy))
             {
                 enemy.Deduct(damage);
 
