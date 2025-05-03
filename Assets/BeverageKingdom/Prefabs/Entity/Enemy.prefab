@@ -215,7 +215,8 @@ MonoBehaviour:
   currentState: 0
   EnemyMovement: {fileID: 7614361190701215873}
   EnemyAnimation: {fileID: 910250489033305400}
-  maxHealth: 10
+  Damage: 2
+  maxHealth: 6
   animator: {fileID: 2996638185219542788}
   AttackRange: 2
   AttackCoolDown: 1

@@ -15,6 +15,7 @@ public class Enemy : TriBehaviour
 
     bool IsDoneAttack = false;
 
+    public float Damage;
     [SerializeField] private int maxHealth = 10;
     private int currentHealth;
     public Animator animator;
@@ -130,6 +131,7 @@ public class Enemy : TriBehaviour
         EnemyMovement.SetStage(3);
         if (IsDoneAttack == true)
         {
+            ApplyDamage();
             _coolDownTimer += Time.deltaTime;
 
             if (_coolDownTimer >= AttackCoolDown)
@@ -139,6 +141,20 @@ public class Enemy : TriBehaviour
                 ChangeState(EnemyState.Idle);
                 EnemyMovement.SetStage(1);
                 IsDoneAttack = false;
+            }
+        }
+    }
+
+    void ApplyDamage()
+    {
+        if (_coolDownTimer == 0)
+        {
+            if (EnemyMovement.Target != null)
+            {
+                if (EnemyMovement.Target.TryGetComponent<Villager>(out var villager))
+                {
+                    villager.TakeDamage(Damage);
+                }
             }
         }
     }

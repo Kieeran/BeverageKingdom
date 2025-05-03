@@ -22,7 +22,9 @@ public class Villager : MonoBehaviour
     public VillagerAnimation VillagerAnimation;
     bool IsDoneAttack = false;
 
-    public int HP = 3;
+    public float HP;
+
+    public int Damage;
 
     public Animator animator;
 
@@ -54,10 +56,10 @@ public class Villager : MonoBehaviour
         }
     }
 
-    public void DecreaseHP()
+    public void TakeDamage(float damage)
     {
-        HP--;
-        if (HP == 0) Destroy(gameObject);
+        HP -= damage;
+        if (HP <= 0) Destroy(gameObject);
     }
 
     public void SetTargetPosition(Vector3 pos)
@@ -146,6 +148,8 @@ public class Villager : MonoBehaviour
     {
         if (IsDoneAttack == true)
         {
+            ApplyDamage();
+
             _coolDownTimer += Time.deltaTime;
 
             if (_coolDownTimer >= AttackCoolDown)
@@ -154,6 +158,20 @@ public class Villager : MonoBehaviour
 
                 ChangeState(VillagerState.Idle);
                 IsDoneAttack = false;
+            }
+        }
+    }
+
+    void ApplyDamage()
+    {
+        if (_coolDownTimer == 0)
+        {
+            if (VillagerMovement.Target != null)
+            {
+                if (VillagerMovement.Target.TryGetComponent<Enemy>(out var enemy))
+                {
+                    enemy.Deduct(Damage);
+                }
             }
         }
     }

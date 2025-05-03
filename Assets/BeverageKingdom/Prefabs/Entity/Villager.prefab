@@ -173,7 +173,8 @@ MonoBehaviour:
   currentState: 0
   VillagerMovement: {fileID: 7558576715593562775}
   VillagerAnimation: {fileID: 5619177395075004523}
-  HP: 3
+  HP: 12
+  Damage: 4
   animator: {fileID: 7785667035142545142}
 --- !u!50 &6308924408376525321
 Rigidbody2D:
@@ -253,7 +254,7 @@ MonoBehaviour:
   Villager: {fileID: 4615887583280631623}
   IsWalking: 0
   IsIdling: 0
-  IsHitting: 0
+  IsAttacking: 0
 --- !u!1 &7375926097080473660
 GameObject:
   m_ObjectHideFlags: 0
