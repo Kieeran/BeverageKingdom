@@ -9,6 +9,20 @@ public class Villager : MonoBehaviour
 
     public int HP = 3;
 
+    public Animator animator;
+
+    void Awake()
+    {
+        VillagerMovement.OnStageChange += SetAnimator;
+    }
+
+    void SetAnimator(int index)
+    {
+        animator.SetBool("Idle", index == 1);
+        animator.SetBool("Walk", index == 2);
+        animator.SetBool("Hit", index == 3);
+    }
+
     public void DecreaseHP()
     {
         HP--;

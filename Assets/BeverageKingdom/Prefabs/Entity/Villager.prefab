@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101968970838250997}
-  - component: {fileID: 1956537547690220524}
+  - component: {fileID: 7785667035142545142}
+  - component: {fileID: 3276596810006431659}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Ani
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +33,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5651233425944984366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1956537547690220524
+--- !u!95 &7785667035142545142
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175824827034525173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5993935b07fbdb947b3795260b11a317, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &3276596810006431659
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,12 +95,12 @@ SpriteRenderer:
   m_SortingLayerID: 477692355
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.45747674, g: 0.8018868, b: 0.374466, a: 1}
+  m_Sprite: {fileID: -479090367, guid: 894b5cbe8082a7d44a15c3dbb32910ca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.13, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -134,6 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VillagerMovement: {fileID: 7963116049216019115}
+  HP: 3
+  animator: {fileID: 7785667035142545142}
 --- !u!50 &6308924408376525321
 Rigidbody2D:
   serializedVersion: 4
@@ -210,6 +234,9 @@ MonoBehaviour:
   Target: {fileID: 0}
   IsEntityInRange: 0
   DetectionRange: {fileID: 3299361434542059082}
+  IsWalking: 0
+  IsIdling: 0
+  IsHitting: 0
 --- !u!1 &7375926097080473660
 GameObject:
   m_ObjectHideFlags: 0
