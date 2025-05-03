@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class VillagerAnimation : MonoBehaviour
 {
-    public Action OnDoneHit;
+    public Action OnDoneAttack;
     public void DoneHit()
     {
-        OnDoneHit?.Invoke();
+        OnDoneAttack?.Invoke();
     }
 }

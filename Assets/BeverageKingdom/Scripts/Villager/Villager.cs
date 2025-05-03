@@ -6,7 +6,7 @@ public class Villager : MonoBehaviour
     {
         Idle,
         Walk,
-        Hit
+        Attack
     }
 
     public float AttackRange = 2f;
@@ -20,7 +20,7 @@ public class Villager : MonoBehaviour
 
     public VillagerMovement VillagerMovement;
     public VillagerAnimation VillagerAnimation;
-    bool IsDoneHit = false;
+    bool IsDoneAttack = false;
 
     public int HP = 3;
 
@@ -30,7 +30,7 @@ public class Villager : MonoBehaviour
     {
         currentState = VillagerState.Idle;
         VillagerMovement.OnStageChange += SetAnimator;
-        VillagerAnimation.OnDoneHit += OnDoneHit;
+        VillagerAnimation.OnDoneAttack += OnDoneAttack;
     }
 
     void SetAnimator(int index)
@@ -40,13 +40,13 @@ public class Villager : MonoBehaviour
 
         if (index == 3)
         {
-            animator.SetBool("Hit", true);
-            animator.Play("Hit", 0, 0f);
+            animator.SetBool("Attack", true);
+            animator.Play("Attack", 0, 0f);
         }
 
         else
         {
-            animator.SetBool("Hit", false);
+            animator.SetBool("Attack", false);
         }
     }
 
@@ -82,8 +82,8 @@ public class Villager : MonoBehaviour
                 HandleWalk();
                 break;
 
-            case VillagerState.Hit:
-                HandleHit();
+            case VillagerState.Attack:
+                HandleAttack();
                 break;
         }
 
@@ -120,7 +120,7 @@ public class Villager : MonoBehaviour
     {
         if (IsInAttackRange())
         {
-            ChangeState(VillagerState.Hit);
+            ChangeState(VillagerState.Attack);
         }
 
         else
@@ -135,10 +135,10 @@ public class Villager : MonoBehaviour
         }
     }
 
-    void HandleHit()
+    void HandleAttack()
     {
         VillagerMovement.SetStage(3);
-        if (IsDoneHit == true)
+        if (IsDoneAttack == true)
         {
             _coolDownTimer += Time.deltaTime;
 
@@ -148,13 +148,13 @@ public class Villager : MonoBehaviour
 
                 ChangeState(VillagerState.Idle);
                 VillagerMovement.SetStage(1);
-                IsDoneHit = false;
+                IsDoneAttack = false;
             }
         }
     }
 
-    void OnDoneHit()
+    void OnDoneAttack()
     {
-        IsDoneHit = true;
+        IsDoneAttack = true;
     }
 }
