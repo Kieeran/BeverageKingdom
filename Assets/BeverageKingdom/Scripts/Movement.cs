@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            if (IsEnemy)
+            if (IsEnemy == true)
                 transform.parent.position += Vector3.left * MoveSpeed * Time.deltaTime;
         }
     }
