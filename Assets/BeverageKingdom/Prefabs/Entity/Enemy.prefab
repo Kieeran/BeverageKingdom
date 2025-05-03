@@ -41,9 +41,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3382394541460262879}
-  - component: {fileID: 7719565881684376618}
+  - component: {fileID: 7614361190701215873}
   m_Layer: 6
-  m_Name: EnemyMovement
+  m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9169969084037855931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7719565881684376618
+--- !u!114 &7614361190701215873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,12 +73,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4634441877426942058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8044a6bd7d4fc3f46b2592e8aadd8db0, type: 3}
+  m_Script: {fileID: 11500000, guid: e42961c0fa46f574bbbc643bdb4c0aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  detectionRange: 5
-  IsEnemeyInRange: 0
+  IsEnemy: 1
+  MoveSpeed: 1
+  Target: {fileID: 0}
+  IsEntityInRange: 0
   DetectionRange: {fileID: 3919812992736525623}
 --- !u!1 &4887401757434989689
 GameObject:
