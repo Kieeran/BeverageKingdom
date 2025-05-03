@@ -9,6 +9,8 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _spawnVillager;
     [SerializeField] Transform _comboController;
     [SerializeField] Transform _projectileSpawner;
+    [SerializeField] Transform _effectSpawner;
+    [SerializeField] Transform _playerInput;
 
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
@@ -37,6 +39,8 @@ public class Controller : MonoBehaviour
         Instantiate(_spawnVillager.gameObject);
         Instantiate(_comboController.gameObject);
         Instantiate(_projectileSpawner.gameObject);
+        Instantiate(_effectSpawner.gameObject);
+        Instantiate(_playerInput.gameObject);
     }
 
     void Start()
