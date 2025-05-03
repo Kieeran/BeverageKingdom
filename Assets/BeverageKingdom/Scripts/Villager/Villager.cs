@@ -3,19 +3,31 @@ using UnityEngine;
 public class Villager : MonoBehaviour
 {
     private Vector3 targetPosition;
-    float _moveSpeed = 5f;
+    bool moveOnSpawn = false;
+
+    public Movement VillagerMovement;
 
     public void SetTargetPosition(Vector3 pos)
     {
         targetPosition = pos;
+        moveOnSpawn = true;
     }
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            targetPosition,
-            _moveSpeed * Time.deltaTime
-        );
+        if (moveOnSpawn == true)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                targetPosition,
+                VillagerMovement.MoveSpeed * 5 * Time.deltaTime
+            );
+        }
+
+        if (Vector3.Distance(transform.position, targetPosition) <= 0.01f && moveOnSpawn == true)
+        {
+            transform.position = targetPosition;
+            moveOnSpawn = false;
+        }
     }
 }
