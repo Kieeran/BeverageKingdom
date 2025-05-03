@@ -17,7 +17,7 @@ public class MeleeWeapon : Weapon
             // Nếu target có Enemy, gây damage
             if (hit.collider.TryGetComponent<Enemy>(out var enemy))
             {
-                enemy.Deduct(damage);
+                enemy.Deduct(3);
             }
         }
         // Bạn có thể thêm effect, âm thanh ở đây

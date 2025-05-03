@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private WeaponController WeaponController;
+    private WeaponController WeaponController;
 
     public static Player instance;
     private void Awake()
@@ -19,11 +19,15 @@ public class Player : MonoBehaviour
         }
 
     }
+    private void Start()
+    {
+        WeaponController = GetComponent<WeaponController>();
 
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetMouseButton(0))
         {
             WeaponController.Attack();
         }

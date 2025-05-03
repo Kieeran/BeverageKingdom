@@ -7,6 +7,8 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _envPrefab;
     [SerializeField] Transform _spawnEnemy;
     [SerializeField] Transform _spawnVillager;
+    [SerializeField] Transform _comboController;
+    [SerializeField] Transform _projectileSpawner;
 
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
@@ -33,6 +35,8 @@ public class Controller : MonoBehaviour
         Env = Instantiate(_envPrefab.gameObject).transform;
         Instantiate(_spawnEnemy.gameObject);
         Instantiate(_spawnVillager.gameObject);
+        Instantiate(_comboController.gameObject);
+        Instantiate(_projectileSpawner.gameObject);
     }
 
     void Start()

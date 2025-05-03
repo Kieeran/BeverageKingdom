@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708ed7b8cd695a42a4b15bf5009643c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainCanvasPrefab: {fileID: 5600984219391760075, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
+  _mainCanvasPrefab: {fileID: 6963734709210465887, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ Transform:
   m_GameObject: {fileID: 1321143015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -306,8 +306,7 @@ MonoBehaviour:
   _playerPrefab: {fileID: 50163657437851169, guid: b573f7a03c8da564d9d9c22f4ce247a9, type: 3}
   _envPrefab: {fileID: 6831704392356177135, guid: 7731ddee1c5f82b44aefac387474df59, type: 3}
   _spawnEnemy: {fileID: 3288029841012418539, guid: 82ed9bfab78da104e93584102592a70a, type: 3}
-  _comboController: {fileID: 2237165565382079234, guid: 7b8c92610858d0246b9343fe2fa11971, type: 3}
-  _spawnProjectile: {fileID: 3593831422830620481, guid: 347b94742f5e1cc45be8d8d8241a521d, type: 3}
+  _spawnVillager: {fileID: 8658250607024624497, guid: e5763547f2865714db1c439e706df353, type: 3}
 --- !u!1 &1502749804
 GameObject:
   m_ObjectHideFlags: 0
