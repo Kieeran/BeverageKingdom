@@ -7,6 +7,14 @@ public class Villager : MonoBehaviour
 
     public Movement VillagerMovement;
 
+    public int HP = 3;
+
+    public void DecreaseHP()
+    {
+        HP--;
+        if (HP == 0) Destroy(gameObject);
+    }
+
     public void SetTargetPosition(Vector3 pos)
     {
         targetPosition = pos;
