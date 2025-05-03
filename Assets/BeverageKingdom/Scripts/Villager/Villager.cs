@@ -1,35 +1,21 @@
 using UnityEngine;
 
-public class Villager : TriBehaviour
+public class Villager : MonoBehaviour
 {
-    [Header("Thiết lập máu")]
-    [SerializeField] private int maxHealth = 10;
-    private int currentHealth;
+    private Vector3 targetPosition;
+    float _moveSpeed = 5f;
 
-    protected override void Awake()
+    public void SetTargetPosition(Vector3 pos)
     {
-        currentHealth = maxHealth;
-    }
-    public override void OnEnable()
-    {
-        base.OnEnable();
-        currentHealth = maxHealth;
+        targetPosition = pos;
     }
 
-    public void Deduct(int amount)
+    void Update()
     {
-        currentHealth -= amount;
-        Debug.Log($"{gameObject.name} nhận {amount} damage, còn {currentHealth} HP");
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        Debug.Log($"{gameObject.name} đã chết!");
-        Destroy(gameObject);
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            targetPosition,
+            _moveSpeed * Time.deltaTime
+        );
     }
 }

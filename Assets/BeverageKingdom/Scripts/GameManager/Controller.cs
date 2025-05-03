@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _spawnVillager;
 
     public Transform Player { get; private set; }
+    public Transform Env { get; private set; }
 
     public static Controller Instance { get; private set; }
 
@@ -29,7 +30,7 @@ public class Controller : MonoBehaviour
     void InitGame()
     {
         Player = Instantiate(_playerPrefab.gameObject).transform;
-        Instantiate(_envPrefab.gameObject);
+        Env = Instantiate(_envPrefab.gameObject).transform;
         Instantiate(_spawnEnemy.gameObject);
         Instantiate(_spawnVillager.gameObject);
     }

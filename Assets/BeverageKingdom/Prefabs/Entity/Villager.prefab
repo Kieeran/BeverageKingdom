@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1065858905010002018
 Transform:
   m_ObjectHideFlags: 0
@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fac66dff78458458e3735f70bc6223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
 --- !u!50 &6308924408376525321
 Rigidbody2D:
   serializedVersion: 4
@@ -213,7 +212,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 811874467483366521}
-  - component: {fileID: 1175860572458377624}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -236,20 +234,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1065858905010002018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1175860572458377624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6688669550623590742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46808e72cb13a0c4b85cb3f2b2e2bd8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  detectionRange: 5
 --- !u!1 &7375926097080473660
 GameObject:
   m_ObjectHideFlags: 0
