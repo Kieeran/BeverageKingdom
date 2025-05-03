@@ -5,8 +5,16 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float moveSpeed = 2f;
-    public float detectionRange = 5f;
+    // public float detectionRange = 5f;
     private Transform player;
+    public bool IsEnemeyInRange;
+    public DetectionRange DetectionRange;
+
+    void Awake()
+    {
+        DetectionRange.OnInRange += SetEnemyInRange;
+        DetectionRange.OnOutRange += SetEnemyOutRange;
+    }
 
     void Start()
     {
@@ -23,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if (player != null && IsPlayerInRange())
+        if (player != null && IsEnemeyInRange == true)
         {
             // Di chuyển về phía người chơi
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
@@ -36,8 +44,13 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    bool IsPlayerInRange()
+    void SetEnemyInRange()
     {
-        return Vector3.Distance(transform.parent.position, player.position) <= detectionRange;
+        IsEnemeyInRange = true;
+    }
+
+    void SetEnemyOutRange()
+    {
+        IsEnemeyInRange = false;
     }
 }

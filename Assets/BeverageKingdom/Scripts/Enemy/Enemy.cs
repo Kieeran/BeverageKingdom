@@ -15,7 +15,7 @@ public class Enemy : TriBehaviour
     public override void OnEnable()
     {
         base.OnEnable();
-        currentHealth = maxHealth;  
+        currentHealth = maxHealth;
     }
 
     public void Deduct(int amount)
