@@ -1,6 +1,7 @@
 ﻿// WeaponController.cs
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WeaponController : MonoBehaviour
 {
@@ -30,9 +31,7 @@ public class WeaponController : MonoBehaviour
         // Fire khi bấm chuột trái
         if (Input.GetButton("Fire1") && CurrentWeapon != null)
         {
-            CurrentWeapon.Attack(firePoint);
-
-
+            // CurrentWeapon.Attack(firePoint);
         }
     }
 
