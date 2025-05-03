@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: b2929214a1c71434389a55af0c807214
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 384
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdf068345d0c86428d7ae62e9324357
+      internalID: -309207110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 384
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf3e6c3d41f5dc4c85a5616ef6f6f93
+      internalID: -794988129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 384
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c9e00231f568649a08b627957630cb
+      internalID: 2100378578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 384
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170b54050566a2d4083bdddb51f63986
+      internalID: -225525152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 384
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed11c626707b60409611cc42343efd1
+      internalID: -349705854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 384
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f75859caf360b945a0447bee71a0cb7
+      internalID: -66001338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 320
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8955496315bae1a4ea38364da8f241b3
+      internalID: 362782645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 320
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427bfb114802a4f40905314dd24ef85a
+      internalID: 238031021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 320
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c3113d219d25e438beb374c04add42
+      internalID: 818449494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_9
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 320
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbc5445f4b3d524596e1e08ca11f3fe
+      internalID: -956364177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 320
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1d31d591de56141887ebb49fc3c26a
+      internalID: -1362504070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 320
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f62e2760bc1964091bf0be2ef83acb
+      internalID: -1747210632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 256
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd16edf94f467814fbed2592da5aad25
+      internalID: 1551682998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 256
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25dec41c9bf30f44a87ff228c49ad29
+      internalID: 2053553874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_14
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 192
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce069926a3cf42448b029902400ca82
+      internalID: 1154532539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 195
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddbb127aef1bb34eb7454c256129e6c
+      internalID: -1578700489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 196
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5826e38f5fc244747a443df35eab0a0f
+      internalID: 1638847682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 192
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af8c6578c76233438c179400d9af97c
+      internalID: 1902877273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_18
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 192
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052ab30e1aa25fb4ab8d140599182dfc
+      internalID: -1871535358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_19
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 192
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961adb4f4f642344bb407dff1f9773ea
+      internalID: 1651924335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 192
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7dc33cb4369164c9278fdc07414021
+      internalID: -1428922060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_21
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 128
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67500b57ee2f86440a2f892cc428e625
+      internalID: -977707268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_22
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 128
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dc267bb900180409ff176de9ac5a20
+      internalID: -1266412779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 128
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df54212ab5f548b47a44ab66992bbe9a
+      internalID: 695186560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_24
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 128
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866a6970e58ad9d49969d75eb77d0557
+      internalID: 798340896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_25
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 128
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661b6bb17207a994a8579a9248955d84
+      internalID: -564436873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_26
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 128
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef541f8432fcb1a4594533fafbba972e
+      internalID: -1167661381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_27
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 128
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046eeaddff9b69c459b61a1bdbb9bf47
+      internalID: 1460419539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_28
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 128
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431067b9f41f7994e93938ab2210f203
+      internalID: 289273247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_29
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 128
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750be5d844ab7e045b1e7565dbee7e2b
+      internalID: -2106678429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 64
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b65dab9c5e342c47ab0e25610f3b63d
+      internalID: -1023747784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_31
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 64
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47d28053c9d6e9449ef6a5aba8a2c66
+      internalID: -754990315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_32
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 64
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb04138ca570444b9dc4dca38a274fd
+      internalID: 84422496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_33
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 64
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958118d5bb707ab4488aeaf10284fd61
+      internalID: 914309018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_34
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 64
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde28bbfc05449f46bb5bbf51289b09c
+      internalID: 1695159871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_35
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 64
+        width: 38
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a6493bc01c019468c1997920010ec6
+      internalID: 203319038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_36
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 64
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a69870681efda49b183e9b41f0a252
+      internalID: 584626361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_37
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 64
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a963d311ad9a72d4f987d756d94e295e
+      internalID: 506254486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_38
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 64
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5c0b19b789b08469b07354428eebe2
+      internalID: 1840123294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_39
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 64
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25829df98eb99f4c907c72a38343986
+      internalID: -204644507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_40
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 64
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342db7cb840af944e9ace67077d568ee
+      internalID: 159075118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e637f84e8ff17489518f63154df925
+      internalID: -412689371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_42
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0a92bbc3a4c5847a792ee0d482e363
+      internalID: -39237960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_43
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b858d4a41225c024bbef898e232a28ac
+      internalID: 562889787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_44
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d4bcd3ad6fec84291ef7d55b64548a
+      internalID: 1893709557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_45
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5328cd020fb728c448111bca19d46556
+      internalID: -631496924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_46
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58421b7670c3f74da9e21d55899e062
+      internalID: -2014677603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_47
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4453476e8aff46a4781c80d4aa226002
+      internalID: -1554024827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PumpkingAdeventurer-Sheet-meele_48
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6a184aa3873e74c84d52ae95c9b779
+      internalID: 704468168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PumpkingAdeventurer-Sheet-meele_0: -309207110
+      PumpkingAdeventurer-Sheet-meele_1: -794988129
+      PumpkingAdeventurer-Sheet-meele_10: -1362504070
+      PumpkingAdeventurer-Sheet-meele_11: -1747210632
+      PumpkingAdeventurer-Sheet-meele_12: 1551682998
+      PumpkingAdeventurer-Sheet-meele_13: 2053553874
+      PumpkingAdeventurer-Sheet-meele_14: 1154532539
+      PumpkingAdeventurer-Sheet-meele_15: -1578700489
+      PumpkingAdeventurer-Sheet-meele_16: 1638847682
+      PumpkingAdeventurer-Sheet-meele_17: 1902877273
+      PumpkingAdeventurer-Sheet-meele_18: -1871535358
+      PumpkingAdeventurer-Sheet-meele_19: 1651924335
+      PumpkingAdeventurer-Sheet-meele_2: 2100378578
+      PumpkingAdeventurer-Sheet-meele_20: -1428922060
+      PumpkingAdeventurer-Sheet-meele_21: -977707268
+      PumpkingAdeventurer-Sheet-meele_22: -1266412779
+      PumpkingAdeventurer-Sheet-meele_23: 695186560
+      PumpkingAdeventurer-Sheet-meele_24: 798340896
+      PumpkingAdeventurer-Sheet-meele_25: -564436873
+      PumpkingAdeventurer-Sheet-meele_26: -1167661381
+      PumpkingAdeventurer-Sheet-meele_27: 1460419539
+      PumpkingAdeventurer-Sheet-meele_28: 289273247
+      PumpkingAdeventurer-Sheet-meele_29: -2106678429
+      PumpkingAdeventurer-Sheet-meele_3: -225525152
+      PumpkingAdeventurer-Sheet-meele_30: -1023747784
+      PumpkingAdeventurer-Sheet-meele_31: -754990315
+      PumpkingAdeventurer-Sheet-meele_32: 84422496
+      PumpkingAdeventurer-Sheet-meele_33: 914309018
+      PumpkingAdeventurer-Sheet-meele_34: 1695159871
+      PumpkingAdeventurer-Sheet-meele_35: 203319038
+      PumpkingAdeventurer-Sheet-meele_36: 584626361
+      PumpkingAdeventurer-Sheet-meele_37: 506254486
+      PumpkingAdeventurer-Sheet-meele_38: 1840123294
+      PumpkingAdeventurer-Sheet-meele_39: -204644507
+      PumpkingAdeventurer-Sheet-meele_4: -349705854
+      PumpkingAdeventurer-Sheet-meele_40: 159075118
+      PumpkingAdeventurer-Sheet-meele_41: -412689371
+      PumpkingAdeventurer-Sheet-meele_42: -39237960
+      PumpkingAdeventurer-Sheet-meele_43: 562889787
+      PumpkingAdeventurer-Sheet-meele_44: 1893709557
+      PumpkingAdeventurer-Sheet-meele_45: -631496924
+      PumpkingAdeventurer-Sheet-meele_46: -2014677603
+      PumpkingAdeventurer-Sheet-meele_47: -1554024827
+      PumpkingAdeventurer-Sheet-meele_48: 704468168
+      PumpkingAdeventurer-Sheet-meele_5: -66001338
+      PumpkingAdeventurer-Sheet-meele_6: 362782645
+      PumpkingAdeventurer-Sheet-meele_7: 238031021
+      PumpkingAdeventurer-Sheet-meele_8: 818449494
+      PumpkingAdeventurer-Sheet-meele_9: -956364177
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,25 +1,59 @@
 ﻿// MeleeWeapon.cs
 using UnityEngine;
 
-// [CreateAssetMenu(menuName = "Weapons/Melee Weapon")]
 public class MeleeWeapon : Weapon
 {
-    [Header("Khoảng cách và Layer target")]
-    public float range = 2f;
+    public float attackLength = 1f;
+    public float attackWidth = 2f;
     public LayerMask hitLayers;
+
+    public float attackCooldown = 0.5f;
+    private float nextAttackTime = 0f;
 
     public override void Attack(Transform fireOrigin)
     {
-        // Chém gần: raycast thẳng theo hướng forward
-        RaycastHit hit;
-        if (Physics.Raycast(fireOrigin.position, fireOrigin.forward, out hit, range, hitLayers))
+        if (Time.time < nextAttackTime) return;
+        nextAttackTime = Time.time + attackCooldown;
+
+        Vector2 origin = transform.position + Vector3.right;
+        Vector2 forward = fireOrigin.right.normalized;
+        Vector2 boxCenter = origin + forward * (attackLength * 0.5f);
+
+        Vector2 boxSize = new Vector2(attackLength, attackWidth);
+
+        float angle = fireOrigin.eulerAngles.z;
+        EffectSpawner.instance.Spawn(EffectSpawner.Slash, boxCenter, fireOrigin.rotation);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(boxCenter, boxSize, angle, hitLayers);
+
+        foreach (var hit in hits)
         {
-            // Nếu target có Enemy, gây damage
-            if (hit.collider.TryGetComponent<Enemy>(out var enemy))
+            if (hit.TryGetComponent<Enemy>(out var enemy))
             {
-                enemy.Deduct(3);
+                enemy.Deduct(damage);
+                ComboController.Instance.AddCombo();
             }
         }
-        // Bạn có thể thêm effect, âm thanh ở đây
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (transform == null) return;
+
+        Vector2 origin = transform.position + Vector3.right;
+        Vector2 forward = transform.right.normalized;
+        Vector2 boxCenter = origin + forward * (attackLength * 0.5f);
+        Vector2 boxSize = new Vector2(attackLength, attackWidth);
+        float angle = transform.eulerAngles.z;
+
+        // Lưu ma trận gốc
+        Matrix4x4 oldMat = Gizmos.matrix;
+
+        Gizmos.matrix = Matrix4x4.TRS(boxCenter, Quaternion.Euler(0, 0, angle), Vector3.one);
+        Gizmos.color = Color.red;
+        // Vẽ hộp có center=(0,0), size=boxSize
+        Gizmos.DrawWireCube(Vector3.zero, boxSize);
+
+        // Khôi phục ma trận
+        Gizmos.matrix = oldMat;
     }
 }
