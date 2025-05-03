@@ -1,7 +1,7 @@
 ﻿// RangedWeapon.cs
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Weapons/Ranged Weapon")]
+// [CreateAssetMenu(menuName = "Weapons/Ranged Weapon")]
 public class RangedWeapon : Weapon
 {
     [Header("Prefab đạn và tốc độ bắn")]

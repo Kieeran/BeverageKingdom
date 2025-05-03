@@ -1,7 +1,7 @@
 ﻿// MeleeWeapon.cs
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Weapons/Melee Weapon")]
+// [CreateAssetMenu(menuName = "Weapons/Melee Weapon")]
 public class MeleeWeapon : Weapon
 {
     [Header("Khoảng cách và Layer target")]
