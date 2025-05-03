@@ -1,22 +1,28 @@
-﻿// RangedWeapon.cs
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Weapons/Ranged Weapon")]
 public class RangedWeapon : Weapon
 {
-    [Header("Prefab đạn và tốc độ bắn")]
-    public GameObject projectilePrefab;
-    public float projectileSpeed = 20f;
+    [Header("Cooldown Settings")]
+    [SerializeField] private float attackCooldown = 0.5f;
+
+    private float lastAttackTime = -Mathf.Infinity;
 
     public override void Attack(Transform fireOrigin)
     {
-        // Spawn viên đạn
-        GameObject proj = Instantiate(projectilePrefab, fireOrigin.position, fireOrigin.rotation);
-        // Gán velocity
-        if (proj.TryGetComponent<Rigidbody>(out var rb))
-            rb.velocity = fireOrigin.forward * projectileSpeed;
+        if (!CanShooting())
+            return;               // Chưa đủ thời gian chờ, không bắn
 
-       /* if (proj.TryGetComponent<Projectile>(out var p))
-            p.damage = damage;*/
+        // Cập nhật thời điểm bắn
+        lastAttackTime = Time.time;
+
+        // Spawn viên đạn
+        GameObject proj = ProjectileSpawner.Instance.Spawn(ProjectileSpawner.Bullet, fireOrigin.position, fireOrigin.rotation).gameObject;
+
+        // ... (các thiết lập thêm cho projectile nếu cần)
+    }
+
+    private bool CanShooting()
+    {
+        return Time.time >= lastAttackTime + attackCooldown;
     }
 }

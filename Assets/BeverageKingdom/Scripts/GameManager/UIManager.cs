@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] MainCanvas _mainCanvasPrefab;
+    [SerializeField] GameObject _mainCanvasPrefab;
 
     public MainCanvas MainCanvas { get; private set; }
 
@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
 
     void InitGame()
     {
-        GameObject mainCanvas = Instantiate(_mainCanvasPrefab.gameObject);
+        GameObject mainCanvas = Instantiate(_mainCanvasPrefab);
         MainCanvas = mainCanvas.GetComponent<MainCanvas>();
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 public class ComboController : MonoBehaviour
 {
     public static ComboController Instance { get; private set; }
+    [SerializeField] private List<ComboSkill> skillList = new List<ComboSkill>();    
+    
 
     [Header("Cài đặt combo")]
     public float comboResetDelay = 2f;   
@@ -40,6 +42,10 @@ public class ComboController : MonoBehaviour
         CurrentCombo = Mathf.Min(CurrentCombo + amount, maxCombo);
         resetTimer = comboResetDelay;
         OnComboChanged?.Invoke(CurrentCombo);
+        foreach (ComboSkill comboSkill in skillList)
+        {
+            comboSkill.TriggerComboSkill(CurrentCombo);
+        }
     }
 
     private void ResetCombo()

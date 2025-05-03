@@ -35,12 +35,16 @@ public class WeaponController : MonoBehaviour
 
         }
     }
+    public void Attack()
+    {
+        weapons[currentIndex].Attack(firePoint);
+    }
 
     public void SwitchWeapon(int dir)
     {
         if (weapons == null || weapons.Count == 0) return;
 
         currentIndex = (currentIndex + dir + weapons.Count) % weapons.Count;
-        Debug.Log($"Switched to weapon: {weapons[currentIndex].weaponName}");
+       // Debug.Log($"Switched to weapon: {weapons[currentIndex].weaponName}");
     }
 }
