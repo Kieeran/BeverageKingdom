@@ -23,11 +23,11 @@ public class ComboTextAnimation : MonoBehaviour
         canvasGroup.alpha = 0f;      // ẩn ban đầu
     }
 
-    private void OnEnable()
+    private void Start()
     {
         ComboController.Instance.OnComboChanged += OnComboChanged;
-    }
 
+    }
     private void OnDisable()
     {
         ComboController.Instance.OnComboChanged -= OnComboChanged;

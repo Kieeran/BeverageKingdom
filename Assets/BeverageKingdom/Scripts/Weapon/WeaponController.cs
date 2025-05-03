@@ -31,8 +31,6 @@ public class WeaponController : MonoBehaviour
         if (Input.GetButton("Fire1") && CurrentWeapon != null)
         {
             CurrentWeapon.Attack(firePoint);
-
-
         }
     }
     public void Attack()
