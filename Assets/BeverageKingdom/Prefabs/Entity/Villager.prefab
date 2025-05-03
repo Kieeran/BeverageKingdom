@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 101968970838250997}
   - component: {fileID: 7785667035142545142}
   - component: {fileID: 3276596810006431659}
+  - component: {fileID: 5619177395075004523}
   m_Layer: 0
   m_Name: Ani
   m_TagString: Untagged
@@ -106,6 +107,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5619177395075004523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175824827034525173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3777a0362c7984fb23ea96a81d85a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091671726167659687
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fac66dff78458458e3735f70bc6223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackRange: 1
+  AttackCoolDown: 1
+  currentState: 0
   VillagerMovement: {fileID: 7558576715593562775}
+  VillagerAnimation: {fileID: 5619177395075004523}
   HP: 3
   animator: {fileID: 7785667035142545142}
 --- !u!50 &6308924408376525321
@@ -233,6 +250,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   IsEntityInRange: 0
   DetectionRange: {fileID: 3299361434542059082}
+  Villager: {fileID: 4615887583280631623}
   IsWalking: 0
   IsIdling: 0
   IsHitting: 0

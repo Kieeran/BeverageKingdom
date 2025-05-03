@@ -7,6 +7,8 @@ public class VillagerSpawner : MonoBehaviour
 
     List<SpawnArea> _spawnAreas = new();
 
+    public int spawnNum;
+
     void Start()
     {
         UIManager.Instance.MainCanvas.OnSpawnVillagerAtSlot1 += OnSpawnVillagerAtSlot1;
@@ -45,7 +47,7 @@ public class VillagerSpawner : MonoBehaviour
         float minY = Mathf.Min(leftTop.position.y, rightBottom.position.y);
         float maxY = Mathf.Max(leftTop.position.y, rightBottom.position.y);
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < spawnNum; i++)
         {
             float randomX = Random.Range(minX, maxX);
             float randomY = Random.Range(minY, maxY);

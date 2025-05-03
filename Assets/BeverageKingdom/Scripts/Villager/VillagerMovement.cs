@@ -9,9 +9,10 @@ public class VillagerMovement : MonoBehaviour
     [HideInInspector]
     public bool IsEntityInRange;
     public DetectionRange DetectionRange;
+    public Villager Villager;
 
     public Action<int> OnStageChange;
-    
+
     [HideInInspector]
     public bool IsWalking;
     [HideInInspector]
@@ -29,19 +30,26 @@ public class VillagerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Target != null && IsEntityInRange == true)
-        {
-            Vector3 directionToPlayer = (Target.position - transform.position).normalized;
-            transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
-            SetStage(2);
-        }
-        else
-        {
-            SetStage(1);
-        }
+        // if (Target != null && IsEntityInRange == true)
+        // {
+        //     Vector3 directionToPlayer = (Target.position - transform.position).normalized;
+        //     transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
+        //     SetStage(2);
+        // }
+        // else
+        // {
+        //     SetStage(1);
+        // }
     }
 
-    void SetStage(int index)
+    public void Walk()
+    {
+        Vector3 directionToPlayer = (Target.position - transform.position).normalized;
+        transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
+        SetStage(2);
+    }
+
+    public void SetStage(int index)
     {
         if (index == 1 && IsIdling == true) return;
         if (index == 2 && IsWalking == true) return;
