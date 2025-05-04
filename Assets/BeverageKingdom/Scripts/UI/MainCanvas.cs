@@ -73,6 +73,7 @@ public class MainCanvas : MonoBehaviour
 
         PlayAgainButton.onClick.AddListener(() =>
         {
+            Time.timeScale = 1f;
             SceneManager.LoadSceneAsync("PlayScene");
         });
 
