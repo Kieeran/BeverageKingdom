@@ -20,14 +20,14 @@ public class ComboBar : MonoBehaviour
     private void UpdateBar(int combo)
     {
         slider.fillAmount = (float)combo/maxCombo;
-        Debug.Log($"ComboBar: "  +maxCombo);
+        Debug.Log($"ComboBar: "  +maxCombo + "      "+ combo); 
         if (combo >= maxCombo)
         {
             //comboController.CurrentCombo = 0;
             comboController.ResetCombo();
             maxCombo += 5;
             EffectSpawner.instance.Spawn(EffectSpawner.LevelUp, Player.instance.transform.position,Quaternion.identity);
-           // Player.instance.LevelUp();
+            Player.instance.LevelUp();
         }
     }
 }

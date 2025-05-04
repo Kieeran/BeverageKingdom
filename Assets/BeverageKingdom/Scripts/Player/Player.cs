@@ -164,4 +164,11 @@ public class Player : MonoBehaviour
             playerSpr.sprite = playerGunSpr;
         }
     }
+    public void LevelUp()
+    {
+        MaxHP += 5;
+        HP = MaxHP;
+        Debug.Log("Level up");
+        HealthBarFillUI.fillAmount = HP / MaxHP;
+    }
 }

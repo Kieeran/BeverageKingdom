@@ -7,6 +7,10 @@ public class RangedWeapon : Weapon
 
     [SerializeField] private float fireCooldown = 0.5f;
     private float nextFireTime = 0f;
+    protected override void Start()
+    {
+        damage = 6;
+    }
 
     public override void Attack()
     {
@@ -19,5 +23,10 @@ public class RangedWeapon : Weapon
         ProjectileSpawner.Instance
                        .Spawn(ProjectileSpawner.Bullet, fireOrigin.position, fireOrigin.rotation);
 
+    }
+    public override void PlayerUpgrade()
+    {
+        base.PlayerUpgrade();
+        damage += 2;
     }
 }

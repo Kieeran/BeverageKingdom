@@ -24,7 +24,6 @@ public class IceFreeze : ComboSkill
 
             ProjectileSpawner.Instance.Spawn(ProjectileSpawner.Ice, spawnPos, Quaternion.identity);
 
-            Debug.Log("asdasd");
 
         }
     }

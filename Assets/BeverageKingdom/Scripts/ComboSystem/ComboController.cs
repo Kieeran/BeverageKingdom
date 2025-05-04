@@ -42,7 +42,8 @@ public class ComboController : MonoBehaviour
     // Gọi khi bạn đánh trúng/quái chết
     public void AddCombo(int amount = 1)
     {
-        CurrentCombo = Mathf.Min(CurrentCombo + amount, maxCombo);
+        // CurrentCombo = Mathf.Min(CurrentCombo + amount, maxCombo);
+        CurrentCombo += amount;
         resetTimer = comboResetDelay;
         OnComboChanged?.Invoke(CurrentCombo);
         foreach (ComboSkill comboSkill in skillList)

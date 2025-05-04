@@ -18,7 +18,6 @@ public class ComboSkill : MonoBehaviour
     protected virtual void ActivateComboSkill()
     {
 
-        Debug.Log(comboName);
 
     }
 }
