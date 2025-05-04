@@ -20,7 +20,7 @@ public class ComboBar : MonoBehaviour
     private void UpdateBar(int combo)
     {
         slider.fillAmount = (float)combo/maxCombo;
-        Debug.Log($"ComboBar: "  +maxCombo + "      "+ combo); 
+        Debug.Log($"ComboBar: "  +maxCombo + "      "+ combo    ); 
         if (combo >= maxCombo)
         {
             //comboController.CurrentCombo = 0;

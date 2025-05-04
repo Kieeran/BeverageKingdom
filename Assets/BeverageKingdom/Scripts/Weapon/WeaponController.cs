@@ -46,8 +46,5 @@ public class WeaponController : MonoBehaviour
     {
         weapons[currentIndex].Attack();
     }
-    public virtual void PlayerUpgrade()
-    {
-
-    }
+    
 }
