@@ -9,7 +9,7 @@ public class RangedWeapon : Weapon
     private float nextFireTime = 0f;
     protected override void Start()
     {
-        damage = 6;
+        fireCooldown = 0.01f;
     }
 
     public override void Attack()

@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboName: Ice Freeze
-  comboIntTrigger: 12
+  comboIntTrigger: 25
   tmpPro: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
   fadeDuration: 0.3
   displayDuration: 1.2
   punchDuration: 0.5
@@ -102,6 +103,7 @@ MonoBehaviour:
   comboName: Electric
   comboIntTrigger: 5
   tmpPro: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
   fadeDuration: 0.3
   displayDuration: 1.2
   punchDuration: 0.5

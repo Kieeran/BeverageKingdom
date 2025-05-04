@@ -36,8 +36,6 @@ public class Enemy : TriBehaviour
 
     protected override void Awake()
     {
-        CurrentHealth = maxHealth;
-
         EnemyMovement.OnStageChange += SetAnimator;
         EnemyAnimation.OnDoneAttack += OnDoneAttack;
     }
@@ -48,7 +46,6 @@ public class Enemy : TriBehaviour
 
         ChangeState(EnemyState.Walk);
         Init();
-
     }
     private void Init()
     {
@@ -56,7 +53,6 @@ public class Enemy : TriBehaviour
         AttackCoolDown = enemyData.attackCoolDown;
         Damage = enemyData.dameAttack;
         maxHealth = enemyData.maxHealth;
-        //HumanPose =
         CurrentHealth = maxHealth;
     }
     void SetAnimator(int index)

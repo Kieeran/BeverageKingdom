@@ -221,12 +221,12 @@ MonoBehaviour:
   EnemyAnimation: {fileID: 910250489033305400}
   VillagerDetectionRange: {fileID: 6019219554763910641}
   VillagerCollision: {fileID: 7954088939533346405}
-  maxHealth: 8
+  maxHealth: 6
   CurrentHealth: 2
   animator: {fileID: 2996638185219542788}
   AttackRange: 2
   AttackCoolDown: 1
-  Damage: 2
+  Damage: 3
   HealthBarFillUI: {fileID: 6053659228006615538}
 --- !u!50 &1581289313147508839
 Rigidbody2D:

@@ -15,13 +15,13 @@ MonoBehaviour:
   waves:
   - enemies:
     - enemyData: {fileID: 11400000, guid: d86f86f0e0677cb41950fbb7c1384e0b, type: 2}
-      count: 70
+      count: 45
   - enemies:
     - enemyData: {fileID: 11400000, guid: 88c23a243f8031e4ebd4f8f7bd642035, type: 2}
       count: 80
   - enemies:
     - enemyData: {fileID: 11400000, guid: 1407cfa6153c24d4f8a910f92b8ad3e9, type: 2}
-      count: 90
+      count: 40
   - enemies:
     - enemyData: {fileID: 11400000, guid: f85d67855bdbb1e4eb357634e63f6d83, type: 2}
-      count: 100
+      count: 60

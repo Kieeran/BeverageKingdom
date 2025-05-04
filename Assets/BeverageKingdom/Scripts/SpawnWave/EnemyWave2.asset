@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   enemyName: EnemyWave1
-  maxHealth: 15
-  speed: 3
-  dameAttack: 75
+  maxHealth: 8
+  speed: 4.5
+  dameAttack: 1
   moneyForDead: 0
   attackRange: 2
-  attackCoolDown: 0
+  attackCoolDown: 1
