@@ -75,7 +75,9 @@ public class Player : MonoBehaviour
 
         if (HP <= 0)
         {
-            anim.Play("Dead", 0, 0f);
+            //anim.Play("Dead", 0, 0f);
+            stateMachine.ChangeState(dead);
+
 
             PlayerDetectionRange.gameObject.SetActive(false);
             PlayerCollision.gameObject.SetActive(false);
