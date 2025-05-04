@@ -16,7 +16,7 @@ public class Enemy : TriBehaviour
     bool IsDoneAttack = false;
 
     [SerializeField] private int maxHealth = 10;
-    private int currentHealth;
+    public int CurrentHealth;
     public Animator animator;
 
     public float AttackRange;
@@ -25,7 +25,7 @@ public class Enemy : TriBehaviour
 
     protected override void Awake()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
 
         EnemyMovement.OnStageChange += SetAnimator;
         EnemyAnimation.OnDoneAttack += OnDoneAttack;
@@ -151,12 +151,12 @@ public class Enemy : TriBehaviour
     public override void OnEnable()
     {
         base.OnEnable();
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     public void Deduct(int amount)
     {
-        currentHealth -= amount;
+        CurrentHealth -= amount;
 
         EnemyEffect effect = GetComponent<EnemyEffect>();
         if (effect != null)
@@ -164,7 +164,7 @@ public class Enemy : TriBehaviour
             effect.ApplyKnockBack();
         }
 
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Die();
         }

@@ -7,7 +7,7 @@ public class ElectricSkill : ComboSkill
     private ElectricGun electricGun;
 
     [Header("Lightning Effect")]
-    [SerializeField] private float dropHeight = 15f;       // khoảng cách sét rơi từ trên trời
+    // [SerializeField] private float dropHeight = 15f;       // khoảng cách sét rơi từ trên trời
     [SerializeField] private float damageRadius = 3f;      // bán kính gây damage
     [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
 
