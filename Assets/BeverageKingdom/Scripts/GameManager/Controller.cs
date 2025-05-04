@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _projectileSpawner;
     [SerializeField] Transform _effectSpawner;
     [SerializeField] Transform _playerInput;
+    [SerializeField] Transform _gameSystem;
 
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
@@ -41,6 +42,7 @@ public class Controller : MonoBehaviour
         Instantiate(_projectileSpawner.gameObject);
         Instantiate(_effectSpawner.gameObject);
         Instantiate(_playerInput.gameObject);
+        Instantiate(_gameSystem.gameObject);
     }
 
     void Start()
