@@ -101,7 +101,8 @@ public class Player : MonoBehaviour
     void OnPlayerAfterDead()
     {
         Time.timeScale = 0f;
-        OnPlayerDead?.Invoke();
+        GameSystem.instance.GameOver();
+        // OnPlayerDead?.Invoke();
     }
 
     void Update()
