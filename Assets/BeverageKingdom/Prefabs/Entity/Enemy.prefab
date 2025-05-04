@@ -462,6 +462,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9169969084037855931}
     m_Modifications:
+    - target: {fileID: 165598655415902412, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165598655415902412, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165598655415902412, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2043110771564536249, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
       propertyPath: m_Name
       value: HPBar
