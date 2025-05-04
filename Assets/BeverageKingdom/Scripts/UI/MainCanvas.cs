@@ -30,10 +30,10 @@ public class MainCanvas : MonoBehaviour
 
     void Start()
     {
-        Player.instance.OnPlayerDead += OnPlayerDead;
+        GameSystem.instance.OnGameOver += OnGameOver;
     }
 
-    void OnPlayerDead()
+    void OnGameOver()
     {
         GameOverPopup.gameObject.SetActive(true);
     }
@@ -73,6 +73,8 @@ public class MainCanvas : MonoBehaviour
 
         PlayAgainButton.onClick.AddListener(() =>
         {
+            Time.timeScale = 1f;
+
             SceneManager.LoadSceneAsync("PlayScene");
         });
 

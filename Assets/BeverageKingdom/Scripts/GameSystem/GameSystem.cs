@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
+    public Action OnGameOver;
+
     public static GameSystem instance;
     private void Awake()
     {
@@ -16,13 +19,15 @@ public class GameSystem : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         // Initialize game system components here
         // For example, you can load player data, initialize UI, etc.
     }
+
     public void GameOver()
     {
-
+        OnGameOver?.Invoke();
     }
 }

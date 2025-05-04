@@ -1,14 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public float HP;
+
+    public void DecreaseHouseHP()
     {
-        if (collision.transform.parent.CompareTag("Enemy"))
+        if (HP == 0) return;
+
+        HP--;
+        if (HP == 0)
         {
-            GameSystem.instance.GameOver();
+            Invoke("DelayAndGameOver", 1f);
         }
+    }
+
+    void DelayAndGameOver()
+    {
+        Time.timeScale = 0f;
+        GameSystem.instance.GameOver();
     }
 }
