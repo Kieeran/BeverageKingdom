@@ -5,5 +5,6 @@ public abstract class Weapon : TriBehaviour
 {
     [SerializeField] protected string weaponName;
     [SerializeField] protected int damage;
-    public abstract void Attack(Transform fireOrigin);
+    [SerializeField] protected Transform fireOrigin;
+    public abstract void Attack();
 }

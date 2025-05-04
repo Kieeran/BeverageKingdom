@@ -6,32 +6,26 @@ public class Enemy : TriBehaviour
     {
         Idle,
         Walk,
-        Attack,
-        Dead
+        Attack
     }
     public EnemyState currentState;
 
     public EnemyMovement EnemyMovement;
     public EnemyAnimation EnemyAnimation;
-    public Transform EnemyDetectionRange;
-    public Transform EnemyCollision;
 
     bool IsDoneAttack = false;
 
-    public float Damage;
     [SerializeField] private int maxHealth = 10;
-    public int CurrentHealth;
+    private int currentHealth;
     public Animator animator;
 
     public float AttackRange;
     public float AttackCoolDown;
     float _coolDownTimer;
 
-    bool IsDead = false;
-
     protected override void Awake()
     {
-        CurrentHealth = maxHealth;
+        currentHealth = maxHealth;
 
         EnemyMovement.OnStageChange += SetAnimator;
         EnemyAnimation.OnDoneAttack += OnDoneAttack;
@@ -48,7 +42,6 @@ public class Enemy : TriBehaviour
     {
         animator.SetBool("Idle", index == 1);
         animator.SetBool("Walk", index == 2);
-        animator.SetBool("Dead", index == 4);
 
         if (index == 3)
         {
@@ -80,10 +73,6 @@ public class Enemy : TriBehaviour
                 EnemyMovement.SetStage(3);
                 HandleAttack();
                 break;
-            case EnemyState.Dead:
-                // EnemyMovement.SetStage(4);
-                HandleDead();
-                break;
         }
     }
 
@@ -97,8 +86,6 @@ public class Enemy : TriBehaviour
 
     void ChangeState(EnemyState newState)
     {
-        if (currentState == newState) return;
-
         currentState = newState;
     }
 
@@ -143,7 +130,6 @@ public class Enemy : TriBehaviour
         EnemyMovement.SetStage(3);
         if (IsDoneAttack == true)
         {
-            ApplyDamage();
             _coolDownTimer += Time.deltaTime;
 
             if (_coolDownTimer >= AttackCoolDown)
@@ -157,38 +143,6 @@ public class Enemy : TriBehaviour
         }
     }
 
-    void HandleDead()
-    {
-        if (IsDead != true)
-        {
-            animator.Play("Dead", 0, 0f);
-            IsDead = true;
-            Destroy(gameObject, 4f);
-            Destroy(EnemyCollision.gameObject);
-            Destroy(EnemyDetectionRange.gameObject);
-        }
-    }
-
-    void ApplyDamage()
-    {
-        if (_coolDownTimer == 0)
-        {
-            if (EnemyMovement.Target != null)
-            {
-                if (EnemyMovement.Target.TryGetComponent<Villager>(out var villager))
-                {
-                    villager.TakeDamage(Damage);
-
-                    if (villager.HP <= 0)
-                    {
-                        EnemyMovement.Target = null;
-                        EnemyMovement.SetStage(1);
-                    }
-                }
-            }
-        }
-    }
-
     void OnDoneAttack()
     {
         IsDoneAttack = true;
@@ -197,21 +151,29 @@ public class Enemy : TriBehaviour
     public override void OnEnable()
     {
         base.OnEnable();
-        CurrentHealth = maxHealth;
+        currentHealth = maxHealth;
     }
 
     public void Deduct(int amount)
     {
-        CurrentHealth -= amount;
+        currentHealth -= amount;
 
-        if (CurrentHealth <= 0)
+        EnemyEffect effect = GetComponent<EnemyEffect>();
+        if (effect != null)
+        {
+            effect.ApplyKnockBack();
+        }
+
+        if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+
     private void Die()
     {
-        ChangeState(EnemyState.Dead);
+        //Destroy(gameObject);
+        EnemySpawner.Instance.Despawm(transform);
     }
 }

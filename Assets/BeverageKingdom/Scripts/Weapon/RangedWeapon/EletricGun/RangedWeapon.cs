@@ -8,7 +8,7 @@ public class RangedWeapon : Weapon
     [SerializeField] private float fireCooldown = 0.5f;
     private float nextFireTime = 0f;
 
-    public override void Attack(Transform fireOrigin)
+    public override void Attack()
     {
         if (Time.time < nextFireTime)
             return;

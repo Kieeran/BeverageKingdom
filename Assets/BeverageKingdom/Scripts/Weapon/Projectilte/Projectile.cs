@@ -30,25 +30,36 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "DetectionRange")
         {
             return;
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy")
+        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBB")
 )
         {
-            Enemy enemy = other.GetComponent<Enemy>();
+            Enemy enemy = other.GetComponentInParent<Enemy>();
             if (enemy != null)
             {
-                enemy.Deduct(damage);
-                comboController.AddCombo();
-                Destroy(this);
+                SendDame(enemy);
             }
 
             Destroy(gameObject);
         }
+    }
+
+    protected virtual void SendDame(Enemy enemy)
+    {
+        enemy.Deduct(damage);
+        comboController.AddCombo();
+        // Destroy(this);
+        ProjectileSpawner.Instance.Despawm(transform); EffectWhenDespwan();
+    }
+
+    protected virtual void EffectWhenDespwan()
+    {
+
     }
 }

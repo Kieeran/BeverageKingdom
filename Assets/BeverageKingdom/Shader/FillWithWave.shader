@@ -1,27 +1,19 @@
-﻿Shader "UI/FillWithWaveHorizontal"
+﻿Shader "UI/GradientGlint_NoTex"
 {
     Properties
     {
-        _MainTex        ("Sprite Texture",    2D)    = "white" {}
-        _FillAmount     ("Fill Amount",       Range(0,1)) = 0.5
-        _WaveSpeed      ("Wave Speed",        Float) = 1
-        _WaveHeight     ("Wave Height",       Float) = 0.02
-        _WaveFrequency  ("Wave Frequency",    Float) = 10
-        _TintColor      ("Tint",              Color) = (1,1,1,1)
+        _LeftColor    ("Left Color",   Color) = (0,0.5,1,1)
+        _RightColor   ("Right Color",  Color) = (0,1,0.3,1)
+        _FillAmount   ("Fill Amount",  Range(0,1)) = 0.5
+        _GlintColor   ("Glint Color",  Color) = (1,1,1,0.8)
+        _GlintSpeed   ("Glint Speed",  Float) = 1
+        _GlintWidth   ("Glint Width",  Float) = 0.2
     }
     SubShader
     {
-        Tags
-        {
-            "Queue"="Transparent"
-            "IgnoreProjector"="True"
-            "RenderType"="Transparent"
-            "PreviewType"="Plane"
-        }
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True" }
+        Cull Off Lighting Off ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
-        Cull Off
-        Lighting Off
-        ZWrite Off
 
         Pass
         {
@@ -30,57 +22,55 @@
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            sampler2D _MainTex;
-            float4   _MainTex_ST;
-            float    _FillAmount;
-            float    _WaveSpeed;
-            float    _WaveHeight;
-            float    _WaveFrequency;
-            float4   _TintColor;
+            float4 _LeftColor;
+            float4 _RightColor;
+            float  _FillAmount;
+            float4 _GlintColor;
+            float  _GlintSpeed;
+            float  _GlintWidth;
 
-            struct appdata_t
+            struct appdata
             {
-                float4 vertex   : POSITION;
-                float4 color    : COLOR;
-                float2 texcoord : TEXCOORD0;
+                float4 vertex : POSITION;
+                float2 uv     : TEXCOORD0;
+                float4 color  : COLOR;
             };
 
             struct v2f
             {
-                float4 pos   : SV_POSITION;
-                fixed4 color : COLOR;
-                float2 uv    : TEXCOORD0;
+                float4 pos : SV_POSITION;
+                float2 uv  : TEXCOORD0;
+                float4 col : COLOR;
             };
 
-            v2f vert(appdata_t IN)
+            v2f vert(appdata IN)
             {
                 v2f OUT;
-                OUT.pos   = UnityObjectToClipPos(IN.vertex);
-                OUT.color = IN.color * _TintColor;
-                OUT.uv    = TRANSFORM_TEX(IN.texcoord, _MainTex);
+                OUT.pos = UnityObjectToClipPos(IN.vertex);
+                OUT.uv  = IN.uv;
+                OUT.col = IN.color;
                 return OUT;
             }
 
             fixed4 frag(v2f IN) : SV_Target
             {
-                float2 uv = IN.uv;
+                float u = IN.uv.x;
 
-                // 1) Tạo wave chạy dọc (theo trục y)
-                float t = _Time.y * _WaveSpeed;
-                float wave = sin(uv.y * _WaveFrequency + t) * _WaveHeight;
-                uv.x += wave;    // đẩy ngang theo sóng
+                // 1) Linear gradient giữa LeftColor và RightColor
+                fixed4 baseCol = lerp(_LeftColor, _RightColor, u);
 
-                // 2) Sample texture
-                fixed4 col = tex2D(_MainTex, uv) * IN.color;
+                // 2) Tính vùng glint (highlight) chạy ngang
+                float t = frac(_Time.y * _GlintSpeed);
+                float glow = smoothstep(t - _GlintWidth, t, u)
+                           - smoothstep(t, t + _GlintWidth, u);
 
-                // 3) Clip theo FillAmount ngang: để chỉ hiển thị đến mức x <= _FillAmount
-                if (uv.x > _FillAmount)
-                    col.a = 0;
+                // 3) Áp glint lên baseCol
+                baseCol.rgb += _GlintColor.rgb * glow;
+                baseCol.a   *= (u <= _FillAmount ? 1 : 0);
 
-                return col;
+                return baseCol * IN.col;
             }
             ENDCG
         }
     }
-    FallBack "UI/Default"
 }
