@@ -25,4 +25,9 @@ public class HomeSceneCanvas : MonoBehaviour
 #endif
         });
     }
+
+    void Start()
+    {
+        SoundManager.Instance.PlaySoundWithDelay(SoundManager.Instance.HomeMenuSE, true, 0.8f);
+    }
 }

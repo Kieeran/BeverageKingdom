@@ -14,11 +14,20 @@ public class WeaponController : MonoBehaviour
 
     public Weapon CurrentWeapon => weapons.Count > 0 ? weapons[currentIndex] : null;
 
+    void Awake()
+    {
+        UIManager.Instance.MainCanvas.OnChangeWeapon += OnChangeWeapon;
+    }
 
     void Start()
     {
         if (weapons == null || weapons.Count == 0)
             Debug.LogWarning("Chưa có weapon nào gán vào WeaponController!");
+    }
+
+    void OnChangeWeapon()
+    {
+        SwitchWeapon(1);
     }
 
     void Update()

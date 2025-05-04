@@ -88,6 +88,7 @@ public class Player : MonoBehaviour
         {
             //anim.Play("Dead", 0, 0f);
             stateMachine.ChangeState(dead);
+            rb.velocity = Vector2.zero;
 
             PlayerDetectionRange.gameObject.SetActive(false);
             PlayerCollision.gameObject.SetActive(false);
@@ -102,7 +103,6 @@ public class Player : MonoBehaviour
     {
         Time.timeScale = 0f;
         GameSystem.instance.GameOver();
-        // OnPlayerDead?.Invoke();
     }
 
     void Update()
@@ -120,6 +120,7 @@ public class Player : MonoBehaviour
         {
             _coolDownTimer = 0;
 
+            SoundManager.Instance.PlaySound(SoundManager.Instance.MeleeAttackSE, false);
             WeaponController.Attack();
             stateMachine.ChangeState(attack);
             stateMachine.currentState.Update();
