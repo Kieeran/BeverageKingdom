@@ -15,8 +15,8 @@ MonoBehaviour:
   id: 0
   enemyName: 
   maxHealth: 30
-  speed: 4
-  dameAttack: 4
+  speed: 3
+  dameAttack: 2
   moneyForDead: 0
   attackRange: 2
-  attackCoolDown: 0
+  attackCoolDown: 1
