@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class WeaponController : MonoBehaviour
-{   
+{
     [Header("Danh sách ScriptableObject Weapon")]
     public List<Weapon> weapons;
     private int currentIndex = 0;
@@ -14,7 +14,7 @@ public class WeaponController : MonoBehaviour
 
     public Weapon CurrentWeapon => weapons.Count > 0 ? weapons[currentIndex] : null;
 
-  
+
     void Start()
     {
         if (weapons == null || weapons.Count == 0)
@@ -31,7 +31,7 @@ public class WeaponController : MonoBehaviour
         // Fire khi bấm chuột trái
         if (Input.GetButton("Fire1") && CurrentWeapon != null)
         {
-             CurrentWeapon.Attack();
+            // CurrentWeapon.Attack();
         }
     }
 

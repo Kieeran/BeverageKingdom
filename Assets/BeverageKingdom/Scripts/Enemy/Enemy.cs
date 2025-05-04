@@ -6,12 +6,15 @@ public class Enemy : TriBehaviour
     {
         Idle,
         Walk,
-        Attack
+        Attack,
+        Dead
     }
     public EnemyState currentState;
 
     public EnemyMovement EnemyMovement;
     public EnemyAnimation EnemyAnimation;
+    public Transform VillagerDetectionRange;
+    public Transform VillagerCollision;
 
     bool IsDoneAttack = false;
 
@@ -22,6 +25,9 @@ public class Enemy : TriBehaviour
     public float AttackRange;
     public float AttackCoolDown;
     float _coolDownTimer;
+
+    public int Damage;
+    bool IsDead = false;
 
     protected override void Awake()
     {
@@ -42,6 +48,7 @@ public class Enemy : TriBehaviour
     {
         animator.SetBool("Idle", index == 1);
         animator.SetBool("Walk", index == 2);
+        animator.SetBool("Dead", index == 4);
 
         if (index == 3)
         {
@@ -73,6 +80,10 @@ public class Enemy : TriBehaviour
                 EnemyMovement.SetStage(3);
                 HandleAttack();
                 break;
+            case EnemyState.Dead:
+                // VillagerMovement.SetStage(4);
+                HandleDead();
+                break;
         }
     }
 
@@ -86,6 +97,8 @@ public class Enemy : TriBehaviour
 
     void ChangeState(EnemyState newState)
     {
+        if (currentState == newState) return;
+
         currentState = newState;
     }
 
@@ -130,6 +143,7 @@ public class Enemy : TriBehaviour
         EnemyMovement.SetStage(3);
         if (IsDoneAttack == true)
         {
+            ApplyDamage();
             _coolDownTimer += Time.deltaTime;
 
             if (_coolDownTimer >= AttackCoolDown)
@@ -139,6 +153,38 @@ public class Enemy : TriBehaviour
                 ChangeState(EnemyState.Idle);
                 EnemyMovement.SetStage(1);
                 IsDoneAttack = false;
+            }
+        }
+    }
+
+    void HandleDead()
+    {
+        if (IsDead != true)
+        {
+            IsDead = true;
+            animator.Play("Dead", 0, 0f);
+            Destroy(gameObject, 4f);
+            Destroy(VillagerCollision.gameObject);
+            Destroy(VillagerDetectionRange.gameObject);
+        }
+    }
+
+    void ApplyDamage()
+    {
+        if (_coolDownTimer == 0)
+        {
+            if (EnemyMovement.Target != null)
+            {
+                if (EnemyMovement.Target.TryGetComponent<Villager>(out var villager))
+                {
+                    villager.TakeDamage(Damage);
+
+                    if (villager.HP <= 0)
+                    {
+                        EnemyMovement.Target = null;
+                        EnemyMovement.SetStage(1);
+                    }
+                }
             }
         }
     }
@@ -170,10 +216,10 @@ public class Enemy : TriBehaviour
         }
     }
 
-
     private void Die()
     {
         //Destroy(gameObject);
-        EnemySpawner.Instance.Despawm(transform);
+        // EnemySpawner.Instance.Despawm(transform);
+        ChangeState(EnemyState.Dead);
     }
 }

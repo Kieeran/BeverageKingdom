@@ -127,6 +127,8 @@ public class Villager : MonoBehaviour
 
     void ChangeState(VillagerState newState)
     {
+        if (currentState == newState) return;
+
         currentState = newState;
     }
 
@@ -170,6 +172,7 @@ public class Villager : MonoBehaviour
                 _coolDownTimer = 0;
 
                 ChangeState(VillagerState.Idle);
+                VillagerMovement.SetStage(1);
                 IsDoneAttack = false;
             }
         }

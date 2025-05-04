@@ -11,7 +11,10 @@ public class Player : MonoBehaviour
     public static Player instance;
     public InputMangager inputMangager;
 
-    public float moveSpeed; 
+    public JoystickMove JoystickMove;
+    public bool UseJoystick;
+
+    public float moveSpeed;
     private bool facingRight = true;
     #region Component
     public AnimatorOverrideController playerSword;
@@ -30,6 +33,9 @@ public class Player : MonoBehaviour
     public PlayerStateDead dead { get; private set; }
     public PlayerStateHit hit { get; private set; }
     #endregion
+
+    public float AttackCoolDown;
+    float _coolDownTimer;
 
     private void Awake()
     {
@@ -52,27 +58,41 @@ public class Player : MonoBehaviour
     private void Start()
     {
         anim = transform.Find("Model").GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
         stateMachine.Initialize(idleState);
         inputMangager = InputMangager.Instance;
     }
     void Update()
     {
-        SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
-
-        if (inputMangager.GetKeyToAttack())
+        if (UseJoystick == false)
         {
+            SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
+            Flip();
+        }
+
+        _coolDownTimer += Time.deltaTime;
+        if (_coolDownTimer >= AttackCoolDown)
+        {
+            _coolDownTimer = 0;
+
             WeaponController.Attack();
             stateMachine.ChangeState(attack);
+            stateMachine.currentState.Update();
         }
-        stateMachine.currentState.Update();
-        Flip();
     }
+
+    void FixedUpdate()
+    {
+        if (UseJoystick == true)
+        {
+            SetVelocity(JoystickMove.move.x * moveSpeed, JoystickMove.move.y * moveSpeed);
+            Flip();
+        }
+    }
+
     public void SetVelocity(float xInput, float yInput)
     {
         rb.velocity = new Vector2(xInput, yInput);
-
-
         //PlayerCtrl.Instance.flipController.CheckFlip();
     }
     public void Flip()

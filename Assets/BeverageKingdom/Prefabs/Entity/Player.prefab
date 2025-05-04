@@ -725,13 +725,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9013626676635541162}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfdc441ae2106074db437e32e9051647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSpeed: 5
-  _rb2d: {fileID: 3195346775243935806}
+  move: {x: 0, y: 0}
+  Joystick: {fileID: 0}
 --- !u!50 &3195346775243935806
 Rigidbody2D:
   serializedVersion: 4
@@ -808,9 +808,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponController: {fileID: 8029644660301429030}
   inputMangager: {fileID: 0}
+  JoystickMove: {fileID: 3667071518967296704}
+  UseJoystick: 1
   moveSpeed: 5
   playerSword: {fileID: 22100000, guid: 61ed2d81f8d9ed244990d4b7c6c0a25f, type: 2}
   playerGun: {fileID: 22100000, guid: 1884c9b546c8c794f9f461b39ebd15eb, type: 2}
   playerSwordSpr: {fileID: -309207110, guid: b2929214a1c71434389a55af0c807214, type: 3}
   playerGunSpr: {fileID: 569212532, guid: a99195cdd24165840b91a01567f67384, type: 3}
   playerSpr: {fileID: 3872018274052402086}
+  AttackCoolDown: 1
