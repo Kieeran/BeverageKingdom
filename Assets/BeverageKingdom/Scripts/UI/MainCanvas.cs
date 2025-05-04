@@ -85,6 +85,7 @@ public class MainCanvas : MonoBehaviour
         {
             Time.timeScale = 1f;
 
+            SoundManager.Instance.StopSound();
             SceneManager.LoadSceneAsync("HomeScene");
         });
     }

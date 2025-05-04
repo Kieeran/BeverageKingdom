@@ -122,6 +122,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &236201608 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8577891064688456016, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+  m_PrefabInstance: {fileID: 3987047100074969604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &236201611 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5277044302636932573, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+  m_PrefabInstance: {fileID: 3987047100074969604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &368282548
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +935,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: audioSourceLoop
+      value: 
+      objectReference: {fileID: 236201608}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: audioSourceUnLoop
+      value: 
+      objectReference: {fileID: 236201611}
     - target: {fileID: 5894024506333679704, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

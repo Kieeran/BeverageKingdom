@@ -6,10 +6,12 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    public AudioSource audioSource;
+    public AudioSource audioSourceLoop;
+    public AudioSource audioSourceUnLoop;
 
     public AudioClip HomeMenuSE;
     public AudioClip InGameSE;
+    public AudioClip MeleeAttackSE;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -22,16 +24,30 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
+    public void StopSound()
     {
-        PlaySoundWithDelay(HomeMenuSE, true, 1f);
+        if (audioSourceLoop != null && audioSourceLoop.isPlaying)
+        {
+            audioSourceLoop.Stop();
+            audioSourceLoop.loop = false;
+        }
     }
 
     public void PlaySound(AudioClip clip, bool loop)
     {
-        audioSource.clip = clip;
-        audioSource.loop = loop;
-        audioSource.Play();
+        if (loop == true)
+        {
+            audioSourceLoop.clip = clip;
+            audioSourceLoop.loop = loop;
+            audioSourceLoop.Play();
+        }
+
+        else
+        {
+            audioSourceUnLoop.clip = clip;
+            audioSourceUnLoop.loop = loop;
+            audioSourceUnLoop.Play();
+        }
     }
 
     public void PlaySoundWithDelay(AudioClip clip, bool loop, float delay)
