@@ -6,6 +6,8 @@ using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
+    public Transform PlayerDetectionRange;
+    public Transform PlayerCollision;
     [SerializeField] private WeaponController WeaponController;
 
     public static Player instance;
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour
     public PlayerStateHit hit { get; private set; }
     #endregion
 
+    public bool IsDead = false;
+    public float HP;
     public float AttackCoolDown;
     float _coolDownTimer;
 
@@ -47,6 +51,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
         stateMachine = new PlayerStateMachine();
         idleState = new PlayerStateIdle(stateMachine, this, "Idle");
         moveState = new PlayerStateMove(stateMachine, this, "Move");
@@ -55,6 +60,7 @@ public class Player : MonoBehaviour
         hit = new PlayerStateHit(stateMachine, this, "Hit");
 
     }
+
     private void Start()
     {
         anim = transform.Find("Model").GetComponentInChildren<Animator>();
@@ -62,8 +68,28 @@ public class Player : MonoBehaviour
         stateMachine.Initialize(idleState);
         inputMangager = InputMangager.Instance;
     }
+
+    public void TakeDamage(float damage)
+    {
+        HP -= damage;
+
+        if (HP <= 0)
+        {
+            //anim.Play("Dead", 0, 0f);
+            stateMachine.ChangeState(dead);
+
+
+            PlayerDetectionRange.gameObject.SetActive(false);
+            PlayerCollision.gameObject.SetActive(false);
+            WeaponController.gameObject.SetActive(false);
+            IsDead = true;
+        }
+    }
+
     void Update()
     {
+        if (IsDead) return;
+
         if (UseJoystick == false)
         {
             SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
@@ -83,6 +109,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (IsDead) return;
+
         if (UseJoystick == true)
         {
             SetVelocity(JoystickMove.move.x * moveSpeed, JoystickMove.move.y * moveSpeed);
@@ -118,5 +146,4 @@ public class Player : MonoBehaviour
             playerSpr.sprite = playerGunSpr;
         }
     }
-
 }

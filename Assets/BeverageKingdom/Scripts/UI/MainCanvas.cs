@@ -5,11 +5,13 @@ using UnityEngine.UI;
 public class MainCanvas : MonoBehaviour
 {
     [SerializeField] Joystick _joystick;
-    [SerializeField] Button _spawnVillagerButton;
     [SerializeField] RectTransform _pickSlotSpawnVillager;
     [SerializeField] Button _spawnVillagerAtSlot1Button;
     [SerializeField] Button _spawnVillagerAtSlot2Button;
     [SerializeField] Button _spawnVillagerAtSlot3Button;
+
+    public Button SpawnVillagerButton;
+    public Button ChangeWeaponButton;
 
     public Action OnSpawnVillagerAtSlot1;
     public Action OnSpawnVillagerAtSlot2;
@@ -18,11 +20,6 @@ public class MainCanvas : MonoBehaviour
 
     void Awake()
     {
-        _spawnVillagerButton.onClick.AddListener(() =>
-        {
-            _pickSlotSpawnVillager.gameObject.SetActive(true);
-        });
-
         _spawnVillagerAtSlot1Button.onClick.AddListener(() =>
         {
             OnSpawnVillagerAtSlot1?.Invoke();
@@ -42,6 +39,16 @@ public class MainCanvas : MonoBehaviour
             OnSpawnVillagerAtSlot3?.Invoke();
 
             _pickSlotSpawnVillager.gameObject.SetActive(false);
+        });
+
+        SpawnVillagerButton.onClick.AddListener(() =>
+        {
+            _pickSlotSpawnVillager.gameObject.SetActive(true);
+        });
+
+        ChangeWeaponButton.onClick.AddListener(() =>
+        {
+            Debug.Log("Change weapon");
         });
     }
 }
