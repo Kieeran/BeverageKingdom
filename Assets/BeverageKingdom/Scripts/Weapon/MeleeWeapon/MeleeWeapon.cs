@@ -31,7 +31,6 @@ public class MeleeWeapon : Weapon
             {
                 enemy.Deduct(damage);
 
-                Debug.Log(damage);
 
                 ComboController.Instance.AddCombo();
             }

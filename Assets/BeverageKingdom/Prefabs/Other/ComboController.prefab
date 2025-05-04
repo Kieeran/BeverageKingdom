@@ -48,7 +48,6 @@ MonoBehaviour:
   comboIntTrigger: 12
   shardCount: 5
   verticalSpacing: 2
-  shardLifetime: 3
 --- !u!1 &1027585634034088888
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +95,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboName: Electric
   comboIntTrigger: 5
-  dropHeight: 15
   damageRadius: 3
   damageAmount: 100
 --- !u!1 &3973057194401509776
@@ -413,7 +411,7 @@ MonoBehaviour:
   - {fileID: 259588502983650606}
   - {fileID: 4793646930791821}
   comboResetDelay: 2
-  maxCombo: 250
+  maxCombo: 25
 --- !u!1 &8670573925190099104
 GameObject:
   m_ObjectHideFlags: 0

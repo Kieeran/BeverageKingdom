@@ -21,6 +21,8 @@ public class EnemyMovement : MonoBehaviour
     [HideInInspector]
     public bool IsDead;
 
+    [SerializeField] private EnemySO enemyData;
+
     void Awake()
     {
         DetectionRange.OnInRange += SetEntityInRange;
@@ -28,7 +30,15 @@ public class EnemyMovement : MonoBehaviour
 
         SetStage(2);
     }
+    private void Start()
+    {
+        Init();
+    }
+    private void Init()
+    {
+        MoveSpeed = enemyData.speed;
 
+    }
     void Update()
     {
         // SetStage(1);

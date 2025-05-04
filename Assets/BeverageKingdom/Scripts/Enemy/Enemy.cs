@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : TriBehaviour
 {
+    [SerializeField] private EnemySO enemyData;
     public enum EnemyState
     {
         Idle,
@@ -18,8 +20,9 @@ public class Enemy : TriBehaviour
 
     bool IsDoneAttack = false;
 
-    [SerializeField] private int maxHealth = 10;
-    public int CurrentHealth;
+    public float maxHealth;
+    [HideInInspector]
+    public float CurrentHealth;
     public Animator animator;
 
     public float AttackRange;
@@ -28,6 +31,8 @@ public class Enemy : TriBehaviour
 
     public int Damage;
     bool IsDead = false;
+
+    public Image HealthBarFillUI;
 
     protected override void Awake()
     {
@@ -39,11 +44,18 @@ public class Enemy : TriBehaviour
 
     protected override void Start()
     {
+        Init();
         base.Start();
 
         ChangeState(EnemyState.Walk);
     }
-
+    private void Init()
+    {
+        AttackRange = enemyData.attackRange;
+        AttackCoolDown = enemyData.attackCoolDown;
+        Damage = enemyData.dameAttack;
+        maxHealth = enemyData.maxHealth;
+    }
     void SetAnimator(int index)
     {
         animator.SetBool("Idle", index == 1);
@@ -159,6 +171,7 @@ public class Enemy : TriBehaviour
     {
         if (IsDead != true)
         {
+            EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
             Destroy(gameObject, 4f);
@@ -212,6 +225,7 @@ public class Enemy : TriBehaviour
     public void Deduct(int amount)
     {
         CurrentHealth -= amount;
+        HealthBarFillUI.fillAmount = CurrentHealth / maxHealth;
 
         EnemyEffect effect = GetComponent<EnemyEffect>();
         if (effect != null)
