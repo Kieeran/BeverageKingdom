@@ -158,7 +158,11 @@ public class Enemy : TriBehaviour
     {
         currentHealth -= amount;
 
-        Debug.Log("asdasd");
+        EnemyEffect effect = GetComponent<EnemyEffect>();
+        if (effect != null)
+        {
+            effect.ApplyKnockBack();
+        }
 
         if (currentHealth <= 0)
         {
@@ -166,8 +170,10 @@ public class Enemy : TriBehaviour
         }
     }
 
+
     private void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        EnemySpawner.Instance.Despawm(transform);
     }
 }

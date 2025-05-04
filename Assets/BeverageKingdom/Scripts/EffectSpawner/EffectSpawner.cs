@@ -8,6 +8,7 @@ public class EffectSpawner : Spawner
 
     public static string Slash = "Slash";
     public static string Lightning = "Lightning";
+    public static string IceBreak = "IceBreak";
     protected override void Awake()
     {
         if (instance == null)

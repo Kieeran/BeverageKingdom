@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &136381876717269076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5968894385371514281}
+  - component: {fileID: 4793646930791821}
+  m_Layer: 0
+  m_Name: IceFreeze
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5968894385371514281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136381876717269076}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7471898666505484330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4793646930791821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136381876717269076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c32c3c5f7c20c54da6c0309a0e6d71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboName: 
+  comboIntTrigger: 12
+  shardCount: 5
+  verticalSpacing: 2
+  shardLifetime: 3
 --- !u!1 &1027585634034088888
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,6 +96,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboName: Electric
   comboIntTrigger: 5
+  dropHeight: 15
+  damageRadius: 3
+  damageAmount: 100
 --- !u!1 &3973057194401509776
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &767314063784129716
 Transform:
   m_ObjectHideFlags: 0
@@ -295,7 +347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: 
   damage: 3
-  attackCooldown: 0.5
+  fireOrigin: {fileID: 0}
+  fireCooldown: 0.5
   maxDistance: 50
   lineRenderer: {fileID: 8438924612530616891}
   textures:
@@ -358,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillList:
   - {fileID: 259588502983650606}
+  - {fileID: 4793646930791821}
   comboResetDelay: 2
   maxCombo: 250
 --- !u!1 &8670573925190099104
@@ -390,5 +444,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9159905369965655494}
+  - {fileID: 5968894385371514281}
   m_Father: {fileID: 2237165565382079234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

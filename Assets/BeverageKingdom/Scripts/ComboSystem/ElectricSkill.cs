@@ -7,7 +7,6 @@ public class ElectricSkill : ComboSkill
     private ElectricGun electricGun;
 
     [Header("Lightning Effect")]
-    [SerializeField] private GameObject lightningPrefab;   // prefab tia sét
     [SerializeField] private float dropHeight = 15f;       // khoảng cách sét rơi từ trên trời
     [SerializeField] private float damageRadius = 3f;      // bán kính gây damage
     [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
@@ -21,13 +20,9 @@ public class ElectricSkill : ComboSkill
     {
         base.ActivateComboSkill();
         Debug.Log("Lightning Strike Activated!");
-        Transform target = EnemySpawner.Instance.randomPrefabs();
+        Transform target = EnemySpawner.Instance.randomPrefabHolder();
 
-
-        if (lightningPrefab != null)
-        {
-            EffectSpawner.instance.Spawn(EffectSpawner.Lightning, target.position + Vector3.up, Quaternion.identity);
-        }
+        EffectSpawner.instance.Spawn(EffectSpawner.Lightning, target.position + Vector3.up, Quaternion.identity);
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(target.transform.position, damageRadius);
         foreach (var col in hits)

@@ -101,4 +101,21 @@ public abstract class Spawner : TriBehaviour
         int rand = Random.Range(0, this.prefabs.Count);
         return prefabs[rand];
     }
+    public virtual Transform randomPrefabHolder()
+    {
+        List<Transform> activeEnemies = new List<Transform>();
+        foreach (Transform child in holder)
+        {
+            if (!child.gameObject.activeSelf)
+                continue;
+            activeEnemies.Add(child);
+        }
+
+        if (activeEnemies.Count == 0)
+            return null;
+
+        int rand = Random.Range(0, activeEnemies.Count);
+        return activeEnemies[rand];
+    }
+
 }
