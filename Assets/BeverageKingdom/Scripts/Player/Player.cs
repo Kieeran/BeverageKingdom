@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
@@ -36,10 +38,16 @@ public class Player : MonoBehaviour
     public PlayerStateHit hit { get; private set; }
     #endregion
 
+    public Image HealthBarFillUI;
+
     public bool IsDead = false;
+    [HideInInspector]
+    public float MaxHP;
     public float HP;
     public float AttackCoolDown;
     float _coolDownTimer;
+
+    public Action OnPlayerDead;
 
     private void Awake()
     {
@@ -67,23 +75,33 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         stateMachine.Initialize(idleState);
         inputMangager = InputMangager.Instance;
+
+        MaxHP = HP;
     }
 
     public void TakeDamage(float damage)
     {
         HP -= damage;
+        HealthBarFillUI.fillAmount = HP / MaxHP;
 
         if (HP <= 0)
         {
             //anim.Play("Dead", 0, 0f);
             stateMachine.ChangeState(dead);
 
-
             PlayerDetectionRange.gameObject.SetActive(false);
             PlayerCollision.gameObject.SetActive(false);
             WeaponController.gameObject.SetActive(false);
             IsDead = true;
+
+            Invoke("OnPlayerAfterDead", 2f);
         }
+    }
+
+    void OnPlayerAfterDead()
+    {
+        Time.timeScale = 0f;
+        OnPlayerDead?.Invoke();
     }
 
     void Update()
