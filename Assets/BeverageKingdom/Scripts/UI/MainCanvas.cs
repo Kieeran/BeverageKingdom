@@ -54,13 +54,13 @@ public class MainCanvas : MonoBehaviour
 
     void OnGameOver()
     {
-        GameWinImageText.gameObject.SetActive(true);
+        GameOverImageText.gameObject.SetActive(true);
         GameWinOverPopup.gameObject.SetActive(true);
     }
 
     void OnGameWin()
     {
-        GameOverImageText.gameObject.SetActive(true);
+        GameWinImageText.gameObject.SetActive(true);
         GameWinOverPopup.gameObject.SetActive(true);
     }
 

@@ -56,7 +56,7 @@ public class EnemySpawner : Spawner
             yield return RunSingleWave(wave, i + 1);
         }
         Debug.Log("=== Đã hoàn thành tất cả các wave ===");
-        //MainCanvas.instance.show
+        GameSystem.instance.GameWin();
     }
 
     private IEnumerator RunSingleWave(EnemyWave wave, int waveNumber)
@@ -67,7 +67,7 @@ public class EnemySpawner : Spawner
         // Spawn theo từng EnemyData
         foreach (var enemyData in wave.enemies)
         {
-        MainCanvas.instance.ShowNextWave(waveNumber, enemyData.count);
+            MainCanvas.instance.ShowNextWave(waveNumber, enemyData.count);
             for (int j = 0; j < enemyData.count; j++)
             {
                 // Spawn 1 enemy

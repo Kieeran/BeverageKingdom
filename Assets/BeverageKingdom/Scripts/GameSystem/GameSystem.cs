@@ -30,7 +30,7 @@ public class GameSystem : MonoBehaviour
     public void GameOver()
     {
         OnGameOver?.Invoke();
-    } 
+    }
     public void GameWin()
     {
         OnGameWin?.Invoke();
