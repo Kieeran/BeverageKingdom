@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : Spawner
@@ -65,6 +66,7 @@ public class EnemySpawner : Spawner
         // Spawn theo từng EnemyData
         foreach (var enemyData in wave.enemies)
         {
+        MainCanvas.instance.ShowNextWave(waveNumber, enemyData.count);
             for (int j = 0; j < enemyData.count; j++)
             {
                 // Spawn 1 enemy
@@ -88,6 +90,7 @@ public class EnemySpawner : Spawner
         yield return new WaitUntil(() => aliveEnemies == 0);
 
         Debug.Log($"--- Wave {waveNumber} cleared! ---");
+        MainCanvas.instance.ShowAllWavesCompleted();
     }
 
     /// <summary>

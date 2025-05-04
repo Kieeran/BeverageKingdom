@@ -11,8 +11,10 @@ public class ElectricSkill : ComboSkill
     [SerializeField] private float damageRadius = 3f;      // bán kính gây damage
     [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
 
-    private void Start()
-    {
+    protected override void Start()
+    {   
+        base.Start();
+        color = Color.yellow;
         electricGun = GetComponentInChildren<ElectricGun>();
     }
 

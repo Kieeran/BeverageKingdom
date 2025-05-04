@@ -9,6 +9,11 @@ public class IceFreeze : ComboSkill
     [SerializeField] private float verticalSpacing = 1f; // Kho?ng c�ch gi?a c�c vi�n theo Y
     // [SerializeField] private float shardLifetime = 3f;   // Th?i gian t?n t?i tr�?c khi t? h?y
 
+    protected override void Start()
+    {
+        base.Start();
+        color = Color.blue;
+    }
     protected override void ActivateComboSkill()
     {
         base.ActivateComboSkill();

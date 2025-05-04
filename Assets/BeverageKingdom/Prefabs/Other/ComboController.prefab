@@ -44,8 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c32c3c5f7c20c54da6c0309a0e6d71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comboName: 
+  comboName: Ice Freeze
   comboIntTrigger: 12
+  tmpPro: {fileID: 0}
+  fadeDuration: 0.3
+  displayDuration: 1.2
+  punchDuration: 0.5
+  punchScale: {x: 1.5, y: 1.5, z: 1.5}
+  punchEase: 27
   shardCount: 5
   verticalSpacing: 2
 --- !u!1 &1027585634034088888
@@ -95,6 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboName: Electric
   comboIntTrigger: 5
+  tmpPro: {fileID: 0}
+  fadeDuration: 0.3
+  displayDuration: 1.2
+  punchDuration: 0.5
+  punchScale: {x: 1.5, y: 1.5, z: 1.5}
+  punchEase: 27
   damageRadius: 3
   damageAmount: 100
 --- !u!1 &3973057194401509776

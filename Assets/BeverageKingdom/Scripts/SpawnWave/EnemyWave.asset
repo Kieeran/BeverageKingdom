@@ -18,10 +18,10 @@ MonoBehaviour:
       count: 70
   - enemies:
     - enemyData: {fileID: 11400000, guid: 88c23a243f8031e4ebd4f8f7bd642035, type: 2}
-      count: 15
+      count: 80
   - enemies:
     - enemyData: {fileID: 11400000, guid: 1407cfa6153c24d4f8a910f92b8ad3e9, type: 2}
-      count: 30
+      count: 90
   - enemies:
     - enemyData: {fileID: 11400000, guid: f85d67855bdbb1e4eb357634e63f6d83, type: 2}
-      count: 50
+      count: 100
