@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
@@ -37,7 +38,11 @@ public class Player : MonoBehaviour
     public PlayerStateHit hit { get; private set; }
     #endregion
 
+    public Image HealthBarFillUI;
+
     public bool IsDead = false;
+    [HideInInspector]
+    public float MaxHP;
     public float HP;
     public float AttackCoolDown;
     float _coolDownTimer;
@@ -70,11 +75,14 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         stateMachine.Initialize(idleState);
         inputMangager = InputMangager.Instance;
+
+        MaxHP = HP;
     }
 
     public void TakeDamage(float damage)
     {
         HP -= damage;
+        HealthBarFillUI.fillAmount = HP / MaxHP;
 
         if (HP <= 0)
         {
