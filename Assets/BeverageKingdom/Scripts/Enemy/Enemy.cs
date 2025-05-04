@@ -104,6 +104,7 @@ public class Enemy : TriBehaviour
 
     void HandleIdle()
     {
+        ChangeState(EnemyState.Walk);
         if (EnemyMovement.Target != null && EnemyMovement.IsEntityInRange == true)
         {
             EnemyMovement.Walk();
@@ -113,8 +114,6 @@ public class Enemy : TriBehaviour
         {
             EnemyMovement.GoToKindom();
         }
-
-        ChangeState(EnemyState.Walk);
     }
 
     void HandleWalk()
@@ -151,7 +150,6 @@ public class Enemy : TriBehaviour
                 _coolDownTimer = 0;
 
                 ChangeState(EnemyState.Idle);
-                EnemyMovement.SetStage(1);
                 IsDoneAttack = false;
             }
         }
@@ -180,6 +178,17 @@ public class Enemy : TriBehaviour
                     villager.TakeDamage(Damage);
 
                     if (villager.HP <= 0)
+                    {
+                        EnemyMovement.Target = null;
+                        EnemyMovement.SetStage(1);
+                    }
+                }
+
+                if (EnemyMovement.Target.TryGetComponent<Player>(out var player))
+                {
+                    player.TakeDamage(Damage);
+
+                    if (player.HP <= 0)
                     {
                         EnemyMovement.Target = null;
                         EnemyMovement.SetStage(1);

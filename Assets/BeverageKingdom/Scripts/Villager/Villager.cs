@@ -172,7 +172,6 @@ public class Villager : MonoBehaviour
                 _coolDownTimer = 0;
 
                 ChangeState(VillagerState.Idle);
-                VillagerMovement.SetStage(1);
                 IsDoneAttack = false;
             }
         }
