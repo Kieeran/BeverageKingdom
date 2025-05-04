@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : TriBehaviour
 {
@@ -19,8 +20,9 @@ public class Enemy : TriBehaviour
 
     bool IsDoneAttack = false;
 
-    [SerializeField] private int maxHealth = 10;
-    public int CurrentHealth;
+    public float maxHealth;
+    [HideInInspector]
+    public float CurrentHealth;
     public Animator animator;
 
     public float AttackRange;
@@ -29,6 +31,8 @@ public class Enemy : TriBehaviour
 
     public int Damage;
     bool IsDead = false;
+
+    public Image HealthBarFillUI;
 
     protected override void Awake()
     {
@@ -221,6 +225,7 @@ public class Enemy : TriBehaviour
     public void Deduct(int amount)
     {
         CurrentHealth -= amount;
+        HealthBarFillUI.fillAmount = CurrentHealth / maxHealth;
 
         EnemyEffect effect = GetComponent<EnemyEffect>();
         if (effect != null)

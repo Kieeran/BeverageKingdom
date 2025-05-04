@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Villager : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Villager : MonoBehaviour
     public Transform VillagerCollision;
     bool IsDoneAttack = false;
 
+    [HideInInspector]
+    public float MaxHP;
     public float HP;
 
     public int Damage;
@@ -32,6 +35,7 @@ public class Villager : MonoBehaviour
     public Animator animator;
 
     bool IsDead = false;
+    public Image HealthBarFillUI;
 
     void Awake()
     {
@@ -41,6 +45,8 @@ public class Villager : MonoBehaviour
 
     void Start()
     {
+        MaxHP = HP;
+
         ChangeState(VillagerState.Idle);
     }
 
@@ -65,6 +71,8 @@ public class Villager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         HP -= damage;
+        HealthBarFillUI.fillAmount = HP / MaxHP;
+
         if (HP <= 0)
         {
             ChangeState(VillagerState.Dead);
