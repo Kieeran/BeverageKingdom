@@ -58,6 +58,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+
+        /*if (Joystick)
+        {
+            
+        }*/
+
         SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
 
         if (inputMangager.GetKeyToAttack())
