@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource audioSource;
 
     public AudioClip HomeMenuSE;
+    public AudioClip InGameSE;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -23,12 +24,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        Invoke("Delay1s", 1f);
-    }
-
-    void Delay1s()
-    {
-        PlaySound(HomeMenuSE, true);
+        PlaySoundWithDelay(HomeMenuSE, true, 1f);
     }
 
     public void PlaySound(AudioClip clip, bool loop)
@@ -36,5 +32,16 @@ public class SoundManager : MonoBehaviour
         audioSource.clip = clip;
         audioSource.loop = loop;
         audioSource.Play();
+    }
+
+    public void PlaySoundWithDelay(AudioClip clip, bool loop, float delay)
+    {
+        StartCoroutine(PlayAfterDelay(clip, loop, delay));
+    }
+
+    private IEnumerator PlayAfterDelay(AudioClip clip, bool loop, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        PlaySound(clip, loop);
     }
 }
