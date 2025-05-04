@@ -163,6 +163,7 @@ MonoBehaviour:
   IsWalking: 0
   IsIdling: 0
   IsAttacking: 0
+  IsDead: 0
 --- !u!1 &4887401757434989689
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,8 +216,11 @@ MonoBehaviour:
   currentState: 0
   EnemyMovement: {fileID: 7614361190701215873}
   EnemyAnimation: {fileID: 910250489033305400}
+  EnemyDetectionRange: {fileID: 6019219554763910641}
+  EnemyCollision: {fileID: 7954088939533346405}
   Damage: 2
   maxHealth: 6
+  CurrentHealth: 0
   animator: {fileID: 2996638185219542788}
   AttackRange: 2
   AttackCoolDown: 1

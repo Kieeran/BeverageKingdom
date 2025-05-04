@@ -13,12 +13,14 @@ public class Enemy : TriBehaviour
 
     public EnemyMovement EnemyMovement;
     public EnemyAnimation EnemyAnimation;
+    public Transform EnemyDetectionRange;
+    public Transform EnemyCollision;
 
     bool IsDoneAttack = false;
 
     public float Damage;
     [SerializeField] private int maxHealth = 10;
-    private int currentHealth;
+    public int CurrentHealth;
     public Animator animator;
 
     public float AttackRange;
@@ -29,7 +31,7 @@ public class Enemy : TriBehaviour
 
     protected override void Awake()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
 
         EnemyMovement.OnStageChange += SetAnimator;
         EnemyAnimation.OnDoneAttack += OnDoneAttack;
@@ -162,6 +164,8 @@ public class Enemy : TriBehaviour
             animator.Play("Dead", 0, 0f);
             IsDead = true;
             Destroy(gameObject, 4f);
+            Destroy(EnemyCollision.gameObject);
+            Destroy(EnemyDetectionRange.gameObject);
         }
     }
 
@@ -174,6 +178,12 @@ public class Enemy : TriBehaviour
                 if (EnemyMovement.Target.TryGetComponent<Villager>(out var villager))
                 {
                     villager.TakeDamage(Damage);
+
+                    if (villager.HP <= 0)
+                    {
+                        EnemyMovement.Target = null;
+                        EnemyMovement.SetStage(1);
+                    }
                 }
             }
         }
@@ -187,14 +197,14 @@ public class Enemy : TriBehaviour
     public override void OnEnable()
     {
         base.OnEnable();
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     public void Deduct(int amount)
     {
-        currentHealth -= amount;
+        CurrentHealth -= amount;
 
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Die();
         }

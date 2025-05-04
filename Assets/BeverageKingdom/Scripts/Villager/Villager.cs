@@ -21,6 +21,8 @@ public class Villager : MonoBehaviour
 
     public VillagerMovement VillagerMovement;
     public VillagerAnimation VillagerAnimation;
+    public Transform VillagerDetectionRange;
+    public Transform VillagerCollision;
     bool IsDoneAttack = false;
 
     public float HP;
@@ -180,6 +182,8 @@ public class Villager : MonoBehaviour
             IsDead = true;
             animator.Play("Dead", 0, 0f);
             Destroy(gameObject, 4f);
+            Destroy(VillagerCollision.gameObject);
+            Destroy(VillagerDetectionRange.gameObject);
         }
     }
 
@@ -192,6 +196,12 @@ public class Villager : MonoBehaviour
                 if (VillagerMovement.Target.TryGetComponent<Enemy>(out var enemy))
                 {
                     enemy.Deduct(Damage);
+
+                    if (enemy.CurrentHealth <= 0)
+                    {
+                        VillagerMovement.Target = null;
+                        VillagerMovement.SetStage(1);
+                    }
                 }
             }
         }
