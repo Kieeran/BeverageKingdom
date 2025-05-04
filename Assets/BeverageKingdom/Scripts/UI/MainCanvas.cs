@@ -83,6 +83,8 @@ public class MainCanvas : MonoBehaviour
 
         ExitButton.onClick.AddListener(() =>
         {
+            Time.timeScale = 1f;
+
             SceneManager.LoadSceneAsync("HomeScene");
         });
     }
