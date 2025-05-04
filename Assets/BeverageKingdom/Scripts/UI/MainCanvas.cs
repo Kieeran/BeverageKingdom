@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainCanvas : MonoBehaviour
-{   
+{
     public static MainCanvas instance;
 
     [SerializeField] Joystick _joystick;
@@ -45,10 +45,10 @@ public class MainCanvas : MonoBehaviour
 
     void Start()
     {
-        Player.instance.OnPlayerDead += OnPlayerDead;
+        GameSystem.instance.OnGameOver += OnGameOver;
     }
-    
-    void OnPlayerDead()
+
+    void OnGameOver()
     {
         GameOverPopup.gameObject.SetActive(true);
     }
