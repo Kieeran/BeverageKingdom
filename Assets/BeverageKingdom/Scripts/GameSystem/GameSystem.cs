@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameSystem instance;
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        // Initialize game system components here
+        // For example, you can load player data, initialize UI, etc.
+    }
+    public void GameOver()
+    {
+
     }
 }
