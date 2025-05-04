@@ -6,7 +6,8 @@ public class Villager : MonoBehaviour
     {
         Idle,
         Walk,
-        Attack
+        Attack,
+        Dead
     }
 
     public float AttackRange = 2f;
@@ -28,6 +29,8 @@ public class Villager : MonoBehaviour
 
     public Animator animator;
 
+    bool IsDead = false;
+
     void Awake()
     {
         VillagerMovement.OnStageChange += SetAnimator;
@@ -43,6 +46,7 @@ public class Villager : MonoBehaviour
     {
         animator.SetBool("Idle", index == 1);
         animator.SetBool("Walk", index == 2);
+        animator.SetBool("Dead", index == 4);
 
         if (index == 3)
         {
@@ -59,7 +63,10 @@ public class Villager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         HP -= damage;
-        if (HP <= 0) Destroy(gameObject);
+        if (HP <= 0)
+        {
+            ChangeState(VillagerState.Dead);
+        }
     }
 
     public void SetTargetPosition(Vector3 pos)
@@ -93,6 +100,10 @@ public class Villager : MonoBehaviour
             case VillagerState.Attack:
                 VillagerMovement.SetStage(3);
                 HandleAttack();
+                break;
+            case VillagerState.Dead:
+                // VillagerMovement.SetStage(4);
+                HandleDead();
                 break;
         }
 
@@ -159,6 +170,16 @@ public class Villager : MonoBehaviour
                 ChangeState(VillagerState.Idle);
                 IsDoneAttack = false;
             }
+        }
+    }
+
+    void HandleDead()
+    {
+        if (IsDead != true)
+        {
+            IsDead = true;
+            animator.Play("Dead", 0, 0f);
+            Destroy(gameObject, 4f);
         }
     }
 

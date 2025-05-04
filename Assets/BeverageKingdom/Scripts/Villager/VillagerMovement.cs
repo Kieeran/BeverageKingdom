@@ -19,6 +19,8 @@ public class VillagerMovement : MonoBehaviour
     public bool IsIdling;
     [HideInInspector]
     public bool IsAttacking;
+    [HideInInspector]
+    public bool IsDead;
 
     void Awake()
     {
@@ -40,10 +42,12 @@ public class VillagerMovement : MonoBehaviour
         if (index == 1 && IsIdling == true) return;
         if (index == 2 && IsWalking == true) return;
         if (index == 3 && IsAttacking == true) return;
+        if (index == 4 && IsDead == true) return;
 
         IsIdling = index == 1;
         IsWalking = index == 2;
         IsAttacking = index == 3;
+        IsDead = index == 4;
 
         OnStageChange?.Invoke(index);
     }

@@ -6,7 +6,8 @@ public class Enemy : TriBehaviour
     {
         Idle,
         Walk,
-        Attack
+        Attack,
+        Dead
     }
     public EnemyState currentState;
 
@@ -23,6 +24,8 @@ public class Enemy : TriBehaviour
     public float AttackRange;
     public float AttackCoolDown;
     float _coolDownTimer;
+
+    bool IsDead = false;
 
     protected override void Awake()
     {
@@ -43,6 +46,7 @@ public class Enemy : TriBehaviour
     {
         animator.SetBool("Idle", index == 1);
         animator.SetBool("Walk", index == 2);
+        animator.SetBool("Dead", index == 4);
 
         if (index == 3)
         {
@@ -74,6 +78,10 @@ public class Enemy : TriBehaviour
                 EnemyMovement.SetStage(3);
                 HandleAttack();
                 break;
+            case EnemyState.Dead:
+                // EnemyMovement.SetStage(4);
+                HandleDead();
+                break;
         }
     }
 
@@ -87,6 +95,8 @@ public class Enemy : TriBehaviour
 
     void ChangeState(EnemyState newState)
     {
+        if (currentState == newState) return;
+
         currentState = newState;
     }
 
@@ -145,6 +155,16 @@ public class Enemy : TriBehaviour
         }
     }
 
+    void HandleDead()
+    {
+        if (IsDead != true)
+        {
+            animator.Play("Dead", 0, 0f);
+            IsDead = true;
+            Destroy(gameObject, 4f);
+        }
+    }
+
     void ApplyDamage()
     {
         if (_coolDownTimer == 0)
@@ -182,6 +202,6 @@ public class Enemy : TriBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        ChangeState(EnemyState.Dead);
     }
 }
