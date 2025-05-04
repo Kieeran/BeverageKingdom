@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainCanvas : MonoBehaviour
@@ -13,12 +14,31 @@ public class MainCanvas : MonoBehaviour
     public Button SpawnVillagerButton;
     public Button ChangeWeaponButton;
 
+    public RectTransform GameOverPopup;
+    public Button PlayAgainButton;
+    public Button ExitButton;
+
     public Action OnSpawnVillagerAtSlot1;
     public Action OnSpawnVillagerAtSlot2;
     public Action OnSpawnVillagerAtSlot3;
     public Joystick GetJoystick() { return _joystick; }
 
     void Awake()
+    {
+        InitListener();
+    }
+
+    void Start()
+    {
+        Player.instance.OnPlayerDead += OnPlayerDead;
+    }
+
+    void OnPlayerDead()
+    {
+        GameOverPopup.gameObject.SetActive(true);
+    }
+
+    void InitListener()
     {
         _spawnVillagerAtSlot1Button.onClick.AddListener(() =>
         {
@@ -49,6 +69,16 @@ public class MainCanvas : MonoBehaviour
         ChangeWeaponButton.onClick.AddListener(() =>
         {
             Debug.Log("Change weapon");
+        });
+
+        PlayAgainButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadSceneAsync("PlayScene");
+        });
+
+        ExitButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadSceneAsync("HomeScene");
         });
     }
 }

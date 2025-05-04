@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
@@ -41,6 +42,8 @@ public class Player : MonoBehaviour
     public float AttackCoolDown;
     float _coolDownTimer;
 
+    public Action OnPlayerDead;
+
     private void Awake()
     {
         if (instance == null)
@@ -78,12 +81,19 @@ public class Player : MonoBehaviour
             //anim.Play("Dead", 0, 0f);
             stateMachine.ChangeState(dead);
 
-
             PlayerDetectionRange.gameObject.SetActive(false);
             PlayerCollision.gameObject.SetActive(false);
             WeaponController.gameObject.SetActive(false);
             IsDead = true;
+
+            Invoke("OnPlayerAfterDead", 2f);
         }
+    }
+
+    void OnPlayerAfterDead()
+    {
+        Time.timeScale = 0f;
+        OnPlayerDead?.Invoke();
     }
 
     void Update()

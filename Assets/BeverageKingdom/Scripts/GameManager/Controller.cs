@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         InitGame();
     }
