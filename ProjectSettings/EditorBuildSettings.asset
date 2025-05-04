@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/BeverageKingdom/Scenes/HomeScene.unity
+    guid: ad0e943ee94668649a30292bb1dfcc7f
+  - enabled: 1
     path: Assets/BeverageKingdom/Scenes/PlayScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
