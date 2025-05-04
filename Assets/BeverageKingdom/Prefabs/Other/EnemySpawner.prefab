@@ -58,8 +58,8 @@ MonoBehaviour:
   spawnX: 10
   minY: -2
   maxY: 2
-  minSpawnInterval: 1
-  maxSpawnInterval: 4
+  minSpawnInterval: 0.35
+  maxSpawnInterval: 0.57
 --- !u!1 &526373953213555695
 GameObject:
   m_ObjectHideFlags: 0

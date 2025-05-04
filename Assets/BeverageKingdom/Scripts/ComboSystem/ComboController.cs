@@ -11,7 +11,7 @@ public class ComboController : MonoBehaviour
 
     [Header("Cài đặt combo")]
     public float comboResetDelay = 2f;   
-    public int maxCombo = 250;            
+    public int maxCombo = 25;            
 
     public int CurrentCombo { get; private set; }
 
@@ -24,7 +24,10 @@ public class ComboController : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
-
+    private void Start()
+    {
+        maxCombo = 25;
+    }
     private void Update()
     {
         // Nếu đang có combo, đếm ngược để reset
@@ -48,7 +51,7 @@ public class ComboController : MonoBehaviour
         }
     }
 
-    private void ResetCombo()
+    public void ResetCombo()
     {
         CurrentCombo = 0;
         OnComboChanged?.Invoke(CurrentCombo);
