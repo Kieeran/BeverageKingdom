@@ -18,7 +18,10 @@ public class MainCanvas : MonoBehaviour
     public Button SpawnVillagerButton;
     public Button ChangeWeaponButton;
 
-    public RectTransform GameOverPopup;
+    public RectTransform GameWinOverPopup;
+    public RectTransform GameWinImageText;
+    public RectTransform GameOverImageText;
+
     public Button PlayAgainButton;
     public Button ExitButton;
     public TextMeshProUGUI tmp;
@@ -45,12 +48,23 @@ public class MainCanvas : MonoBehaviour
 
     void Start()
     {
+<<<<<<< Updated upstream
         Player.instance.OnPlayerDead += OnPlayerDead;
+=======
+        GameSystem.instance.OnGameOver += OnGameOver;
+        GameSystem.instance.OnGameWin += OnGameWin;
+>>>>>>> Stashed changes
     }
     
     void OnPlayerDead()
     {
-        GameOverPopup.gameObject.SetActive(true);
+        GameWinOverPopup.gameObject.SetActive(true);
+        GameOverImageText.gameObject.SetActive(true);
+    } 
+    void OnGameWin()
+    {
+        GameWinOverPopup.gameObject.SetActive(true);
+        GameWinImageText.gameObject.SetActive(true);
     }
 
     void InitListener()

@@ -46,10 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad263a5a641895418424545154b86e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 8577891064688456016}
+  audioSourceLoop: {fileID: 8577891064688456016}
+  audioSourceUnLoop: {fileID: 5277044302636932573}
   HomeMenuSE: {fileID: 8300000, guid: b73fe0c27a5cbf44194f02b646bc8a67, type: 3}
   InGameSE: {fileID: 8300000, guid: 2b989e5ced306f549b6b77872934866a, type: 3}
   MeleeAttackSE: {fileID: 8300000, guid: f6c6cae059c8f8c4b90017fd6381c6a5, type: 3}
+  ThunderSoundFx: {fileID: 8300000, guid: c67fc45e2dc1b0741b752f82aa4b0c7c, type: 3}
+  IceSoundFx: {fileID: 8300000, guid: 49ce9ec1842db7544b5b839110376c43, type: 3}
 --- !u!82 &8577891064688456016
 AudioSource:
   m_ObjectHideFlags: 0

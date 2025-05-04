@@ -56,6 +56,7 @@ public class EnemySpawner : Spawner
             yield return RunSingleWave(wave, i + 1);
         }
         Debug.Log("=== Đã hoàn thành tất cả các wave ===");
+        //MainCanvas.instance.show
     }
 
     private IEnumerator RunSingleWave(EnemyWave wave, int waveNumber)

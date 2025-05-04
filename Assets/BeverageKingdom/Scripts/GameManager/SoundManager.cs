@@ -12,6 +12,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip HomeMenuSE;
     public AudioClip InGameSE;
     public AudioClip MeleeAttackSE;
+    public AudioClip ThunderSoundFx;
+    public AudioClip IceSoundFx;
     private void Awake()
     {
         if (Instance != null && Instance != this)

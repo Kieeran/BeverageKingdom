@@ -44,10 +44,11 @@ public class Enemy : TriBehaviour
 
     protected override void Start()
     {
-        Init();
         base.Start();
 
         ChangeState(EnemyState.Walk);
+        Init();
+
     }
     private void Init()
     {
@@ -55,6 +56,8 @@ public class Enemy : TriBehaviour
         AttackCoolDown = enemyData.attackCoolDown;
         Damage = enemyData.dameAttack;
         maxHealth = enemyData.maxHealth;
+        //HumanPose =
+        CurrentHealth = maxHealth;
     }
     void SetAnimator(int index)
     {

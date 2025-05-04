@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour
 {
     public Action OnGameOver;
+    public Action OnGameWin;
 
     public static GameSystem instance;
     private void Awake()
@@ -29,5 +30,9 @@ public class GameSystem : MonoBehaviour
     public void GameOver()
     {
         OnGameOver?.Invoke();
+    } 
+    public void GameWin()
+    {
+        OnGameWin?.Invoke();
     }
 }

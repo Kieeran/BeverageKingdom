@@ -17,7 +17,7 @@ public class IceFreeze : ComboSkill
     protected override void ActivateComboSkill()
     {
         base.ActivateComboSkill();
-
+        SoundManager.Instance.PlaySound(SoundManager.Instance.IceSoundFx, false);
         // T�nh offset �? h�ng vi�n b�ng c�n gi?a so v?i v? tr� player
         float centerOffset = (shardCount - 1) / 2f;
 

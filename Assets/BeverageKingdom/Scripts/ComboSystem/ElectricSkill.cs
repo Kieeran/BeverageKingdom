@@ -21,6 +21,7 @@ public class ElectricSkill : ComboSkill
     protected override void ActivateComboSkill()
     {
         base.ActivateComboSkill();
+        SoundManager.Instance.PlaySound(SoundManager.Instance.ThunderSoundFx,false);
         Debug.Log("Lightning Strike Activated!");
         Transform target = EnemySpawner.Instance.randomPrefabHolder();
 
