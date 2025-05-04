@@ -136,7 +136,7 @@ MonoBehaviour:
   detectionRadius: 2
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   showGizmos: 1
 --- !u!1 &3175273159572450347
 GameObject:
@@ -185,10 +185,10 @@ MonoBehaviour:
   targetDetectionRange: 5
   obstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2560
   showGizmos: 0
 --- !u!1 &3467412826458928285
 GameObject:
@@ -663,7 +663,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   movementInput: {x: 0, y: 0}
-  movementDirectionSolver: {fileID: 0}
+  movementDirectionSolver: {fileID: 3448192619866630865}
 --- !u!1001 &8876869060402150539
 PrefabInstance:
   m_ObjectHideFlags: 0

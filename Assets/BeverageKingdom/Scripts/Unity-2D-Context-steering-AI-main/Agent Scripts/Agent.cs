@@ -40,8 +40,8 @@ public class Agent : MonoBehaviour
     private void AnimateCharacter()
     {
         Vector2 lookDirection = pointerInput - (Vector2)transform.position;
-        agentAnimations.RotateToPointer(lookDirection);
-        agentAnimations.PlayAnimation(MovementInput);
+       // agentAnimations.RotateToPointer(lookDirection);
+       // agentAnimations.PlayAnimation(MovementInput);
     }
 
     
