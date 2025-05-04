@@ -138,7 +138,7 @@ public class Enemy : TriBehaviour
         }
     }
 
-    void HandleAttack()
+    public void HandleAttack()
     {
         EnemyMovement.SetStage(3);
         if (IsDoneAttack == true)
