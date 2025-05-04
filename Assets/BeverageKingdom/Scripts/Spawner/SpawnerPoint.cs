@@ -64,6 +64,6 @@ public class SpawnerPoint : MonoBehaviour
         Transform spawnPoint = GetRandomSpawnPoint();
         if (spawnPoint == null) return;
 
-        enemySpawner.Spawn(EnemySpawner.enemy, spawnPoint.position, spawnPoint.rotation).gameObject.SetActive(true);
+        //enemySpawner.Spawn(EnemySpawner.enemy, spawnPoint.position, spawnPoint.rotation).gameObject.SetActive(true);
     }
 }

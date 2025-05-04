@@ -2,6 +2,7 @@
 
 public class Enemy : TriBehaviour
 {
+    [SerializeField] private EnemySO enemyData;
     public enum EnemyState
     {
         Idle,
@@ -39,11 +40,18 @@ public class Enemy : TriBehaviour
 
     protected override void Start()
     {
+        Init();
         base.Start();
 
         ChangeState(EnemyState.Walk);
     }
-
+    private void Init()
+    {
+        AttackRange = enemyData.attackRange;
+        AttackCoolDown = enemyData.attackCoolDown;
+        Damage = enemyData.dameAttack;
+        maxHealth = enemyData.maxHealth;
+    }
     void SetAnimator(int index)
     {
         animator.SetBool("Idle", index == 1);
@@ -159,6 +167,7 @@ public class Enemy : TriBehaviour
     {
         if (IsDead != true)
         {
+            EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
             Destroy(gameObject, 4f);

@@ -851,5 +851,5 @@ MonoBehaviour:
   playerGunSpr: {fileID: 569212532, guid: a99195cdd24165840b91a01567f67384, type: 3}
   playerSpr: {fileID: 3872018274052402086}
   IsDead: 0
-  HP: 10
+  HP: 25
   AttackCoolDown: 1

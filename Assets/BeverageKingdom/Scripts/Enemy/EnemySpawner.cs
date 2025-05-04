@@ -5,19 +5,22 @@ using UnityEngine;
 public class EnemySpawner : Spawner
 {
     public static EnemySpawner Instance { get; private set; }
-    public static string enemy = "Enemy";
 
-    [Header("Giới hạn toạ độ Y khi spawn")]
+    [Header("Wave Configuration")]
+    [Tooltip("ScriptableObject chứa danh sách các wave")]
+    public WaveDataSO waveDataSO;
+
+    [Header("Spawn Area")]
+    public float spawnX = 10f;
     public float minY = -2f;
     public float maxY = 2f;
 
-    [Header("Cài đặt spawn tự động")]
-    public bool autoSpawn = true;
-    public float minSpawnInterval = 0.3f;
-    public float maxSpawnInterval = 0.5f;
-    public float spawnX = 10f; // vị trí X cố định để spawn
+    [Header("Spawn Interval (seconds)")]
+    public float minSpawnInterval = 0.2f;
+    public float maxSpawnInterval = 0.3f;
 
-    private float nextSpawnTime = 0f;
+    // Đếm số enemy đang sống
+    private int aliveEnemies;
 
     protected override void Awake()
     {
@@ -29,36 +32,76 @@ public class EnemySpawner : Spawner
         else
         {
             Destroy(gameObject);
+            return;
         }
     }
 
     protected override void Start()
     {
-        SetNextSpawnTime();
-    }
-
-    void Update()
-    {
-        if (!autoSpawn) return;
-
-        nextSpawnTime -= Time.deltaTime;
-        if (nextSpawnTime <= 0f)
+        if (waveDataSO == null || waveDataSO.waves.Count == 0)
         {
-            SpawnAtX(spawnX, Quaternion.identity);
-            SetNextSpawnTime();
+            Debug.LogWarning("EnemySpawner: WaveDataSO chưa gán hoặc không có wave nào!");
+            return;
         }
+        StartCoroutine(RunAllWaves());
     }
 
-    void SetNextSpawnTime()
+    private IEnumerator RunAllWaves()
     {
-        nextSpawnTime = Random.Range(minSpawnInterval, maxSpawnInterval);
+        for (int i = 0; i < waveDataSO.waves.Count; i++)
+        {
+            EnemyWave wave = waveDataSO.waves[i];
+            Debug.Log($"--- Bắt đầu Wave {i + 1} ---");
+            yield return RunSingleWave(wave, i + 1);
+        }
+        Debug.Log("=== Đã hoàn thành tất cả các wave ===");
     }
 
-    public Transform SpawnAtX(float xPos, Quaternion rotation)
+    private IEnumerator RunSingleWave(EnemyWave wave, int waveNumber)
+    {
+        // Reset counter
+        aliveEnemies = 0;
+
+        // Spawn theo từng EnemyData
+        foreach (var enemyData in wave.enemies)
+        {
+            for (int j = 0; j < enemyData.count; j++)
+            {
+                // Spawn 1 enemy
+                Transform t = Spawn(
+                    enemyData.enemyData.name,
+                    GetRandomSpawnPos(),
+                    Quaternion.identity
+                );
+                if (t != null && t.TryGetComponent<Enemy>(out var e))
+                {
+                    aliveEnemies++;
+                }
+
+                // Chờ random interval trước khi spawn tiếp
+                float wait = Random.Range(minSpawnInterval, maxSpawnInterval);
+                yield return new WaitForSeconds(wait);
+            }
+        }
+
+        // Đợi đến khi người chơi kill sạch
+        yield return new WaitUntil(() => aliveEnemies == 0);
+
+        Debug.Log($"--- Wave {waveNumber} cleared! ---");
+    }
+
+    /// <summary>
+    /// Gọi từ Enemy.Die() để giảm counter aliveEnemies
+    /// </summary>
+    public void NotifyEnemyKilled()
+    {
+        aliveEnemies = Mathf.Max(0, aliveEnemies - 1);
+    }
+
+    private Vector3 GetRandomSpawnPos()
     {
         float y = Random.Range(minY, maxY);
-        Vector3 spawnPos = new Vector3(xPos, y, 0f);
-        return Spawn(enemy, spawnPos, rotation);
+        return new Vector3(spawnX, y, 0f);
     }
 
     public override Transform Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
