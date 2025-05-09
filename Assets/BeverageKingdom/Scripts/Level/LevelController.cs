@@ -45,7 +45,7 @@ public class LevelController : MonoBehaviour
 
     void InitMarker()
     {
-        for (int i = 1; i < levelData.Waves.Count; i++)
+        for (int i = 0; i < levelData.Waves.Count; i++)
         {
             RectTransform markerRect = _mileStoneProgressBar.PlaceTimeMarker(levelData.Waves[i].StartTime, _levelDuration);
 
@@ -86,7 +86,7 @@ public class LevelController : MonoBehaviour
             StartCoroutine(SpawnWave(wave));
             isSpawningWave = true;
 
-            // _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
+            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex + 1);
         }
     }
 
