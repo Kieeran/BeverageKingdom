@@ -8,6 +8,8 @@ public class LevelController : MonoBehaviour
 
     public GameObject EnemyPrefab;
 
+    MileStone _mileStoneProgressBar;
+
     public LevelData levelData;
     private int currentWaveIndex = 0;
     private float timer = 0f;
@@ -35,6 +37,23 @@ public class LevelController : MonoBehaviour
 
         _isLevelComplete = false;
         _isSpawnAllEnemies = false;
+
+        _mileStoneProgressBar = UIManager.Instance.MainCanvas.MileStoneProgressBar;
+
+        InitMarker();
+    }
+
+    void InitMarker()
+    {
+        for (int i = 1; i < levelData.Waves.Count; i++)
+        {
+            RectTransform markerRect = _mileStoneProgressBar.PlaceTimeMarker(levelData.Waves[i].StartTime, _levelDuration);
+
+            if (i == levelData.Waves.Count - 1)
+            {
+                _mileStoneProgressBar.UpsizeMarker(markerRect, 50f);
+            }
+        }
     }
 
     void Update()
@@ -57,6 +76,7 @@ public class LevelController : MonoBehaviour
         {
             UIManager.Instance.MainCanvas.UpdateLevelProgressBar(timer / _levelDuration);
         }
+        Debug.Log(timer + "  " + levelData.Waves[currentWaveIndex].StartTime);
 
         WaveData wave = levelData.Waves[currentWaveIndex];
         Debug.Log("Wave" + (currentWaveIndex + 1));
@@ -65,6 +85,8 @@ public class LevelController : MonoBehaviour
         {
             StartCoroutine(SpawnWave(wave));
             isSpawningWave = true;
+
+            // _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
         }
     }
 
