@@ -690,7 +690,7 @@ PrefabInstance:
     - target: {fileID: 4665712575133816631, guid: fe5cec5108ce7434c846fae0522e3cb1, type: 3}
       propertyPath: enemyData
       value: 
-      objectReference: {fileID: 11400000, guid: 1407cfa6153c24d4f8a910f92b8ad3e9, type: 2}
+      objectReference: {fileID: 11400000, guid: f85d67855bdbb1e4eb357634e63f6d83, type: 2}
     - target: {fileID: 4887401757434989689, guid: fe5cec5108ce7434c846fae0522e3cb1, type: 3}
       propertyPath: m_Name
       value: EnemyWave4
