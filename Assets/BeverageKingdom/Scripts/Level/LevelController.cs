@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    public static LevelController instance;    
+    public static LevelController instance;
 
     public GameObject EnemyPrefab;
 
@@ -44,7 +44,6 @@ public class LevelController : MonoBehaviour
         }
 
         WaveData wave = levelData.Waves[currentWaveIndex];
-
 
         if (!isSpawningWave && timer >= wave.StartTime)
         {

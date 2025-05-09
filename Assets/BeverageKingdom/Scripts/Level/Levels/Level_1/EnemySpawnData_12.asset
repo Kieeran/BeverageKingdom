@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
-  m_Name: EnemySpawnData_1
+  m_Name: EnemySpawnData_12
   m_EditorClassIdentifier: 
   EnemyType: Melee
-  Count: 50
-  SpawnInterval: 0.2
+  Count: 10
+  SpawnInterval: 5

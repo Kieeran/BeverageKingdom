@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 952174f65ebad234dac0a35587976239, type: 3}
-  m_Name: Level_1
+  m_Script: {fileID: 11500000, guid: 2d096232a37b3814bb9a51784f2c4fd8, type: 3}
+  m_Name: Wave_4
   m_EditorClassIdentifier: 
-  Waves:
-  - {fileID: 11400000, guid: 8bd2d9c4d6da8b142b6b49577aa7ef1e, type: 2}
+  StartTime: 0
+  IsBossWave: 0
+  EnemiesToSpawn: []
