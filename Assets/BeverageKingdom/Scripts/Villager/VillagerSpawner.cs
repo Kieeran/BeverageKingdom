@@ -48,24 +48,12 @@ public class VillagerSpawner : MonoBehaviour
 
     void SpawnVillagetAt(int index)
     {
-        Transform leftTop = _spawnAreas[index - 1].LeftTop;
-        Transform rightBottom = _spawnAreas[index - 1].RightBottom;
-
-        float minX = Mathf.Min(leftTop.position.x, rightBottom.position.x);
-        float maxX = Mathf.Max(leftTop.position.x, rightBottom.position.x);
-        float minY = Mathf.Min(leftTop.position.y, rightBottom.position.y);
-        float maxY = Mathf.Max(leftTop.position.y, rightBottom.position.y);
-
         for (int i = 0; i < spawnNum; i++)
         {
-            float randomX = Random.Range(minX, maxX);
-            float randomY = Random.Range(minY, maxY);
-
-            Vector3 moveToPosition = new Vector3(randomX, randomY, 0f);
             Villager villager = Instantiate(_villagerPrefab);
             villager.transform.position = _spawnAreas[index - 1].transform.position;
 
-            villager.SetTargetPosition(moveToPosition);
+            villager.SetTargetPosition(_spawnAreas[index - 1].GetRandomSpawnPos());
         }
     }
 }

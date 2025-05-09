@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class _EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject _enemyPrefab;
+    public float spawnInterval;
+    public Transform spawnPoint;
 
-    // Update is called once per frame
+    private float timer;
+
     void Update()
     {
-        
+        timer += Time.deltaTime;
+
+        if (timer >= spawnInterval)
+        {
+            Spawn();
+            timer = 0f;
+        }
+    }
+
+    void Spawn()
+    {
+        Vector3 pos = spawnPoint != null ? spawnPoint.position : transform.position;
+        Instantiate(_enemyPrefab, pos, Quaternion.identity);
     }
 }
