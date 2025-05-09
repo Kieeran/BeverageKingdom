@@ -16,5 +16,3 @@ MonoBehaviour:
   IsBossWave: 0
   EnemiesToSpawn:
   - {fileID: 11400000, guid: f610faee5f5518d41ab00de65bacd622, type: 2}
-  - {fileID: 11400000, guid: bb45a73c72738424689e2314085b5f79, type: 2}
-  - {fileID: 11400000, guid: dfffd148c4845a44a90868df26fab193, type: 2}

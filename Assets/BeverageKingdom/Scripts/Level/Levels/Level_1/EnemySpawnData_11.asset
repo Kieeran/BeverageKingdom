@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyType: Melee
   Count: 8
-  SpawnInterval: 4
+  SpawnInterval: 1

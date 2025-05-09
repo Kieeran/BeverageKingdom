@@ -14,13 +14,15 @@ public class LevelController : MonoBehaviour
     private bool isSpawningWave = false;
 
     List<SpawnArea> _spawnAreas = new();
-
+    bool _isLevelComplete;
+    bool _isSpawnAllEnemies;
     float _levelDuration;
 
     private void Awake()
     {
         instance = this;
     }
+
     void Start()
     {
         Env env = Controller.Instance.Env.GetComponent<Env>();
@@ -30,11 +32,24 @@ public class LevelController : MonoBehaviour
         _spawnAreas.Add(env.EnemySpawnPosSlot3.GetChild(0).GetComponent<SpawnArea>());
 
         _levelDuration = levelData.Waves[levelData.Waves.Count - 1].StartTime;
+
+        _isLevelComplete = false;
+        _isSpawnAllEnemies = false;
     }
 
     void Update()
     {
-        if (currentWaveIndex >= levelData.Waves.Count) return;
+        if (CheckCompleteLevel() && _isLevelComplete == false && _isSpawnAllEnemies == true)
+        {
+            _isLevelComplete = true;
+            GameSystem.instance.GameWin();
+        }
+
+        if (currentWaveIndex >= levelData.Waves.Count)
+        {
+            _isSpawnAllEnemies = true;
+            return;
+        }
 
         timer += Time.deltaTime;
 
@@ -50,6 +65,11 @@ public class LevelController : MonoBehaviour
             StartCoroutine(SpawnWave(wave));
             isSpawningWave = true;
         }
+    }
+
+    bool CheckCompleteLevel()
+    {
+        return transform.childCount == 0;
     }
 
     IEnumerator SpawnWave(WaveData wave)
