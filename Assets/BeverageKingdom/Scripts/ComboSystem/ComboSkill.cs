@@ -31,11 +31,11 @@ public class ComboSkill : MonoBehaviour
     {
         if (currentCombo % comboIntTrigger == 0)
         {
-            ActivateComboSkill();
+          // ActivateComboSkill();
         }
     }
 
-    protected virtual void ActivateComboSkill()
+    public virtual void ActivateComboSkill()
     {
         if (skillSequence != null && skillSequence.IsActive())
             skillSequence.Kill();

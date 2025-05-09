@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+[RequireComponent(typeof(EnemyEffect))]
 
 public class Enemy : TriBehaviour
 {
@@ -28,11 +29,13 @@ public class Enemy : TriBehaviour
     public float AttackRange;
     public float AttackCoolDown;
     float _coolDownTimer;
-
     public int Damage;
+
     bool IsDead = false;
 
     public Image HealthBarFillUI;
+
+    private EnemyEffect _enemyEffect;
 
     protected override void Awake()
     {
@@ -46,6 +49,7 @@ public class Enemy : TriBehaviour
 
         ChangeState(EnemyState.Walk);
         // Init();
+        _enemyEffect = GetComponent<EnemyEffect>();
     }
     private void Init()
     {
@@ -183,9 +187,10 @@ public class Enemy : TriBehaviour
     {
         if (_coolDownTimer == 0)
         {
-            if (EnemyMovement.Target != null)
+            var target = EnemyMovement.Target;
+            if (target != null)
             {
-                if (EnemyMovement.Target.TryGetComponent<Villager>(out var villager))
+                if (target.TryGetComponent<Villager>(out var villager))
                 {
                     villager.TakeDamage(Damage);
 
@@ -195,8 +200,7 @@ public class Enemy : TriBehaviour
                         EnemyMovement.SetStage(1);
                     }
                 }
-
-                if (EnemyMovement.Target.TryGetComponent<Player>(out var player))
+                if (target.TryGetComponent<Player>(out var player))
                 {
                     player.TakeDamage(Damage);
 
@@ -226,12 +230,14 @@ public class Enemy : TriBehaviour
         CurrentHealth -= amount;
         HealthBarFillUI.fillAmount = CurrentHealth / maxHealth;
 
-        EnemyEffect effect = GetComponent<EnemyEffect>();
-        if (effect != null)
+        //EnemyEffect effect = GetComponent<EnemyEffect>();
+        
+        if (_enemyEffect != null)
         {
-            effect.ApplyKnockBack();
-        }
+            _enemyEffect.ApplyKnockBack();
+            _enemyEffect.ApplyHitEffect();
 
+        }
         if (CurrentHealth <= 0)
         {
             Die();

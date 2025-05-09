@@ -30,7 +30,23 @@ public class EnemyEffect : MonoBehaviour
         if (knockbackRoutine != null) StopCoroutine(knockbackRoutine);
         knockbackRoutine = StartCoroutine(KnockBackCoroutine());
     }
+    public void ApplyHitEffect()
+    {
+        StartCoroutine(HitEffectCoroutine());
+    }
 
+    private IEnumerator HitEffectCoroutine()
+    {
+        var sr = transform.Find("Model").GetComponentInChildren<SpriteRenderer>();
+        if (sr == null) yield break;
+
+        Color originalColor = sr.color;
+        sr.color = Color.red;
+
+        yield return new WaitForSeconds(0.1f); // Thời gian đổi màu đỏ
+
+        sr.color = originalColor;
+    }
     private IEnumerator FreezeCoroutine()
     {
         var enemy = GetComponent<Enemy>();

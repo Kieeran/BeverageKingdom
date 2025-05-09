@@ -72,7 +72,6 @@ public class Villager : MonoBehaviour
     {
         HP -= damage;
         HealthBarFillUI.fillAmount = HP / MaxHP;
-
         if (HP <= 0)
         {
             ChangeState(VillagerState.Dead);

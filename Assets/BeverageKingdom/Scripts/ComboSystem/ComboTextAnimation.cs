@@ -99,8 +99,6 @@ public class ComboTextAnimation : MonoBehaviour
                         {
                             // return to normal size after burst
 
-                            Debug.Log("bbbbbbbbbbbbb");
-
                             suffixText.transform.DOScale(Vector3.one, punchDuration).SetEase(Ease.InBack);
                         });
                 }

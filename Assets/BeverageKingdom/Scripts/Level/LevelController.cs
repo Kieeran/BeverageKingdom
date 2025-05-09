@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    public static LevelController instance;    
+
     public GameObject EnemyPrefab;
 
     public LevelData levelData;
@@ -15,6 +17,10 @@ public class LevelController : MonoBehaviour
 
     float _levelDuration;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         Env env = Controller.Instance.Env.GetComponent<Env>();
@@ -39,7 +45,6 @@ public class LevelController : MonoBehaviour
 
         WaveData wave = levelData.Waves[currentWaveIndex];
 
-        Debug.Log("Spawn wave " + currentWaveIndex);
 
         if (!isSpawningWave && timer >= wave.StartTime)
         {
@@ -67,6 +72,13 @@ public class LevelController : MonoBehaviour
     {
         int laneIndex = Random.Range(0, _spawnAreas.Count);
         Vector2 spawnPos = _spawnAreas[laneIndex].GetRandomSpawnPos();
-        Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
+        GameObject enemy = Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
+        enemy.transform.SetParent(transform);
+    }
+    public Transform GetRadomEnemy()
+    {
+        int random = Random.Range(0, transform.childCount);
+        Transform enemy = transform.GetChild(random);
+        return enemy;
     }
 }

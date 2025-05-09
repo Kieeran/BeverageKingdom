@@ -16,7 +16,7 @@ public class MainCanvas : MonoBehaviour
     [SerializeField] Button _spawnVillagerAtSlot3Button;
 
     public Button SpawnVillagerButton;
-    public Button ChangeWeaponButton;
+    public Button ActiveSkill;
     public Button AttackButton;
 
     public RectTransform GameWinOverPopup;
@@ -34,8 +34,9 @@ public class MainCanvas : MonoBehaviour
 
     public Action OnSpawnVillagerAtAllSlot;
     public Action OnAttack;
+    public Action OnActiveSkill;
 
-    public Action OnChangeWeapon;
+    public ComboBar comboBar;
     public Joystick GetJoystick() { return _joystick; }
 
 
@@ -44,6 +45,8 @@ public class MainCanvas : MonoBehaviour
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private float displayDuration = 2f;
     [SerializeField] private Ease fadeEase = Ease.Linear;
+
+    [Header("")]
     private Sequence waveSequence;
     void Awake()
     {
@@ -99,10 +102,10 @@ public class MainCanvas : MonoBehaviour
             OnSpawnVillagerAtAllSlot?.Invoke();
         });
 
-        ChangeWeaponButton.onClick.AddListener(() =>
+        ActiveSkill.onClick.AddListener(() =>
         {
             Debug.Log("Change weapon");
-            OnChangeWeapon?.Invoke();
+            OnActiveSkill?.Invoke();
         });
 
         AttackButton.onClick.AddListener(() =>
