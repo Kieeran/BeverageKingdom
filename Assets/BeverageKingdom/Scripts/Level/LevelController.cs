@@ -59,6 +59,7 @@ public class LevelController : MonoBehaviour
         }
 
         WaveData wave = levelData.Waves[currentWaveIndex];
+        Debug.Log("Wave" + (currentWaveIndex + 1));
 
         if (!isSpawningWave && timer >= wave.StartTime)
         {

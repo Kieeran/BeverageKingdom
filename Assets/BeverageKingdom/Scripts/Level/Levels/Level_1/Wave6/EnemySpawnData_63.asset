@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d096232a37b3814bb9a51784f2c4fd8, type: 3}
-  m_Name: Wave_2
+  m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
+  m_Name: EnemySpawnData_63
   m_EditorClassIdentifier: 
-  StartTime: 20
-  IsBossWave: 0
-  EnemiesToSpawn:
-  - {fileID: 11400000, guid: bb45a73c72738424689e2314085b5f79, type: 2}
+  EnemyType: 
+  Count: 0
+  SpawnInterval: 0
