@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 4887401757434989689, guid: fe5cec5108ce7434c846fae0522e3cb1, type: 3}
-  levelData: {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
+  levelData: {fileID: 11400000, guid: 26194ba886891524798c1e381d59b90d, type: 2}
