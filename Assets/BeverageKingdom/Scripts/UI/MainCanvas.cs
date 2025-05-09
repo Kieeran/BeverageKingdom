@@ -22,6 +22,7 @@ public class MainCanvas : MonoBehaviour
     public RectTransform GameWinOverPopup;
     public RectTransform GameWinImageText;
     public RectTransform GameOverImageText;
+    public MileStone MileStoneProgressBar;
 
     public Button PlayAgainButton;
     public Button ExitButton;
