@@ -41,7 +41,7 @@ public class Controller : MonoBehaviour
         Player = Instantiate(_playerPrefab.gameObject).transform;
         Env = Instantiate(_envPrefab.gameObject).transform;
         // Instantiate(_spawnEnemy.gameObject);
-        Instantiate(__spawnEnemy.gameObject);
+        // Instantiate(__spawnEnemy.gameObject);
         Instantiate(_spawnVillager.gameObject);
         Instantiate(_comboController.gameObject);
         Instantiate(_projectileSpawner.gameObject);

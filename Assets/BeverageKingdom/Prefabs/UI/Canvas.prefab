@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.02998209, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.65890217, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.683
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -1757,6 +1757,7 @@ MonoBehaviour:
   PlayAgainButton: {fileID: 9094171243519624545}
   ExitButton: {fileID: 3233533658348707380}
   tmp: {fileID: 7392026532767995455}
+  LevelProgressFillUI: {fileID: 4416598517060720498}
   nextWave: {fileID: 512557899475270741}
   fadeDuration: 0.5
   displayDuration: 2
@@ -3455,7 +3456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5704972936759566646
 RectTransform:
   m_ObjectHideFlags: 0

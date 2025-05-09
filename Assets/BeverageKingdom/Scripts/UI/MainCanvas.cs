@@ -26,6 +26,7 @@ public class MainCanvas : MonoBehaviour
     public Button PlayAgainButton;
     public Button ExitButton;
     public TextMeshProUGUI tmp;
+    public Image LevelProgressFillUI;
 
     public Action OnSpawnVillagerAtSlot1;
     public Action OnSpawnVillagerAtSlot2;
@@ -160,5 +161,12 @@ public class MainCanvas : MonoBehaviour
             .AppendInterval(displayDuration)
             .Append(nextWave.DOFade(0f, fadeDuration).SetEase(fadeEase))
             .OnComplete(() => waveSequence = null);
+    }
+
+    public void UpdateLevelProgressBar(float fillAmount)
+    {
+        LevelProgressFillUI.fillAmount = fillAmount;
+
+        if (fillAmount > 1f) LevelProgressFillUI.fillAmount = 1;
     }
 }
