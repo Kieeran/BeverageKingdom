@@ -845,7 +845,6 @@ MonoBehaviour:
   WeaponController: {fileID: 8029644660301429030}
   inputMangager: {fileID: 0}
   JoystickMove: {fileID: 3667071518967296704}
-  UseJoystick: 0
   moveSpeed: 5
   playerSword: {fileID: 22100000, guid: 61ed2d81f8d9ed244990d4b7c6c0a25f, type: 2}
   playerGun: {fileID: 22100000, guid: 1884c9b546c8c794f9f461b39ebd15eb, type: 2}
@@ -855,7 +854,7 @@ MonoBehaviour:
   HealthBarFillUI: {fileID: 4509538063275114473}
   IsDead: 0
   MaxHP: 0
-  HP: 10
+  HP: 10000
   AttackCoolDown: 0.5
 --- !u!1001 &44912535549813156
 PrefabInstance:

@@ -30,15 +30,17 @@ public class EnemyMovement : MonoBehaviour
 
         SetStage(2);
     }
+
     private void Start()
     {
         Init();
     }
+
     private void Init()
     {
-        MoveSpeed = enemyData.speed;
-
+        // MoveSpeed = enemyData.speed;
     }
+
     void Update()
     {
         // SetStage(1);

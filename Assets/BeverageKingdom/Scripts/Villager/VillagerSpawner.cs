@@ -19,9 +19,9 @@ public class VillagerSpawner : MonoBehaviour
 
         Env env = Controller.Instance.Env.GetComponent<Env>();
 
-        _spawnAreas.Add(env.spawnPosSlot1.GetChild(0).GetComponent<SpawnArea>());
-        _spawnAreas.Add(env.spawnPosSlot2.GetChild(0).GetComponent<SpawnArea>());
-        _spawnAreas.Add(env.spawnPosSlot3.GetChild(0).GetComponent<SpawnArea>());
+        _spawnAreas.Add(env.VillagerSpawnPosSlot1.GetChild(0).GetComponent<SpawnArea>());
+        _spawnAreas.Add(env.VillagerSpawnPosSlot2.GetChild(0).GetComponent<SpawnArea>());
+        _spawnAreas.Add(env.VillagerSpawnPosSlot3.GetChild(0).GetComponent<SpawnArea>());
     }
 
     void OnSpawnVillagerAtSlot1()

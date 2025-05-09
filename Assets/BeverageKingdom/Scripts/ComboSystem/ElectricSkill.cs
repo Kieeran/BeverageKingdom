@@ -9,7 +9,7 @@ public class ElectricSkill : ComboSkill
     [Header("Lightning Effect")]
     // [SerializeField] private float dropHeight = 15f;       // khoảng cách sét rơi từ trên trời
     [SerializeField] private float damageRadius = 3f;      // bán kính gây damage
-    [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
+    // [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
 
     protected override void Start()
     {
@@ -23,22 +23,22 @@ public class ElectricSkill : ComboSkill
         base.ActivateComboSkill();
         SoundManager.Instance?.PlaySound(SoundManager.Instance?.ThunderSoundFx, false);
         Debug.Log("Lightning Strike Activated!");
-        Transform target = EnemySpawner.Instance.randomPrefabHolder();
+        // Transform target = EnemySpawner.Instance.randomPrefabHolder();
 
-        EffectSpawner.instance.Spawn(EffectSpawner.Lightning, target.position + Vector3.up, Quaternion.identity);
+        // EffectSpawner.instance.Spawn(EffectSpawner.Lightning, target.position + Vector3.up, Quaternion.identity);
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(target.transform.position, damageRadius);
-        foreach (var col in hits)
-        {
-            if (col.CompareTag("Enemy"))
-            {
-                var health = col.GetComponent<Enemy>();
-                if (health != null)
-                {
-                    health.Deduct(damageAmount);
-                }
-            }
-        }
+        // Collider2D[] hits = Physics2D.OverlapCircleAll(target.transform.position, damageRadius);
+        // foreach (var col in hits)
+        // {
+        //     if (col.CompareTag("Enemy"))
+        //     {
+        //         var health = col.GetComponent<Enemy>();
+        //         if (health != null)
+        //         {
+        //             health.Deduct(damageAmount);
+        //         }
+        //     }
+        // }
     }
 
     private void OnDrawGizmosSelected()

@@ -45,7 +45,7 @@ public class Enemy : TriBehaviour
         base.Start();
 
         ChangeState(EnemyState.Walk);
-        Init();
+        // Init();
     }
     private void Init()
     {
@@ -170,7 +170,7 @@ public class Enemy : TriBehaviour
     {
         if (IsDead != true)
         {
-            EnemySpawner.Instance.NotifyEnemyKilled();
+            // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
             Destroy(gameObject, 4f);
