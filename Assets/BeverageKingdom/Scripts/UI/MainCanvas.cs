@@ -30,6 +30,8 @@ public class MainCanvas : MonoBehaviour
     public Action OnSpawnVillagerAtSlot2;
     public Action OnSpawnVillagerAtSlot3;
 
+    public Action OnSpawnVillagerAtAllSlot;
+
     public Action OnChangeWeapon;
     public Joystick GetJoystick() { return _joystick; }
 
@@ -89,7 +91,9 @@ public class MainCanvas : MonoBehaviour
 
         SpawnVillagerButton.onClick.AddListener(() =>
         {
-            _pickSlotSpawnVillager.gameObject.SetActive(true);
+            // _pickSlotSpawnVillager.gameObject.SetActive(true);
+
+            OnSpawnVillagerAtAllSlot?.Invoke();
         });
 
         ChangeWeaponButton.onClick.AddListener(() =>
@@ -108,7 +112,7 @@ public class MainCanvas : MonoBehaviour
         {
             Time.timeScale = 1f;
 
-            SoundManager.Instance.StopSound();
+            SoundManager.Instance?.StopSound();
             SceneManager.LoadSceneAsync("HomeScene");
         });
     }

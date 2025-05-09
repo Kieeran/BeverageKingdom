@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _villagerPrefab: {fileID: 4615887583280631623, guid: efd6ff58a11244d45bdf3285d4940da6, type: 3}
-  spawnNum: 3
+  spawnNum: 1

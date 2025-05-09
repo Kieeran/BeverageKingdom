@@ -15,6 +15,8 @@ public class VillagerSpawner : MonoBehaviour
         UIManager.Instance.MainCanvas.OnSpawnVillagerAtSlot2 += OnSpawnVillagerAtSlot2;
         UIManager.Instance.MainCanvas.OnSpawnVillagerAtSlot3 += OnSpawnVillagerAtSlot3;
 
+        UIManager.Instance.MainCanvas.OnSpawnVillagerAtAllSlot += OnSpawnVillagerAtAllSlot;
+
         Env env = Controller.Instance.Env.GetComponent<Env>();
 
         _spawnAreas.Add(env.spawnPosSlot1.GetChild(0).GetComponent<SpawnArea>());
@@ -25,6 +27,13 @@ public class VillagerSpawner : MonoBehaviour
     void OnSpawnVillagerAtSlot1()
     {
         SpawnVillagetAt(1);
+    }
+
+    void OnSpawnVillagerAtAllSlot()
+    {
+        OnSpawnVillagerAtSlot1();
+        OnSpawnVillagerAtSlot2();
+        OnSpawnVillagerAtSlot3();
     }
 
     void OnSpawnVillagerAtSlot2()

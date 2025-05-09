@@ -17,7 +17,7 @@ public class IceFreeze : ComboSkill
     protected override void ActivateComboSkill()
     {
         base.ActivateComboSkill();
-        SoundManager.Instance.PlaySound(SoundManager.Instance.IceSoundFx, false);
+        SoundManager.Instance?.PlaySound(SoundManager.Instance?.IceSoundFx, false);
         // T�nh offset �? h�ng vi�n b�ng c�n gi?a so v?i v? tr� player
         float centerOffset = (shardCount - 1) / 2f;
 
@@ -25,7 +25,7 @@ public class IceFreeze : ComboSkill
         {
             // T�nh v? tr� spawn cho vi�n th? i
             float yOffset = (i - centerOffset) * verticalSpacing;
-            Vector3 spawnPos = new Vector3(-4,0,0) + Vector3.up * yOffset;
+            Vector3 spawnPos = new Vector3(-4, 0, 0) + Vector3.up * yOffset;
 
             ProjectileSpawner.Instance.Spawn(ProjectileSpawner.Ice, spawnPos, Quaternion.identity);
 

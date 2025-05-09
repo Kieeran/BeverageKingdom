@@ -12,7 +12,7 @@ public class ElectricSkill : ComboSkill
     [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
 
     protected override void Start()
-    {   
+    {
         base.Start();
         color = Color.yellow;
         electricGun = GetComponentInChildren<ElectricGun>();
@@ -21,7 +21,7 @@ public class ElectricSkill : ComboSkill
     protected override void ActivateComboSkill()
     {
         base.ActivateComboSkill();
-        SoundManager.Instance.PlaySound(SoundManager.Instance.ThunderSoundFx,false);
+        SoundManager.Instance?.PlaySound(SoundManager.Instance?.ThunderSoundFx, false);
         Debug.Log("Lightning Strike Activated!");
         Transform target = EnemySpawner.Instance.randomPrefabHolder();
 
