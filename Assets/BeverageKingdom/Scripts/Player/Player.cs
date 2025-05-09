@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public InputMangager inputMangager;
 
     public JoystickMove JoystickMove;
-    public bool UseJoystick;
+    // public bool UseJoystick;
 
     public float moveSpeed;
     private bool facingRight = true;
@@ -73,6 +73,9 @@ public class Player : MonoBehaviour
         inputMangager = InputMangager.Instance;
 
         MaxHP = HP;
+
+        _coolDownTimer = 0;
+        UIManager.Instance.MainCanvas.OnAttack += OnAttack;
     }
 
     public void TakeDamage(float damage)
@@ -101,37 +104,72 @@ public class Player : MonoBehaviour
         GameSystem.instance.GameOver();
     }
 
+    void OnAttack()
+    {
+        if (_coolDownTimer != 0) return;
+
+        SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSE, false);
+        WeaponController.Attack();
+        stateMachine.ChangeState(attack);
+        stateMachine.currentState.Update();
+
+        _coolDownTimer = AttackCoolDown;
+    }
+
     void Update()
     {
         if (IsDead) return;
 
-        if (UseJoystick == false)
+        // if (UseJoystick == false)
+        // {
+        //     SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
+        //     Flip();
+        // }
+
+        if (_coolDownTimer != 0)
         {
-            SetVelocity(inputMangager.Horizontal * moveSpeed, inputMangager.Vertical * moveSpeed);
-            Flip();
+            _coolDownTimer -= Time.deltaTime;
+
+            if (_coolDownTimer <= 0)
+            {
+                _coolDownTimer = 0;
+            }
         }
 
-        _coolDownTimer += Time.deltaTime;
-        if (_coolDownTimer >= AttackCoolDown)
-        {
-            _coolDownTimer = 0;
+        // _coolDownTimer += Time.deltaTime;
+        // if (_coolDownTimer >= AttackCoolDown)
+        // {
+        //     _coolDownTimer = 0;
 
-            SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSE, false);
-            WeaponController.Attack();
-            stateMachine.ChangeState(attack);
-            stateMachine.currentState.Update();
-        }
+        //     SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSE, false);
+        //     WeaponController.Attack();
+        //     stateMachine.ChangeState(attack);
+        //     stateMachine.currentState.Update();
+        // }
     }
 
     void FixedUpdate()
     {
         if (IsDead) return;
 
-        if (UseJoystick == true)
+        // if (UseJoystick == true)
+        // {
+        //     SetVelocity(JoystickMove.move.x * moveSpeed, JoystickMove.move.y * moveSpeed);
+        //     Flip();
+        // }
+
+        Vector2 input;
+        if (JoystickMove.move.sqrMagnitude > 0.01f)
         {
-            SetVelocity(JoystickMove.move.x * moveSpeed, JoystickMove.move.y * moveSpeed);
-            Flip();
+            input = JoystickMove.move;
         }
+        else
+        {
+            input = new Vector2(inputMangager.Horizontal, inputMangager.Vertical);
+        }
+
+        SetVelocity(input.x * moveSpeed, input.y * moveSpeed);
+        Flip();
     }
 
     public void SetVelocity(float xInput, float yInput)

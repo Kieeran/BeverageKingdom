@@ -17,6 +17,7 @@ public class MainCanvas : MonoBehaviour
 
     public Button SpawnVillagerButton;
     public Button ChangeWeaponButton;
+    public Button AttackButton;
 
     public RectTransform GameWinOverPopup;
     public RectTransform GameWinImageText;
@@ -31,6 +32,7 @@ public class MainCanvas : MonoBehaviour
     public Action OnSpawnVillagerAtSlot3;
 
     public Action OnSpawnVillagerAtAllSlot;
+    public Action OnAttack;
 
     public Action OnChangeWeapon;
     public Joystick GetJoystick() { return _joystick; }
@@ -100,6 +102,11 @@ public class MainCanvas : MonoBehaviour
         {
             Debug.Log("Change weapon");
             OnChangeWeapon?.Invoke();
+        });
+
+        AttackButton.onClick.AddListener(() =>
+        {
+            OnAttack?.Invoke();
         });
 
         PlayAgainButton.onClick.AddListener(() =>
