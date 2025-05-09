@@ -31,7 +31,7 @@ public class ComboSkill : MonoBehaviour
     {
         if (currentCombo % comboIntTrigger == 0)
         {
-          // ActivateComboSkill();
+           ActivateComboSkill();
         }
     }
 

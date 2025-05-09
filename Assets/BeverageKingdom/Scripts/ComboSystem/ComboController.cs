@@ -11,7 +11,7 @@ public class ComboController : MonoBehaviour
 
     [Header("Cài đặt combo")]
     public float comboResetDelay = 2f;   
-    public int maxCombo = 25;            
+    public int maxCombo = 5;            
 
     public int CurrentCombo { get; private set; }
 
@@ -26,7 +26,7 @@ public class ComboController : MonoBehaviour
     }
     private void Start()
     {
-        maxCombo = 25;
+        maxCombo = 5;
     }
     private void Update()
     {
