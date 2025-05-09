@@ -7,9 +7,9 @@ public class ElectricSkill : ComboSkill
     private ElectricGun electricGun;
 
     [Header("Lightning Effect")]
-     [SerializeField] private float dropHeight = 15f;       // khoảng cách sét rơi từ trên trời
+    //  [SerializeField] private float dropHeight = 15f;       // khoảng cách sét rơi từ trên trời
     [SerializeField] private float damageRadius = 3f;      // bán kính gây damage
-     [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
+    [SerializeField] private int damageAmount = 100;       // lượng damage gây ra
 
     private MainCanvas mainCanvas;
     protected override void Start()
@@ -17,12 +17,12 @@ public class ElectricSkill : ComboSkill
         base.Start();
         color = Color.yellow;
         electricGun = GetComponentInChildren<ElectricGun>();
-        mainCanvas =MainCanvas.instance;
+        mainCanvas = MainCanvas.instance;
         if (mainCanvas != null)
         {
             mainCanvas.comboBar.OnComboMax += ActivateComboSkill;
         }
-        
+
     }
 
     public override void ActivateComboSkill()
@@ -36,17 +36,17 @@ public class ElectricSkill : ComboSkill
         EffectSpawner.instance.Spawn(EffectSpawner.Lightning, target.position + Vector3.up, Quaternion.identity);
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(target.transform.position, damageRadius);
-         foreach (var col in hits)
-         {
-             if (col.CompareTag("Enemy"))
-           {
-                 var health = col.GetComponent<Enemy>();
-                 if (health != null)
-                 {
-                     health.Deduct(damageAmount);
-                 }
-             }
-         }
+        foreach (var col in hits)
+        {
+            if (col.CompareTag("Enemy"))
+            {
+                var health = col.GetComponent<Enemy>();
+                if (health != null)
+                {
+                    health.Deduct(damageAmount);
+                }
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()

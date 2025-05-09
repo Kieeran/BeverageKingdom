@@ -13,7 +13,7 @@ public class LevelController : MonoBehaviour
     public LevelData levelData;
     private int currentWaveIndex = 0;
     private float timer = 0f;
-    private bool isSpawningWave = false;
+    // private bool isSpawningWave = false;
 
     List<SpawnArea> _spawnAreas = new();
     bool _isLevelComplete;
@@ -45,7 +45,7 @@ public class LevelController : MonoBehaviour
 
     void InitMarker()
     {
-        for (int i = 0; i < levelData.Waves.Count; i++)
+        for (int i = 1; i < levelData.Waves.Count; i++)
         {
             RectTransform markerRect = _mileStoneProgressBar.PlaceTimeMarker(levelData.Waves[i].StartTime, _levelDuration);
 
@@ -76,17 +76,17 @@ public class LevelController : MonoBehaviour
         {
             UIManager.Instance.MainCanvas.UpdateLevelProgressBar(timer / _levelDuration);
         }
-        Debug.Log(timer + "  " + levelData.Waves[currentWaveIndex].StartTime);
+        // Debug.Log(timer + "  " + levelData.Waves[currentWaveIndex].StartTime);
 
         WaveData wave = levelData.Waves[currentWaveIndex];
-        Debug.Log("Wave" + (currentWaveIndex + 1));
+        // Debug.Log("Wave" + (currentWaveIndex + 1));
 
-        if (!isSpawningWave && timer >= wave.StartTime)
+        if (/*!isSpawningWave &&*/ timer >= wave.StartTime)
         {
+            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
+            currentWaveIndex++;
             StartCoroutine(SpawnWave(wave));
-            isSpawningWave = true;
-
-            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex + 1);
+            // isSpawningWave = true;
         }
     }
 
@@ -106,8 +106,8 @@ public class LevelController : MonoBehaviour
             }
         }
 
-        currentWaveIndex++;
-        isSpawningWave = false;
+        // currentWaveIndex++;
+        // isSpawningWave = false;
     }
 
     void SpawnEnemy()
