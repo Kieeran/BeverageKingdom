@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d096232a37b3814bb9a51784f2c4fd8, type: 3}
   m_Name: Wave_6
   m_EditorClassIdentifier: 
-  StartTime: 0
-  IsBossWave: 0
-  EnemiesToSpawn: []
+  StartTime: 300
+  IsBossWave: 1
+  EnemiesToSpawn:
+  - {fileID: 11400000, guid: 11ef7da6277c2e64b85d8882d835a680, type: 2}
+  - {fileID: 11400000, guid: 9243eb78e3a8e7642b5900c944eeb1e5, type: 2}
+  - {fileID: 11400000, guid: 9553ccef50b95b749a14b701d58b2eba, type: 2}
+  - {fileID: 11400000, guid: 0013fbc7c6645d446a3a09fdee5fc62e, type: 2}

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
-  m_Name: EnemySpawnData_43
+  m_Script: {fileID: 11500000, guid: 952174f65ebad234dac0a35587976239, type: 3}
+  m_Name: Level_2
   m_EditorClassIdentifier: 
-  EnemyType: 
-  Count: 10
-  SpawnInterval: 3.5
+  Waves:
+  - {fileID: 11400000, guid: 850b0b19f92c5424f86262962929374a, type: 2}
+  - {fileID: 11400000, guid: db376e7d73f116d4d846bce946d435e3, type: 2}
