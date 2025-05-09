@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using UnityEngine.UI;
 [RequireComponent(typeof(EnemyEffect))]
 
@@ -177,7 +178,7 @@ public class Enemy : TriBehaviour
             // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
-            Destroy(gameObject, 4f);
+            Destroy(gameObject, 1f);
             Destroy(VillagerCollision.gameObject);
             Destroy(VillagerDetectionRange.gameObject);
         }
@@ -228,10 +229,11 @@ public class Enemy : TriBehaviour
     public void Deduct(int amount)
     {
         CurrentHealth -= amount;
-        HealthBarFillUI.fillAmount = CurrentHealth / maxHealth;
+        HealthBarFillUI.DOFillAmount(CurrentHealth / maxHealth, 0.5f)
+    .SetEase(Ease.OutBounce);
 
         //EnemyEffect effect = GetComponent<EnemyEffect>();
-        
+
         if (_enemyEffect != null)
         {
             _enemyEffect.ApplyKnockBack();
