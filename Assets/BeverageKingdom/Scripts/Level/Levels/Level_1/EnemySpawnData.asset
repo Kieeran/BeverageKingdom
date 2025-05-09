@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemySpawnData
   m_EditorClassIdentifier: 
   EnemyType: 
-  Count: 100
+  Count: 2
   SpawnInterval: 1
