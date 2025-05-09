@@ -12,7 +12,6 @@ public class MeleeWeapon : Weapon
 
     public override void Attack()
     {
-        if (Time.time < nextAttackTime) return;
         nextAttackTime = Time.time + attackCooldown;
 
         Vector2 origin = fireOrigin.position;

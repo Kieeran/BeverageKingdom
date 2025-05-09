@@ -77,6 +77,12 @@ public class Player : MonoBehaviour
         inputMangager = InputMangager.Instance;
 
         MaxHP = HP;
+<<<<<<< Updated upstream
+=======
+
+        _coolDownTimer = 0;
+        MainCanvas.instance.OnAttack += OnAttack;
+>>>>>>> Stashed changes
     }
 
     public void TakeDamage(float damage)
@@ -105,6 +111,24 @@ public class Player : MonoBehaviour
         GameSystem.instance.GameOver();
     }
 
+<<<<<<< Updated upstream
+=======
+    void OnAttack()
+    {
+        if (_coolDownTimer != 0) return;
+
+        SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSE, false);
+        WeaponController.Attack();
+        stateMachine.ChangeState(attack);
+
+        Debug.Log("Attack");
+
+        //  stateMachine.currentState.Update();
+
+        _coolDownTimer = AttackCoolDown;
+    }
+
+>>>>>>> Stashed changes
     void Update()
     {
         if (IsDead) return;
