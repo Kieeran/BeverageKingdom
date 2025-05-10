@@ -47,11 +47,18 @@ public class ComboTextAnimation : MonoBehaviour
 
     private void Start()
     {
-        ComboController.Instance.OnComboChanged += OnComboChanged;
+        if (ComboController.Instance != null)
+        {
+            ComboController.Instance.OnComboChanged += OnComboChanged;
+        }
     }
+
     private void OnDisable()
     {
-        ComboController.Instance.OnComboChanged -= OnComboChanged;
+        if (ComboController.Instance != null)
+        {
+            ComboController.Instance.OnComboChanged -= OnComboChanged;
+        }
     }
 
     private void OnComboChanged(int combo)

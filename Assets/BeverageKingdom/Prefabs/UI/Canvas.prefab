@@ -1855,7 +1855,7 @@ MonoBehaviour:
   comboBar: {fileID: 52126255550063263}
   nextWave: {fileID: 512557899475270741}
   fadeDuration: 0.5
-  displayDuration: 2
+  displayDuration: 30
   fadeEase: 1
 --- !u!1 &5617369960591451978
 GameObject:

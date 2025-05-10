@@ -49,16 +49,30 @@ public class Enemy : TriBehaviour
         base.Start();
 
         ChangeState(EnemyState.Walk);
-        // Init();
+        Init();
         _enemyEffect = GetComponent<EnemyEffect>();
     }
     private void Init()
     {
-        AttackRange = enemyData.attackRange;
-        AttackCoolDown = enemyData.attackCoolDown;
-        Damage = enemyData.dameAttack;
-        maxHealth = enemyData.maxHealth;
+        // Set default values if enemyData is null
+        if (enemyData == null)
+        {
+            Debug.LogWarning($"EnemyData is null on {gameObject.name}, using default values");
+            AttackRange = 2f;
+            AttackCoolDown = 1f;
+            Damage = 1;
+            maxHealth = 10f;
+        }
+        else
+        {
+            AttackRange = enemyData.attackRange;
+            AttackCoolDown = enemyData.attackCoolDown;
+            Damage = enemyData.dameAttack;
+            maxHealth = enemyData.maxHealth;
+        }
+        
         CurrentHealth = maxHealth;
+        Debug.Log($"Enemy initialized with {maxHealth} max health");
     }
     void SetAnimator(int index)
     {
@@ -228,18 +242,18 @@ public class Enemy : TriBehaviour
 
     public void Deduct(int amount)
     {
+        Debug.Log($"Enemy taking {amount} damage. Current health: {CurrentHealth}");
         CurrentHealth -= amount;
         HealthBarFillUI.DOFillAmount(CurrentHealth / maxHealth, 0.5f)
-    .SetEase(Ease.OutBounce);
-
-        //EnemyEffect effect = GetComponent<EnemyEffect>();
+            .SetEase(Ease.OutBounce);
 
         if (_enemyEffect != null)
         {
             _enemyEffect.ApplyKnockBack();
             _enemyEffect.ApplyHitEffect();
-
         }
+        
+        Debug.Log($"Enemy health after damage: {CurrentHealth}");
         if (CurrentHealth <= 0)
         {
             Die();

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemySpawnData_11
   m_EditorClassIdentifier: 
   EnemyType: Melee
-  Count: 10
-  SpawnInterval: 3
+  Count: 25
+  SpawnInterval: 1

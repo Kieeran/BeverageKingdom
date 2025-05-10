@@ -474,14 +474,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: 
-  damage: 4
+  damage: 5
   fireOrigin: {fileID: 3996528971548036216}
-  attackLength: 1
-  attackWidth: 2
+  attackLength: 1.39
+  attackWidth: 2.5
   hitLayers:
     serializedVersion: 2
     m_Bits: 64
-  attackCooldown: 1
+  attackCooldown: 0.5
 --- !u!1 &9011361467845623921
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboName: Electric
-  comboIntTrigger: 3
+  comboIntTrigger: 5
   tmpPro: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   fadeDuration: 0.3
@@ -109,8 +109,10 @@ MonoBehaviour:
   punchDuration: 0.5
   punchScale: {x: 1.5, y: 1.5, z: 1.5}
   punchEase: 27
-  damageRadius: 3
-  damageAmount: 100
+  damageRadius: 1
+  damageAmount: 4
+  baseEnemyCount: 1
+  maxComboRadius: 15
 --- !u!1 &3973057194401509776
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +427,8 @@ MonoBehaviour:
   - {fileID: 259588502983650606}
   - {fileID: 4793646930791821}
   comboResetDelay: 2
-  maxCombo: 25
+  decayRate: 2
+  maxCombo: 30
 --- !u!1 &8670573925190099104
 GameObject:
   m_ObjectHideFlags: 0
