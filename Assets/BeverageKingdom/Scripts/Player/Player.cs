@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
     {
         if (_coolDownTimer != 0) return;
 
-        SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSE, false);
+        SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSound, false);
         WeaponController.Attack();
         stateMachine.ChangeState(attack);
         stateMachine.currentState.Update();

@@ -33,7 +33,7 @@ public class HomeSceneCanvas : MonoBehaviour
 
     void Start()
     {
-        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.HomeMenuSE, true, 0.8f);
+        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.HomeMenuSound, true, 0.8f);
         HideAllPages();
         TutorialPanel.SetActive(false); // Ẩn tutorial lúc đầu
         TutorialButton.onClick.AddListener(() =>

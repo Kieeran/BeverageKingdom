@@ -426,8 +426,8 @@ MonoBehaviour:
   skillList:
   - {fileID: 259588502983650606}
   - {fileID: 4793646930791821}
-  comboResetDelay: 2
-  decayRate: 2
+  comboResetDelay: 1.2
+  decayRate: 5
   maxCombo: 30
 --- !u!1 &8670573925190099104
 GameObject:

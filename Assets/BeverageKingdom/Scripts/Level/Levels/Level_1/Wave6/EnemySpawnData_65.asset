@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
-  m_Name: EnemySpawnData_42
+  m_Name: EnemySpawnData_65
   m_EditorClassIdentifier: 
   EnemyType: 
-  Count: 12
+  Count: 15
   SpawnInterval: 2

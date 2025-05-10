@@ -61,7 +61,7 @@ public class Enemy : TriBehaviour
             AttackRange = 2f;
             AttackCoolDown = 1f;
             Damage = 1;
-            maxHealth = 10f;
+            maxHealth = 6f;
         }
         else
         {

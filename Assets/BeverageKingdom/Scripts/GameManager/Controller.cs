@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour
 
     void InitGame()
     {
-        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.InGameSE, true, 0.3f);
+        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.InGameSound, true, 0.3f);
 
         Player = Instantiate(_playerPrefab.gameObject).transform;
         Env = Instantiate(_envPrefab.gameObject).transform;
