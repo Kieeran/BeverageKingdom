@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
@@ -21,13 +21,19 @@ public class Tutorial : MonoBehaviour
             gameObject.SetActive(false);
         });
 
-        gameObject.SetActive(false);
+        gameObject.SetActive(SceneManager.GetActiveScene().name == "PlayScene");
     }
 
     void OnEnable()
     {
+        Time.timeScale = 0f;
         currentPage = 0;
         SetPage(currentPage);
+    }
+
+    void OnDisable()
+    {
+        Time.timeScale = 1f;
     }
 
     void UpdateTutorialPage(int index)
