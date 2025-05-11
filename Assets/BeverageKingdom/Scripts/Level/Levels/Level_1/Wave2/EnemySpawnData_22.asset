@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemySpawnData_22
   m_EditorClassIdentifier: 
   EnemyType: Goblin
-  Count: 10
+  Count: 1
   SpawnInterval: 1.5

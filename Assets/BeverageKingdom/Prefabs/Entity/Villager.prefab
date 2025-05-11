@@ -177,7 +177,7 @@ MonoBehaviour:
   VillagerDetectionRange: {fileID: 4629960346496005070}
   VillagerCollision: {fileID: 8785300164831233514}
   MaxHP: 0
-  HP: 10
+  HP: 6
   Damage: 4
   animator: {fileID: 7785667035142545142}
   HealthBarFillUI: {fileID: 8610310692179935701}

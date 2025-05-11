@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,8 @@ public class LevelController : MonoBehaviour
     bool _isLevelComplete;
     bool _isSpawnAllEnemies;
     float _levelDuration;
+
+    private Coroutine spawnCoroutine;
 
     private void Awake()
     {
@@ -75,15 +77,19 @@ public class LevelController : MonoBehaviour
         {
             UIManager.Instance.MainCanvas.UpdateLevelProgressBar(timer / _levelDuration);
         }
-        // Debug.Log(timer + "  " + levelData.Waves[currentWaveIndex].StartTime);
 
         WaveData wave = levelData.Waves[currentWaveIndex];
-        // Debug.Log("Wave" + (currentWaveIndex + 1));
 
-        if (/*!isSpawningWave &&*/ timer >= wave.StartTime)
+        if (timer >= wave.StartTime)
         {
+            if (spawnCoroutine != null)
+            {
+                StopCoroutine(spawnCoroutine);
+                spawnCoroutine = null;
+            }
+
             _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
-            StartCoroutine(SpawnWave(wave, currentWaveIndex));
+            spawnCoroutine = StartCoroutine(SpawnWave(wave, currentWaveIndex));
             currentWaveIndex++;
         }
     }
@@ -92,33 +98,53 @@ public class LevelController : MonoBehaviour
     {
         return transform.childCount == 0;
     }
-
+    int _groupsRemaining;
     IEnumerator SpawnWave(WaveData wave, int waveIndex)
     {
+        // 1) Khởi tạo counter = số nhóm trong wave
+        _groupsRemaining = wave.EnemiesToSpawn.Count;
+
+        // 2) Với mỗi spawnData, start 1 coroutine con
         foreach (var spawnData in wave.EnemiesToSpawn)
         {
-            for (int i = 0; i < spawnData.Count; i++)
-            {
-                SpawnEnemy(spawnData.EnemyType);
-                yield return new WaitForSeconds(spawnData.SpawnInterval);
-            }
+            StartCoroutine(SpawnEnemyGroup(spawnData));
         }
 
+        // 3) Chờ cho đến khi tất cả nhóm xong (counter về 0)
+        yield return new WaitUntil(() => _groupsRemaining == 0);
+
+        // 4) Wave này đã xong
         if (waveIndex == levelData.Waves.Count - 1)
         {
             _isSpawnAllEnemies = true;
+            Debug.Log("completed.");
         }
-
-        // currentWaveIndex++;
-        // isSpawningWave = false;
     }
 
-    void SpawnEnemy(string name)
+    // Coroutine con chỉ lo spawn nhóm đó
+    private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
     {
-        int laneIndex = Random.Range(0, _spawnAreas.Count);
-        Vector2 spawnPos = _spawnAreas[laneIndex].GetRandomSpawnPos();
-        GameObject enemy = Instantiate(GetEnemyPrefab(name), spawnPos, Quaternion.identity);
+        for (int i = 0; i < spawnData.Count; i++)
+        {
+            SpawnEnemy(spawnData.EnemyType);
+            yield return new WaitForSeconds(spawnData.SpawnInterval);
+        }
+
+        // Khi group này xong, giảm counter
+        _groupsRemaining--;
+    }
+    private void SpawnEnemy(string enemyName)
+    {
+        GameObject enemyPrefab = GetEnemyPrefab(enemyName);
+        if (enemyPrefab == null)
+        {
+            Debug.LogError($"Enemy prefab not found: {enemyName}");
+            return;
+        }
+
+        GameObject enemy = Instantiate(enemyPrefab, _spawnAreas[Random.Range(0,3)].GetRandomSpawnPos(), Quaternion.identity);
         enemy.transform.SetParent(transform);
+
     }
     public Transform GetRadomEnemy()
     {

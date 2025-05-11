@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : TriBehaviour
 {
-    [SerializeField] private EnemySO enemyData;
+    [SerializeField] protected EnemySO enemyData;
     public enum EnemyState
     {
         Idle,
@@ -54,7 +54,7 @@ public class Enemy : TriBehaviour
         Init();
         _enemyEffect = GetComponent<EnemyEffect>();
     }
-    private void Init()
+    protected virtual void Init()
     {
         // Set default values if enemyData is null
         if (enemyData == null)
@@ -70,7 +70,6 @@ public class Enemy : TriBehaviour
             AttackRange = enemyData.attackRange;
             AttackCoolDown = enemyData.attackCoolDown;
             Damage = enemyData.dameAttack;
-            maxHealth = enemyData.maxHealth;
         }
         
         CurrentHealth = maxHealth;

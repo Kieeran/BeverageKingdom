@@ -21,7 +21,6 @@ public class EnemyMovement : MonoBehaviour
     [HideInInspector]
     public bool IsDead;
 
-    [SerializeField] private EnemySO enemyData;
 
     void Awake()
     {

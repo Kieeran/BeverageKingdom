@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42961c0fa46f574bbbc643bdb4c0aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2.5
+  MoveSpeed: 0.9
   Target: {fileID: 0}
   IsEntityInRange: 0
   DetectionRange: {fileID: 8507334683868806510}
@@ -132,7 +132,6 @@ MonoBehaviour:
   IsIdling: 0
   IsAttacking: 0
   IsDead: 0
-  enemyData: {fileID: 0}
 --- !u!1 &2938084942165596952
 GameObject:
   m_ObjectHideFlags: 0
