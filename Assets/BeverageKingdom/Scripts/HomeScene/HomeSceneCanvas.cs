@@ -28,7 +28,7 @@ public class HomeSceneCanvas : MonoBehaviour
         });
 
         NextButton.onClick.AddListener(NextPage);
-      //  BackButton.onClick.AddListener(PreviousPage);
+        BackButton.onClick.AddListener(PreviousPage);
     }
 
     void Start()
@@ -57,7 +57,7 @@ public class HomeSceneCanvas : MonoBehaviour
             TutorialPages[currentPage].gameObject.SetActive(true);
         }
 
-     //   BackButton.interactable = currentPage > 0;
+        //   BackButton.interactable = currentPage > 0;
     }
 
     void HideAllPages()
@@ -70,17 +70,20 @@ public class HomeSceneCanvas : MonoBehaviour
 
     void NextPage()
     {
-        if (currentPage < TutorialPages.Length -1)
-        {
-            currentPage++;
-            UpdateTutorialPage();
-        }
-        else
-        {
-            TutorialPanel.SetActive(false);
-            // SceneManager.LoadSceneAsync("PlayScene");
-            Debug.Log("End");
-        }
+        // if (currentPage < TutorialPages.Length - 1)
+        // {
+        //     currentPage++;
+        //     UpdateTutorialPage();
+        // }
+        // else
+        // {
+        //     TutorialPanel.SetActive(false);
+        //     // SceneManager.LoadSceneAsync("PlayScene");
+        //     Debug.Log("End");
+        // }
+
+        currentPage++;
+        UpdateTutorialPage();
     }
 
     void PreviousPage()

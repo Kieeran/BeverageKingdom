@@ -1877,13 +1877,13 @@ RectTransform:
   - {fileID: 7583310329757287099}
   - {fileID: 8742280754422428499}
   - {fileID: 5239808587159844798}
-  - {fileID: 8134458663390555959}
   - {fileID: 668945739957838185}
   - {fileID: 6561084382215719106}
   - {fileID: 1497296416228163958}
   - {fileID: 4159066858777733127}
   - {fileID: 850925470854412001}
   - {fileID: 3811640704054293323}
+  - {fileID: 8134458663390555959}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1971,8 +1971,8 @@ MonoBehaviour:
   _spawnVillagerAtSlot1Button: {fileID: 506425863714585138}
   _spawnVillagerAtSlot2Button: {fileID: 8395169361555421835}
   _spawnVillagerAtSlot3Button: {fileID: 1330276114804989977}
-  SpawnVillagerButton: {fileID: 8267260445064314390}
-  ActiveSkill: {fileID: 7717798339769844286}
+  SpawnVillagerButton: {fileID: 5959253496463336979}
+  ActiveSkill: {fileID: 7793526912141145252}
   AttackButton: {fileID: 4259116994736235451}
   GameWinOverPopup: {fileID: 8134458663390555959}
   GameWinImageText: {fileID: 3550830752719626310}

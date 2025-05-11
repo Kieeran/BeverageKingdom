@@ -938,6 +938,18 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 487547539388112409, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 487547539388112409, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 487547539388112409, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3764706
+      objectReference: {fileID: 0}
     - target: {fileID: 2043110771564536249, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
       propertyPath: m_Name
       value: HPBar
@@ -1021,6 +1033,26 @@ PrefabInstance:
     - target: {fileID: 3294720439323787145, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730392602253543997, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730392602253543997, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730392602253543997, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730392602253543997, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807366854329371446, guid: 584f317ead7cc2f4383ba80c9403485a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
