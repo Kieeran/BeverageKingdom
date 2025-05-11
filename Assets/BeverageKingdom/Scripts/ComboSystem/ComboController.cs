@@ -6,18 +6,18 @@ using UnityEngine;
 public class ComboController : MonoBehaviour
 {
     public static ComboController Instance { get; private set; }
-    [SerializeField] private List<ComboSkill> skillList = new List<ComboSkill>();    
-    
+    [SerializeField] private List<ComboSkill> skillList = new List<ComboSkill>();
+
     [Header("Cài đặt combo")]
     public float comboResetDelay = 2f;   // Time before decay starts
     public float decayRate = 1f;         // How many combo points to lose per second
-    public int maxCombo = 30;            
+    public int maxCombo = 30;
 
     public int CurrentCombo { get; private set; }
 
     private float resetTimer;
     private bool isDecaying = false;
-    private float decayTimer = 0f;  // Track time for decay
+    // private float decayTimer = 0f;  // Track time for decay
     private float lastDecayTime = 0f; // Track when we last decayed
 
     public event Action<int> OnComboChanged;
@@ -45,7 +45,7 @@ public class ComboController : MonoBehaviour
                 if (resetTimer <= 0f)
                 {
                     isDecaying = true;
-                    decayTimer = 0f;
+                    // decayTimer = 0f;
                     lastDecayTime = Time.time;
                     Debug.Log("Starting combo decay");
                 }
@@ -58,7 +58,7 @@ public class ComboController : MonoBehaviour
                 {
                     int decayPoints = Mathf.FloorToInt(timeSinceLastDecay * decayRate);
                     int newCombo = Mathf.Max(0, CurrentCombo - decayPoints);
-                    
+
                     if (newCombo != CurrentCombo)
                     {
                         CurrentCombo = newCombo;
@@ -84,7 +84,7 @@ public class ComboController : MonoBehaviour
         CurrentCombo = Mathf.Min(CurrentCombo + amount, maxCombo);
         resetTimer = comboResetDelay;
         isDecaying = false;
-        decayTimer = 0f;
+        // decayTimer = 0f;
         lastDecayTime = Time.time;
         OnComboChanged?.Invoke(CurrentCombo);
         Debug.Log($"Combo increased to {CurrentCombo}");
@@ -99,7 +99,7 @@ public class ComboController : MonoBehaviour
         CurrentCombo = 0;
         isDecaying = false;
         resetTimer = comboResetDelay;
-        decayTimer = 0f;
+        // decayTimer = 0f;
         lastDecayTime = Time.time;
         OnComboChanged?.Invoke(CurrentCombo);
         Debug.Log("Combo reset to 0");
