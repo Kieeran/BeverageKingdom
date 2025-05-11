@@ -13,6 +13,10 @@ public class PlayerAnimator : MonoBehaviour
     {
         player.stateMachine.ChangeState(player.idleState);
 
-         
+    }
+    public void EndHit()
+    {
+        player.stateMachine.ChangeState(player.idleState);
+
     }
 }

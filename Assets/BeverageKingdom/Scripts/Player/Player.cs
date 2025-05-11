@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
         HP -= damage;
         HealthBarFillUI.fillAmount = HP / MaxHP;
 
+            stateMachine.ChangeState(hit);
         if (HP <= 0)
         {
             //anim.Play("Dead", 0, 0f);

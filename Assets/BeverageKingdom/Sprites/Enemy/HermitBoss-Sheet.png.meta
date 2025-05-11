@@ -1,0 +1,2239 @@
+fileFormatVersion: 2
+guid: 3796573f7c6b2d94cbece18b89d48773
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 14
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97186000e66accf4cb2d0db45afef8e9
+      internalID: 2139300850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd02fe2f6863924594aae261b4555a2
+      internalID: -1317466483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 672
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62c3f28b4c3e7f4a9144fa3753240e2
+      internalID: 2026843156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 672
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347fca7ae3c4cd7489063e80790a01fd
+      internalID: 1141238382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 672
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1421870d1f680d44ad970667bb12ce9
+      internalID: -1729692430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a44cdab77666ee4ab30c4d93582347a
+      internalID: -2139799161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 576
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9743801a341ec64e939329793260f6e
+      internalID: 1167638428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 576
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae65dafb5ee773546ac9f7df8fed356e
+      internalID: -748594399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 576
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb7163bbb563414b95f11873dcaf737
+      internalID: 1134227224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 576
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28980d36e23effa408d1ff69ffb8f019
+      internalID: 1779657899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c88097b461a354bbe1588e7430da20
+      internalID: 742740927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5690c18034f9b44ca9e8cca0b5468da
+      internalID: -1410521360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1e7736e1addac4da6b8c5796588408
+      internalID: -935184746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b11a8c2e0206604db28198b55bbc4c8
+      internalID: -1347344179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e686dc3cff005409416e4ac78c3c42
+      internalID: -1614930758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35a069a7635e5345b797c9bd2f463b2
+      internalID: 2147263898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c67c19575250044bb1576e90b8bac4
+      internalID: -191894567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85609250a45968442a13e63a763b7690
+      internalID: 941247599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 480
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6500f7ac8068589488000a6a65e5c74b
+      internalID: 1567676808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c588fcdb124664498930e3247d8af50
+      internalID: -847067797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038745effbb9f7144920d4135374c720
+      internalID: 2015934750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938120138b390af41bc684d2188d2c15
+      internalID: -692964887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9962b40579baa41836c74fd294b37c
+      internalID: -883555256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df5b6ed8b0fd2045b64e9e4f28b2705
+      internalID: 1133932298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6478d57e6dcda4aabaeb7acbd49ba3
+      internalID: 899850109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76da7acc4662df449f6267142e68591
+      internalID: -135657789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5006fb1c67f0bd4087a0ec182df79f6
+      internalID: 1020970344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac4a5e3f2e71ca44b5865f1e0d512b3
+      internalID: -1189564183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee3c48504c5a844db4532ed08cfb0af
+      internalID: 1213562449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fd02599eb772145b2028a118631e3f
+      internalID: -672689016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c78029ff20d3a4ea02e6179d1605c1
+      internalID: 1192543119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ba0c515454d024b9381c53aad140b2
+      internalID: -935895339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e968c2f5a0d7c0747a20ee17817cc035
+      internalID: 1262750311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc914086e22a644fb1cbc723cfb5c4d
+      internalID: 1914179525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3966b40d1ebcb5448b7b24e7d3305ced
+      internalID: -413389997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0ad9cca874ad74980d6782b0d41ae9
+      internalID: 40514256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee94d17f23402b041a089ce5d9dfde6e
+      internalID: 1531351020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 384
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61732b1ca257f094c86b2ac7af668863
+      internalID: -1274871054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd03fe404c88c44f9121cff6b0ca3e9
+      internalID: 459014951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfc727ed37c5094b92d191a07d30215
+      internalID: -1777568365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e2151bca50589438684427f1ffdb0a
+      internalID: 1175971183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd988e16bfbdc0f438bc1c5e02f3331f
+      internalID: -1326999899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f91b478d689b0142840277b6d39b07b
+      internalID: 698861405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8ea269b35b2764fab367283e4d7c2e
+      internalID: 612232475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb109c2e9beb6fa4aa49e0d1f66551da
+      internalID: -1150383568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5348e9205fb9644e8c0f336f085e862
+      internalID: 1494254559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ce2ac3c1f4f6643844690847c9dc33
+      internalID: 1975446163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8b51287e6742049ae0817edcae828d
+      internalID: 343372475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162b3c776c459474482c60bea6dbd95f
+      internalID: 422236485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f14df4fb9ecd64aac3109fe46ef2d1
+      internalID: -365288239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d9310c9d6cf5a46ab43e1241103955
+      internalID: -880255149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db17b0f3a9fbbef44abc532510952054
+      internalID: 189994790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2de48e5a6dd28a4f9648845768250e2
+      internalID: 1331334032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abc166093664c14eb294beea52e928d
+      internalID: -296140911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edae67fdb183ae409308475bd10d8aa
+      internalID: 465337435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d140e02b9ea0d4648ba13e618d47a346
+      internalID: -1223297648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 288
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce40759c2b9aea647812e731f3767653
+      internalID: 761174786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7783516164086664ebc8c1956269f7ea
+      internalID: 299566541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9417754c54d4e143851dded6a823561
+      internalID: 1878411228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e221e9237ebe54c9b375f225b90513
+      internalID: -2077235696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a78631dd009af49b4db0d29f94be2a
+      internalID: -567638448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6600c62e642f78243b4b0861f89ba868
+      internalID: 1950884784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d7e6eacab1cc241af91a58204ec76b
+      internalID: -1093160665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4176b69216cf91949a6145f80088e06c
+      internalID: 192245864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7c2f5377fb46b4580e0629c2c57ceb
+      internalID: -672577457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc91a57ff3664147b024e4135df9221
+      internalID: -846937010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25992ef844b1e184aa3874236cc954c8
+      internalID: -693641270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab58eb051a971841aa4593e5ce2afa9
+      internalID: -740151649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacaac95985eb324f9d24272d4ce68c8
+      internalID: -306410978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661b05824852a064a9008d390b64dd27
+      internalID: 172054888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 192
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b153ecbf53f6944967eab1dd1def3e
+      internalID: -1393102580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5994b0476c58e6648845b2635621e3dd
+      internalID: -258442142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec70b1bb089bec428f2aed6daaa0de8
+      internalID: 721510959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48a8218669c1c6489a63568ce75523f
+      internalID: -1027533042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fc19a7fdfa05244be86573ccb1ee32
+      internalID: 460637747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f30013b8248ccf43b295b0bfc58063c
+      internalID: 712895784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32664632cb651844b594c3d35ce274c
+      internalID: 2116676851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a17b603a7be7e745840fe013b6936cd
+      internalID: 1123294629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afb9dd162b777c40a97a037b086e235
+      internalID: 1432236008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd4331a53978b14db8685cf5b690527
+      internalID: 1504546827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1746bec3a0057a2428f38bb7289c34a1
+      internalID: -393787593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bccb2d8a84305478b8c9b367dfa545
+      internalID: 309382838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72384bfe388a9b049bba626a972633dc
+      internalID: -404839084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2729e64b7f93af42b4885c5b00e58e1
+      internalID: 123441332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 96
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af39f8d9671d2b748b344e4086cf92ba
+      internalID: -575892812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743ea6d6fcf01544e85f69ddc5057029
+      internalID: -2078120546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5990f85fb73e64347a1db5a1f9e67f99
+      internalID: 1482264862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca80db77a1f6e274fbc17f3658fe0edb
+      internalID: -1061216872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c224c89d6908848b11d41c81ef1607
+      internalID: -912426668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468cd0513173b9f449ab17d638c0088d
+      internalID: 2027696640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db70909be6bdd146af47ff0d89f660f
+      internalID: 335279101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4b7d783dcd2b6409bb0065142a2724
+      internalID: 1096809685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f4e3430acccef4a90288563be78d25
+      internalID: 299588172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2890e0bf7e9f7be4280c42d5b8306e96
+      internalID: 201259668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06d58010fba18e4bac483ada26e6bfe
+      internalID: -1842248121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HermitBoss-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 180
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989a743e7d9bfae46bf9bfd7b303e385
+      internalID: 2108714279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HermitBoss-Sheet_0: 2139300850
+      HermitBoss-Sheet_1: -1317466483
+      HermitBoss-Sheet_10: 742740927
+      HermitBoss-Sheet_11: -1410521360
+      HermitBoss-Sheet_12: -935184746
+      HermitBoss-Sheet_13: -1347344179
+      HermitBoss-Sheet_14: -1614930758
+      HermitBoss-Sheet_15: 2147263898
+      HermitBoss-Sheet_16: -191894567
+      HermitBoss-Sheet_17: 941247599
+      HermitBoss-Sheet_18: 1567676808
+      HermitBoss-Sheet_19: -847067797
+      HermitBoss-Sheet_2: 2026843156
+      HermitBoss-Sheet_20: 2015934750
+      HermitBoss-Sheet_21: -692964887
+      HermitBoss-Sheet_22: -883555256
+      HermitBoss-Sheet_23: 1133932298
+      HermitBoss-Sheet_24: 899850109
+      HermitBoss-Sheet_25: -135657789
+      HermitBoss-Sheet_26: 1020970344
+      HermitBoss-Sheet_27: -1189564183
+      HermitBoss-Sheet_28: 1213562449
+      HermitBoss-Sheet_29: -672689016
+      HermitBoss-Sheet_3: 1141238382
+      HermitBoss-Sheet_30: 1192543119
+      HermitBoss-Sheet_31: -935895339
+      HermitBoss-Sheet_32: 1262750311
+      HermitBoss-Sheet_33: 1914179525
+      HermitBoss-Sheet_34: -413389997
+      HermitBoss-Sheet_35: 40514256
+      HermitBoss-Sheet_36: 1531351020
+      HermitBoss-Sheet_37: -1274871054
+      HermitBoss-Sheet_38: 459014951
+      HermitBoss-Sheet_39: -1777568365
+      HermitBoss-Sheet_4: -1729692430
+      HermitBoss-Sheet_40: 1175971183
+      HermitBoss-Sheet_41: -1326999899
+      HermitBoss-Sheet_42: 698861405
+      HermitBoss-Sheet_43: 612232475
+      HermitBoss-Sheet_44: -1150383568
+      HermitBoss-Sheet_45: 1494254559
+      HermitBoss-Sheet_46: 1975446163
+      HermitBoss-Sheet_47: 343372475
+      HermitBoss-Sheet_48: 422236485
+      HermitBoss-Sheet_49: -365288239
+      HermitBoss-Sheet_5: -2139799161
+      HermitBoss-Sheet_50: -880255149
+      HermitBoss-Sheet_51: 189994790
+      HermitBoss-Sheet_52: 1331334032
+      HermitBoss-Sheet_53: -296140911
+      HermitBoss-Sheet_54: 465337435
+      HermitBoss-Sheet_55: -1223297648
+      HermitBoss-Sheet_56: 761174786
+      HermitBoss-Sheet_57: 299566541
+      HermitBoss-Sheet_58: 1878411228
+      HermitBoss-Sheet_59: -2077235696
+      HermitBoss-Sheet_6: 1167638428
+      HermitBoss-Sheet_60: -567638448
+      HermitBoss-Sheet_61: 1950884784
+      HermitBoss-Sheet_62: -1093160665
+      HermitBoss-Sheet_63: 192245864
+      HermitBoss-Sheet_64: -672577457
+      HermitBoss-Sheet_65: -846937010
+      HermitBoss-Sheet_66: -693641270
+      HermitBoss-Sheet_67: -740151649
+      HermitBoss-Sheet_68: -306410978
+      HermitBoss-Sheet_69: 172054888
+      HermitBoss-Sheet_7: -748594399
+      HermitBoss-Sheet_70: -1393102580
+      HermitBoss-Sheet_71: -258442142
+      HermitBoss-Sheet_72: 721510959
+      HermitBoss-Sheet_73: -1027533042
+      HermitBoss-Sheet_74: 460637747
+      HermitBoss-Sheet_75: 712895784
+      HermitBoss-Sheet_76: 2116676851
+      HermitBoss-Sheet_77: 1123294629
+      HermitBoss-Sheet_78: 1432236008
+      HermitBoss-Sheet_79: 1504546827
+      HermitBoss-Sheet_8: 1134227224
+      HermitBoss-Sheet_80: -393787593
+      HermitBoss-Sheet_81: 309382838
+      HermitBoss-Sheet_82: -404839084
+      HermitBoss-Sheet_83: 123441332
+      HermitBoss-Sheet_84: -575892812
+      HermitBoss-Sheet_85: -2078120546
+      HermitBoss-Sheet_86: 1482264862
+      HermitBoss-Sheet_87: -1061216872
+      HermitBoss-Sheet_88: -912426668
+      HermitBoss-Sheet_89: 2027696640
+      HermitBoss-Sheet_9: 1779657899
+      HermitBoss-Sheet_90: 335279101
+      HermitBoss-Sheet_91: 1096809685
+      HermitBoss-Sheet_92: 299588172
+      HermitBoss-Sheet_93: 201259668
+      HermitBoss-Sheet_94: -1842248121
+      HermitBoss-Sheet_95: 2108714279
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
