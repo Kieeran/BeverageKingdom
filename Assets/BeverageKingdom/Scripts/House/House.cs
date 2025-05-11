@@ -29,7 +29,6 @@ public class House : MonoBehaviour
 
     void DelayAndGameOver()
     {
-        Time.timeScale = 0f;
         GameSystem.instance.GameOver();
     }
 }

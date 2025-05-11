@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
         HP -= damage;
         HealthBarFillUI.fillAmount = HP / MaxHP;
 
-            stateMachine.ChangeState(hit);
+        stateMachine.ChangeState(hit);
         if (HP <= 0)
         {
             //anim.Play("Dead", 0, 0f);
@@ -102,7 +102,6 @@ public class Player : MonoBehaviour
 
     void OnPlayerAfterDead()
     {
-        Time.timeScale = 0f;
         GameSystem.instance.GameOver();
     }
 
