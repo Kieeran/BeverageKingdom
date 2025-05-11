@@ -29,10 +29,13 @@ public class GameSystem : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0f;
         OnGameOver?.Invoke();
     }
+
     public void GameWin()
     {
+        Time.timeScale = 0f;
         OnGameWin?.Invoke();
     }
 }

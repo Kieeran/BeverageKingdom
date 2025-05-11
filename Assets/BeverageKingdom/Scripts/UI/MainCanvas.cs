@@ -19,13 +19,9 @@ public class MainCanvas : MonoBehaviour
     public Button ActiveSkill;
     public Button AttackButton;
 
-    public RectTransform GameWinOverPopup;
-    public RectTransform GameWinImageText;
-    public RectTransform GameOverImageText;
+    public GameWinOverPopup GameWinOverPopup;
     public MileStone MileStoneProgressBar;
 
-    public Button PlayAgainButton;
-    public Button ExitButton;
     public TextMeshProUGUI tmp;
     public Image LevelProgressFillUI;
 
@@ -57,20 +53,24 @@ public class MainCanvas : MonoBehaviour
 
     void Start()
     {
+        GameWinOverPopup.gameObject.SetActive(false);
+
         GameSystem.instance.OnGameOver += OnGameOver;
         GameSystem.instance.OnGameWin += OnGameWin;
     }
 
     void OnGameOver()
     {
-        GameOverImageText.gameObject.SetActive(true);
         GameWinOverPopup.gameObject.SetActive(true);
+
+        GameWinOverPopup.OnGameOver();
     }
 
     void OnGameWin()
     {
-        GameWinImageText.gameObject.SetActive(true);
         GameWinOverPopup.gameObject.SetActive(true);
+
+        GameWinOverPopup.OnGameWin();
     }
 
     void InitListener()
@@ -112,20 +112,6 @@ public class MainCanvas : MonoBehaviour
         AttackButton.onClick.AddListener(() =>
         {
             OnAttack?.Invoke();
-        });
-
-        PlayAgainButton.onClick.AddListener(() =>
-        {
-            Time.timeScale = 1f;
-            SceneManager.LoadSceneAsync("PlayScene");
-        });
-
-        ExitButton.onClick.AddListener(() =>
-        {
-            Time.timeScale = 1f;
-
-            SoundManager.Instance?.StopSound();
-            SceneManager.LoadSceneAsync("HomeScene");
         });
     }
     public void ShowNextWave(int wave, int enemyCount)
