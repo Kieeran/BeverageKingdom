@@ -226,6 +226,7 @@ MonoBehaviour:
   maxHealth: 6
   CurrentHealth: 2
   animator: {fileID: 2996638185219542788}
+  animatorOverride: {fileID: 22100000, guid: a21be8fd490265048b2d5b3475c86d5e, type: 2}
   AttackRange: 1
   AttackCoolDown: 1
   Damage: 2
@@ -434,7 +435,7 @@ Animator:
   m_GameObject: {fileID: 9087388154507893948}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fbf6367d116fec0499b17dcfd433f6a4, type: 2}
+  m_Controller: {fileID: 22100000, guid: a21be8fd490265048b2d5b3475c86d5e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

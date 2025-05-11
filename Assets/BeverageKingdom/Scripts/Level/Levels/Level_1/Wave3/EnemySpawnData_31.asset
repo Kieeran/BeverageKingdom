@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
   m_Name: EnemySpawnData_31
   m_EditorClassIdentifier: 
-  EnemyType: 
+  EnemyType: Enemy
   Count: 12
   SpawnInterval: 1.5

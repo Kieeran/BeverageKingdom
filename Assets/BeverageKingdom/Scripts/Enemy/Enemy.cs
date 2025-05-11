@@ -11,7 +11,8 @@ public class Enemy : TriBehaviour
         Idle,
         Walk,
         Attack,
-        Dead
+        Dead,
+        Hit
     }
     public EnemyState currentState;
 
@@ -26,6 +27,7 @@ public class Enemy : TriBehaviour
     [HideInInspector]
     public float CurrentHealth;
     public Animator animator;
+    public AnimatorOverrideController animatorOverride;
 
     public float AttackRange;
     public float AttackCoolDown;
@@ -40,14 +42,14 @@ public class Enemy : TriBehaviour
 
     protected override void Awake()
     {
-        EnemyMovement.OnStageChange += SetAnimator;
-        EnemyAnimation.OnDoneAttack += OnDoneAttack;
+        
     }
 
     protected override void Start()
     {
         base.Start();
-
+        EnemyMovement.OnStageChange += SetAnimator;
+        EnemyAnimation.OnDoneAttack += OnDoneAttack;
         ChangeState(EnemyState.Walk);
         Init();
         _enemyEffect = GetComponent<EnemyEffect>();

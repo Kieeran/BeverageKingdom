@@ -6,7 +6,7 @@ public class LevelController : MonoBehaviour
 {
     public static LevelController instance;
 
-    public GameObject EnemyPrefab;
+    public List<GameObject> EnemyPrefab;
 
     MileStone _mileStoneProgressBar;
 
@@ -99,7 +99,7 @@ public class LevelController : MonoBehaviour
         {
             for (int i = 0; i < spawnData.Count; i++)
             {
-                SpawnEnemy();
+                SpawnEnemy(spawnData.EnemyType);
                 yield return new WaitForSeconds(spawnData.SpawnInterval);
             }
         }
@@ -113,11 +113,11 @@ public class LevelController : MonoBehaviour
         // isSpawningWave = false;
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(string name)
     {
         int laneIndex = Random.Range(0, _spawnAreas.Count);
         Vector2 spawnPos = _spawnAreas[laneIndex].GetRandomSpawnPos();
-        GameObject enemy = Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
+        GameObject enemy = Instantiate(GetEnemyPrefab(name), spawnPos, Quaternion.identity);
         enemy.transform.SetParent(transform);
     }
     public Transform GetRadomEnemy()
@@ -125,5 +125,16 @@ public class LevelController : MonoBehaviour
         int random = Random.Range(0, transform.childCount);
         Transform enemy = transform.GetChild(random);
         return enemy;
+    }
+    private GameObject GetEnemyPrefab(string name)
+    {
+        foreach (var enemy in EnemyPrefab)
+        {
+            if (enemy.name == name)
+            {
+                return enemy;
+            }
+        }
+        return null;
     }
 }
