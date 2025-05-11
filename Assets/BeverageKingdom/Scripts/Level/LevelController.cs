@@ -66,7 +66,6 @@ public class LevelController : MonoBehaviour
 
         if (currentWaveIndex >= levelData.Waves.Count)
         {
-            _isSpawnAllEnemies = true;
             return;
         }
 
@@ -84,9 +83,8 @@ public class LevelController : MonoBehaviour
         if (/*!isSpawningWave &&*/ timer >= wave.StartTime)
         {
             _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
+            StartCoroutine(SpawnWave(wave, currentWaveIndex));
             currentWaveIndex++;
-            StartCoroutine(SpawnWave(wave));
-            // isSpawningWave = true;
         }
     }
 
@@ -95,7 +93,7 @@ public class LevelController : MonoBehaviour
         return transform.childCount == 0;
     }
 
-    IEnumerator SpawnWave(WaveData wave)
+    IEnumerator SpawnWave(WaveData wave, int waveIndex)
     {
         foreach (var spawnData in wave.EnemiesToSpawn)
         {
@@ -104,6 +102,11 @@ public class LevelController : MonoBehaviour
                 SpawnEnemy();
                 yield return new WaitForSeconds(spawnData.SpawnInterval);
             }
+        }
+
+        if (waveIndex == levelData.Waves.Count - 1)
+        {
+            _isSpawnAllEnemies = true;
         }
 
         // currentWaveIndex++;
