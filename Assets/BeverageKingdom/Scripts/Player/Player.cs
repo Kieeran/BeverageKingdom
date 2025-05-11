@@ -74,8 +74,9 @@ public class Player : MonoBehaviour
 
         MaxHP = HP;
 
-        _coolDownTimer = 0;
-        UIManager.Instance.MainCanvas.OnAttack += OnAttack;
+        // _coolDownTimer = 0;
+        _coolDownTimer = AttackCoolDown;
+        // UIManager.Instance.MainCanvas.OnAttack += OnAttack;
     }
 
     public void TakeDamage(float damage)
@@ -126,15 +127,21 @@ public class Player : MonoBehaviour
         //     Flip();
         // }
 
-        if (_coolDownTimer != 0)
-        {
-            _coolDownTimer -= Time.deltaTime;
+        // if (_coolDownTimer != 0)
+        // {
+        _coolDownTimer -= Time.deltaTime;
 
-            if (_coolDownTimer <= 0)
-            {
-                _coolDownTimer = 0;
-            }
+        if (_coolDownTimer <= 0)
+        {
+            // _coolDownTimer = 0;
+            SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSound, false);
+            WeaponController.Attack();
+            stateMachine.ChangeState(attack);
+            stateMachine.currentState.Update();
+
+            _coolDownTimer = AttackCoolDown;
         }
+        // }
 
         // _coolDownTimer += Time.deltaTime;
         // if (_coolDownTimer >= AttackCoolDown)

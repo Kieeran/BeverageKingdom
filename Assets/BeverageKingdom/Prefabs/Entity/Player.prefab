@@ -845,7 +845,7 @@ MonoBehaviour:
   WeaponController: {fileID: 8029644660301429030}
   inputMangager: {fileID: 0}
   JoystickMove: {fileID: 3667071518967296704}
-  moveSpeed: 4
+  moveSpeed: 3
   playerSword: {fileID: 22100000, guid: 61ed2d81f8d9ed244990d4b7c6c0a25f, type: 2}
   playerGun: {fileID: 22100000, guid: 1884c9b546c8c794f9f461b39ebd15eb, type: 2}
   playerSwordSpr: {fileID: -309207110, guid: b2929214a1c71434389a55af0c807214, type: 3}
@@ -855,7 +855,7 @@ MonoBehaviour:
   IsDead: 0
   MaxHP: 0
   HP: 100
-  AttackCoolDown: 0.5
+  AttackCoolDown: 0.8
 --- !u!1001 &44912535549813156
 PrefabInstance:
   m_ObjectHideFlags: 0
