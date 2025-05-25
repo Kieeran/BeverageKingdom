@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +19,13 @@ public class LevelSelection : MonoBehaviour
 
     void Start()
     {
+        InitLevelSelection();
+    }
+
+    void InitLevelSelection()
+    {
+        int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
+
         for (int i = 0; i < LevelNumber; i++)
         {
             GameObject levelItem = Instantiate(_levelItemUIPrefab.gameObject, _container);
@@ -28,11 +33,31 @@ public class LevelSelection : MonoBehaviour
 
             LevelItemUI levelItemUI = levelItem.GetComponent<LevelItemUI>();
             levelItemUI.UpdateLevelItemUIText((i + 1).ToString());
+            levelItemUI.SetLevelIndex(i);
+
+            if (i <= currentLevelIndex)
+            {
+                levelItemUI.EnableLevelItemUI();
+                continue;
+            }
+
+            levelItemUI.DisableLevelItemUI();
         }
     }
 
-    void Update()
+    void OnEnable()
     {
+        int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
 
+        for (int i = 1; i < transform.childCount; i++)
+        {
+            LevelItemUI levelItemUI = _container.transform.GetChild(i).GetComponent<LevelItemUI>();
+            if (levelItemUI.IsEnable == true) continue;
+
+            if (i - 1 <= currentLevelIndex)
+            {
+                levelItemUI.EnableLevelItemUI();
+            }
+        }
     }
 }

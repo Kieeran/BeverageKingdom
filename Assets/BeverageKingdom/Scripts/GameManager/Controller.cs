@@ -91,9 +91,4 @@ public class Controller : MonoBehaviour
             InitHome();
         }
     }
-
-    public void NextLevel()
-    {
-        CurrentLevelIndex++;
-    }
 }

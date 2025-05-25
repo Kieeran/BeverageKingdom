@@ -30,7 +30,6 @@ public class GameWinOverPopup : MonoBehaviour
         {
             Time.timeScale = 1f;
 
-            Controller.Instance.NextLevel();
             Controller.Instance.ChangeScene("PlayScene");
         });
     }
