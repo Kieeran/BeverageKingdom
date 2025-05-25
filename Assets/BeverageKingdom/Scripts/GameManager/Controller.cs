@@ -21,6 +21,8 @@ public class Controller : MonoBehaviour
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
 
+    public int CurrentLevelIndex = 0;
+
     public static Controller Instance { get; private set; }
 
     private void Awake()
@@ -88,5 +90,10 @@ public class Controller : MonoBehaviour
         {
             InitHome();
         }
+    }
+
+    public void NextLevel()
+    {
+        CurrentLevelIndex++;
     }
 }

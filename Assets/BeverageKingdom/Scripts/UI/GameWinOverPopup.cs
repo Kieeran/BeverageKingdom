@@ -25,6 +25,14 @@ public class GameWinOverPopup : MonoBehaviour
             SoundManager.Instance?.StopSound();
             Controller.Instance.ChangeScene("HomeScene");
         });
+
+        ContinueButton.onClick.AddListener(() =>
+        {
+            Time.timeScale = 1f;
+
+            Controller.Instance.NextLevel();
+            Controller.Instance.ChangeScene("PlayScene");
+        });
     }
 
     public void OnGameOver()

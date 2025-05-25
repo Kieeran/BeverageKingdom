@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using JetBrains.Annotations;
+using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
@@ -6,7 +8,9 @@ public class LevelController : MonoBehaviour
 
     MileStone _mileStoneProgressBar;
 
-    public LevelData levelData;
+    public List<LevelData> LevelDatas;
+    LevelData _currentLevelData;
+
     private int currentWaveIndex = 0;
     private float timer = 0f;
 
@@ -21,7 +25,14 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
-        _levelDuration = levelData.Waves[^1].StartTime;
+        int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
+        _currentLevelData = LevelDatas[currentLevelIndex];
+        InitLevel();
+    }
+
+    void InitLevel()
+    {
+        _levelDuration = _currentLevelData.Waves[^1].StartTime;
 
         _isLevelComplete = false;
         _isSpawnAllEnemies = false;
@@ -33,11 +44,13 @@ public class LevelController : MonoBehaviour
 
     void InitMarker()
     {
-        for (int i = 1; i < levelData.Waves.Count; i++)
-        {
-            RectTransform markerRect = _mileStoneProgressBar.PlaceTimeMarker(levelData.Waves[i].StartTime, _levelDuration);
+        _mileStoneProgressBar.ClearTimeMarker();
 
-            if (i == levelData.Waves.Count - 1)
+        for (int i = 1; i < _currentLevelData.Waves.Count; i++)
+        {
+            RectTransform markerRect = _mileStoneProgressBar.PlaceTimeMarker(_currentLevelData.Waves[i].StartTime, _levelDuration);
+
+            if (i == _currentLevelData.Waves.Count - 1)
             {
                 _mileStoneProgressBar.UpsizeMarker(markerRect, 50f);
             }
@@ -52,7 +65,7 @@ public class LevelController : MonoBehaviour
             GameSystem.instance.GameWin();
         }
 
-        if (currentWaveIndex >= levelData.Waves.Count)
+        if (currentWaveIndex >= _currentLevelData.Waves.Count)
         {
             return;
         }
@@ -64,7 +77,7 @@ public class LevelController : MonoBehaviour
             UIManager.Instance.PlayCanvas.UpdateLevelProgressBar(timer / _levelDuration);
         }
 
-        WaveData wave = levelData.Waves[currentWaveIndex];
+        WaveData wave = _currentLevelData.Waves[currentWaveIndex];
 
         if (timer >= wave.StartTime)
         {
@@ -73,7 +86,7 @@ public class LevelController : MonoBehaviour
                 wave,
                 () =>
                 {
-                    if (currentWaveIndex == levelData.Waves.Count - 1)
+                    if (currentWaveIndex == _currentLevelData.Waves.Count - 1)
                     {
                         _isSpawnAllEnemies = true;
                         Debug.Log("completed.");

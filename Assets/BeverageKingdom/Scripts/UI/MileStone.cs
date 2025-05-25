@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +21,17 @@ public class MileStone : MonoBehaviour
     {
         Image mileStone = transform.GetChild(index).GetComponent<Image>();
         mileStone.color = Color.white;
+    }
+
+    public void ClearTimeMarker()
+    {
+        // Vì chứa cả prefab marker đã disabled nên nếu có ít hơn 2 obj tức là hiện đang không có marker nào active
+        if (transform.childCount <= 1) return;
+
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     public RectTransform PlaceTimeMarker(float time, float ns)
