@@ -19,25 +19,21 @@ public class ElectricSkill : ComboSkill
     protected override void Start()
     {
         base.Start();
-        Debug.Log("ElectricSkill Start called");
         color = Color.yellow;
         electricGun = GetComponentInChildren<ElectricGun>();
         mainCanvas = MainCanvas.instance;
         if (mainCanvas != null)
         {
-            Debug.Log("MainCanvas found, subscribing to OnComboMax");
             comboBar = mainCanvas.comboBar;
             comboBar.OnComboMax += ActivateComboSkill;
         }
         else
         {
-            Debug.LogWarning("MainCanvas is null! Electric skill won't activate!");
         }
     }
 
     public override void ActivateComboSkill()
     {
-        Debug.Log("ActivateComboSkill called on ElectricSkill");
         base.ActivateComboSkill();
         
         // Lấy số combo hiện tại
@@ -61,13 +57,10 @@ public class ElectricSkill : ComboSkill
 
         float currentRadius = Mathf.Lerp(damageRadius, maxComboRadius, (float)currentCombo / maxCombo);
         
-        Debug.Log($"Combo: {currentCombo}, Hitting {enemiesToHit} enemies with radius {currentRadius}");
-
         // Lấy tất cả quái trong scene
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (allEnemies.Length == 0)
         {
-            Debug.LogWarning("No enemies found in scene!");
             return;
         }
 
@@ -102,7 +95,6 @@ public class ElectricSkill : ComboSkill
     private void StrikeEnemy(Vector3 position, float radius, bool isMaxCombo)
     {
         SoundManager.Instance?.PlaySound(SoundManager.Instance?.ThunderSound, false);
-        Debug.Log($"Lightning Strike Activated at position: {position}");
 
         EffectSpawner.instance.Spawn(EffectSpawner.Lightning, position + Vector3.up, Quaternion.identity);
 
@@ -118,14 +110,11 @@ public class ElectricSkill : ComboSkill
                 var enemy = col.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    Debug.Log($"Striking enemy with {enemy.CurrentHealth} current health");
                     enemy.Deduct(damageAmount);
                     enemyCount++;
-                    Debug.Log($"Dealt {damageAmount} damage to enemy at position {enemy.transform.position}");
                 }
             }
         }
-        Debug.Log($"Found {enemyCount} enemies in damage radius at position {position}");
 
         // Hiện hitbox sét đánh
         Debug.DrawLine(position, position + Vector3.up * actualRadius, Color.red, 2f);

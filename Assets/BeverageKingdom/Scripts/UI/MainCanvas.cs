@@ -105,7 +105,6 @@ public class MainCanvas : MonoBehaviour
 
         ActiveSkill.onClick.AddListener(() =>
         {
-            Debug.Log("Change weapon");
             OnActiveSkill?.Invoke();
         });
 

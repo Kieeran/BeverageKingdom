@@ -75,15 +75,13 @@ public class SoundManager : MonoBehaviour
         {
             audioSourceLoop.Stop();
             audioSourceLoop.loop = false;
-            Debug.Log("SoundManager: Stopped loop sound");
-        }
+        }   
     }
 
     public void PlaySound(AudioClip clip, bool loop)
     {
         if (clip == null)
         {
-            Debug.LogError("SoundManager: Attempted to play null AudioClip!");
             return;
         }
 
@@ -94,11 +92,9 @@ public class SoundManager : MonoBehaviour
                 audioSourceLoop.clip = clip;
                 audioSourceLoop.loop = loop;
                 audioSourceLoop.Play();
-                Debug.Log($"SoundManager: Playing loop sound: {clip.name}");
             }
             else
             {
-                Debug.LogError("SoundManager: audioSourceLoop is null!");
             }
         }
         else
@@ -108,11 +104,9 @@ public class SoundManager : MonoBehaviour
                 audioSourceUnLoop.clip = clip;
                 audioSourceUnLoop.loop = loop;
                 audioSourceUnLoop.Play();
-                Debug.Log($"SoundManager: Playing one-shot sound: {clip.name}");
             }
             else
             {
-                Debug.LogError("SoundManager: audioSourceUnLoop is null!");
             }
         }
     }
@@ -121,7 +115,6 @@ public class SoundManager : MonoBehaviour
     {
         if (clip == null)
         {
-            Debug.LogError("SoundManager: Attempted to play null AudioClip with delay!");
             return;
         }
         StartCoroutine(PlayAfterDelay(clip, loop, delay));
