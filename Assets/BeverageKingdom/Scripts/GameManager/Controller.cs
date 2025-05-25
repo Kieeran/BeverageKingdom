@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Controller : MonoBehaviour
@@ -31,17 +30,20 @@ public class Controller : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        InitGame();
+        InitHome();
     }
 
-    void InitGame()
+    void InitHome()
     {
         SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.InGameSound, true, 0.3f);
+    }
+
+    public void InitInGame()
+    {
+        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
 
         Player = Instantiate(_playerPrefab.gameObject).transform;
         Env = Instantiate(_envPrefab.gameObject).transform;
-        // Instantiate(_spawnEnemy.gameObject);
-        // Instantiate(__spawnEnemy.gameObject);
         Instantiate(_spawnVillager.gameObject);
         Instantiate(_comboController.gameObject);
         Instantiate(_projectileSpawner.gameObject);
@@ -49,10 +51,5 @@ public class Controller : MonoBehaviour
         Instantiate(_playerInput.gameObject);
         Instantiate(_gameSystem.gameObject);
         Instantiate(_levelController.gameObject);
-    }
-
-    void Start()
-    {
-        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
     }
 }

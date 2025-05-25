@@ -434,6 +434,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47292045738340688, guid: 95a6eaadb854c554391cccdddd8608ab, type: 3}
+      propertyPath: _homeCanvasPrefab
+      value: 
+      objectReference: {fileID: 6075498405728850597, guid: f671e99d7f4fa0641a98c76ac16e0a9f, type: 3}
+    - target: {fileID: 47292045738340688, guid: 95a6eaadb854c554391cccdddd8608ab, type: 3}
+      propertyPath: _playCanvasPrefab
+      value: 
+      objectReference: {fileID: 5600984219391760075, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
     - target: {fileID: 2487010451457294303, guid: 95a6eaadb854c554391cccdddd8608ab, type: 3}
       propertyPath: m_Name
       value: UIManager

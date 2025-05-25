@@ -21,10 +21,16 @@ public class UIManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        InitGame();
+        InitHome();
     }
 
-    void InitGame()
+    public void InitHome()
+    {
+        GameObject homeCanvas = Instantiate(_homeCanvasPrefab);
+        HomeCanvas = homeCanvas.GetComponent<MainCanvas>();
+    }
+
+    public void InitInGame()
     {
         GameObject mainCanvas = Instantiate(_playCanvasPrefab);
         PlayCanvas = mainCanvas.GetComponent<MainCanvas>();
