@@ -104,25 +104,27 @@ public class HotSpot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            other.GetComponent<Player>()?.SetSpeed(-4f); // giảm tốc
+            Debug.Log("asdasd");
+            // other.GetComponent<Player>().SetSpeed(-4f); // giảm tốc
+            Player.instance.moveSpeed = 1; // giảm tốc
         }
         else if (other.CompareTag("Enemy"))
         {
-            other.GetComponentInChildren<EnemyMovement>()?.SetSpeed(4.5f); // tăng tốc
+            other.GetComponentInChildren<EnemyMovement>().SetSpeed(4.5f); // tăng tốc
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            other.GetComponent<Player>()?.SetSpeed(0f); // trở lại tốc độ ban đầu
+            Player.instance.moveSpeed = 3; // giảm tốc
         }
         else if (other.CompareTag("Enemy"))
         {
-            other.GetComponentInChildren<EnemyMovement>()?.SetSpeed(0f); // hoặc giá trị mặc định
+            other.GetComponentInChildren<EnemyMovement>().SetSpeed(0f); // hoặc giá trị mặc định
         }
     }
 
