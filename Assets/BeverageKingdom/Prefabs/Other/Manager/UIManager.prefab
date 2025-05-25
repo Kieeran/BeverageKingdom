@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708ed7b8cd695a42a4b15bf5009643c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainCanvasPrefab: {fileID: 5600984219391760075, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
+  _playCanvasPrefab: {fileID: 5600984219391760075, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
+  _homeCanvasPrefab: {fileID: 6075498405728850597, guid: f671e99d7f4fa0641a98c76ac16e0a9f, type: 3}

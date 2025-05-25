@@ -28,6 +28,7 @@ public class LevelController : MonoBehaviour
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
         _currentLevelData = LevelDatas[currentLevelIndex];
         InitLevel();
+        UIManager.Instance.PlayCanvas.UpdateLevelText(currentLevelIndex + 1);
     }
 
     void InitLevel()
