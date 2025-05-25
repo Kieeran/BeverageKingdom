@@ -76,6 +76,8 @@ public class LevelSelection : MonoBehaviour
 
     void ClearLevelSelection()
     {
+        if (_container.childCount == 1) return;
+
         for (int i = 1; i < _container.childCount; i++)
         {
             Destroy(_container.GetChild(i).gameObject);
