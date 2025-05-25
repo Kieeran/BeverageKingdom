@@ -39,6 +39,7 @@ public class Enemy : TriBehaviour
     public Image HealthBarFillUI;
 
     private EnemyEffect _enemyEffect;
+    private ItemSpawner ItemSpawner;
 
     protected override void Awake()
     {
@@ -53,13 +54,14 @@ public class Enemy : TriBehaviour
         ChangeState(EnemyState.Walk);
         Init();
         _enemyEffect = GetComponent<EnemyEffect>();
+        ItemSpawner = ItemSpawner.Instance;
+
     }
     protected virtual void Init()
     {
         // Set default values if enemyData is null
         if (enemyData == null)
         {
-            Debug.LogWarning($"EnemyData is null on {gameObject.name}, using default values");
             AttackRange = 2f;
             AttackCoolDown = 1f;
             Damage = 1;
@@ -73,7 +75,6 @@ public class Enemy : TriBehaviour
         }
         
         CurrentHealth = maxHealth;
-        Debug.Log($"Enemy initialized with {maxHealth} max health");
     }
     void SetAnimator(int index)
     {
@@ -193,9 +194,10 @@ public class Enemy : TriBehaviour
             // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
-            Destroy(gameObject, 1f);
             Destroy(VillagerCollision.gameObject);
             Destroy(VillagerDetectionRange.gameObject);
+            ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            Destroy(gameObject, 1f);
         }
     }
 
@@ -243,7 +245,6 @@ public class Enemy : TriBehaviour
 
     public void Deduct(int amount)
     {
-        Debug.Log($"Enemy taking {amount} damage. Current health: {CurrentHealth}");
         CurrentHealth -= amount;
         HealthBarFillUI.DOFillAmount(CurrentHealth / maxHealth, 0.5f)
             .SetEase(Ease.OutBounce);
@@ -254,7 +255,6 @@ public class Enemy : TriBehaviour
             _enemyEffect.ApplyHitEffect();
         }
         
-        Debug.Log($"Enemy health after damage: {CurrentHealth}");
         if (CurrentHealth <= 0)
         {
             Die();
@@ -267,4 +267,5 @@ public class Enemy : TriBehaviour
         // EnemySpawner.Instance.Despawm(transform);
         ChangeState(EnemyState.Dead);
     }
+
 }

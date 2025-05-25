@@ -96,7 +96,7 @@ public abstract class Spawner : TriBehaviour
 
         return null;
     }
-    public virtual Transform randomPrefabs()
+    public virtual Transform RandomPrefabs()
     {
         int rand = Random.Range(0, this.prefabs.Count);
         return prefabs[rand];

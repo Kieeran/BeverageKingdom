@@ -47,7 +47,6 @@ public class ComboController : MonoBehaviour
                     isDecaying = true;
                     // decayTimer = 0f;
                     lastDecayTime = Time.time;
-                    Debug.Log("Starting combo decay");
                 }
             }
             else
@@ -63,7 +62,6 @@ public class ComboController : MonoBehaviour
                     {
                         CurrentCombo = newCombo;
                         OnComboChanged?.Invoke(CurrentCombo);
-                        Debug.Log($"Combo decaying: {CurrentCombo} (Rate: {decayRate} points/sec)");
                     }
 
                     lastDecayTime = Time.time;
@@ -71,7 +69,6 @@ public class ComboController : MonoBehaviour
                     if (CurrentCombo == 0)
                     {
                         isDecaying = false;
-                        Debug.Log("Combo decay complete");
                     }
                 }
             }
@@ -87,7 +84,6 @@ public class ComboController : MonoBehaviour
         // decayTimer = 0f;
         lastDecayTime = Time.time;
         OnComboChanged?.Invoke(CurrentCombo);
-        Debug.Log($"Combo increased to {CurrentCombo}");
         foreach (ComboSkill comboSkill in skillList)
         {
             comboSkill.TriggerComboSkill(CurrentCombo);
@@ -102,6 +98,5 @@ public class ComboController : MonoBehaviour
         // decayTimer = 0f;
         lastDecayTime = Time.time;
         OnComboChanged?.Invoke(CurrentCombo);
-        Debug.Log("Combo reset to 0");
     }
 }

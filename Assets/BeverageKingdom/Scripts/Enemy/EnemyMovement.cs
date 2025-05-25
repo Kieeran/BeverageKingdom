@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -21,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
     [HideInInspector]
     public bool IsDead;
 
-
+    private bool isSpeed;
     void Awake()
     {
         DetectionRange.OnInRange += SetEntityInRange;
@@ -92,5 +93,15 @@ public class EnemyMovement : MonoBehaviour
     {
         IsEntityInRange = false;
         Target = null;
+    }
+    public IEnumerator SetSpeed(float addSpeed)
+    {
+        if (isSpeed)
+            yield break;
+        isSpeed = true;
+        MoveSpeed += addSpeed;
+        yield return new WaitForSeconds(3f);
+        MoveSpeed -= addSpeed;
+        isSpeed = false;
     }
 }

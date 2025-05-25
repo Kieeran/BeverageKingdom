@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,6 +46,9 @@ public class Player : MonoBehaviour
 
     public Action OnPlayerDead;
 
+    private bool isShield;
+    [SerializeField] private Transform shield;
+    private bool isSpeed;
     private void Awake()
     {
         if (instance == null)
@@ -76,15 +80,31 @@ public class Player : MonoBehaviour
 
         // _coolDownTimer = 0;
         _coolDownTimer = AttackCoolDown;
+        isSpeed = false;
+        isShield = false;
         // UIManager.Instance.MainCanvas.OnAttack += OnAttack;
+    }
+    IEnumerator DisableAfterDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        obj.SetActive(false);
     }
 
     public void TakeDamage(float damage)
     {
+        if (isShield)
+        {
+            shield.GetComponent<Animator>().SetBool("Break", true);
+            StartCoroutine(DisableAfterDelay(shield.gameObject, 0.1f));
+
+            DeactiveShield();
+            return;
+        }
         HP -= damage;
         HealthBarFillUI.fillAmount = HP / MaxHP;
 
         stateMachine.ChangeState(hit);
+
         if (HP <= 0)
         {
             //anim.Play("Dead", 0, 0f);
@@ -207,11 +227,34 @@ public class Player : MonoBehaviour
             playerSpr.sprite = playerGunSpr;
         }
     }
-    public void LevelUp()
+    public void RecoverHp(int hp)
     {
-        MaxHP += 5;
-        HP = MaxHP;
+        HP += hp;
         Debug.Log("Level up");
         HealthBarFillUI.fillAmount = HP / MaxHP;
+    }
+    public void ActiveShield()
+    {
+        shield.gameObject.SetActive(true);
+        isShield = true;
+
+        Debug.Log("shield");
+
+    }
+    private void DeactiveShield()
+    {
+        shield.gameObject.SetActive(false);
+        isShield = false;
+
+    }
+    public IEnumerator SetSpeed(float addSpeed)
+    {
+        if (isSpeed)
+            yield break;
+        isSpeed = true;
+        moveSpeed += addSpeed;
+        yield return new WaitForSeconds(3f);
+        moveSpeed -= addSpeed;
+        isSpeed = false;
     }
 }
