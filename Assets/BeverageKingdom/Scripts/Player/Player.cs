@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        isSpeed = false;
         anim = transform.Find("Model").GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         stateMachine.Initialize(idleState);
