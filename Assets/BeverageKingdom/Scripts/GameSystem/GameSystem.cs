@@ -21,12 +21,6 @@ public class GameSystem : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // Initialize game system components here
-        // For example, you can load player data, initialize UI, etc.
-    }
-
     public void GameOver()
     {
         Time.timeScale = 0f;
@@ -36,6 +30,7 @@ public class GameSystem : MonoBehaviour
     public void GameWin()
     {
         Time.timeScale = 0f;
+        Controller.Instance.CurrentLevelIndex++;
         OnGameWin?.Invoke();
     }
 }

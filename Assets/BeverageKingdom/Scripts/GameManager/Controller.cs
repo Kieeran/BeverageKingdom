@@ -1,12 +1,13 @@
-using System.Collections.Generic;
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
     [SerializeField] Transform _playerPrefab;
     [SerializeField] Transform _envPrefab;
     [SerializeField] Transform _spawnEnemy;
-    [SerializeField] Transform __spawnEnemy;
     [SerializeField] Transform _spawnVillager;
     [SerializeField] Transform _comboController;
     [SerializeField] Transform _projectileSpawner;
@@ -15,13 +16,20 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _gameSystem;
     [SerializeField] Transform _levelController;
 
+    public Action<string> OnSceneChange;
+
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
+
+    public int CurrentLevelIndex = 0;
 
     public static Controller Instance { get; private set; }
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -29,19 +37,20 @@ public class Controller : MonoBehaviour
         }
 
         Instance = this;
-        // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
-        InitGame();
+        InitHome();
     }
 
-    void InitGame()
+    void InitHome()
     {
-        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.InGameSound, true, 0.3f);
+        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.HomeMenuSound, true, 0.3f);
+    }
 
+    public void InitInGame()
+    {
         Player = Instantiate(_playerPrefab.gameObject).transform;
         Env = Instantiate(_envPrefab.gameObject).transform;
-        // Instantiate(_spawnEnemy.gameObject);
-        // Instantiate(__spawnEnemy.gameObject);
         Instantiate(_spawnVillager.gameObject);
         Instantiate(_comboController.gameObject);
         Instantiate(_projectileSpawner.gameObject);
@@ -49,10 +58,37 @@ public class Controller : MonoBehaviour
         Instantiate(_playerInput.gameObject);
         Instantiate(_gameSystem.gameObject);
         Instantiate(_levelController.gameObject);
+        Instantiate(_spawnEnemy.gameObject);
+
+        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
     }
 
-    void Start()
+    public void ChangeScene(string sceneName)
     {
-        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.MainCanvas.GetJoystick());
+        StartCoroutine(LoadScene(sceneName));
+    }
+
+    IEnumerator LoadScene(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        // Chờ đến khi load xong
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        Debug.Log("Scene " + sceneName + " loaded!");
+        OnSceneChange?.Invoke(sceneName);
+
+        if (sceneName == "PlayScene")
+        {
+            InitInGame();
+        }
+
+        else if (sceneName == "HomeScene")
+        {
+            InitHome();
+        }
     }
 }

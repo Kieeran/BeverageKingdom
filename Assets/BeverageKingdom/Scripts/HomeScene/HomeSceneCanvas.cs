@@ -8,6 +8,9 @@ public class HomeSceneCanvas : MonoBehaviour
     public Button ExitGameButton;
     public Button TutorialButton;
 
+    public Button LevelSelectionButton;
+    public LevelSelection LevelSelection;
+
     public RectTransform TutorialPanel;
 
     void Awake()
@@ -24,9 +27,8 @@ public class HomeSceneCanvas : MonoBehaviour
 
     void Start()
     {
-        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.HomeMenuSound, true, 0.8f);
-
         TutorialPanel.gameObject.SetActive(false);
+        LevelSelection.gameObject.SetActive(false);
 
         TutorialButton.onClick.AddListener(() =>
         {
@@ -35,7 +37,12 @@ public class HomeSceneCanvas : MonoBehaviour
 
         StartGameButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadSceneAsync("PlayScene");
+            Controller.Instance.ChangeScene("PlayScene");
+        });
+
+        LevelSelectionButton.onClick.AddListener(() =>
+        {
+            LevelSelection.gameObject.SetActive(true);
         });
     }
 }

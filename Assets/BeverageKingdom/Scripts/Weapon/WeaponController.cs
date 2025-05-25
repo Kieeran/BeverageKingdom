@@ -16,7 +16,7 @@ public class WeaponController : MonoBehaviour
 
     void Awake()
     {
-        UIManager.Instance.MainCanvas.OnActiveSkill += OnChangeWeapon;
+        UIManager.Instance.PlayCanvas.OnActiveSkill += OnChangeWeapon;
     }
 
     void Start()
@@ -48,12 +48,12 @@ public class WeaponController : MonoBehaviour
     {
         if (weapons == null || weapons.Count == 0) return;
 
-      //  currentIndex = (currentIndex + dir + weapons.Count) % weapons.Count;
+        //  currentIndex = (currentIndex + dir + weapons.Count) % weapons.Count;
         Player.instance.SwapAnimatorController(currentIndex);
     }
     public void Attack()
     {
         weapons[currentIndex].Attack();
     }
-    
+
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2417780063896469207
+--- !u!1 &2487010451457294303
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3327843650473428389}
-  - component: {fileID: 5922819221672640356}
+  - component: {fileID: 5261773723261895675}
+  - component: {fileID: 47292045738340688}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3327843650473428389
+--- !u!4 &5261773723261895675
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417780063896469207}
+  m_GameObject: {fileID: 2487010451457294303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,19 +32,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5922819221672640356
+--- !u!114 &47292045738340688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2417780063896469207}
+  m_GameObject: {fileID: 2487010451457294303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca068f0e78869248adfd38745f61b38, type: 3}
+  m_Script: {fileID: 11500000, guid: c708ed7b8cd695a42a4b15bf5009643c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab:
-  - {fileID: 4887401757434989689, guid: fe5cec5108ce7434c846fae0522e3cb1, type: 3}
-  - {fileID: 7508368098532413865, guid: e868faee2e1d66e43a8d5d4a66c0004e, type: 3}
-  spawnInterval: 2
+  _playCanvasPrefab: {fileID: 5600984219391760075, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
+  _homeCanvasPrefab: {fileID: 6075498405728850597, guid: f671e99d7f4fa0641a98c76ac16e0a9f, type: 3}

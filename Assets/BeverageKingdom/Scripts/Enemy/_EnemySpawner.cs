@@ -1,43 +1,113 @@
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
-public class _EnemySpawner : MonoBehaviour
+public class _EnemySpawner : Spawner
 {
-    [SerializeField] GameObject _enemyPrefab;
-    public float spawnInterval;
+    public static _EnemySpawner Instance { get; private set; }
 
-    List<SpawnArea> _spawnAreas = new();
+    [Header("Wave Configuration")]
+    [Tooltip("ScriptableObject chứa danh sách các wave")]
+    public WaveDataSO waveDataSO;
 
-    private float timer;
+    [Header("Spawn Area")]
+    public float spawnX = 10f;
+    public float minY = -2f;
+    public float maxY = 2f;
 
-    void Start()
+    [Header("Spawn Interval (seconds)")]
+    public float minSpawnInterval = 0.2f;
+    public float maxSpawnInterval = 0.3f;
+
+    // Đếm số enemy đang sống
+    private int aliveEnemies;
+
+    protected override void Awake()
     {
-        Env env = Controller.Instance.Env.GetComponent<Env>();
-
-        _spawnAreas.Add(env.EnemySpawnPosSlot1.GetChild(0).GetComponent<SpawnArea>());
-        _spawnAreas.Add(env.EnemySpawnPosSlot2.GetChild(0).GetComponent<SpawnArea>());
-        _spawnAreas.Add(env.EnemySpawnPosSlot3.GetChild(0).GetComponent<SpawnArea>());
-    }
-
-    void Update()
-    {
-        timer += Time.deltaTime;
-
-        if (timer >= spawnInterval)
+        if (Instance == null)
         {
-            Spawn();
-            timer = 0f;
+            Instance = this;
+            // DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
         }
     }
 
-    void Spawn()
+    protected override void Start()
     {
-        Instantiate(_enemyPrefab, GetRandomSpawnArea().GetRandomSpawnPos(), Quaternion.identity);
+        if (waveDataSO == null || waveDataSO.waves.Count == 0)
+        {
+            Debug.LogWarning("EnemySpawner: WaveDataSO chưa gán hoặc không có wave nào!");
+            return;
+        }
+        StartCoroutine(RunAllWaves());
     }
 
-    SpawnArea GetRandomSpawnArea()
+    private IEnumerator RunAllWaves()
     {
-        int index = Random.Range(0, 3);
-        return _spawnAreas[index];
+        for (int i = 0; i < waveDataSO.waves.Count; i++)
+        {
+            EnemyWave wave = waveDataSO.waves[i];
+            Debug.Log($"--- Bắt đầu Wave {i + 1} ---");
+            yield return RunSingleWave(wave, i + 1);
+        }
+        Debug.Log("=== Đã hoàn thành tất cả các wave ===");
+        GameSystem.instance.GameWin();
+    }
+
+    private IEnumerator RunSingleWave(EnemyWave wave, int waveNumber)
+    {
+        // Reset counter
+        aliveEnemies = 0;
+
+        // Spawn theo từng EnemyData
+        foreach (var enemyData in wave.enemies)
+        {
+            MainCanvas.instance.ShowNextWave(waveNumber, enemyData.count);
+            for (int j = 0; j < enemyData.count; j++)
+            {
+                // Spawn 1 enemy
+                Transform t = Spawn(
+                    enemyData.enemyData.name,
+                    GetRandomSpawnPos(),
+                    Quaternion.identity
+                );
+                if (t != null && t.TryGetComponent<Enemy>(out var e))
+                {
+                    aliveEnemies++;
+                }
+
+                // Chờ random interval trước khi spawn tiếp
+                float wait = Random.Range(minSpawnInterval, maxSpawnInterval);
+                yield return new WaitForSeconds(wait);
+            }
+        }
+
+        // Đợi đến khi người chơi kill sạch
+        yield return new WaitUntil(() => aliveEnemies == 0);
+
+        Debug.Log($"--- Wave {waveNumber} cleared! ---");
+        MainCanvas.instance.ShowAllWavesCompleted();
+    }
+
+    /// <summary>
+    /// Gọi từ Enemy.Die() để giảm counter aliveEnemies
+    /// </summary>
+    public void NotifyEnemyKilled()
+    {
+        aliveEnemies = Mathf.Max(0, aliveEnemies - 1);
+    }
+
+    private Vector3 GetRandomSpawnPos()
+    {
+        float y = Random.Range(minY, maxY);
+        return new Vector3(spawnX, y, 0f);
+    }
+
+    public override Transform Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
+    {
+        return base.Spawn(prefabName, spawnPos, rotation);
     }
 }

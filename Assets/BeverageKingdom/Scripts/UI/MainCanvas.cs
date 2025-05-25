@@ -2,7 +2,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainCanvas : MonoBehaviour
@@ -36,6 +35,7 @@ public class MainCanvas : MonoBehaviour
     public ComboBar comboBar;
     public Joystick GetJoystick() { return _joystick; }
 
+    public TextMeshProUGUI levelText;
 
     [Header("Animation Wave Settings")]
     [SerializeField] private TextMeshProUGUI nextWave;
@@ -71,6 +71,11 @@ public class MainCanvas : MonoBehaviour
         GameWinOverPopup.gameObject.SetActive(true);
 
         GameWinOverPopup.OnGameWin();
+    }
+
+    public void UpdateLevelText(int levelNum)
+    {
+        levelText.text = "Lv. " + levelNum.ToString();
     }
 
     void InitListener()

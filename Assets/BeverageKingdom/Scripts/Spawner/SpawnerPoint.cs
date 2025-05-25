@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnerPoint : MonoBehaviour
 {
     public List<Transform> spawnPoints = new List<Transform>();
-    private EnemySpawner enemySpawner;
+    private _EnemySpawner enemySpawner;
 
     [Header("Cài đặt spawn")]
     public bool autoSpawn = true;
@@ -14,7 +14,7 @@ public class SpawnerPoint : MonoBehaviour
 
     void Start()
     {
-        enemySpawner = EnemySpawner.Instance;
+        enemySpawner = _EnemySpawner.Instance;
 
         if (spawnPoints.Count == 0)
         {
