@@ -8,8 +8,9 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] Button _exitButton;
     [SerializeField] Button _levelGD1Button;
     [SerializeField] Button _levelGD2Button;
-    [SerializeField] Image _levelActiveVisualGD1;
-    [SerializeField] Image _levelActiveVisualGD2;
+
+    [SerializeField] Image _levelGD1Image;
+    [SerializeField] Image _levelGD2Image;
 
     public int LevelNumber;
 
@@ -30,8 +31,8 @@ public class LevelSelection : MonoBehaviour
                 }
             );
 
-            _levelActiveVisualGD1.gameObject.SetActive(true);
-            _levelActiveVisualGD2.gameObject.SetActive(false);
+            _levelGD1Image.color = Color.white;
+            _levelGD2Image.color = new Color32(0x6A, 0x6A, 0x6A, 0xFF);
         });
 
         _levelGD2Button.onClick.AddListener(() =>
@@ -44,9 +45,12 @@ public class LevelSelection : MonoBehaviour
                 }
             );
 
-            _levelActiveVisualGD1.gameObject.SetActive(false);
-            _levelActiveVisualGD2.gameObject.SetActive(true);
+            _levelGD1Image.color = new Color32(0x6A, 0x6A, 0x6A, 0xFF);
+            _levelGD2Image.color = Color.white;
         });
+
+        _levelGD1Image.color = Color.white;
+        _levelGD2Image.color = new Color32(0x6A, 0x6A, 0x6A, 0xFF);
     }
 
     void CreateLevelSelection()
