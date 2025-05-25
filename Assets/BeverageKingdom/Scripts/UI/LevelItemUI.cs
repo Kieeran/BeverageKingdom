@@ -9,8 +9,6 @@ public class LevelItemUI : MonoBehaviour
     [SerializeField] Button _selectLevelButton;
 
     public int LevelIndex;
-    [HideInInspector]
-    public bool IsEnable;
 
     void Awake()
     {
@@ -26,16 +24,12 @@ public class LevelItemUI : MonoBehaviour
     {
         _hide.gameObject.SetActive(true);
         _selectLevelButton.targetGraphic = null;
-
-        IsEnable = false;
     }
 
     public void EnableLevelItemUI()
     {
         _hide.gameObject.SetActive(false);
         _selectLevelButton.targetGraphic = GetComponent<Image>();
-
-        IsEnable = true;
     }
 
     public void UpdateLevelItemUIText(string text)

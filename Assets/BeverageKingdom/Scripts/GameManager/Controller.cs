@@ -22,6 +22,9 @@ public class Controller : MonoBehaviour
     public Transform Env { get; private set; }
 
     public int CurrentLevelIndex = 0;
+    public int CurrentLevelIndexGD1 = 0;
+    public int CurrentLevelIndexGD2 = 0;
+    public bool IsGD1Active = true;
 
     public static Controller Instance { get; private set; }
 
@@ -90,5 +93,28 @@ public class Controller : MonoBehaviour
         {
             InitHome();
         }
+    }
+
+    public void ChangeGD(int index, Action OnChangeGD)
+    {
+        if (index == 1 && IsGD1Active || index == 2 && !IsGD1Active) return;
+
+        if (index == 1)
+        {
+            CurrentLevelIndexGD2 = CurrentLevelIndex;
+
+            IsGD1Active = true;
+            CurrentLevelIndex = CurrentLevelIndexGD1;
+        }
+
+        else if (index == 2)
+        {
+            CurrentLevelIndexGD1 = CurrentLevelIndex;
+
+            IsGD1Active = false;
+            CurrentLevelIndex = CurrentLevelIndexGD2;
+        }
+
+        OnChangeGD?.Invoke();
     }
 }
