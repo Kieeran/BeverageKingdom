@@ -40,7 +40,7 @@ public class LevelController : MonoBehaviour
         _isLevelComplete = false;
         _isSpawnAllEnemies = false;
 
-        _mileStoneProgressBar = UIManager.Instance.MainCanvas.MileStoneProgressBar;
+        _mileStoneProgressBar = UIManager.Instance.PlayCanvas.MileStoneProgressBar;
 
         InitMarker();
     }
@@ -75,7 +75,7 @@ public class LevelController : MonoBehaviour
 
         if (timer <= _levelDuration)
         {
-            UIManager.Instance.MainCanvas.UpdateLevelProgressBar(timer / _levelDuration);
+            UIManager.Instance.PlayCanvas.UpdateLevelProgressBar(timer / _levelDuration);
         }
 
         WaveData wave = levelData.Waves[currentWaveIndex];
@@ -98,6 +98,7 @@ public class LevelController : MonoBehaviour
     {
         return transform.childCount == 0;
     }
+
     int _groupsRemaining;
     IEnumerator SpawnWave(WaveData wave, int waveIndex)
     {

@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour
         }
 
         Instance = this;
-        // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         InitGame();
     }
@@ -53,6 +53,6 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
-        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.MainCanvas.GetJoystick());
+        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
     }
 }

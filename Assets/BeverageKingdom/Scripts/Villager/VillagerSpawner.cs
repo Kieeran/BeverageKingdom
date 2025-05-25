@@ -11,11 +11,11 @@ public class VillagerSpawner : MonoBehaviour
 
     void Start()
     {
-        UIManager.Instance.MainCanvas.OnSpawnVillagerAtSlot1 += OnSpawnVillagerAtSlot1;
-        UIManager.Instance.MainCanvas.OnSpawnVillagerAtSlot2 += OnSpawnVillagerAtSlot2;
-        UIManager.Instance.MainCanvas.OnSpawnVillagerAtSlot3 += OnSpawnVillagerAtSlot3;
+        UIManager.Instance.PlayCanvas.OnSpawnVillagerAtSlot1 += OnSpawnVillagerAtSlot1;
+        UIManager.Instance.PlayCanvas.OnSpawnVillagerAtSlot2 += OnSpawnVillagerAtSlot2;
+        UIManager.Instance.PlayCanvas.OnSpawnVillagerAtSlot3 += OnSpawnVillagerAtSlot3;
 
-        UIManager.Instance.MainCanvas.OnSpawnVillagerAtAllSlot += OnSpawnVillagerAtAllSlot;
+        UIManager.Instance.PlayCanvas.OnSpawnVillagerAtAllSlot += OnSpawnVillagerAtAllSlot;
 
         Env env = Controller.Instance.Env.GetComponent<Env>();
 

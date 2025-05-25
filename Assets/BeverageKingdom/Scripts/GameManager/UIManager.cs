@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] GameObject _mainCanvasPrefab;
+    [SerializeField] GameObject _playCanvasPrefab;
+    [SerializeField] GameObject _homeCanvasPrefab;
 
-    public MainCanvas MainCanvas { get; private set; }
+    public MainCanvas PlayCanvas { get; private set; }
+    public MainCanvas HomeCanvas { get; private set; }
 
     public static UIManager Instance { get; private set; }
 
@@ -17,14 +19,14 @@ public class UIManager : MonoBehaviour
         }
 
         Instance = this;
-        // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         InitGame();
     }
 
     void InitGame()
     {
-        GameObject mainCanvas = Instantiate(_mainCanvasPrefab);
-        MainCanvas = mainCanvas.GetComponent<MainCanvas>();
+        GameObject mainCanvas = Instantiate(_playCanvasPrefab);
+        PlayCanvas = mainCanvas.GetComponent<MainCanvas>();
     }
 }
