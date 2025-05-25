@@ -5,8 +5,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _playCanvasPrefab;
     [SerializeField] GameObject _homeCanvasPrefab;
 
+    public HomeSceneCanvas HomeCanvas { get; private set; }
     public MainCanvas PlayCanvas { get; private set; }
-    public MainCanvas HomeCanvas { get; private set; }
 
     public static UIManager Instance { get; private set; }
 
@@ -24,10 +24,28 @@ public class UIManager : MonoBehaviour
         InitHome();
     }
 
+    void Start()
+    {
+        Controller.Instance.OnSceneChange += OnSceneChange;
+    }
+
+    void OnSceneChange(string sceneName)
+    {
+        if (sceneName == "PlayScene")
+        {
+            InitInGame();
+        }
+
+        else if (sceneName == "HomeScene")
+        {
+            InitHome();
+        }
+    }
+
     public void InitHome()
     {
         GameObject homeCanvas = Instantiate(_homeCanvasPrefab);
-        HomeCanvas = homeCanvas.GetComponent<MainCanvas>();
+        HomeCanvas = homeCanvas.GetComponent<HomeSceneCanvas>();
     }
 
     public void InitInGame()

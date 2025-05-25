@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameWinOverPopup : MonoBehaviour
@@ -18,7 +15,7 @@ public class GameWinOverPopup : MonoBehaviour
         PlayAgainButton.onClick.AddListener(() =>
         {
             Time.timeScale = 1f;
-            SceneManager.LoadSceneAsync("PlayScene");
+            Controller.Instance.ChangeScene("PlayScene");
         });
 
         ExitButton.onClick.AddListener(() =>
@@ -26,7 +23,7 @@ public class GameWinOverPopup : MonoBehaviour
             Time.timeScale = 1f;
 
             SoundManager.Instance?.StopSound();
-            SceneManager.LoadSceneAsync("HomeScene");
+            Controller.Instance.ChangeScene("HomeScene");
         });
     }
 

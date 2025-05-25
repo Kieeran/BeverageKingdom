@@ -24,8 +24,6 @@ public class HomeSceneCanvas : MonoBehaviour
 
     void Start()
     {
-        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.HomeMenuSound, true, 0.8f);
-
         TutorialPanel.gameObject.SetActive(false);
 
         TutorialButton.onClick.AddListener(() =>
@@ -35,7 +33,7 @@ public class HomeSceneCanvas : MonoBehaviour
 
         StartGameButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadSceneAsync("PlayScene");
+            Controller.Instance.ChangeScene("PlayScene");
         });
     }
 }

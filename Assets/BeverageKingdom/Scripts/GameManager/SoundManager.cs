@@ -31,9 +31,6 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        Application.targetFrameRate = 60;
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

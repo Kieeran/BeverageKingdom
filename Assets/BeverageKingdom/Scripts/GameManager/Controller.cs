@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
@@ -14,6 +17,8 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _gameSystem;
     [SerializeField] Transform _levelController;
 
+    public Action<string> OnSceneChange;
+
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
 
@@ -21,6 +26,9 @@ public class Controller : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -35,13 +43,11 @@ public class Controller : MonoBehaviour
 
     void InitHome()
     {
-        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.InGameSound, true, 0.3f);
+        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.HomeMenuSound, true, 0.3f);
     }
 
     public void InitInGame()
     {
-        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
-
         Player = Instantiate(_playerPrefab.gameObject).transform;
         Env = Instantiate(_envPrefab.gameObject).transform;
         Instantiate(_spawnVillager.gameObject);
@@ -51,5 +57,36 @@ public class Controller : MonoBehaviour
         Instantiate(_playerInput.gameObject);
         Instantiate(_gameSystem.gameObject);
         Instantiate(_levelController.gameObject);
+
+        Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        StartCoroutine(LoadScene(sceneName));
+    }
+
+    IEnumerator LoadScene(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        // Chờ đến khi load xong
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        Debug.Log("Scene " + sceneName + " loaded!");
+        OnSceneChange?.Invoke(sceneName);
+
+        if (sceneName == "PlayScene")
+        {
+            InitInGame();
+        }
+
+        else if (sceneName == "HomeScene")
+        {
+            InitHome();
+        }
     }
 }
