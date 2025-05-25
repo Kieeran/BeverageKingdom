@@ -6,6 +6,10 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] RectTransform _container;
     [SerializeField] RectTransform _levelItemUIPrefab;
     [SerializeField] Button _exitButton;
+    [SerializeField] Button _levelGD1Button;
+    [SerializeField] Button _levelGD2Button;
+    [SerializeField] Image _levelActiveVisualGD1;
+    [SerializeField] Image _levelActiveVisualGD2;
 
     public int LevelNumber;
 
@@ -15,15 +19,40 @@ public class LevelSelection : MonoBehaviour
         {
             gameObject.SetActive(false);
         });
+
+        _levelGD1Button.onClick.AddListener(() =>
+        {
+            Controller.Instance.ChangeGD(
+                1,
+                () =>
+                {
+                    CreateLevelSelection();
+                }
+            );
+
+            _levelActiveVisualGD1.gameObject.SetActive(true);
+            _levelActiveVisualGD2.gameObject.SetActive(false);
+        });
+
+        _levelGD2Button.onClick.AddListener(() =>
+        {
+            Controller.Instance.ChangeGD(
+                2,
+                () =>
+                {
+                    CreateLevelSelection();
+                }
+            );
+
+            _levelActiveVisualGD1.gameObject.SetActive(false);
+            _levelActiveVisualGD2.gameObject.SetActive(true);
+        });
     }
 
-    void Start()
+    void CreateLevelSelection()
     {
-        InitLevelSelection();
-    }
+        ClearLevelSelection();
 
-    void InitLevelSelection()
-    {
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
 
         for (int i = 0; i < LevelNumber; i++)
@@ -45,19 +74,16 @@ public class LevelSelection : MonoBehaviour
         }
     }
 
+    void ClearLevelSelection()
+    {
+        for (int i = 1; i < _container.childCount; i++)
+        {
+            Destroy(_container.GetChild(i).gameObject);
+        }
+    }
+
     void OnEnable()
     {
-        int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
-
-        for (int i = 1; i < transform.childCount; i++)
-        {
-            LevelItemUI levelItemUI = _container.transform.GetChild(i).GetComponent<LevelItemUI>();
-            if (levelItemUI.IsEnable == true) continue;
-
-            if (i - 1 <= currentLevelIndex)
-            {
-                levelItemUI.EnableLevelItemUI();
-            }
-        }
+        CreateLevelSelection();
     }
 }
