@@ -1,115 +1,99 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-public class EnemySpawner : Spawner
+public class EnemySpawner : MonoBehaviour
 {
-    public static EnemySpawner Instance { get; private set; }
+    public static EnemySpawner Instance;
+    public List<GameObject> EnemyPrefab;
 
-    [Header("Wave Configuration")]
-    [Tooltip("ScriptableObject chứa danh sách các wave")]
-    public WaveDataSO waveDataSO;
+    List<SpawnArea> _spawnAreas = new();
 
-    [Header("Spawn Area")]
-    public float spawnX = 10f;
-    public float minY = -2f;
-    public float maxY = 2f;
-
-    [Header("Spawn Interval (seconds)")]
-    public float minSpawnInterval = 0.2f;
-    public float maxSpawnInterval = 0.3f;
-
-    // Đếm số enemy đang sống
-    private int aliveEnemies;
-
-    protected override void Awake()
+    private void Awake()
     {
-        if (Instance == null)
+        Instance = this;
+    }
+
+    void Start()
+    {
+        Env env = Controller.Instance.Env.GetComponent<Env>();
+
+        _spawnAreas.Add(env.EnemySpawnPosSlot1.GetChild(0).GetComponent<SpawnArea>());
+        _spawnAreas.Add(env.EnemySpawnPosSlot2.GetChild(0).GetComponent<SpawnArea>());
+        _spawnAreas.Add(env.EnemySpawnPosSlot3.GetChild(0).GetComponent<SpawnArea>());
+    }
+
+    public void SpawnEnemy(string enemyName)
+    {
+        GameObject enemyPrefab = GetEnemyPrefab(enemyName);
+        if (enemyPrefab == null)
         {
-            Instance = this;
-            // DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
+            Debug.LogError($"Enemy prefab not found: {enemyName}");
             return;
         }
+
+        GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
+        enemy.transform.SetParent(transform);
     }
 
-    protected override void Start()
+    int _groupsRemaining;
+    public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
     {
-        if (waveDataSO == null || waveDataSO.waves.Count == 0)
+        // 1) Khởi tạo counter = số nhóm trong wave
+        _groupsRemaining = wave.EnemiesToSpawn.Count;
+
+        // 2) Với mỗi spawnData, start 1 coroutine con
+        foreach (var spawnData in wave.EnemiesToSpawn)
         {
-            Debug.LogWarning("EnemySpawner: WaveDataSO chưa gán hoặc không có wave nào!");
-            return;
+            StartCoroutine(SpawnEnemyGroup(spawnData));
         }
-        StartCoroutine(RunAllWaves());
+
+        // 3) Chờ cho đến khi tất cả nhóm xong (counter về 0)
+        yield return new WaitUntil(() => _groupsRemaining == 0);
+
+        CheckSpawnAllEnemies?.Invoke();
     }
 
-    private IEnumerator RunAllWaves()
+    // Coroutine con chỉ lo spawn nhóm đó
+    private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
     {
-        for (int i = 0; i < waveDataSO.waves.Count; i++)
+        for (int i = 0; i < spawnData.Count; i++)
         {
-            EnemyWave wave = waveDataSO.waves[i];
-            Debug.Log($"--- Bắt đầu Wave {i + 1} ---");
-            yield return RunSingleWave(wave, i + 1);
+            SpawnEnemy(spawnData.EnemyType);
+            yield return new WaitForSeconds(spawnData.SpawnInterval);
         }
-        Debug.Log("=== Đã hoàn thành tất cả các wave ===");
-        GameSystem.instance.GameWin();
+
+        // Khi group này xong, giảm counter
+        _groupsRemaining--;
     }
 
-    private IEnumerator RunSingleWave(EnemyWave wave, int waveNumber)
+    public bool IsAnyEnemyInContainer()
     {
-        // Reset counter
-        aliveEnemies = 0;
+        return transform.childCount != 0;
+    }
 
-        // Spawn theo từng EnemyData
-        foreach (var enemyData in wave.enemies)
+    GameObject GetEnemyPrefab(string name)
+    {
+        foreach (var enemy in EnemyPrefab)
         {
-            MainCanvas.instance.ShowNextWave(waveNumber, enemyData.count);
-            for (int j = 0; j < enemyData.count; j++)
+            if (enemy.name == name)
             {
-                // Spawn 1 enemy
-                Transform t = Spawn(
-                    enemyData.enemyData.name,
-                    GetRandomSpawnPos(),
-                    Quaternion.identity
-                );
-                if (t != null && t.TryGetComponent<Enemy>(out var e))
-                {
-                    aliveEnemies++;
-                }
-
-                // Chờ random interval trước khi spawn tiếp
-                float wait = Random.Range(minSpawnInterval, maxSpawnInterval);
-                yield return new WaitForSeconds(wait);
+                return enemy;
             }
         }
-
-        // Đợi đến khi người chơi kill sạch
-        yield return new WaitUntil(() => aliveEnemies == 0);
-
-        Debug.Log($"--- Wave {waveNumber} cleared! ---");
-        MainCanvas.instance.ShowAllWavesCompleted();
+        return null;
     }
 
-    /// <summary>
-    /// Gọi từ Enemy.Die() để giảm counter aliveEnemies
-    /// </summary>
-    public void NotifyEnemyKilled()
+    Vector2 GetRandomSpawnPos()
     {
-        aliveEnemies = Mathf.Max(0, aliveEnemies - 1);
+        int index = Random.Range(0, 3);
+        return _spawnAreas[index].GetRandomSpawnPos();
     }
 
-    private Vector3 GetRandomSpawnPos()
+    public Transform GetRandomEnemy()
     {
-        float y = Random.Range(minY, maxY);
-        return new Vector3(spawnX, y, 0f);
-    }
-
-    public override Transform Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
-    {
-        return base.Spawn(prefabName, spawnPos, rotation);
+        int random = Random.Range(0, transform.childCount);
+        Transform enemy = transform.GetChild(random);
+        return enemy;
     }
 }

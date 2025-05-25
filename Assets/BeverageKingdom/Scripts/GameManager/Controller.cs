@@ -8,7 +8,6 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _playerPrefab;
     [SerializeField] Transform _envPrefab;
     [SerializeField] Transform _spawnEnemy;
-    [SerializeField] Transform __spawnEnemy;
     [SerializeField] Transform _spawnVillager;
     [SerializeField] Transform _comboController;
     [SerializeField] Transform _projectileSpawner;
@@ -57,6 +56,7 @@ public class Controller : MonoBehaviour
         Instantiate(_playerInput.gameObject);
         Instantiate(_gameSystem.gameObject);
         Instantiate(_levelController.gameObject);
+        Instantiate(_spawnEnemy.gameObject);
 
         Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
     }
