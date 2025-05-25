@@ -82,11 +82,11 @@ public class LevelController : MonoBehaviour
 
         if (timer >= wave.StartTime)
         {
-            if (spawnCoroutine != null)
-            {
-                StopCoroutine(spawnCoroutine);
-                spawnCoroutine = null;
-            }
+            // if (spawnCoroutine != null)
+            // {
+            //     StopCoroutine(spawnCoroutine);
+            //     spawnCoroutine = null;
+            // }
 
             _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
             spawnCoroutine = StartCoroutine(SpawnWave(wave, currentWaveIndex));
@@ -133,6 +133,7 @@ public class LevelController : MonoBehaviour
         // Khi group này xong, giảm counter
         _groupsRemaining--;
     }
+
     private void SpawnEnemy(string enemyName)
     {
         GameObject enemyPrefab = GetEnemyPrefab(enemyName);
@@ -142,16 +143,17 @@ public class LevelController : MonoBehaviour
             return;
         }
 
-        GameObject enemy = Instantiate(enemyPrefab, _spawnAreas[Random.Range(0,3)].GetRandomSpawnPos(), Quaternion.identity);
+        GameObject enemy = Instantiate(enemyPrefab, _spawnAreas[Random.Range(0, 3)].GetRandomSpawnPos(), Quaternion.identity);
         enemy.transform.SetParent(transform);
-
     }
+
     public Transform GetRadomEnemy()
     {
         int random = Random.Range(0, transform.childCount);
         Transform enemy = transform.GetChild(random);
         return enemy;
     }
+
     private GameObject GetEnemyPrefab(string name)
     {
         foreach (var enemy in EnemyPrefab)

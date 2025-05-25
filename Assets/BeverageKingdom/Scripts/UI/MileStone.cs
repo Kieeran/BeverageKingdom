@@ -20,8 +20,6 @@ public class MileStone : MonoBehaviour
 
     public void UpdateCompleteMileStone(int index)
     {
-        // Debug.Log("AAAAAAAAA" + index);
-
         Image mileStone = transform.GetChild(index).GetComponent<Image>();
         mileStone.color = Color.white;
     }
