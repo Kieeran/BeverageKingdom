@@ -15,15 +15,20 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _playerInput;
     [SerializeField] Transform _gameSystem;
     [SerializeField] Transform _levelController;
+    [SerializeField] Transform _itemSpawner;
 
     public Action<string> OnSceneChange;
 
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
 
+    [HideInInspector]
     public int CurrentLevelIndex = 0;
+    [HideInInspector]
     public int CurrentLevelIndexGD1 = 0;
+    [HideInInspector]
     public int CurrentLevelIndexGD2 = 0;
+    [HideInInspector]
     public bool IsGD1Active = true;
 
     public static Controller Instance { get; private set; }
@@ -61,6 +66,7 @@ public class Controller : MonoBehaviour
         Instantiate(_playerInput.gameObject);
         Instantiate(_gameSystem.gameObject);
         Instantiate(_levelController.gameObject);
+        Instantiate(_itemSpawner.gameObject);
         Instantiate(_spawnEnemy.gameObject);
 
         Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
