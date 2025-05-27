@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : Spawner
 {
     public static EnemySpawner Instance;
     public List<GameObject> EnemyPrefab;
 
     List<SpawnArea> _spawnAreas = new();
 
-    private void Awake()
+    protected override void Awake()
     {
         Instance = this;
     }
 
-    void Start()
+    protected override void Start()
     {
         Env env = Controller.Instance.Env.GetComponent<Env>();
 
@@ -32,8 +32,9 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
-        enemy.transform.SetParent(transform);
+      /*  GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
+        enemy.transform.SetParent(transform);*/
+        Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity);
     }
 
     int _groupsRemaining;
@@ -69,7 +70,7 @@ public class EnemySpawner : MonoBehaviour
 
     public bool IsAnyEnemyInContainer()
     {
-        return transform.childCount != 0;
+        return holder.childCount != 0;
     }
 
     GameObject GetEnemyPrefab(string name)
