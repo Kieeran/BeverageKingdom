@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     private bool isSpeed;
 
     public Transform DetectionRangeVisual;
+    public Transform BoundingBoxVisual;
 
     private void Awake()
     {
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         hit = new PlayerStateHit(stateMachine, this, "Hit");
 
         DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
     }
 
     private void Start()

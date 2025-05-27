@@ -42,10 +42,12 @@ public class Enemy : TriBehaviour
     private ItemSpawner ItemSpawner;
 
     public Transform DetectionRangeVisual;
+    public Transform BoundingBoxVisual;
 
     protected override void Awake()
     {
         DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
     }
 
     protected override void Start()

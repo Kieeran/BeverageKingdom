@@ -40,6 +40,7 @@ public class Villager : MonoBehaviour
     public Image HealthBarFillUI;
 
     public Transform DetectionRangeVisual;
+    public Transform BoundingBoxVisual;
 
     void Awake()
     {
@@ -47,6 +48,7 @@ public class Villager : MonoBehaviour
         VillagerAnimation.OnDoneAttack += OnDoneAttack;
 
         DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
     }
 
     void Start()

@@ -51,11 +51,17 @@ TagManager:
   - name: Ground
     uniqueID: 3718771661
     locked: 0
+  - name: Visual
+    uniqueID: 3195321649
+    locked: 0
   - name: Enemy
     uniqueID: 1276064043
     locked: 0
   - name: Projectile
     uniqueID: 1739929691
+    locked: 0
+  - name: Entity
+    uniqueID: 2366923299
     locked: 0
   - name: Player
     uniqueID: 477692355
