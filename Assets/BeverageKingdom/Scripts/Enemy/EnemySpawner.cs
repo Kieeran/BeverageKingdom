@@ -83,16 +83,14 @@ public class EnemySpawner : Spawner
             return;
         }
 
-        Vector2 spawnPos = GetRandomSpawnPos();
-        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-        enemy.transform.SetParent(transform);
+        GameObject enemy = Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity).gameObject;
 
         // Set the enemy data
-        var enemyComponent = enemy.GetComponent<Enemy>();
-        if (enemyComponent != null)
+        if (enemy.TryGetComponent<Enemy>(out var enemyComponent))
         {
             enemyComponent.SetEnemyData(enemyData);
         }
+
         else
         {
             Debug.LogError("Spawned enemy prefab doesn't have Enemy component!");
@@ -114,7 +112,7 @@ public class EnemySpawner : Spawner
     // }
 
     int _groupsRemaining;
-    public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
+    public IEnumerator SpawnWave(WaveData wave, int WaveIndex, System.Action<int> CheckSpawnAllEnemies)
     {
         // 1) Khởi tạo counter = số nhóm trong wave
         _groupsRemaining = wave.EnemiesToSpawn.Count;
@@ -128,7 +126,7 @@ public class EnemySpawner : Spawner
         // 3) Chờ cho đến khi tất cả nhóm xong (counter về 0)
         yield return new WaitUntil(() => _groupsRemaining == 0);
 
-        CheckSpawnAllEnemies?.Invoke();
+        CheckSpawnAllEnemies?.Invoke(WaveIndex);
     }
 
     // public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)

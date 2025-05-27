@@ -148,9 +148,10 @@ public class LevelController : MonoBehaviour
             _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
             StartCoroutine(EnemySpawner.Instance.SpawnWave(
                 wave,
-                () =>
+                currentWaveIndex,
+                WaveIndex =>
                 {
-                    if (currentWaveIndex == _currentLevelData.Waves.Count - 1)
+                    if (WaveIndex == _currentLevelData.Waves.Count - 1)
                     {
                         _isSpawnAllEnemies = true;
                         Debug.Log("completed.");
