@@ -8,9 +8,9 @@ public class DetectionRange : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.root.CompareTag("Ally") ||
-        collision.transform.root.CompareTag("Enemy") ||
-        collision.transform.root.CompareTag("Player"))
+        if (collision.transform.parent.CompareTag("Ally") ||
+        collision.transform.parent.CompareTag("Enemy") ||
+        collision.transform.parent.CompareTag("Player"))
         {
             OnInRange?.Invoke(collision.transform.parent);
         }
@@ -18,9 +18,9 @@ public class DetectionRange : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.root.CompareTag("Ally") ||
-        collision.transform.root.CompareTag("Enemy") ||
-        collision.transform.root.CompareTag("Player"))
+        if (collision.transform.parent.CompareTag("Ally") ||
+        collision.transform.parent.CompareTag("Enemy") ||
+        collision.transform.parent.CompareTag("Player"))
         {
             OnOutRange?.Invoke();
         }
