@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Goblin : Enemy
 {
     protected override void Start()
@@ -9,6 +5,7 @@ public class Goblin : Enemy
         base.Start();
         CurrentHealth = 15;
     }
+
     protected override void Init()
     {
         if (enemyData == null)

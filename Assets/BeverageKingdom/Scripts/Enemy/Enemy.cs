@@ -41,9 +41,11 @@ public class Enemy : TriBehaviour
     private EnemyEffect _enemyEffect;
     private ItemSpawner ItemSpawner;
 
+    public Transform DetectionRangeVisual;
+
     protected override void Awake()
     {
-
+        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
     }
 
     protected override void Start()

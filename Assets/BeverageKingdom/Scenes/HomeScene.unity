@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: _spawnEnemy
       value: 
       objectReference: {fileID: 3327843650473428389, guid: c70956d466a6e754897bcf88e7fb00a9, type: 3}
+    - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
+      propertyPath: VisualizeDetectionRange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

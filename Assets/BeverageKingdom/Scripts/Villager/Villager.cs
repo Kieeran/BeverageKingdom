@@ -39,10 +39,14 @@ public class Villager : MonoBehaviour
     bool IsDead = false;
     public Image HealthBarFillUI;
 
+    public Transform DetectionRangeVisual;
+
     void Awake()
     {
         VillagerMovement.OnStageChange += SetAnimator;
         VillagerAnimation.OnDoneAttack += OnDoneAttack;
+
+        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
     }
 
     void Start()

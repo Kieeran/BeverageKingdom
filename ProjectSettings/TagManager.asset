@@ -18,14 +18,14 @@ TagManager:
   - Enemy
   - Bullet
   - Ground
-  - Player
+  - BoundingBox
   - EnemyBB
   - House
   - Obstacle
   - Item
   - HotSpot
   - Collectable
-  - 
+  - DetectionRange
   - 
   - 
   - 

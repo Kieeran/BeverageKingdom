@@ -49,6 +49,9 @@ public class Player : MonoBehaviour
     private bool isShield;
     [SerializeField] private Transform shield;
     private bool isSpeed;
+
+    public Transform DetectionRangeVisual;
+
     private void Awake()
     {
         if (instance == null)
@@ -67,6 +70,7 @@ public class Player : MonoBehaviour
         dead = new PlayerStateDead(stateMachine, this, "Dead");
         hit = new PlayerStateHit(stateMachine, this, "Hit");
 
+        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
     }
 
     private void Start()

@@ -17,6 +17,8 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _levelController;
     [SerializeField] Transform _itemSpawner;
 
+    public bool VisualizeDetectionRange;
+
     public Action<string> OnSceneChange;
 
     public Transform Player { get; private set; }
@@ -33,7 +35,7 @@ public class Controller : MonoBehaviour
 
     public static Controller Instance { get; private set; }
 
-    private void Awake()
+    void Awake()
     {
         Application.targetFrameRate = 60;
         Screen.orientation = ScreenOrientation.LandscapeLeft;
