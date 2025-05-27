@@ -64,6 +64,7 @@ public class EnemySpawner : Spawner
             Debug.LogError("No enemy data found! Make sure ScriptableObjects exist in Resources/Data/");
         }
     }
+
     public void SpawnEnemy(string enemyType)
     {
         Debug.Log($"Attempting to spawn enemy of type: {enemyType}");
@@ -77,9 +78,25 @@ public class EnemySpawner : Spawner
         // Get the enemy data
         string type = enemyType.ToLower();
         if (!_enemyDataCache.TryGetValue(type, out var enemyData))
-            /*  GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
-              enemy.transform.SetParent(transform);*/
-            Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity);
+        {
+            Debug.LogError($"Enemy data not found for type: {enemyType}. Available types: {string.Join(", ", _enemyDataCache.Keys)}");
+            return;
+        }
+
+        Vector2 spawnPos = GetRandomSpawnPos();
+        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        enemy.transform.SetParent(transform);
+
+        // Set the enemy data
+        var enemyComponent = enemy.GetComponent<Enemy>();
+        if (enemyComponent != null)
+        {
+            enemyComponent.SetEnemyData(enemyData);
+        }
+        else
+        {
+            Debug.LogError("Spawned enemy prefab doesn't have Enemy component!");
+        }
     }
 
     // public void SpawnEnemy(string enemyName)

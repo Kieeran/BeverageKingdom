@@ -81,7 +81,7 @@ public class Enemy : TriBehaviour
         // Set default values if enemyData is null
         if (enemyData == null)
         {
-            AttackRange = 1f;
+            AttackRange = 2f;
             AttackCoolDown = 1f;
             Damage = 1;
             maxHealth = 6f;
@@ -90,8 +90,8 @@ public class Enemy : TriBehaviour
 
             // Default size and color
             transform.localScale = Vector3.one;
-            // if (_spriteRenderer != null)
-            //     _spriteRenderer.color = Color.white;
+            if (_spriteRenderer != null)
+                _spriteRenderer.color = Color.white;
         }
         else
         {
@@ -104,12 +104,13 @@ public class Enemy : TriBehaviour
 
             // Apply size and color from enemy data
             transform.localScale = enemyData.enemyScale;
-            // if (_spriteRenderer != null)
-            //     _spriteRenderer.color = enemyData.enemyColor;
+            if (_spriteRenderer != null)
+                _spriteRenderer.color = enemyData.enemyColor;
         }
 
         CurrentHealth = maxHealth;
     }
+
     void SetAnimator(int index)
     {
         animator.SetBool("Idle", index == 1);
