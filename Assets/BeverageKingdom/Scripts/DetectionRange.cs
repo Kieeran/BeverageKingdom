@@ -12,6 +12,11 @@ public class DetectionRange : MonoBehaviour
         {
             OnInRange?.Invoke(collision.transform.parent);
         }
+
+        if (collision.CompareTag("Item"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)

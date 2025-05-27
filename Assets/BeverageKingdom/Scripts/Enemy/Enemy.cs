@@ -43,7 +43,7 @@ public class Enemy : TriBehaviour
 
     protected override void Awake()
     {
-        
+
     }
 
     protected override void Start()
@@ -73,7 +73,7 @@ public class Enemy : TriBehaviour
             AttackCoolDown = enemyData.attackCoolDown;
             Damage = enemyData.dameAttack;
         }
-        
+
         CurrentHealth = maxHealth;
     }
     void SetAnimator(int index)
@@ -197,6 +197,7 @@ public class Enemy : TriBehaviour
             Destroy(VillagerCollision.gameObject);
             Destroy(VillagerDetectionRange.gameObject);
             // ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            _ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
             Destroy(gameObject, 1f);
         }
     }
@@ -254,7 +255,7 @@ public class Enemy : TriBehaviour
             _enemyEffect.ApplyKnockBack();
             _enemyEffect.ApplyHitEffect();
         }
-        
+
         if (CurrentHealth <= 0)
         {
             Die();

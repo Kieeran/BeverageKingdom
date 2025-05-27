@@ -54,7 +54,7 @@ MonoBehaviour:
   _playerInput: {fileID: 9093346097574067721, guid: 78c70f3f98be5bb458e75d9fb8ca4387, type: 3}
   _gameSystem: {fileID: 1508675649591075520, guid: 9267d60e0a05cab47b53f59fbb8c6ea6, type: 3}
   _levelController: {fileID: 6350751142450708216, guid: 587990fd81a910843b9ae16985a6c032, type: 3}
-  _itemSpawner: {fileID: 1561152676760957522, guid: 4aea69c666d58d04a8a1e1809fba6c2e, type: 3}
+  _itemSpawner: {fileID: 1230319003367506749, guid: 39b1c31e77635c9428542f53dc24315f, type: 3}
   CurrentLevelIndex: 0
   CurrentLevelIndexGD1: 0
   CurrentLevelIndexGD2: 0
