@@ -325,7 +325,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4684424836428179757}
   - component: {fileID: 1418075460779281547}
-  - component: {fileID: 803717409612988096}
   m_Layer: 16
   m_Name: DetectionRange
   m_TagString: Untagged
@@ -384,18 +383,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &803717409612988096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5467681874336310765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 949549126e80ffc42aa00c40fd7c0fe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5969154003579874413
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +659,7 @@ MonoBehaviour:
   attackWidth: 2.5
   hitLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 32768
   attackCooldown: 0.5
 --- !u!1 &7109143686502172632
 GameObject:
@@ -1037,7 +1024,7 @@ GameObject:
   - component: {fileID: 7184173532152428892}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Entity
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

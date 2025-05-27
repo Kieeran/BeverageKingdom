@@ -29,6 +29,7 @@ public class Enemy : TriBehaviour
     public Animator animator;
     public AnimatorOverrideController animatorOverride;
 
+    [HideInInspector]
     public float AttackRange;
     public float AttackCoolDown;
     float _coolDownTimer;
@@ -66,7 +67,7 @@ public class Enemy : TriBehaviour
         // Set default values if enemyData is null
         if (enemyData == null)
         {
-            AttackRange = 2f;
+            AttackRange = 1f;
             AttackCoolDown = 1f;
             Damage = 1;
             maxHealth = 6f;

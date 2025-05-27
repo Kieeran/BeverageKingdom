@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 477692355
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 2008401541, guid: 19f93c2eca819c34a912b29946701b29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -94,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6807314472611303998}
   - component: {fileID: 5549214277552928122}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: RecoverHp
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
