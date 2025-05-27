@@ -12,7 +12,7 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] Image _levelGD1Image;
     [SerializeField] Image _levelGD2Image;
 
-    public int LevelNumber;
+    public int LevelNumber = 10; // Set to 10 levels
 
     void Awake()
     {

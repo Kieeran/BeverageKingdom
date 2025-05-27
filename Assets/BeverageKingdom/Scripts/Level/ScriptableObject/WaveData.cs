@@ -5,6 +5,5 @@ using UnityEngine;
 public class WaveData : ScriptableObject
 {
     public float StartTime;
-    public bool IsBossWave;
     public List<EnemySpawnData> EnemiesToSpawn;
 }

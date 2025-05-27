@@ -56,7 +56,12 @@ public class Enemy : TriBehaviour
         _enemyEffect = GetComponent<EnemyEffect>();
         ItemSpawner = ItemSpawner.Instance;
 
+    }    public void SetEnemyData(EnemySO data)
+    {
+        enemyData = data;
+        Init();
     }
+
     protected virtual void Init()
     {
         // Set default values if enemyData is null
@@ -66,12 +71,17 @@ public class Enemy : TriBehaviour
             AttackCoolDown = 1f;
             Damage = 1;
             maxHealth = 6f;
+            if (EnemyMovement != null)
+                EnemyMovement.MoveSpeed = 4f;
         }
         else
         {
             AttackRange = enemyData.attackRange;
             AttackCoolDown = enemyData.attackCoolDown;
             Damage = enemyData.dameAttack;
+            maxHealth = enemyData.maxHealth;
+            if (EnemyMovement != null)
+                EnemyMovement.MoveSpeed = enemyData.speed;
         }
         
         CurrentHealth = maxHealth;
@@ -194,9 +204,12 @@ public class Enemy : TriBehaviour
             // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
-            Destroy(VillagerCollision.gameObject);
-            Destroy(VillagerDetectionRange.gameObject);
-            ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            if (VillagerCollision != null && VillagerCollision.gameObject != null)
+                Destroy(VillagerCollision.gameObject);
+            if (VillagerDetectionRange != null && VillagerDetectionRange.gameObject != null)
+                Destroy(VillagerDetectionRange.gameObject);
+            if (ItemSpawner != null)
+                ItemSpawner.Spawn(transform.position, Quaternion.identity);
             Destroy(gameObject, 1f);
         }
     }
@@ -259,9 +272,7 @@ public class Enemy : TriBehaviour
         {
             Die();
         }
-    }
-
-    private void Die()
+    }    public void Die()
     {
         //Destroy(gameObject);
         // EnemySpawner.Instance.Despawm(transform);

@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
 
     MileStone _mileStoneProgressBar;
 
+    [HideInInspector]
     public List<LevelData> LevelDatas;
     LevelData _currentLevelData;
 
@@ -25,10 +26,46 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
+        LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
-        _currentLevelData = LevelDatas[currentLevelIndex];
-        InitLevel();
-        UIManager.Instance.PlayCanvas.UpdateLevelText(currentLevelIndex + 1);
+        if (currentLevelIndex < LevelDatas.Count)
+        {
+            _currentLevelData = LevelDatas[currentLevelIndex];
+            InitLevel();
+            UIManager.Instance.PlayCanvas.UpdateLevelText(currentLevelIndex + 1);
+        }
+        else
+        {
+            Debug.LogError($"Level {currentLevelIndex + 1} not found!");
+        }
+    }
+
+    void LoadLevelData()
+    {
+        LevelDatas = new List<LevelData>();
+        bool anyLevelsFound = false;
+
+        for (int i = 1; i <= 10; i++)
+        {
+            string levelPath = $"Levels/Level{i}/LevelData";
+            LevelData levelData = Resources.Load<LevelData>(levelPath);
+
+            if (levelData != null)
+            {
+                LevelDatas.Add(levelData);
+                anyLevelsFound = true;
+                Debug.Log($"Successfully loaded {levelPath}");
+            }
+            else
+            {
+                Debug.LogError($"Could not load {levelPath}. Make sure to generate levels using the Level Data Helper tool (Tools > Level Data Helper).");
+            }
+        }
+
+        if (!anyLevelsFound)
+        {
+            Debug.LogError("No level data found! Please generate levels using Tools > Level Data Helper in the Unity Editor.");
+        }
     }
 
     void InitLevel()
