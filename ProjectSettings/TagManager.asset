@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Range
-  - BB
-  - Enemy
-  - Item
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,15 +14,15 @@ TagManager:
   - Enemy
   - Bullet
   - Ground
-  - BoundingBox
-  - EnemyBB
   - House
   - Obstacle
   - Item
   - HotSpot
   - Collectable
-  - DetectionRange
-  - 
+  - Enemy_DetectionRange
+  - Enemy_BoundingBox
+  - Ally_DetectionRange
+  - Ally_BoundingBox
   - 
   - 
   - 

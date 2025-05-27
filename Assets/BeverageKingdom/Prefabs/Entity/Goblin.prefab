@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7359905196505151425}
   - component: {fileID: 8507334683868806510}
   - component: {fileID: 1184473224806974664}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DetectionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 5839404390919497915}
   - component: {fileID: 9018171506472588051}
   - component: {fileID: 8220941760097698096}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BoundingBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 9113909019627376567}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

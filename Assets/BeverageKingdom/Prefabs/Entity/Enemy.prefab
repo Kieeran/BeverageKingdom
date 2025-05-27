@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7954088939533346405}
   - component: {fileID: 1574832084752480464}
   - component: {fileID: 4932135931825730873}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BoundingBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6530689070853379880}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 6019219554763910641}
   - component: {fileID: 5489983124696390738}
   - component: {fileID: 3919812992736525623}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: DetectionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

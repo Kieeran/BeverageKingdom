@@ -94,7 +94,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1928043997
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -479090367, guid: 894b5cbe8082a7d44a15c3dbb32910ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 6308924408376525321}
   m_Layer: 0
   m_Name: Villager
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8785300164831233514}
   - component: {fileID: 5194418632846453753}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: BoundingBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 4629960346496005070}
   - component: {fileID: 3125655613857420616}
   - component: {fileID: 3299361434542059082}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: DetectionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

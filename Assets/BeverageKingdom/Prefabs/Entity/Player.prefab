@@ -257,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3440114181805592143}
   - component: {fileID: 8329190101315181384}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: BoundingBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 4684424836428179757}
   - component: {fileID: 1418075460779281547}
   - component: {fileID: 803717409612988096}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: DetectionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 7184173532152428892}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
