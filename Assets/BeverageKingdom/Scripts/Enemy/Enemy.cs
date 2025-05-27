@@ -18,8 +18,8 @@ public class Enemy : TriBehaviour
 
     public EnemyMovement EnemyMovement;
     public EnemyAnimation EnemyAnimation;
-    public Transform VillagerDetectionRange;
-    public Transform VillagerCollision;
+    public Transform EnemyDetectionRange;
+    public Transform EnemyCollision;
 
     bool IsDoneAttack = false;
 
@@ -42,23 +42,22 @@ public class Enemy : TriBehaviour
     private EnemyEffect _enemyEffect;
     private ItemSpawner ItemSpawner;
 
-    // private SpriteRenderer _spriteRenderer;
+    public Transform DetectionRangeVisual;
+    public Transform BoundingBoxVisual;
 
-    // protected override void Awake()
-    // {
-    //     _spriteRenderer = GetComponent<SpriteRenderer>();
-    //     if (_spriteRenderer == null)
-    //     {
-    //         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-    //     }
-    // public Transform DetectionRangeVisual;
-    // public Transform BoundingBoxVisual;
+    private SpriteRenderer _spriteRenderer;
 
-    // protected override void Awake()
-    // {
-    //     DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
-    //     BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
-    // }
+    protected override void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        if (_spriteRenderer == null)
+        {
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
+    }
 
     protected override void Start()
     {
@@ -70,7 +69,8 @@ public class Enemy : TriBehaviour
         _enemyEffect = GetComponent<EnemyEffect>();
         ItemSpawner = ItemSpawner.Instance;
 
-    }    public void SetEnemyData(EnemySO data)
+    }
+    public void SetEnemyData(EnemySO data)
     {
         enemyData = data;
         Init();
@@ -219,27 +219,30 @@ public class Enemy : TriBehaviour
                 IsDoneAttack = false;
             }
         }
-    }    void HandleDead()
+    }
+    void HandleDead()
     {
         if (IsDead != true)
         {
             // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
-            // if (VillagerCollision != null && VillagerCollision.gameObject != null)
-            //     Destroy(VillagerCollision.gameObject);
-            // if (VillagerDetectionRange != null && VillagerDetectionRange.gameObject != null)
-            //     Destroy(VillagerDetectionRange.gameObject);
-            // if (ItemSpawner != null)
-            //     ItemSpawner.Spawn(transform.position, Quaternion.identity);
-            
-            // // Deactivate immediately and destroy after delay
-            // gameObject.SetActive(false);
-            // Debug.Log($"Enemy dying at position {transform.position}");
-            // Destroy(VillagerCollision.gameObject);
-            // Destroy(VillagerDetectionRange.gameObject);
-            // // ItemSpawner.Spawn(transform.position, Quaternion.identity);
-            // _ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
+
+            if (EnemyDetectionRange != null && EnemyDetectionRange.gameObject != null)
+            {
+                Destroy(EnemyDetectionRange.gameObject);
+            }
+
+            if (EnemyDetectionRange != null && EnemyDetectionRange.gameObject != null)
+            {
+                Destroy(EnemyDetectionRange.gameObject);
+            }
+
+            if (ItemSpawner != null)
+            {
+                // ItemSpawner.Spawn(transform.position, Quaternion.identity);
+                _ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
+            }
             Destroy(gameObject, 1f);
         }
     }
@@ -302,7 +305,8 @@ public class Enemy : TriBehaviour
         {
             Die();
         }
-    }    public void Die()
+    }
+    public void Die()
     {
         //Destroy(gameObject);
         // EnemySpawner.Instance.Despawm(transform);

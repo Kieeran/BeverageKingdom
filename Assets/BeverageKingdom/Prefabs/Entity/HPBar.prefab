@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6003609985791270287}
   - component: {fileID: 5671181200545813413}
   - component: {fileID: 9211443110009946920}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: HPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 6447591757739549611}
   - component: {fileID: 8091194168250224271}
   - component: {fileID: 165598655415902412}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4561288064042137794}
   - component: {fileID: 3253124425115396909}
   - component: {fileID: 487547539388112409}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 5559406932168395426}
   - component: {fileID: 8306455264471765992}
   - component: {fileID: 5730392602253543997}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FillUseDotween
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 9001897651939767958}
   - component: {fileID: 5756563420791297268}
   - component: {fileID: 9043332612002062452}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 9014444357124206893}
   - component: {fileID: 4269159700967877529}
   - component: {fileID: 3365595921459387270}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

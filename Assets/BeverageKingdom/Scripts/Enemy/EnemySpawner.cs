@@ -74,122 +74,128 @@ public class EnemySpawner : Spawner
             return;
         }
 
-        //     // Get the enemy data
-        //     string type = enemyType.ToLower();
-        //     if (!_enemyDataCache.TryGetValue(type, out var enemyData))
-        //   /*  GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
-        //     enemy.transform.SetParent(transform);*/
-        //     Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity);
-        // }
-
-        // int _groupsRemaining;
-        // public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
-        // {
-        //     // 1) Khởi tạo counter = số nhóm trong wave
-        //     _groupsRemaining = wave.EnemiesToSpawn.Count;
-
-        //     // 2) Với mỗi spawnData, start 1 coroutine con
-        //     foreach (var spawnData in wave.EnemiesToSpawn)
-        //     {
-        //         Debug.LogError($"Enemy data not found for type: {enemyType}. Available types: {string.Join(", ", _enemyDataCache.Keys)}");
-        //         return;
-        //     }
-
-        // Vector2 spawnPos = GetRandomSpawnPos();
-        // GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-        // enemy.transform.SetParent(transform);
-
-        // // Set the enemy data
-        // var enemyComponent = enemy.GetComponent<Enemy>();
-        // if (enemyComponent != null)
-        // {
-        //     enemyComponent.SetEnemyData(enemyData);
-        // }
-        // else
-        // {
-        //     Debug.LogError("Spawned enemy prefab doesn't have Enemy component!");
-        // }
+        // Get the enemy data
+        string type = enemyType.ToLower();
+        if (!_enemyDataCache.TryGetValue(type, out var enemyData))
+            /*  GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
+              enemy.transform.SetParent(transform);*/
+            Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity);
     }
 
-    int _groupsRemaining; public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
+    // public void SpawnEnemy(string enemyName)
+    // {
+    //     GameObject enemyPrefab = GetEnemyPrefab(enemyName);
+    //     if (enemyPrefab == null)
+    //     {
+    //         Debug.LogError($"Enemy prefab not found: {enemyName}");
+    //         return;
+    //     }
+
+    //     /*  GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
+    //       enemy.transform.SetParent(transform);*/
+    //     Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity);
+    // }
+
+    int _groupsRemaining;
+    public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
     {
-        if (wave == null || wave.EnemiesToSpawn == null || wave.EnemiesToSpawn.Count == 0)
-        {
-            Debug.LogError("Invalid wave data!");
-            CheckSpawnAllEnemies?.Invoke();
-            yield break;
-        }
+        // 1) Khởi tạo counter = số nhóm trong wave
+        _groupsRemaining = wave.EnemiesToSpawn.Count;
 
-        // Filter out null spawn data entries
-        var validSpawnData = wave.EnemiesToSpawn.Where(x => x != null).ToList();
-        if (validSpawnData.Count == 0)
-        {
-            Debug.LogError("No valid enemy spawn data in wave!");
-            CheckSpawnAllEnemies?.Invoke();
-            yield break;
-        }
-
-        // Initialize counter for enemy groups
-        _groupsRemaining = validSpawnData.Count;
-        Debug.Log($"Starting wave with {_groupsRemaining} enemy groups");
-
-        // Start spawning each valid group
-        foreach (var spawnData in validSpawnData)
+        // 2) Với mỗi spawnData, start 1 coroutine con
+        foreach (var spawnData in wave.EnemiesToSpawn)
         {
             StartCoroutine(SpawnEnemyGroup(spawnData));
-            yield return new WaitForSeconds(0.2f); // Increased delay between groups
-        }        // Wait until all groups are done spawning
-        float waitTime = 0f;
-        while (_groupsRemaining > 0)
-        {
-            waitTime += 0.1f;
-            Debug.Log($"Waiting for {_groupsRemaining} groups to finish spawning. Total wait time: {waitTime:F1}s");
-            yield return new WaitForSeconds(0.1f);
         }
 
-        int remainingEnemies = transform.childCount;
-        Debug.Log($"Wave completed. All enemy groups spawned. {remainingEnemies} enemies currently alive.");
+        // 3) Chờ cho đến khi tất cả nhóm xong (counter về 0)
+        yield return new WaitUntil(() => _groupsRemaining == 0);
+
         CheckSpawnAllEnemies?.Invoke();
     }
+
+    // public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
+    // {
+    //     if (wave == null || wave.EnemiesToSpawn == null || wave.EnemiesToSpawn.Count == 0)
+    //     {
+    //         Debug.LogError("Invalid wave data!");
+    //         CheckSpawnAllEnemies?.Invoke();
+    //         yield break;
+    //     }
+
+    //     // Filter out null spawn data entries
+    //     var validSpawnData = wave.EnemiesToSpawn.Where(x => x != null).ToList();
+    //     if (validSpawnData.Count == 0)
+    //     {
+    //         Debug.LogError("No valid enemy spawn data in wave!");
+    //         CheckSpawnAllEnemies?.Invoke();
+    //         yield break;
+    //     }
+
+    //     // Initialize counter for enemy groups
+    //     _groupsRemaining = validSpawnData.Count;
+    //     Debug.Log($"Starting wave with {_groupsRemaining} enemy groups");
+
+    //     // Start spawning each valid group
+    //     foreach (var spawnData in validSpawnData)
+    //     {
+    //         StartCoroutine(SpawnEnemyGroup(spawnData));
+    //         yield return new WaitForSeconds(0.2f); // Increased delay between groups
+    //     }        // Wait until all groups are done spawning
+    //     float waitTime = 0f;
+    //     while (_groupsRemaining > 0)
+    //     {
+    //         waitTime += 0.1f;
+    //         Debug.Log($"Waiting for {_groupsRemaining} groups to finish spawning. Total wait time: {waitTime:F1}s");
+    //         yield return new WaitForSeconds(0.1f);
+    //     }
+
+    //     int remainingEnemies = transform.childCount;
+    //     Debug.Log($"Wave completed. All enemy groups spawned. {remainingEnemies} enemies currently alive.");
+    //     CheckSpawnAllEnemies?.Invoke();
+    // }
+
+    // Coroutine con chỉ lo spawn nhóm đó
     private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
     {
-        if (spawnData == null || string.IsNullOrEmpty(spawnData.EnemyType))
-        {
-            Debug.LogError($"Invalid spawn data: {(spawnData == null ? "null" : "empty enemy type")}!");
-            _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
-            yield break;
-        }
-
-        Debug.Log($"Spawning enemy group: {spawnData.Count} {spawnData.EnemyType} enemies with interval {spawnData.SpawnInterval}s");
-
         for (int i = 0; i < spawnData.Count; i++)
         {
             SpawnEnemy(spawnData.EnemyType);
-            yield return new WaitForSeconds(Mathf.Max(0.1f, spawnData.SpawnInterval));
+            yield return new WaitForSeconds(spawnData.SpawnInterval);
         }
 
-        _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
-        if (_groupsRemaining > 0)
-            // Khi group này xong, giảm counter
-            _groupsRemaining--;
+        // Khi group này xong, giảm counter
+        _groupsRemaining--;
     }
+
+    // private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
+    // {
+    //     if (spawnData == null || string.IsNullOrEmpty(spawnData.EnemyType))
+    //     {
+    //         Debug.LogError($"Invalid spawn data: {(spawnData == null ? "null" : "empty enemy type")}!");
+    //         _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
+    //         yield break;
+    //     }
+
+    //     Debug.Log($"Spawning enemy group: {spawnData.Count} {spawnData.EnemyType} enemies with interval {spawnData.SpawnInterval}s");
+
+    //     for (int i = 0; i < spawnData.Count; i++)
+    //     {
+    //         SpawnEnemy(spawnData.EnemyType);
+    //         yield return new WaitForSeconds(Mathf.Max(0.1f, spawnData.SpawnInterval));
+    //     }
+
+    //     _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
+    //     if (_groupsRemaining > 0)
+    //         // Khi group này xong, giảm counter
+    //         _groupsRemaining--;
+    // }
 
     public bool IsAnyEnemyInContainer()
     {
         return holder.childCount != 0;
     }
 
-    // GameObject GetEnemyPrefab(string name)
-    // {
-    //     foreach (var enemy in EnemyPrefab)
-    //     {
-    //         Debug.Log($"Group complete. {_groupsRemaining} groups remaining");
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("All groups completed.");
-    //     }
-    // }
     // public bool IsAnyEnemyInContainer()
     // {
     //     int count = 0;
@@ -206,21 +212,58 @@ public class EnemySpawner : Spawner
     //     return count > 0;
     // }
 
+    GameObject GetEnemyPrefab(string name)
+    {
+        foreach (var enemy in EnemyPrefab)
+        {
+            if (enemy.name == name)
+            {
+                return enemy;
+            }
+        }
+        return null;
+    }
+
+    // GameObject GetEnemyPrefab(string name)
+    // {
+    //     foreach (var enemy in EnemyPrefab)
+    //     {
+    //         Debug.Log($"Group complete. {_groupsRemaining} groups remaining");
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("All groups completed.");
+    //     }
+    // }
+
     Vector2 GetRandomSpawnPos()
     {
-        if (_spawnAreas == null || _spawnAreas.Count == 0)
-        {
-            Debug.LogError("No spawn areas set up!");
-            return Vector2.zero;
-        }
-
-        int index = Random.Range(0, _spawnAreas.Count);
+        int index = Random.Range(0, 3);
         return _spawnAreas[index].GetRandomSpawnPos();
     }
 
+    // Vector2 GetRandomSpawnPos()
+    // {
+    //     if (_spawnAreas == null || _spawnAreas.Count == 0)
+    //     {
+    //         Debug.LogError("No spawn areas set up!");
+    //         return Vector2.zero;
+    //     }
+
+    //     int index = Random.Range(0, _spawnAreas.Count);
+    //     return _spawnAreas[index].GetRandomSpawnPos();
+    // }
+
     public Transform GetRandomEnemy()
     {
-        if (transform.childCount == 0) return null;
-        return transform.GetChild(Random.Range(0, transform.childCount));
+        int random = Random.Range(0, transform.childCount);
+        Transform enemy = transform.GetChild(random);
+        return enemy;
     }
+
+    // public Transform GetRandomEnemy()
+    // {
+    //     if (transform.childCount == 0) return null;
+    //     return transform.GetChild(Random.Range(0, transform.childCount));
+    // }
 }

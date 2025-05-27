@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 9113909019627376567}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Entity
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,8 +438,8 @@ MonoBehaviour:
   currentState: 0
   EnemyMovement: {fileID: 2052896889894065889}
   EnemyAnimation: {fileID: 3584930264691911656}
-  VillagerDetectionRange: {fileID: 7359905196505151425}
-  VillagerCollision: {fileID: 5839404390919497915}
+  EnemyDetectionRange: {fileID: 0}
+  EnemyCollision: {fileID: 0}
   maxHealth: 37.9
   CurrentHealth: 0
   animator: {fileID: 3584840274293437326}
