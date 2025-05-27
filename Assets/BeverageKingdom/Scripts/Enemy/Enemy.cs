@@ -41,9 +41,15 @@ public class Enemy : TriBehaviour
     private EnemyEffect _enemyEffect;
     private ItemSpawner ItemSpawner;
 
+    private SpriteRenderer _spriteRenderer;
+
     protected override void Awake()
     {
-        
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        if (_spriteRenderer == null)
+        {
+            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
     }
 
     protected override void Start()
@@ -73,6 +79,11 @@ public class Enemy : TriBehaviour
             maxHealth = 6f;
             if (EnemyMovement != null)
                 EnemyMovement.MoveSpeed = 4f;
+
+            // Default size and color
+            transform.localScale = Vector3.one;
+            if (_spriteRenderer != null)
+                _spriteRenderer.color = Color.white;
         }
         else
         {
@@ -82,6 +93,11 @@ public class Enemy : TriBehaviour
             maxHealth = enemyData.maxHealth;
             if (EnemyMovement != null)
                 EnemyMovement.MoveSpeed = enemyData.speed;
+
+            // Apply size and color from enemy data
+            transform.localScale = enemyData.enemyScale;
+            if (_spriteRenderer != null)
+                _spriteRenderer.color = enemyData.enemyColor;
         }
         
         CurrentHealth = maxHealth;
@@ -195,9 +211,7 @@ public class Enemy : TriBehaviour
                 IsDoneAttack = false;
             }
         }
-    }
-
-    void HandleDead()
+    }    void HandleDead()
     {
         if (IsDead != true)
         {
@@ -210,6 +224,10 @@ public class Enemy : TriBehaviour
                 Destroy(VillagerDetectionRange.gameObject);
             if (ItemSpawner != null)
                 ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            
+            // Deactivate immediately and destroy after delay
+            gameObject.SetActive(false);
+            Debug.Log($"Enemy dying at position {transform.position}");
             Destroy(gameObject, 1f);
         }
     }

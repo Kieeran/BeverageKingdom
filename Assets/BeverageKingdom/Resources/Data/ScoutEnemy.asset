@@ -15,8 +15,10 @@ MonoBehaviour:
   id: 1
   enemyName: Scout
   maxHealth: 4
-  speed: 6
+  speed: 4.5
   dameAttack: 1
   moneyForDead: 2
   attackRange: 1.5
   attackCoolDown: 0.8
+  enemyScale: {x: 0.7, y: 0.7, z: 0.7}
+  enemyColor: {r: 0.26352793, g: 0.8018786, b: 0.8867924, a: 1}

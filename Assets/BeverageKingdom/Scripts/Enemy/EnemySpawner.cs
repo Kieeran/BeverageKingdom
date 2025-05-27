@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -62,10 +63,9 @@ public class EnemySpawner : MonoBehaviour
         {
             Debug.LogError("No enemy data found! Make sure ScriptableObjects exist in Resources/Data/");
         }
-    }
-
-    public void SpawnEnemy(string enemyType)
+    }    public void SpawnEnemy(string enemyType)
     {
+        Debug.Log($"Attempting to spawn enemy of type: {enemyType}");
         GameObject enemyPrefab = normalEnemyPrefab;
         if (enemyPrefab == null)
         {
@@ -97,62 +97,51 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    int _groupsRemaining;
-    public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
+    int _groupsRemaining;    public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
     {
-        if (wave == null)
+        if (wave == null || wave.EnemiesToSpawn == null || wave.EnemiesToSpawn.Count == 0)
         {
-            Debug.LogError("Wave is null!");
+            Debug.LogError("Invalid wave data!");
+            CheckSpawnAllEnemies?.Invoke();
             yield break;
         }
 
-        if (wave.EnemiesToSpawn == null)
+        // Filter out null spawn data entries
+        var validSpawnData = wave.EnemiesToSpawn.Where(x => x != null).ToList();
+        if (validSpawnData.Count == 0)
         {
-            Debug.LogError("EnemiesToSpawn list is null in wave!");
+            Debug.LogError("No valid enemy spawn data in wave!");
+            CheckSpawnAllEnemies?.Invoke();
             yield break;
         }
 
-        if (wave.EnemiesToSpawn.Count == 0)
-        {
-            Debug.LogError("No enemies to spawn in wave!");
-            yield break;
-        }
-
-        // 1) Khởi tạo counter = số nhóm trong wave
-        _groupsRemaining = wave.EnemiesToSpawn.Count;
+        // Initialize counter for enemy groups
+        _groupsRemaining = validSpawnData.Count;
         Debug.Log($"Starting wave with {_groupsRemaining} enemy groups");
 
-        // 2) Với mỗi spawnData, start 1 coroutine con
-        foreach (var spawnData in wave.EnemiesToSpawn)
+        // Start spawning each valid group
+        foreach (var spawnData in validSpawnData)
         {
-            if (spawnData == null)
-            {
-                Debug.LogError("Found null spawnData in wave.EnemiesToSpawn!");
-                _groupsRemaining--;
-                continue;
-            }
             StartCoroutine(SpawnEnemyGroup(spawnData));
+            yield return new WaitForSeconds(0.2f); // Increased delay between groups
+        }        // Wait until all groups are done spawning
+        float waitTime = 0f;
+        while (_groupsRemaining > 0)
+        {
+            waitTime += 0.1f;
+            Debug.Log($"Waiting for {_groupsRemaining} groups to finish spawning. Total wait time: {waitTime:F1}s");
+            yield return new WaitForSeconds(0.1f);
         }
 
-        // 3) Chờ cho đến khi tất cả nhóm xong (counter về 0)
-        yield return new WaitUntil(() => _groupsRemaining == 0);
-
+        int remainingEnemies = transform.childCount;
+        Debug.Log($"Wave completed. All enemy groups spawned. {remainingEnemies} enemies currently alive.");
         CheckSpawnAllEnemies?.Invoke();
-    }
-
-    private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
+    }    private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
     {
-        if (spawnData == null)
+        if (spawnData == null || string.IsNullOrEmpty(spawnData.EnemyType))
         {
-            Debug.LogError("SpawnData is null!");
-            _groupsRemaining--;
-            yield break;
-        }
-
-        if (string.IsNullOrEmpty(spawnData.EnemyType))
-        {
-            Debug.LogError("EnemyType is null or empty in SpawnData!");
-            _groupsRemaining--;
+            Debug.LogError($"Invalid spawn data: {(spawnData == null ? "null" : "empty enemy type")}!");
+            _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
             yield break;
         }
 
@@ -161,17 +150,32 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < spawnData.Count; i++)
         {
             SpawnEnemy(spawnData.EnemyType);
-            yield return new WaitForSeconds(spawnData.SpawnInterval);
+            yield return new WaitForSeconds(Mathf.Max(0.1f, spawnData.SpawnInterval));
         }
 
-        // Khi group này xong, giảm counter
-        _groupsRemaining--;
-        Debug.Log($"Group complete. {_groupsRemaining} groups remaining");
-    }
-
-    public bool IsAnyEnemyInContainer()
+        _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
+        if (_groupsRemaining > 0)
+        {
+            Debug.Log($"Group complete. {_groupsRemaining} groups remaining");
+        }
+        else 
+        {
+            Debug.Log("All groups completed.");
+        }
+    }    public bool IsAnyEnemyInContainer()
     {
-        return transform.childCount != 0;
+        int count = 0;
+        // Count only active enemies (not being destroyed)
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var child = transform.GetChild(i);
+            if (child != null && child.gameObject.activeInHierarchy)
+            {
+                count++;
+            }
+        }
+        Debug.Log($"Active enemy count in container: {count} (Total children: {transform.childCount})");
+        return count > 0;
     }
 
     Vector2 GetRandomSpawnPos()

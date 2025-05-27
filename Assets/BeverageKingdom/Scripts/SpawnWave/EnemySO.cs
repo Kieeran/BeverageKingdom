@@ -13,4 +13,8 @@ public class EnemySO : ScriptableObject
     public int moneyForDead;
     public float attackRange;
     public float attackCoolDown;
+
+    // New properties for size and color
+    public Vector3 enemyScale = Vector3.one;  // Default size is 1,1,1
+    public Color enemyColor = Color.white;    // Default color is white
 }

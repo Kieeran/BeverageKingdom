@@ -12,6 +12,7 @@ public class LevelDataHelper : EditorWindow
     private static float spawnIntervalDecreasePerLevel = 0.15f;
     private static float waveStartTimeInterval = 25f;  // Increased to give more time between waves
     private static string levelsPath = "Assets/BeverageKingdom/Resources/Levels";
+    private static int numberOfLevels = 10; // Default number of levels
 
     // Enemy type distribution per wave - adjusted for better progression
     private static readonly (string type, float ratio)[][] waveEnemyTypes = new[]
@@ -34,16 +35,25 @@ public class LevelDataHelper : EditorWindow
     {
         GUILayout.Label("Level Configuration", EditorStyles.boldLabel);
         
+        numberOfLevels = EditorGUILayout.IntField("Number of Levels", numberOfLevels);
         baseEnemyCount = EditorGUILayout.FloatField("Base Enemy Count", baseEnemyCount);
         enemyIncreasePerLevel = EditorGUILayout.FloatField("Enemy Increase Per Level", enemyIncreasePerLevel);
         baseSpawnInterval = EditorGUILayout.FloatField("Base Spawn Interval", baseSpawnInterval);
         spawnIntervalDecreasePerLevel = EditorGUILayout.FloatField("Spawn Interval Decrease", spawnIntervalDecreasePerLevel);
         waveStartTimeInterval = EditorGUILayout.FloatField("Wave Time Interval", waveStartTimeInterval);
 
+        // Add min/max validation for number of levels
+        if (numberOfLevels < 1)
+        {
+            EditorGUILayout.HelpBox("Number of levels must be at least 1", MessageType.Warning);
+        }
+
+        GUI.enabled = numberOfLevels >= 1;
         if (GUILayout.Button("Generate All Levels"))
         {
             GenerateAllLevels();
         }
+        GUI.enabled = true;
     }
 
     private void EnsureDirectoryExists(string path)
@@ -102,7 +112,13 @@ public class LevelDataHelper : EditorWindow
             }
         }
 
-        for (int level = 0; level < 10; level++)
+        // Create a configuration file to store the number of levels
+        var config = CreateInstance<LevelConfiguration>();
+        config.TotalLevels = numberOfLevels;
+        SaveAsset(config, $"{levelsPath}/LevelConfig.asset");
+        Debug.Log($"Saved level configuration with {numberOfLevels} levels");
+
+        for (int level = 0; level < numberOfLevels; level++)
         {
             Debug.Log($"Generating Level {level + 1}...");
             

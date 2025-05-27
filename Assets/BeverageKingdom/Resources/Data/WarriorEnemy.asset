@@ -15,8 +15,10 @@ MonoBehaviour:
   id: 2
   enemyName: Warrior
   maxHealth: 8
-  speed: 4
+  speed: 3
   dameAttack: 2
   moneyForDead: 3
   attackRange: 2
   attackCoolDown: 1
+  enemyScale: {x: 1, y: 1, z: 1}
+  enemyColor: {r: 0.9150943, g: 0.8592732, b: 0.13381095, a: 1}
