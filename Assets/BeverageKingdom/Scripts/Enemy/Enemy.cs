@@ -121,28 +121,32 @@ public class Enemy : TriBehaviour
     {
         if (EnemyMovement.Target == null) return false;
 
+        // Add debug log to check distance calculations
         float distance = Vector3.Distance(transform.position, EnemyMovement.Target.position);
-        return distance >= 0 && distance <= AttackRange;
+        Debug.Log($"Distance to target: {distance}, Attack Range: {AttackRange}");
+        
+        // Changed to return true if distance is less than or equal to attack range
+        return distance <= AttackRange;
     }
 
     void ChangeState(EnemyState newState)
     {
         if (currentState == newState) return;
-
+        Debug.Log($"Enemy changing state from {currentState} to {newState}");
         currentState = newState;
     }
 
     void HandleIdle()
     {
-        ChangeState(EnemyState.Walk);
-        if (EnemyMovement.Target != null && EnemyMovement.IsEntityInRange == true)
+        if (EnemyMovement.Target != null && EnemyMovement.IsEntityInRange)
         {
             EnemyMovement.Walk();
+            ChangeState(EnemyState.Walk);
         }
-
         else
         {
             EnemyMovement.GoToKindom();
+            ChangeState(EnemyState.Walk);
         }
     }
 
@@ -151,26 +155,30 @@ public class Enemy : TriBehaviour
         if (IsInAttackRange())
         {
             ChangeState(EnemyState.Attack);
+            return;
         }
 
+        if (EnemyMovement.Target == null)
+        {
+            EnemyMovement.GoToKindom();
+        }
         else
         {
-            if (EnemyMovement.Target == null)
-            {
-                EnemyMovement.GoToKindom();
-            }
-
-            else
-            {
-                EnemyMovement.Walk();
-            }
+            EnemyMovement.Walk();
         }
     }
 
     public void HandleAttack()
     {
+        if (!IsInAttackRange())
+        {
+            ChangeState(EnemyState.Walk);
+            return;
+        }
+
         EnemyMovement.SetStage(3);
-        if (IsDoneAttack == true)
+        
+        if (IsDoneAttack)
         {
             ApplyDamage();
             _coolDownTimer += Time.deltaTime;
@@ -178,9 +186,12 @@ public class Enemy : TriBehaviour
             if (_coolDownTimer >= AttackCoolDown)
             {
                 _coolDownTimer = 0;
-
-                ChangeState(EnemyState.Idle);
                 IsDoneAttack = false;
+                // Only go to idle if we're no longer in attack range
+                if (!IsInAttackRange())
+                {
+                    ChangeState(EnemyState.Walk);
+                }
             }
         }
     }
@@ -192,39 +203,49 @@ public class Enemy : TriBehaviour
             // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
+<<<<<<< Updated upstream
             Destroy(gameObject, 1f);
             Destroy(VillagerCollision.gameObject);
             Destroy(VillagerDetectionRange.gameObject);
+=======
+            if (VillagerCollision != null && VillagerCollision.gameObject != null)
+                Destroy(VillagerCollision.gameObject);
+            if (VillagerDetectionRange != null && VillagerDetectionRange.gameObject != null)
+                Destroy(VillagerDetectionRange.gameObject);
+            if (ItemSpawner != null)
+                ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            Destroy(gameObject, 1f);
+>>>>>>> Stashed changes
         }
     }
 
     void ApplyDamage()
     {
-        if (_coolDownTimer == 0)
+        if (_coolDownTimer > 0) return;
+
+        var target = EnemyMovement.Target;
+        if (target == null) return;
+
+        // Try Player first since that's our primary target
+        if (target.TryGetComponent<Player>(out var player))
         {
-            var target = EnemyMovement.Target;
-            if (target != null)
+            Debug.Log($"Enemy attacking player for {Damage} damage");
+            player.TakeDamage(Damage);
+            if (player.HP <= 0)
             {
-                if (target.TryGetComponent<Villager>(out var villager))
-                {
-                    villager.TakeDamage(Damage);
-
-                    if (villager.HP <= 0)
-                    {
-                        EnemyMovement.Target = null;
-                        EnemyMovement.SetStage(1);
-                    }
-                }
-                if (target.TryGetComponent<Player>(out var player))
-                {
-                    player.TakeDamage(Damage);
-
-                    if (player.HP <= 0)
-                    {
-                        EnemyMovement.Target = null;
-                        EnemyMovement.SetStage(1);
-                    }
-                }
+                EnemyMovement.Target = null;
+                EnemyMovement.SetStage(1);
+            }
+        }
+        // Fall back to villager if it's not a player
+        else if (target.TryGetComponent<Villager>(out var villager))
+        {
+            Debug.Log($"Enemy attacking villager for {Damage} damage");
+            villager.TakeDamage(Damage);
+            if (villager.HP <= 0)
+            {
+                EnemyMovement.Target = null;
+                EnemyMovement.SetStage(1);
             }
         }
     }
@@ -258,9 +279,7 @@ public class Enemy : TriBehaviour
         {
             Die();
         }
-    }
-
-    private void Die()
+    }    public void Die()
     {
         //Destroy(gameObject);
         // EnemySpawner.Instance.Despawm(transform);
