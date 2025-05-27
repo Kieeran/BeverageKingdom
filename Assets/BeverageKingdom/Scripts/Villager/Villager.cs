@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Villager : MonoBehaviour
 {
+    [HideInInspector]
     public enum VillagerState
     {
         Idle,
@@ -15,6 +16,7 @@ public class Villager : MonoBehaviour
     public float AttackCoolDown = 0.5f;
     float _coolDownTimer;
 
+    [HideInInspector]
     public VillagerState currentState;
 
     private Vector3 targetPosition;

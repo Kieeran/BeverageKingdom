@@ -196,7 +196,7 @@ public class Enemy : TriBehaviour
             animator.Play("Dead", 0, 0f);
             Destroy(VillagerCollision.gameObject);
             Destroy(VillagerDetectionRange.gameObject);
-            ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            // ItemSpawner.Spawn(transform.position, Quaternion.identity);
             Destroy(gameObject, 1f);
         }
     }
