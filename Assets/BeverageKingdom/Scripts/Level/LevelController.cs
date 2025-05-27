@@ -28,6 +28,7 @@ public class LevelController : MonoBehaviour
     void Start()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
         if (currentLevelIndex < LevelDatas.Count)
@@ -58,6 +59,9 @@ public class LevelController : MonoBehaviour
             }
         }
     }
+=======
+        Env env = Controller.Instance.Env.GetComponent<Env>();
+>>>>>>> parent of 1769e09 (ddd)
 =======
         Env env = Controller.Instance.Env.GetComponent<Env>();
 >>>>>>> parent of 1769e09 (ddd)

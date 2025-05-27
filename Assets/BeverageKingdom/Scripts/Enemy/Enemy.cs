@@ -193,6 +193,7 @@ public class Enemy : TriBehaviour
             IsDead = true;
             animator.Play("Dead", 0, 0f);
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (VillagerCollision != null && VillagerCollision.gameObject != null)
                 Destroy(VillagerCollision.gameObject);
             if (VillagerDetectionRange != null && VillagerDetectionRange.gameObject != null)
@@ -200,6 +201,11 @@ public class Enemy : TriBehaviour
             if (ItemSpawner != null)
                 ItemSpawner.Spawn(transform.position, Quaternion.identity);
             Destroy(gameObject, 1f);
+=======
+            Destroy(gameObject, 1f);
+            Destroy(VillagerCollision.gameObject);
+            Destroy(VillagerDetectionRange.gameObject);
+>>>>>>> parent of 1769e09 (ddd)
 =======
             Destroy(gameObject, 1f);
             Destroy(VillagerCollision.gameObject);
