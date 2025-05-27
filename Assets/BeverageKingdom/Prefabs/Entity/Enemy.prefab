@@ -164,7 +164,6 @@ MonoBehaviour:
   IsIdling: 0
   IsAttacking: 0
   IsDead: 0
-  enemyData: {fileID: 0}
 --- !u!1 &4887401757434989689
 GameObject:
   m_ObjectHideFlags: 0
