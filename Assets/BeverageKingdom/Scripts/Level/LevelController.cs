@@ -10,14 +10,7 @@ public class LevelController : MonoBehaviour
 
     MileStone _mileStoneProgressBar;
 
-<<<<<<< Updated upstream
     public LevelData levelData;
-=======
-    [HideInInspector]
-    public List<LevelData> LevelDatas;
-    LevelData _currentLevelData;
-
->>>>>>> Stashed changes
     private int currentWaveIndex = 0;
     private float timer = 0f;
     // private bool isSpawningWave = false;
@@ -34,9 +27,7 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
-<<<<<<< Updated upstream
-        Env env = Controller.Instance.Env.GetComponent<Env>();
-=======
+<<<<<<< HEAD
         LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
         if (currentLevelIndex < LevelDatas.Count)
@@ -67,7 +58,9 @@ public class LevelController : MonoBehaviour
             }
         }
     }
->>>>>>> Stashed changes
+=======
+        Env env = Controller.Instance.Env.GetComponent<Env>();
+>>>>>>> parent of 1769e09 (ddd)
 
         _spawnAreas.Add(env.EnemySpawnPosSlot1.GetChild(0).GetComponent<SpawnArea>());
         _spawnAreas.Add(env.EnemySpawnPosSlot2.GetChild(0).GetComponent<SpawnArea>());

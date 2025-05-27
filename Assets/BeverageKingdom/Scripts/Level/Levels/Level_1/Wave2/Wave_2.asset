@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d096232a37b3814bb9a51784f2c4fd8, type: 3}
-  m_Name: Wave_L10_W1
+  m_Name: Wave_2
   m_EditorClassIdentifier: 
-  StartTime: 0
+  StartTime: 27
   IsBossWave: 0
   EnemiesToSpawn:
-  - {fileID: 11400000, guid: a1c0ba2f14f2f944f87c42ae42de9874, type: 2}
+  - {fileID: 11400000, guid: 9b9a8bc0d432a4143898528ee20e3041, type: 2}
+  - {fileID: 11400000, guid: bdc69e4b09fe68e408a05bcc58774b6c, type: 2}

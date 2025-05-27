@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314734901e3cfae4ebf8f23f1f83d64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   detectionRadius: 2
   layerMask:
     serializedVersion: 2
@@ -1136,10 +1135,3 @@ MonoBehaviour:
   flashInterval: 0.1
   knockbackForce: 5
   knockbackDuration: 0.2
-=======
-  EnemyPrefab:
-  - {fileID: 4887401757434989689, guid: fe5cec5108ce7434c846fae0522e3cb1, type: 3}
-  - {fileID: 7508368098532413865, guid: e868faee2e1d66e43a8d5d4a66c0004e, type: 3}
-  normalEnemyPrefab: {fileID: 4887401757434989689, guid: fe5cec5108ce7434c846fae0522e3cb1, type: 3}
-  bossEnemyPrefab: {fileID: 7508368098532413865, guid: e868faee2e1d66e43a8d5d4a66c0004e, type: 3}
->>>>>>> Stashed changes

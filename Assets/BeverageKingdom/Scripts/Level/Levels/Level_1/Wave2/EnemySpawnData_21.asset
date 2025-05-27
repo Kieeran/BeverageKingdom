@@ -10,14 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
-  m_Name: EnemySpawn_L1_W3
+  m_Name: EnemySpawnData_21
   m_EditorClassIdentifier: 
-<<<<<<<< Updated upstream:Assets/BeverageKingdom/Scripts/Level/Levels/Level_1/Wave2/EnemySpawnData_21.asset
   EnemyType: 
   Count: 10
   SpawnInterval: 2
-========
-  EnemyType: Boss
-  Count: 15
-  SpawnInterval: 1.5
->>>>>>>> Stashed changes:Assets/BeverageKingdom/Resources/Levels/Level1/EnemySpawn_L1_W3.asset
