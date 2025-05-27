@@ -96,12 +96,12 @@ public class EnemyMovement : MonoBehaviour
     }
     public IEnumerator SetSpeed(float addSpeed)
     {
+        Debug.Log("SetSpeed: " + addSpeed);
         if (isSpeed)
             yield break;
         isSpeed = true;
+
         MoveSpeed += addSpeed;
-        yield return new WaitForSeconds(3f);
-        MoveSpeed -= addSpeed;
         isSpeed = false;
     }
 }

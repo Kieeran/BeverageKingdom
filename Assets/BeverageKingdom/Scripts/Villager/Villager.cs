@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Villager : MonoBehaviour
 {
+    [HideInInspector]
     public enum VillagerState
     {
         Idle,
@@ -15,6 +16,7 @@ public class Villager : MonoBehaviour
     public float AttackCoolDown = 0.5f;
     float _coolDownTimer;
 
+    [HideInInspector]
     public VillagerState currentState;
 
     private Vector3 targetPosition;
@@ -37,10 +39,16 @@ public class Villager : MonoBehaviour
     bool IsDead = false;
     public Image HealthBarFillUI;
 
+    public Transform DetectionRangeVisual;
+    public Transform BoundingBoxVisual;
+
     void Awake()
     {
         VillagerMovement.OnStageChange += SetAnimator;
         VillagerAnimation.OnDoneAttack += OnDoneAttack;
+
+        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
     }
 
     void Start()

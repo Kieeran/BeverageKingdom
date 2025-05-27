@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class _EnemySpawner : Spawner
 {
-    public static _EnemySpawner Instance { get; private set; }
+   /* public static _EnemySpawner Instance { get; private set; }
 
     [Header("Wave Configuration")]
     [Tooltip("ScriptableObject chứa danh sách các wave")]
@@ -109,5 +109,5 @@ public class _EnemySpawner : Spawner
     public override Transform Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
     {
         return base.Spawn(prefabName, spawnPos, rotation);
-    }
+    }*/
 }

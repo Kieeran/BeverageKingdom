@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : Spawner
 {
     public static EnemySpawner Instance;
     public List<GameObject> EnemyPrefab;
@@ -15,10 +15,10 @@ public class EnemySpawner : MonoBehaviour
 
     List<SpawnArea> _spawnAreas = new();
 
-    private void Awake()
+    protected override void Awake()
     {
         Instance = this;
-        
+
         // Initialize the enemy prefabs list if it's empty
         if (EnemyPrefab == null || EnemyPrefab.Count == 0)
         {
@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    void Start()
+    protected override void Start()
     {
         Env env = Controller.Instance.Env.GetComponent<Env>();
 
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
     private void LoadEnemyData()
     {
         _enemyDataCache = new Dictionary<string, EnemySO>();
-        
+
         // Load all enemy scriptable objects
         var scoutData = Resources.Load<EnemySO>("Data/ScoutEnemy");
         var warriorData = Resources.Load<EnemySO>("Data/WarriorEnemy");
@@ -63,7 +63,8 @@ public class EnemySpawner : MonoBehaviour
         {
             Debug.LogError("No enemy data found! Make sure ScriptableObjects exist in Resources/Data/");
         }
-    }    public void SpawnEnemy(string enemyType)
+    }
+    public void SpawnEnemy(string enemyType)
     {
         Debug.Log($"Attempting to spawn enemy of type: {enemyType}");
         GameObject enemyPrefab = normalEnemyPrefab;
@@ -73,31 +74,44 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        // Get the enemy data
-        string type = enemyType.ToLower();
-        if (!_enemyDataCache.TryGetValue(type, out var enemyData))
-        {
-            Debug.LogError($"Enemy data not found for type: {enemyType}. Available types: {string.Join(", ", _enemyDataCache.Keys)}");
-            return;
-        }
+        //     // Get the enemy data
+        //     string type = enemyType.ToLower();
+        //     if (!_enemyDataCache.TryGetValue(type, out var enemyData))
+        //   /*  GameObject enemy = Instantiate(enemyPrefab, GetRandomSpawnPos(), Quaternion.identity);
+        //     enemy.transform.SetParent(transform);*/
+        //     Spawn(enemyPrefab.transform, GetRandomSpawnPos(), Quaternion.identity);
+        // }
 
-        Vector2 spawnPos = GetRandomSpawnPos();
-        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-        enemy.transform.SetParent(transform);
+        // int _groupsRemaining;
+        // public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
+        // {
+        //     // 1) Khởi tạo counter = số nhóm trong wave
+        //     _groupsRemaining = wave.EnemiesToSpawn.Count;
 
-        // Set the enemy data
-        var enemyComponent = enemy.GetComponent<Enemy>();
-        if (enemyComponent != null)
-        {
-            enemyComponent.SetEnemyData(enemyData);
-        }
-        else
-        {
-            Debug.LogError("Spawned enemy prefab doesn't have Enemy component!");
-        }
+        //     // 2) Với mỗi spawnData, start 1 coroutine con
+        //     foreach (var spawnData in wave.EnemiesToSpawn)
+        //     {
+        //         Debug.LogError($"Enemy data not found for type: {enemyType}. Available types: {string.Join(", ", _enemyDataCache.Keys)}");
+        //         return;
+        //     }
+
+        // Vector2 spawnPos = GetRandomSpawnPos();
+        // GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        // enemy.transform.SetParent(transform);
+
+        // // Set the enemy data
+        // var enemyComponent = enemy.GetComponent<Enemy>();
+        // if (enemyComponent != null)
+        // {
+        //     enemyComponent.SetEnemyData(enemyData);
+        // }
+        // else
+        // {
+        //     Debug.LogError("Spawned enemy prefab doesn't have Enemy component!");
+        // }
     }
 
-    int _groupsRemaining;    public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
+    int _groupsRemaining; public IEnumerator SpawnWave(WaveData wave, System.Action CheckSpawnAllEnemies)
     {
         if (wave == null || wave.EnemiesToSpawn == null || wave.EnemiesToSpawn.Count == 0)
         {
@@ -136,7 +150,8 @@ public class EnemySpawner : MonoBehaviour
         int remainingEnemies = transform.childCount;
         Debug.Log($"Wave completed. All enemy groups spawned. {remainingEnemies} enemies currently alive.");
         CheckSpawnAllEnemies?.Invoke();
-    }    private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
+    }
+    private IEnumerator SpawnEnemyGroup(EnemySpawnData spawnData)
     {
         if (spawnData == null || string.IsNullOrEmpty(spawnData.EnemyType))
         {
@@ -146,7 +161,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         Debug.Log($"Spawning enemy group: {spawnData.Count} {spawnData.EnemyType} enemies with interval {spawnData.SpawnInterval}s");
-        
+
         for (int i = 0; i < spawnData.Count; i++)
         {
             SpawnEnemy(spawnData.EnemyType);
@@ -155,28 +170,41 @@ public class EnemySpawner : MonoBehaviour
 
         _groupsRemaining = Mathf.Max(0, _groupsRemaining - 1);
         if (_groupsRemaining > 0)
-        {
-            Debug.Log($"Group complete. {_groupsRemaining} groups remaining");
-        }
-        else 
-        {
-            Debug.Log("All groups completed.");
-        }
-    }    public bool IsAnyEnemyInContainer()
-    {
-        int count = 0;
-        // Count only active enemies (not being destroyed)
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            var child = transform.GetChild(i);
-            if (child != null && child.gameObject.activeInHierarchy)
-            {
-                count++;
-            }
-        }
-        Debug.Log($"Active enemy count in container: {count} (Total children: {transform.childCount})");
-        return count > 0;
+            // Khi group này xong, giảm counter
+            _groupsRemaining--;
     }
+
+    public bool IsAnyEnemyInContainer()
+    {
+        return holder.childCount != 0;
+    }
+
+    // GameObject GetEnemyPrefab(string name)
+    // {
+    //     foreach (var enemy in EnemyPrefab)
+    //     {
+    //         Debug.Log($"Group complete. {_groupsRemaining} groups remaining");
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("All groups completed.");
+    //     }
+    // }
+    // public bool IsAnyEnemyInContainer()
+    // {
+    //     int count = 0;
+    //     // Count only active enemies (not being destroyed)
+    //     for (int i = 0; i < transform.childCount; i++)
+    //     {
+    //         var child = transform.GetChild(i);
+    //         if (child != null && child.gameObject.activeInHierarchy)
+    //         {
+    //             count++;
+    //         }
+    //     }
+    //     Debug.Log($"Active enemy count in container: {count} (Total children: {transform.childCount})");
+    //     return count > 0;
+    // }
 
     Vector2 GetRandomSpawnPos()
     {
@@ -185,7 +213,7 @@ public class EnemySpawner : MonoBehaviour
             Debug.LogError("No spawn areas set up!");
             return Vector2.zero;
         }
-        
+
         int index = Random.Range(0, _spawnAreas.Count);
         return _spawnAreas[index].GetRandomSpawnPos();
     }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HotSpotManager : MonoBehaviour
 {
-    [SerializeField] GameObject hotSpotPrefab;
-    [SerializeField] List<Transform> spawnZones; // 9 vùng
-    [SerializeField] int maxHotSpots = 2;
+    [SerializeField] private GameObject hotSpotPrefab;
+    [SerializeField] private List<Transform> spawnZones; // 9 vùng
+    [SerializeField] private int maxHotSpots = 2;
 
     private bool isSpawning = false;
 
@@ -15,13 +15,11 @@ public class HotSpotManager : MonoBehaviour
         if (!isSpawning)
             StartCoroutine(SpawnRoutine());
     }
-
-    void Start()
+    private void Start()
     {
         TrySpawnHotSpots();
     }
-
-    IEnumerator SpawnRoutine()
+    private IEnumerator SpawnRoutine()
     {
         isSpawning = true;
 
@@ -37,7 +35,8 @@ public class HotSpotManager : MonoBehaviour
 
         foreach (var zone in selectedZones)
         {
-            GameObject hotSpot = Instantiate(hotSpotPrefab, zone.position, Quaternion.Euler(0, 0, 180));
+            GameObject hotSpot = Instantiate(hotSpotPrefab, zone.position, Quaternion.Euler(0,0,180));
+            hotSpot.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.5f); // delay giữa các hotspot nếu cần
         }
 

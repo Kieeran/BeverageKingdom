@@ -15,7 +15,7 @@ public class MeleeWeapon : Weapon
         nextAttackTime = Time.time + attackCooldown;
 
         Vector2 origin = fireOrigin.position;
-       // Vector2 forward = fireOrigin.right.normalized;
+        // Vector2 forward = fireOrigin.right.normalized;
         Vector2 boxCenter = origin /*+ forward * (attackLength * 0.5f)*/;
 
         Vector2 boxSize = new Vector2(attackLength, attackWidth);
@@ -26,12 +26,13 @@ public class MeleeWeapon : Weapon
 
         foreach (var hit in hits)
         {
-            if (hit.transform.parent.TryGetComponent<Enemy>(out var enemy))
+            if (hit != null)
             {
-                enemy.Deduct(damage);
-
-
-                ComboController.Instance.AddCombo();
+                if (hit.transform.parent.TryGetComponent<Enemy>(out var enemy))
+                {
+                    enemy.Deduct(damage);
+                    ComboController.Instance.AddCombo();
+                }
             }
         }
     }
@@ -57,5 +58,4 @@ public class MeleeWeapon : Weapon
         // Khôi phục ma trận
         Gizmos.matrix = oldMat;
     }
-    
 }

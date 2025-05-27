@@ -29,6 +29,7 @@ public class Enemy : TriBehaviour
     public Animator animator;
     public AnimatorOverrideController animatorOverride;
 
+    [HideInInspector]
     public float AttackRange;
     public float AttackCoolDown;
     float _coolDownTimer;
@@ -41,16 +42,23 @@ public class Enemy : TriBehaviour
     private EnemyEffect _enemyEffect;
     private ItemSpawner ItemSpawner;
 
-    private SpriteRenderer _spriteRenderer;
+    // private SpriteRenderer _spriteRenderer;
 
-    protected override void Awake()
-    {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        if (_spriteRenderer == null)
-        {
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        }
-    }
+    // protected override void Awake()
+    // {
+    //     _spriteRenderer = GetComponent<SpriteRenderer>();
+    //     if (_spriteRenderer == null)
+    //     {
+    //         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    //     }
+    // public Transform DetectionRangeVisual;
+    // public Transform BoundingBoxVisual;
+
+    // protected override void Awake()
+    // {
+    //     DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+    //     BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
+    // }
 
     protected override void Start()
     {
@@ -73,7 +81,7 @@ public class Enemy : TriBehaviour
         // Set default values if enemyData is null
         if (enemyData == null)
         {
-            AttackRange = 2f;
+            AttackRange = 1f;
             AttackCoolDown = 1f;
             Damage = 1;
             maxHealth = 6f;
@@ -82,8 +90,8 @@ public class Enemy : TriBehaviour
 
             // Default size and color
             transform.localScale = Vector3.one;
-            if (_spriteRenderer != null)
-                _spriteRenderer.color = Color.white;
+            // if (_spriteRenderer != null)
+            //     _spriteRenderer.color = Color.white;
         }
         else
         {
@@ -96,10 +104,10 @@ public class Enemy : TriBehaviour
 
             // Apply size and color from enemy data
             transform.localScale = enemyData.enemyScale;
-            if (_spriteRenderer != null)
-                _spriteRenderer.color = enemyData.enemyColor;
+            // if (_spriteRenderer != null)
+            //     _spriteRenderer.color = enemyData.enemyColor;
         }
-        
+
         CurrentHealth = maxHealth;
     }
     void SetAnimator(int index)
@@ -218,16 +226,20 @@ public class Enemy : TriBehaviour
             // EnemySpawner.Instance.NotifyEnemyKilled();
             IsDead = true;
             animator.Play("Dead", 0, 0f);
-            if (VillagerCollision != null && VillagerCollision.gameObject != null)
-                Destroy(VillagerCollision.gameObject);
-            if (VillagerDetectionRange != null && VillagerDetectionRange.gameObject != null)
-                Destroy(VillagerDetectionRange.gameObject);
-            if (ItemSpawner != null)
-                ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            // if (VillagerCollision != null && VillagerCollision.gameObject != null)
+            //     Destroy(VillagerCollision.gameObject);
+            // if (VillagerDetectionRange != null && VillagerDetectionRange.gameObject != null)
+            //     Destroy(VillagerDetectionRange.gameObject);
+            // if (ItemSpawner != null)
+            //     ItemSpawner.Spawn(transform.position, Quaternion.identity);
             
-            // Deactivate immediately and destroy after delay
-            gameObject.SetActive(false);
-            Debug.Log($"Enemy dying at position {transform.position}");
+            // // Deactivate immediately and destroy after delay
+            // gameObject.SetActive(false);
+            // Debug.Log($"Enemy dying at position {transform.position}");
+            // Destroy(VillagerCollision.gameObject);
+            // Destroy(VillagerDetectionRange.gameObject);
+            // // ItemSpawner.Spawn(transform.position, Quaternion.identity);
+            // _ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
             Destroy(gameObject, 1f);
         }
     }
@@ -285,7 +297,7 @@ public class Enemy : TriBehaviour
             _enemyEffect.ApplyKnockBack();
             _enemyEffect.ApplyHitEffect();
         }
-        
+
         if (CurrentHealth <= 0)
         {
             Die();
