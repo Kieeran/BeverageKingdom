@@ -32,7 +32,9 @@ public class LevelController : MonoBehaviour
         {
             totalLevels = levelConfig.TotalLevels;
         }
-    }    void Start()
+    }
+
+    void Start()
     {
         LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
@@ -75,7 +77,8 @@ public class LevelController : MonoBehaviour
         {
             Debug.LogError("No level data found! Please generate levels using Tools > Level Data Helper in the Unity Editor.");
         }
-    }    void InitLevel()
+    }
+    void InitLevel()
     {
         // Reset all level state
         _levelDuration = _currentLevelData.Waves[^1].StartTime;
@@ -105,14 +108,15 @@ public class LevelController : MonoBehaviour
                 _mileStoneProgressBar.UpsizeMarker(markerRect, 50f);
             }
         }
-    }    void Update()
+    }
+    void Update()
     {
         // Only check for level completion if all enemies have been spawned and there are none left
         if (_isSpawnAllEnemies)
         {
             bool hasEnemies = EnemySpawner.Instance.IsAnyEnemyInContainer();
             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completion check - Enemies remaining: {(hasEnemies ? "Yes" : "No")}, All waves spawned: {_isSpawnAllEnemies}, Level complete: {_isLevelComplete}");
-            
+
             if (!hasEnemies && !_isLevelComplete)
             {
                 _isLevelComplete = true;
@@ -132,7 +136,8 @@ public class LevelController : MonoBehaviour
         if (timer <= _levelDuration)
         {
             UIManager.Instance.PlayCanvas.UpdateLevelProgressBar(timer / _levelDuration);
-        }        WaveData wave = _currentLevelData.Waves[currentWaveIndex];        if (timer >= wave.StartTime)
+        }
+        WaveData wave = _currentLevelData.Waves[currentWaveIndex]; if (timer >= wave.StartTime)
         {
             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}, Starting Wave {currentWaveIndex + 1}/{_currentLevelData.Waves.Count} at time {timer:F1}s");
             _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
