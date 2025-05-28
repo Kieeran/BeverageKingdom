@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave3_WarriorSpawn
   m_EditorClassIdentifier: 
   EnemyType: Warrior
-  Count: 9
+  Count: 11
   SpawnInterval: 0.9499999
