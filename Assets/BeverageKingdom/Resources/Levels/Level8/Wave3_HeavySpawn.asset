@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave3_HeavySpawn
   m_EditorClassIdentifier: 
   EnemyType: Heavy
-  Count: 11
+  Count: 5
   SpawnInterval: 0.9499999
