@@ -1132,7 +1132,7 @@ MonoBehaviour:
   IsDead: 0
   MaxHP: 0
   HP: 100
-  AttackCoolDown: 0.8
+  AttackCoolDown: 0.5
   shield: {fileID: 3873248692582247751}
   DetectionRangeVisual: {fileID: 8559638188146458547}
   BoundingBoxVisual: {fileID: 3128112426063204360}

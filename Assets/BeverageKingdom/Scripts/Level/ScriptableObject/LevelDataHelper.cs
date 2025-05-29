@@ -12,9 +12,7 @@ public class LevelDataHelper : EditorWindow
     private static float spawnIntervalDecreasePerLevel = 0.15f;
     private static float waveStartTimeInterval = 25f;  // Increased to give more time between waves
     private static string levelsPath = "Assets/BeverageKingdom/Resources/Levels";
-    private static int numberOfLevels = 10; // Default number of levels
-
-    // Enemy type distribution per wave - adjusted for better progression
+    private static int numberOfLevels = 10; // Default number of levels    // Enemy type distribution per wave - adjusted for better progression
     private static readonly (string type, float ratio)[][] waveEnemyTypes = new[]
     {
         // Wave 1: Mostly scouts with few warriors (early game wave)
@@ -22,7 +20,7 @@ public class LevelDataHelper : EditorWindow
         // Wave 2: Balanced mix (mid wave)
         new[] { ("Scout", 0.4f), ("Warrior", 0.4f), ("Heavy", 0.2f) },
         // Wave 3: Challenging wave with tough enemies
-        new[] { ("Scout", 0.2f), ("Warrior", 0.5f), ("Heavy", 0.3f) }
+        new[] { ("Scout", 0.3f), ("Warrior", 0.3f), ("Heavy", 0.3f), ("Boss", 0.1f) }
     };
 
     [MenuItem("Tools/Level Data Helper")]

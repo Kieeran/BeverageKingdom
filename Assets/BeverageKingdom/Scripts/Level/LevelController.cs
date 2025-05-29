@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using System.Collections;
 
 public class LevelController : MonoBehaviour
 {
@@ -30,9 +32,7 @@ public class LevelController : MonoBehaviour
         {
             totalLevels = levelConfig.TotalLevels;
         }
-    }
-
-    void Start()
+    }    void Start()
     {
         LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
@@ -75,36 +75,22 @@ public class LevelController : MonoBehaviour
         {
             Debug.LogError("No level data found! Please generate levels using Tools > Level Data Helper in the Unity Editor.");
         }
-    }
-
-    void InitLevel()
+    }    void InitLevel()
     {
+        // Reset all level state
         _levelDuration = _currentLevelData.Waves[^1].StartTime;
-
+        currentWaveIndex = 0;
+        timer = 0f;
         _isLevelComplete = false;
         _isSpawnAllEnemies = false;
+
+        Debug.Log($"Initializing Level {Controller.Instance.CurrentLevelIndex + 1} with {_currentLevelData.Waves.Count} waves. Total duration: {_levelDuration}s");
+        Debug.Log($"Level state reset - Wave Index: {currentWaveIndex}, Timer: {timer}, Complete: {_isLevelComplete}, AllSpawned: {_isSpawnAllEnemies}");
 
         _mileStoneProgressBar = UIManager.Instance.PlayCanvas.MileStoneProgressBar;
 
         InitMarker();
     }
-
-    // void InitLevel()
-    // {
-    //     // Reset all level state
-    //     _levelDuration = _currentLevelData.Waves[^1].StartTime;
-    //     currentWaveIndex = 0;
-    //     timer = 0f;
-    //     _isLevelComplete = false;
-    //     _isSpawnAllEnemies = false;
-
-    //     Debug.Log($"Initializing Level {Controller.Instance.CurrentLevelIndex + 1} with {_currentLevelData.Waves.Count} waves. Total duration: {_levelDuration}s");
-    //     Debug.Log($"Level state reset - Wave Index: {currentWaveIndex}, Timer: {timer}, Complete: {_isLevelComplete}, AllSpawned: {_isSpawnAllEnemies}");
-
-    //     _mileStoneProgressBar = UIManager.Instance.PlayCanvas.MileStoneProgressBar;
-
-    //     InitMarker();
-    // }
 
     void InitMarker()
     {
@@ -119,14 +105,21 @@ public class LevelController : MonoBehaviour
                 _mileStoneProgressBar.UpsizeMarker(markerRect, 50f);
             }
         }
-    }
-
-    void Update()
+    }    void Update()
     {
-        if (!EnemySpawner.Instance.IsAnyEnemyInContainer() && _isLevelComplete == false && _isSpawnAllEnemies == true)
+        // Only check for level completion if all enemies have been spawned and there are none left
+        if (_isSpawnAllEnemies)
         {
-            _isLevelComplete = true;
-            GameSystem.instance.GameWin();
+            bool hasEnemies = EnemySpawner.Instance.IsAnyEnemyInContainer();
+            Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completion check - Enemies remaining: {(hasEnemies ? "Yes" : "No")}, All waves spawned: {_isSpawnAllEnemies}, Level complete: {_isLevelComplete}");
+            
+            if (!hasEnemies && !_isLevelComplete)
+            {
+                _isLevelComplete = true;
+                Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completed. All waves done and enemies defeated. Triggering GameWin.");
+                GameSystem.instance.GameWin();
+                return;
+            }
         }
 
         if (currentWaveIndex >= _currentLevelData.Waves.Count)
@@ -139,74 +132,23 @@ public class LevelController : MonoBehaviour
         if (timer <= _levelDuration)
         {
             UIManager.Instance.PlayCanvas.UpdateLevelProgressBar(timer / _levelDuration);
-        }
-
-        WaveData wave = _currentLevelData.Waves[currentWaveIndex];
-
-        if (timer >= wave.StartTime)
+        }        WaveData wave = _currentLevelData.Waves[currentWaveIndex];        if (timer >= wave.StartTime)
         {
-            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
-            StartCoroutine(EnemySpawner.Instance.SpawnWave(
+            Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}, Starting Wave {currentWaveIndex + 1}/{_currentLevelData.Waves.Count} at time {timer:F1}s");
+            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);            StartCoroutine(EnemySpawner.Instance.SpawnWave(
                 wave,
-                currentWaveIndex,
-                WaveIndex =>
+                currentWaveIndex + 1,
+                (waveIndex) =>
                 {
-                    if (WaveIndex == _currentLevelData.Waves.Count - 1)
+                    Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}: Wave {waveIndex} spawn complete");
+                    if (currentWaveIndex >= _currentLevelData.Waves.Count)
                     {
                         _isSpawnAllEnemies = true;
-                        Debug.Log("completed.");
+                        Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}: All waves completed. Waiting for remaining enemies to be defeated.");
                     }
                 }
             ));
             currentWaveIndex++;
         }
     }
-
-    // void Update()
-    // {
-    //     // Only check for level completion if all enemies have been spawned and there are none left
-    //     if (_isSpawnAllEnemies)
-    //     {
-    //         bool hasEnemies = EnemySpawner.Instance.IsAnyEnemyInContainer();
-    //         Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completion check - Enemies remaining: {(hasEnemies ? "Yes" : "No")}, All waves spawned: {_isSpawnAllEnemies}, Level complete: {_isLevelComplete}");
-
-    //         if (!hasEnemies && !_isLevelComplete)
-    //         {
-    //             _isLevelComplete = true;
-    //             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completed. All waves done and enemies defeated. Triggering GameWin.");
-    //             GameSystem.instance.GameWin();
-    //             return;
-    //         }
-    //     }
-
-    //     if (currentWaveIndex >= _currentLevelData.Waves.Count)
-    //     {
-    //         return;
-    //     }
-
-    //     timer += Time.deltaTime;
-
-    //     if (timer <= _levelDuration)
-    //     {
-    //         UIManager.Instance.PlayCanvas.UpdateLevelProgressBar(timer / _levelDuration);
-    //     }
-    //     WaveData wave = _currentLevelData.Waves[currentWaveIndex]; if (timer >= wave.StartTime)
-    //     {
-    //         Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}, Starting Wave {currentWaveIndex + 1}/{_currentLevelData.Waves.Count} at time {timer:F1}s");
-    //         _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
-    //         StartCoroutine(EnemySpawner.Instance.SpawnWave(
-    //             wave,
-    //             () =>
-    //             {
-    //                 Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}: Wave {currentWaveIndex + 1} spawn complete");
-    //                 if (currentWaveIndex >= _currentLevelData.Waves.Count)
-    //                 {
-    //                     _isSpawnAllEnemies = true;
-    //                     Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}: All waves completed. Waiting for remaining enemies to be defeated.");
-    //                 }
-    //             }
-    //         ));
-    //         currentWaveIndex++;
-    //     }
-    // }
 }
