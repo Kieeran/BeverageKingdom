@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 477692355
   m_SortingLayer: 7
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2008401541, guid: 19f93c2eca819c34a912b29946701b29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6807314472611303998}
   - component: {fileID: 5549214277552928122}
+  - component: {fileID: 6700433594972432242}
   m_Layer: 13
   m_Name: RecoverHp
   m_TagString: Item
@@ -162,3 +163,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64067596, y: 0.85769343}
   m_EdgeRadius: 0
+--- !u!114 &6700433594972432242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8639092846716464141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b458bab637b40f41a145b365fe8976f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
