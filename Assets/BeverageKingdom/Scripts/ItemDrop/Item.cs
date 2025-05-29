@@ -46,7 +46,7 @@ public class Item : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.CompareTag("BB"))
         {
             PickUp();
             itemDespawn.DeSpawnObj(); // Call the despawn method to handle item removal

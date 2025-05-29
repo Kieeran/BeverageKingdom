@@ -248,13 +248,13 @@ public class Player : MonoBehaviour
         isShield = false;
 
     }
-    public IEnumerator SetSpeed(float addSpeed)
+    public IEnumerator SpeedUp(float addSpeed)
     {
         if (isSpeed)
             yield break;
         isSpeed = true;
         moveSpeed += addSpeed;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         moveSpeed -= addSpeed;
         isSpeed = false;
     }

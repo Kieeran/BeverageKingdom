@@ -6,7 +6,7 @@ public class SpeedUpItem : Item
 {
     protected override void PickUp()
     {   
-        StartCoroutine(Player.instance.SetSpeed(5f));
+        StartCoroutine(Player.instance.SpeedUp(2f));
         base.PickUp();
     }
 }

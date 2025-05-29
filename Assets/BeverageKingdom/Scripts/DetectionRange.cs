@@ -8,6 +8,9 @@ public class DetectionRange : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
+        Debug.Log("asdasd");
+
         if (collision.CompareTag("Range"))
         {
             OnInRange?.Invoke(collision.transform.parent);

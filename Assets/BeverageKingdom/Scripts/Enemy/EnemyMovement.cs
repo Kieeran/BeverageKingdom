@@ -43,18 +43,18 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        // SetStage(1);
-        // if (Target != null && IsEntityInRange == true)
-        // {
-        //     Vector3 directionToPlayer = (Target.position - transform.position).normalized;
-        //     transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
-        //     SetStage(2);
-        // }
-        // else
-        // {
-        //     transform.parent.position += Vector3.left * MoveSpeed * Time.deltaTime;
-        //     SetStage(2);
-        // }
+         SetStage(1);
+         if (Target != null && IsEntityInRange == true)
+         {
+             Vector3 directionToPlayer = (Target.position - transform.position).normalized;
+             transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
+             SetStage(2);
+         }
+         else
+         {
+             transform.parent.position += Vector3.left * MoveSpeed * Time.deltaTime;
+             SetStage(2);
+         }
     }
 
     public void Walk()
