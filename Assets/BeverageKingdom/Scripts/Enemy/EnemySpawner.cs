@@ -55,11 +55,13 @@ public class EnemySpawner : Spawner
         var warriorData = Resources.Load<EnemySO>("Data/WarriorEnemy");
         var heavyData = Resources.Load<EnemySO>("Data/HeavyEnemy");
         var bossData = Resources.Load<EnemySO>("Data/BOSSEnemy");  // Add new enemy type
+        var BOSS2Enemy = Resources.Load<EnemySO>("Data/BOSS2Enemy");  // Add new enemy type
 
         if (scoutData != null) _enemyDataCache["scout"] = scoutData;
         if (warriorData != null) _enemyDataCache["warrior"] = warriorData;
         if (heavyData != null) _enemyDataCache["heavy"] = heavyData;
         if (bossData != null) _enemyDataCache["boss"] = bossData;  // Cache the new enemy type
+        if (BOSS2Enemy != null) _enemyDataCache["BOSS2Enemy"] = BOSS2Enemy;  // Cache the new enemy type
 
         if (_enemyDataCache.Count == 0)
         {

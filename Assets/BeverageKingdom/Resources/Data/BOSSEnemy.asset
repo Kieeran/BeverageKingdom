@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   enemyName: Boss
-  maxHealth: 15
+  maxHealth: 150
   speed: 0.75
-  dameAttack: 10
+  dameAttack: 30
   moneyForDead: 0
   attackRange: 0.5
   attackCoolDown: 2
   enemyScale: {x: 2, y: 2, z: 2}
-  enemyColor: {r: 0.9245283, g: 0.100302614, b: 0.100302614, a: 1}
+  enemyColor: {r: 0.28235295, g: 0.0627451, b: 0.6509804, a: 1}
