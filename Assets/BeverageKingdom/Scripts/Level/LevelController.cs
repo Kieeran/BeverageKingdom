@@ -9,7 +9,7 @@ public class LevelController : MonoBehaviour
 
     MileStone _mileStoneProgressBar;
 
-    [HideInInspector]
+   // [HideInInspector]
     public List<LevelData> LevelDatas;
     LevelData _currentLevelData;
 
@@ -32,7 +32,8 @@ public class LevelController : MonoBehaviour
         {
             totalLevels = levelConfig.TotalLevels;
         }
-    }    void Start()
+    }   
+    void Start()
     {
         LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
