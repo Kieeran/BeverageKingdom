@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 1
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -4344,13 +4345,13 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1759157289
+    guid: -1118742541
     name: sunnyside_world_chatacter_anim_GOBLIN
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -4359,7 +4360,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: e0e5a4ba63dfbaf4bb38e4c6fdaa0378
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -4368,7 +4369,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d464eb5e6643080468795805283303c8
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -4377,7 +4378,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: e4f138844afa6ca40a69ada7fa4ecae4
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -4386,7 +4387,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 44ad8e8e61d84bf4eb3e369ea5f337e7
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -4395,7 +4396,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 532313d2477f7a34c8d3b3662194f421
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -4404,7 +4405,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5b09867f6a867a94785e03500dbdb18b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -4413,7 +4414,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 87aa8632174eb8142bbfaafb83efa7d0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -4422,7 +4423,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 37d7551975b60e043a0545dd499324ea
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -4431,7 +4432,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 37885e59f89c20a4fad588c6a99c3fbc
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -4440,7 +4441,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d9b77116f6da4264ea63d25071b762f6
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -4449,7 +4450,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 4061dfd8c7e02a345bc87c201b8b4a3c
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -4458,7 +4459,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b857618fdf8b13a42b44e90886f204ef
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -4467,7 +4468,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 152310b33924b7841bf3c96c61149d4c
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -4476,7 +4477,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: cc59d3ae84a41974e98d27d5df0f1bd0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -4485,7 +4486,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 6486c8586c211a1469c4c48d835cea5b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -4494,7 +4495,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 8682a35f5dc2c374da844467f2f07281
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -4503,7 +4504,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 20ac54c64dc34fd46a4b2aaa3a030619
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -4512,7 +4513,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: e88b023061de96243828f1b74e386293
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -4521,7 +4522,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5c6d351424f991b459f81f5b83a38616
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -4530,7 +4531,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1110207f0bd5f6e4cb5bee1a49fd718b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -4539,7 +4540,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: fdd5c4e6a15fbd04aa348ab5c2166f0b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_21
+    - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -4548,7 +4549,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c8087c5ae88321d4baa4b652dc5cb671
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_22
+    - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -4557,7 +4558,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 288297c72ee84b7439dc0c4cc2ddc715
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_23
+    - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -4566,7 +4567,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 119abddda5da43844b15f2a38245072c
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_24
+    - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -4575,7 +4576,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c671bf3939f767147bf5cd2c54ba2d4a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_25
+    - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -4584,7 +4585,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f11b4a1c739129a4ba0a31e7f41a8f90
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_26
+    - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -4593,7 +4594,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: cac27b0b5d0852b4c8f20630d9bd16ce
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_27
+    - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
       cellRect:
@@ -4602,7 +4603,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 64a4be6d53f20544da53cfd568b12606
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_28
+    - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -4611,7 +4612,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2f6d52abb261e554f81c4b7a5cf5a34b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_29
+    - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -4620,7 +4621,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1028640bff118e94cb21a46fbfeee99f
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_30
+    - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
@@ -4629,7 +4630,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2f5bdf5106623fc41a5c189ea23b6bd1
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_31
+    - name: Frame_31
       frameIndex: 31
       additiveSortOrder: 0
       cellRect:
@@ -4638,7 +4639,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b3f8b8e9f703e2a41b6f5c99bebadea9
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_32
+    - name: Frame_32
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
@@ -4647,7 +4648,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 68a63d3bca793b64f8bb45321d72a392
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_33
+    - name: Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
@@ -4656,7 +4657,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2e56b65b3ccd532429c748c8213b5790
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_34
+    - name: Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
@@ -4665,7 +4666,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 95b31af100b65e64bad501153c852dc1
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_35
+    - name: Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
@@ -4674,7 +4675,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 6f5d6bdd72022d240ba432de2dffbce8
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_36
+    - name: Frame_36
       frameIndex: 36
       additiveSortOrder: 0
       cellRect:
@@ -4683,7 +4684,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f7555a76ca9c3994aab74bf11b0aa465
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_37
+    - name: Frame_37
       frameIndex: 37
       additiveSortOrder: 0
       cellRect:
@@ -4692,7 +4693,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 6d0f881bd6b9edf4aa681a0539ac9d7d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_38
+    - name: Frame_38
       frameIndex: 38
       additiveSortOrder: 0
       cellRect:
@@ -4701,7 +4702,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7e4a56678bb57974f978fd600e9e16f0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_39
+    - name: Frame_39
       frameIndex: 39
       additiveSortOrder: 0
       cellRect:
@@ -4710,7 +4711,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a7f45d467f28d5748b2581f7d8b84a4d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_40
+    - name: Frame_40
       frameIndex: 40
       additiveSortOrder: 0
       cellRect:
@@ -4719,7 +4720,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a20ea21fb6697e142a708c7c2e79e00e
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_41
+    - name: Frame_41
       frameIndex: 41
       additiveSortOrder: 0
       cellRect:
@@ -4728,7 +4729,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: dbfe6cc3583f5a3459c1b5efd42234fb
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_42
+    - name: Frame_42
       frameIndex: 42
       additiveSortOrder: 0
       cellRect:
@@ -4737,7 +4738,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 4326b3d027175a244b24afc42e8932a7
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_43
+    - name: Frame_43
       frameIndex: 43
       additiveSortOrder: 0
       cellRect:
@@ -4746,7 +4747,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: cea9532bdd22c53459d3d7417cac7d36
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_44
+    - name: Frame_44
       frameIndex: 44
       additiveSortOrder: 0
       cellRect:
@@ -4755,7 +4756,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 860370640f35ae344923712579e6d271
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_45
+    - name: Frame_45
       frameIndex: 45
       additiveSortOrder: 0
       cellRect:
@@ -4764,7 +4765,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: af6284ab46c0b2f4388b7213541e5909
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_46
+    - name: Frame_46
       frameIndex: 46
       additiveSortOrder: 0
       cellRect:
@@ -4773,7 +4774,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: af00f9100393084438f72fd1330c5647
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_47
+    - name: Frame_47
       frameIndex: 47
       additiveSortOrder: 0
       cellRect:
@@ -4782,7 +4783,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ed2f1aa8180ed624e81fc92a9948158f
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_48
+    - name: Frame_48
       frameIndex: 48
       additiveSortOrder: 0
       cellRect:
@@ -4791,7 +4792,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b83099fab5bb48443916e5114b8ed4a2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_49
+    - name: Frame_49
       frameIndex: 49
       additiveSortOrder: 0
       cellRect:
@@ -4800,7 +4801,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2c445f8201b943541a26267dc46c0c4c
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_50
+    - name: Frame_50
       frameIndex: 50
       additiveSortOrder: 0
       cellRect:
@@ -4809,7 +4810,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a89fc29ed9fa5c347a9e248625465562
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_51
+    - name: Frame_51
       frameIndex: 51
       additiveSortOrder: 0
       cellRect:
@@ -4818,7 +4819,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d6312984fd9d4834d8847ba2698adc21
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_52
+    - name: Frame_52
       frameIndex: 52
       additiveSortOrder: 0
       cellRect:
@@ -4827,7 +4828,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b9de858f53c722748affe1428119e82e
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_53
+    - name: Frame_53
       frameIndex: 53
       additiveSortOrder: 0
       cellRect:
@@ -4836,7 +4837,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f1669a4c8d99ed74e88baacd11f2d17b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_54
+    - name: Frame_54
       frameIndex: 54
       additiveSortOrder: 0
       cellRect:
@@ -4845,7 +4846,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c4688b7ea2b13d14fb5e2fd7550144e9
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_55
+    - name: Frame_55
       frameIndex: 55
       additiveSortOrder: 0
       cellRect:
@@ -4854,7 +4855,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: aa67c7a971082614082521176121657f
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_56
+    - name: Frame_56
       frameIndex: 56
       additiveSortOrder: 0
       cellRect:
@@ -4863,7 +4864,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f87dc507d8db9b245a05e8895ef48cc2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_57
+    - name: Frame_57
       frameIndex: 57
       additiveSortOrder: 0
       cellRect:
@@ -4872,7 +4873,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 68225cf7289d36640920c0cf87597d46
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_58
+    - name: Frame_58
       frameIndex: 58
       additiveSortOrder: 0
       cellRect:
@@ -4881,7 +4882,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: e328fc122c54a224981742538400a301
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_59
+    - name: Frame_59
       frameIndex: 59
       additiveSortOrder: 0
       cellRect:
@@ -4890,7 +4891,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: fa6cfdda5ece7c646ae47fd3c5077650
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_60
+    - name: Frame_60
       frameIndex: 60
       additiveSortOrder: 0
       cellRect:
@@ -4899,7 +4900,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f43ecb079dd2011498cc98e048b92c4e
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_61
+    - name: Frame_61
       frameIndex: 61
       additiveSortOrder: 0
       cellRect:
@@ -4908,7 +4909,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 43a2675fd8554db43b1cb5fe48da96d4
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_62
+    - name: Frame_62
       frameIndex: 62
       additiveSortOrder: 0
       cellRect:
@@ -4917,7 +4918,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 32e980d08537d7d41aa1f3fd893c8756
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_63
+    - name: Frame_63
       frameIndex: 63
       additiveSortOrder: 0
       cellRect:
@@ -4926,7 +4927,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f88553db64026d742b02eac8679f82ab
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_64
+    - name: Frame_64
       frameIndex: 64
       additiveSortOrder: 0
       cellRect:
@@ -4935,7 +4936,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 424b4d1a07b7a004f875e73a5799ba97
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_65
+    - name: Frame_65
       frameIndex: 65
       additiveSortOrder: 0
       cellRect:
@@ -4944,7 +4945,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 81c29b02796ca97419cc3db009c97290
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_66
+    - name: Frame_66
       frameIndex: 66
       additiveSortOrder: 0
       cellRect:
@@ -4953,7 +4954,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 4ca94127ea1590440be667a6d0fa122c
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_67
+    - name: Frame_67
       frameIndex: 67
       additiveSortOrder: 0
       cellRect:
@@ -4962,7 +4963,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f581ef55307f8524cbb4a9ef78eb2bae
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_68
+    - name: Frame_68
       frameIndex: 68
       additiveSortOrder: 0
       cellRect:
@@ -4971,7 +4972,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: bad517d8d07069842b51dcad1aac4730
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_69
+    - name: Frame_69
       frameIndex: 69
       additiveSortOrder: 0
       cellRect:
@@ -4980,7 +4981,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7395004e371ff7e44a5f7feb4c5b88b7
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_70
+    - name: Frame_70
       frameIndex: 70
       additiveSortOrder: 0
       cellRect:
@@ -4989,7 +4990,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d6e11e472f3ab8542a1039d6aee4b9cb
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_71
+    - name: Frame_71
       frameIndex: 71
       additiveSortOrder: 0
       cellRect:
@@ -4998,7 +4999,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 6aa718b8661d4b341b02bee168d9490d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_72
+    - name: Frame_72
       frameIndex: 72
       additiveSortOrder: 0
       cellRect:
@@ -5007,7 +5008,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 845cc1c213c3ea44c8e32be5e40508d5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_73
+    - name: Frame_73
       frameIndex: 73
       additiveSortOrder: 0
       cellRect:
@@ -5016,7 +5017,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 60b79748fb1cb79409a19791902a9c22
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_74
+    - name: Frame_74
       frameIndex: 74
       additiveSortOrder: 0
       cellRect:
@@ -5025,7 +5026,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 0359ea959167f8b488fcbad50a12d0f1
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_75
+    - name: Frame_75
       frameIndex: 75
       additiveSortOrder: 0
       cellRect:
@@ -5034,7 +5035,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 24cc8c6a6b3d4e1439cd906bc396da98
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_76
+    - name: Frame_76
       frameIndex: 76
       additiveSortOrder: 0
       cellRect:
@@ -5043,7 +5044,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 653fc827868462e478c8f05721d04329
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_77
+    - name: Frame_77
       frameIndex: 77
       additiveSortOrder: 0
       cellRect:
@@ -5052,7 +5053,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5594aff9ed552754a9cf51b3f35204b6
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_78
+    - name: Frame_78
       frameIndex: 78
       additiveSortOrder: 0
       cellRect:
@@ -5061,7 +5062,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1f0b1a3e410dad34eaa469f616874811
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_79
+    - name: Frame_79
       frameIndex: 79
       additiveSortOrder: 0
       cellRect:
@@ -5070,7 +5071,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d6f39634af3dfa741aa5c2ca0e02fa7b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_80
+    - name: Frame_80
       frameIndex: 80
       additiveSortOrder: 0
       cellRect:
@@ -5079,7 +5080,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ca78137aa991b2141ac225f4279e0aeb
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_81
+    - name: Frame_81
       frameIndex: 81
       additiveSortOrder: 0
       cellRect:
@@ -5088,7 +5089,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 14489c34ce94276409df11a67a402c19
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_82
+    - name: Frame_82
       frameIndex: 82
       additiveSortOrder: 0
       cellRect:
@@ -5097,7 +5098,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: efc3e1de80badcf4b96b30b6a095ac25
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_83
+    - name: Frame_83
       frameIndex: 83
       additiveSortOrder: 0
       cellRect:
@@ -5106,7 +5107,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a3c12d79febbfe54ca4b1023b176efd7
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_84
+    - name: Frame_84
       frameIndex: 84
       additiveSortOrder: 0
       cellRect:
@@ -5115,7 +5116,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5e11b44d47faba5418a0bd8ae28e68b2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_85
+    - name: Frame_85
       frameIndex: 85
       additiveSortOrder: 0
       cellRect:
@@ -5124,7 +5125,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 80cf7b1f9f01ed04db7c5b4f12052a52
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_86
+    - name: Frame_86
       frameIndex: 86
       additiveSortOrder: 0
       cellRect:
@@ -5133,7 +5134,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 3608708e3a1a5784a861e1fd93845b71
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_87
+    - name: Frame_87
       frameIndex: 87
       additiveSortOrder: 0
       cellRect:
@@ -5142,7 +5143,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 38f7d5e406e3be246b94e8678353e726
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_88
+    - name: Frame_88
       frameIndex: 88
       additiveSortOrder: 0
       cellRect:
@@ -5151,7 +5152,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a51d2e46b6796d04cb7a52e2b2ddd257
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_89
+    - name: Frame_89
       frameIndex: 89
       additiveSortOrder: 0
       cellRect:
@@ -5160,7 +5161,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d46021418360a3e4292a79b103748077
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_90
+    - name: Frame_90
       frameIndex: 90
       additiveSortOrder: 0
       cellRect:
@@ -5169,7 +5170,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ad66f438b848cfa46b2bb24689ae82d0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_91
+    - name: Frame_91
       frameIndex: 91
       additiveSortOrder: 0
       cellRect:
@@ -5178,7 +5179,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 36ae6a30dd63cf9458952a59a0d9a137
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_92
+    - name: Frame_92
       frameIndex: 92
       additiveSortOrder: 0
       cellRect:
@@ -5187,7 +5188,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7f0995501617a294393dabda2b629bf8
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_93
+    - name: Frame_93
       frameIndex: 93
       additiveSortOrder: 0
       cellRect:
@@ -5196,7 +5197,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 8d3a7e21b501a7346bfce2b8c86c6edb
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_94
+    - name: Frame_94
       frameIndex: 94
       additiveSortOrder: 0
       cellRect:
@@ -5205,7 +5206,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2b59f8f0b67b37d4f9dcba9be73c22ca
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_95
+    - name: Frame_95
       frameIndex: 95
       additiveSortOrder: 0
       cellRect:
@@ -5214,7 +5215,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 31fc2aea92cabb447900c64e13d8515e
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_96
+    - name: Frame_96
       frameIndex: 96
       additiveSortOrder: 0
       cellRect:
@@ -5223,7 +5224,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 48e39147143fe984781cf27c69e45056
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_97
+    - name: Frame_97
       frameIndex: 97
       additiveSortOrder: 0
       cellRect:
@@ -5232,7 +5233,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 90361b7604fa7c54f9c6109a46a2d9b2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_98
+    - name: Frame_98
       frameIndex: 98
       additiveSortOrder: 0
       cellRect:
@@ -5241,7 +5242,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 0f687978494ac9e47929531b16633d8d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_99
+    - name: Frame_99
       frameIndex: 99
       additiveSortOrder: 0
       cellRect:
@@ -5250,7 +5251,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f3aae9f5d69d93c4aad1a03acb349c57
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_100
+    - name: Frame_100
       frameIndex: 100
       additiveSortOrder: 0
       cellRect:
@@ -5259,7 +5260,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ed5854b233cee6f448ceda1af1217d87
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_101
+    - name: Frame_101
       frameIndex: 101
       additiveSortOrder: 0
       cellRect:
@@ -5268,7 +5269,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c3aa8599961e9ee4788f20558c3905ab
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_102
+    - name: Frame_102
       frameIndex: 102
       additiveSortOrder: 0
       cellRect:
@@ -5277,7 +5278,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c21e37674c666ff49b35cccc0d86685a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_103
+    - name: Frame_103
       frameIndex: 103
       additiveSortOrder: 0
       cellRect:
@@ -5286,7 +5287,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2c31a45ee0bb4204085d0b7f4d7f99b4
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_104
+    - name: Frame_104
       frameIndex: 104
       additiveSortOrder: 0
       cellRect:
@@ -5295,7 +5296,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 47bf41eac18770546b35c480a1804d07
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_105
+    - name: Frame_105
       frameIndex: 105
       additiveSortOrder: 0
       cellRect:
@@ -5304,7 +5305,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 519eb3172b084ae46bd42d35aded3735
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_106
+    - name: Frame_106
       frameIndex: 106
       additiveSortOrder: 0
       cellRect:
@@ -5313,7 +5314,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7942c04e73d2ef14d91e3ca3a510f6f9
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_107
+    - name: Frame_107
       frameIndex: 107
       additiveSortOrder: 0
       cellRect:
@@ -5322,7 +5323,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d6627a4d23b125642985a2a97b947a58
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_108
+    - name: Frame_108
       frameIndex: 108
       additiveSortOrder: 0
       cellRect:
@@ -5331,7 +5332,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f75aa9b73a9a1c54a95f562ad06532e7
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_109
+    - name: Frame_109
       frameIndex: 109
       additiveSortOrder: 0
       cellRect:
@@ -5340,7 +5341,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f00337d36868a5b4e964716992d65209
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_110
+    - name: Frame_110
       frameIndex: 110
       additiveSortOrder: 0
       cellRect:
@@ -5349,7 +5350,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1a8dbe4ec9b111e4699e5731608f05ce
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_111
+    - name: Frame_111
       frameIndex: 111
       additiveSortOrder: 0
       cellRect:
@@ -5358,7 +5359,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a132bc8f734ea9841bcb56dc245cf1aa
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_112
+    - name: Frame_112
       frameIndex: 112
       additiveSortOrder: 0
       cellRect:
@@ -5367,7 +5368,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 8679198f4f46b51499730d41b058aa96
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_113
+    - name: Frame_113
       frameIndex: 113
       additiveSortOrder: 0
       cellRect:
@@ -5376,7 +5377,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a41cc43baad61164fa60107a9df7e5c3
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_114
+    - name: Frame_114
       frameIndex: 114
       additiveSortOrder: 0
       cellRect:
@@ -5385,7 +5386,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b927ec8307cda7e49be689e372724756
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_115
+    - name: Frame_115
       frameIndex: 115
       additiveSortOrder: 0
       cellRect:
@@ -5394,7 +5395,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: cf6d35844365ad742876788926b91146
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_116
+    - name: Frame_116
       frameIndex: 116
       additiveSortOrder: 0
       cellRect:
@@ -5403,7 +5404,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d32e8a3427f9ba7409fb3dd86b856fa5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_117
+    - name: Frame_117
       frameIndex: 117
       additiveSortOrder: 0
       cellRect:
@@ -5412,7 +5413,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 435dc5086e7534b4195e39a90b0ab3f1
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_118
+    - name: Frame_118
       frameIndex: 118
       additiveSortOrder: 0
       cellRect:
@@ -5421,7 +5422,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: e745a14d204e82f47b78ab4c91e1b7f1
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_119
+    - name: Frame_119
       frameIndex: 119
       additiveSortOrder: 0
       cellRect:
@@ -5430,7 +5431,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 4155a9b30a262da458bac7bb1a491e8d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_120
+    - name: Frame_120
       frameIndex: 120
       additiveSortOrder: 0
       cellRect:
@@ -5439,7 +5440,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 15f104ff0e430f94db5cce04eb2fae72
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_121
+    - name: Frame_121
       frameIndex: 121
       additiveSortOrder: 0
       cellRect:
@@ -5448,7 +5449,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: df0953087ed806644956afc0d4d8b900
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_122
+    - name: Frame_122
       frameIndex: 122
       additiveSortOrder: 0
       cellRect:
@@ -5457,7 +5458,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d95efa9f3ab7c474b95b71fa81a2faad
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_123
+    - name: Frame_123
       frameIndex: 123
       additiveSortOrder: 0
       cellRect:
@@ -5466,7 +5467,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2d46ed76f57c8e745886c6e975f1a2fc
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_124
+    - name: Frame_124
       frameIndex: 124
       additiveSortOrder: 0
       cellRect:
@@ -5475,7 +5476,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 6e3dc9f835573984b83072065e9c7492
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_125
+    - name: Frame_125
       frameIndex: 125
       additiveSortOrder: 0
       cellRect:
@@ -5484,7 +5485,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b8f8201aef4838e4cbe0e93abfe6ec97
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_126
+    - name: Frame_126
       frameIndex: 126
       additiveSortOrder: 0
       cellRect:
@@ -5493,7 +5494,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7f3c8b2c44633e641913e720a7f5c931
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_127
+    - name: Frame_127
       frameIndex: 127
       additiveSortOrder: 0
       cellRect:
@@ -5502,7 +5503,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 9d1615ec94194b5478548aa3a90afa4a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_128
+    - name: Frame_128
       frameIndex: 128
       additiveSortOrder: 0
       cellRect:
@@ -5511,7 +5512,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5b85df2d3a5a05740896a16f1348fa81
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_129
+    - name: Frame_129
       frameIndex: 129
       additiveSortOrder: 0
       cellRect:
@@ -5520,7 +5521,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ae2385140fff14c46869856c694e0cb3
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_130
+    - name: Frame_130
       frameIndex: 130
       additiveSortOrder: 0
       cellRect:
@@ -5529,7 +5530,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 17faeee2c751d4b41a94f61ba0ac45ca
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_131
+    - name: Frame_131
       frameIndex: 131
       additiveSortOrder: 0
       cellRect:
@@ -5538,7 +5539,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: d16f3069862060c47a570a0bafff011d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_132
+    - name: Frame_132
       frameIndex: 132
       additiveSortOrder: 0
       cellRect:
@@ -5547,7 +5548,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: feb8bd14e3e246843b41c992a0680d8a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_133
+    - name: Frame_133
       frameIndex: 133
       additiveSortOrder: 0
       cellRect:
@@ -5556,7 +5557,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 8a5329bc0ffd0af499bbc1fe3b4772fe
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_134
+    - name: Frame_134
       frameIndex: 134
       additiveSortOrder: 0
       cellRect:
@@ -5565,7 +5566,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: aa5173b22a8f2864bbd45104221ab888
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_135
+    - name: Frame_135
       frameIndex: 135
       additiveSortOrder: 0
       cellRect:
@@ -5574,7 +5575,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: edf9f614fa65d3546bb7a5f6ad941cc2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_136
+    - name: Frame_136
       frameIndex: 136
       additiveSortOrder: 0
       cellRect:
@@ -5583,7 +5584,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 62bc646a350774245b32ed9db22e83cd
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_137
+    - name: Frame_137
       frameIndex: 137
       additiveSortOrder: 0
       cellRect:
@@ -5592,7 +5593,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1a6e29c74c3b70144a96d86c998cd83f
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_138
+    - name: Frame_138
       frameIndex: 138
       additiveSortOrder: 0
       cellRect:
@@ -5601,7 +5602,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 0244a86c318fd6d4ba9626f90a5d9ef5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_139
+    - name: Frame_139
       frameIndex: 139
       additiveSortOrder: 0
       cellRect:
@@ -5610,7 +5611,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5aef48b80bcb1504982228f952cbdbe5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_140
+    - name: Frame_140
       frameIndex: 140
       additiveSortOrder: 0
       cellRect:
@@ -5619,7 +5620,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 34b5a49df0cd0c546842503e14cd3e49
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_141
+    - name: Frame_141
       frameIndex: 141
       additiveSortOrder: 0
       cellRect:
@@ -5628,7 +5629,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 56074048aa9b28242887cbfefde931db
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_142
+    - name: Frame_142
       frameIndex: 142
       additiveSortOrder: 0
       cellRect:
@@ -5637,7 +5638,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: eae24b508d8656446aaa756ea17d7c21
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_143
+    - name: Frame_143
       frameIndex: 143
       additiveSortOrder: 0
       cellRect:
@@ -5646,7 +5647,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 9aaff704a6d696647b32c11c92ad059a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_144
+    - name: Frame_144
       frameIndex: 144
       additiveSortOrder: 0
       cellRect:
@@ -5655,7 +5656,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 84975eacf06ef9d42a20c6d6fcbd4cc4
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_145
+    - name: Frame_145
       frameIndex: 145
       additiveSortOrder: 0
       cellRect:
@@ -5664,7 +5665,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 0793be31251f16a43b49aa0f034c46b3
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_146
+    - name: Frame_146
       frameIndex: 146
       additiveSortOrder: 0
       cellRect:
@@ -5673,7 +5674,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f6ccdaa1aabe3554b8e2451740c1aa71
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_147
+    - name: Frame_147
       frameIndex: 147
       additiveSortOrder: 0
       cellRect:
@@ -5682,7 +5683,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2e59c7e4a63665c4b8c5915c5fcee117
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_148
+    - name: Frame_148
       frameIndex: 148
       additiveSortOrder: 0
       cellRect:
@@ -5691,7 +5692,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 588952f3f0dba5749a3041a74660c783
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_149
+    - name: Frame_149
       frameIndex: 149
       additiveSortOrder: 0
       cellRect:
@@ -5700,7 +5701,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 54b7c46e4f13b94419d5090774c2905f
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_150
+    - name: Frame_150
       frameIndex: 150
       additiveSortOrder: 0
       cellRect:
@@ -5709,7 +5710,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: b695d2358720f1740aa2e916155308da
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_151
+    - name: Frame_151
       frameIndex: 151
       additiveSortOrder: 0
       cellRect:
@@ -5718,7 +5719,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1098e87d79202ec43a66e13618e6543e
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_152
+    - name: Frame_152
       frameIndex: 152
       additiveSortOrder: 0
       cellRect:
@@ -5727,7 +5728,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ba63499c56e6eb34e934791809a9866c
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_153
+    - name: Frame_153
       frameIndex: 153
       additiveSortOrder: 0
       cellRect:
@@ -5736,7 +5737,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5e85180b588bcf646bc289ed06dad117
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_154
+    - name: Frame_154
       frameIndex: 154
       additiveSortOrder: 0
       cellRect:
@@ -5745,7 +5746,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f5a3bea92cac37140b051b63957c4e36
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_155
+    - name: Frame_155
       frameIndex: 155
       additiveSortOrder: 0
       cellRect:
@@ -5754,7 +5755,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: e608b15c4f765a74f9dbc2e8c9b2a1e9
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_156
+    - name: Frame_156
       frameIndex: 156
       additiveSortOrder: 0
       cellRect:
@@ -5763,7 +5764,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 67ca665e59c25314397f58251b4f9969
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_157
+    - name: Frame_157
       frameIndex: 157
       additiveSortOrder: 0
       cellRect:
@@ -5772,7 +5773,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 9b629728d3d68aa4b84b0348172aa646
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_158
+    - name: Frame_158
       frameIndex: 158
       additiveSortOrder: 0
       cellRect:
@@ -5781,7 +5782,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 55f3ff78d268f9b42862779a5fdb1f46
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_159
+    - name: Frame_159
       frameIndex: 159
       additiveSortOrder: 0
       cellRect:
@@ -5790,7 +5791,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a401931e4adfb8642af28a541f1d38cd
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_160
+    - name: Frame_160
       frameIndex: 160
       additiveSortOrder: 0
       cellRect:
@@ -5799,7 +5800,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: feee5457f5a36c647abbc00f456851e8
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_161
+    - name: Frame_161
       frameIndex: 161
       additiveSortOrder: 0
       cellRect:
@@ -5808,7 +5809,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 502d820035937c44d8356c3693404c75
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_162
+    - name: Frame_162
       frameIndex: 162
       additiveSortOrder: 0
       cellRect:
@@ -5817,7 +5818,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 44631dc716ff4374c93c571ebc6091e5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_163
+    - name: Frame_163
       frameIndex: 163
       additiveSortOrder: 0
       cellRect:
@@ -5826,7 +5827,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 82d6551664510634b9aef26f74e6b432
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_164
+    - name: Frame_164
       frameIndex: 164
       additiveSortOrder: 0
       cellRect:
@@ -5835,7 +5836,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c453be730f3fcd14bacf469c298931ef
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_165
+    - name: Frame_165
       frameIndex: 165
       additiveSortOrder: 0
       cellRect:
@@ -5844,7 +5845,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7f3fffad2f1c0c64780f3bc4f03404fb
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_166
+    - name: Frame_166
       frameIndex: 166
       additiveSortOrder: 0
       cellRect:
@@ -5853,7 +5854,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 0d85cfd52ba8243418af5d0df5f4ad97
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_167
+    - name: Frame_167
       frameIndex: 167
       additiveSortOrder: 0
       cellRect:
@@ -5862,7 +5863,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 5ea0756563bed16468cd6c7306658e80
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_168
+    - name: Frame_168
       frameIndex: 168
       additiveSortOrder: 0
       cellRect:
@@ -5871,7 +5872,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: be98259d6fac2034cabb0fe045cf705f
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_169
+    - name: Frame_169
       frameIndex: 169
       additiveSortOrder: 0
       cellRect:
@@ -5880,7 +5881,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 13613715959b9fb459214e85023f99ff
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_170
+    - name: Frame_170
       frameIndex: 170
       additiveSortOrder: 0
       cellRect:
@@ -5889,7 +5890,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 107ff5e2818f4df4ca6d538e68dc6352
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_171
+    - name: Frame_171
       frameIndex: 171
       additiveSortOrder: 0
       cellRect:
@@ -5898,7 +5899,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 51596711ba0a36a4481b6a2d83101307
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_172
+    - name: Frame_172
       frameIndex: 172
       additiveSortOrder: 0
       cellRect:
@@ -5907,7 +5908,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 7c0d26779eb07194090263dd287ec930
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_173
+    - name: Frame_173
       frameIndex: 173
       additiveSortOrder: 0
       cellRect:
@@ -5916,7 +5917,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: a58d4911fa4e99a4b80f5dceb69e3324
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_174
+    - name: Frame_174
       frameIndex: 174
       additiveSortOrder: 0
       cellRect:
@@ -5925,7 +5926,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c1fc6cdf8cf12014b99f475b3a98a968
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_175
+    - name: Frame_175
       frameIndex: 175
       additiveSortOrder: 0
       cellRect:
@@ -5934,7 +5935,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c7b337ee648e5a542b6fe5168c43ad1e
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_176
+    - name: Frame_176
       frameIndex: 176
       additiveSortOrder: 0
       cellRect:
@@ -5943,7 +5944,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c19da3c23b7407f49be4238db56351b0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_177
+    - name: Frame_177
       frameIndex: 177
       additiveSortOrder: 0
       cellRect:
@@ -5952,7 +5953,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 09105dd01905e5545a50071264053ba6
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_178
+    - name: Frame_178
       frameIndex: 178
       additiveSortOrder: 0
       cellRect:
@@ -5961,7 +5962,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 9568918ec81165748a6f0b75c194abd2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_179
+    - name: Frame_179
       frameIndex: 179
       additiveSortOrder: 0
       cellRect:
@@ -5970,7 +5971,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: cd20980eea3c5e343b56ca993cee9925
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_180
+    - name: Frame_180
       frameIndex: 180
       additiveSortOrder: 0
       cellRect:
@@ -5979,7 +5980,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: c02856f7829288e4981c8e630502b24a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_181
+    - name: Frame_181
       frameIndex: 181
       additiveSortOrder: 0
       cellRect:
@@ -5988,7 +5989,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 09c894a9c6dd16b4f957e1b715449ef3
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_182
+    - name: Frame_182
       frameIndex: 182
       additiveSortOrder: 0
       cellRect:
@@ -5997,7 +5998,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 27babd6a2ffd8134697494ed236d175b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_183
+    - name: Frame_183
       frameIndex: 183
       additiveSortOrder: 0
       cellRect:
@@ -6006,7 +6007,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 229699d58bb999c4c95011a63c26dc1a
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_184
+    - name: Frame_184
       frameIndex: 184
       additiveSortOrder: 0
       cellRect:
@@ -6015,7 +6016,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 39e0c834f9d16b745a0edc2bc844a231
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_185
+    - name: Frame_185
       frameIndex: 185
       additiveSortOrder: 0
       cellRect:
@@ -6024,7 +6025,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 2e94b4415b29f9343af70e5fbb3e4444
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_186
+    - name: Frame_186
       frameIndex: 186
       additiveSortOrder: 0
       cellRect:
@@ -6033,7 +6034,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f3a1ddf038d661248aab51b96494c992
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_187
+    - name: Frame_187
       frameIndex: 187
       additiveSortOrder: 0
       cellRect:
@@ -6042,7 +6043,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ce2ec4afe5bc31845b1929dfdb146640
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_188
+    - name: Frame_188
       frameIndex: 188
       additiveSortOrder: 0
       cellRect:
@@ -6051,7 +6052,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: f36c2a9c2e0c4064a999d2685999c394
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_189
+    - name: Frame_189
       frameIndex: 189
       additiveSortOrder: 0
       cellRect:
@@ -6060,7 +6061,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 612941ad030e1b94eb02abdc827e3979
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_190
+    - name: Frame_190
       frameIndex: 190
       additiveSortOrder: 0
       cellRect:
@@ -6069,7 +6070,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: aad0228c116b845459077720fc146ec5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_191
+    - name: Frame_191
       frameIndex: 191
       additiveSortOrder: 0
       cellRect:
@@ -6078,7 +6079,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 85ad7ab38d8fd14449cb21bae6b7e6f5
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_192
+    - name: Frame_192
       frameIndex: 192
       additiveSortOrder: 0
       cellRect:
@@ -6087,7 +6088,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 6f4943c12d06b234f8b9941eab273bd8
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_193
+    - name: Frame_193
       frameIndex: 193
       additiveSortOrder: 0
       cellRect:
@@ -6096,7 +6097,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 843bda6387ce99245991b48f615c500b
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_194
+    - name: Frame_194
       frameIndex: 194
       additiveSortOrder: 0
       cellRect:
@@ -6105,7 +6106,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: eb95098ca906c264dabfa423ebdb6336
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_195
+    - name: Frame_195
       frameIndex: 195
       additiveSortOrder: 0
       cellRect:
@@ -6114,7 +6115,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 38036c3b36441b5449061953af8f5ff9
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_196
+    - name: Frame_196
       frameIndex: 196
       additiveSortOrder: 0
       cellRect:
@@ -6123,7 +6124,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 4fc884e2c89a8aa418d4d549cec11ad2
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_197
+    - name: Frame_197
       frameIndex: 197
       additiveSortOrder: 0
       cellRect:
@@ -6132,7 +6133,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: dd938608b35198a45b2d513c80d43bf0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_198
+    - name: Frame_198
       frameIndex: 198
       additiveSortOrder: 0
       cellRect:
@@ -6141,7 +6142,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 496da100ea960d04e993c9303c9e76bf
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_199
+    - name: Frame_199
       frameIndex: 199
       additiveSortOrder: 0
       cellRect:
@@ -6150,7 +6151,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: ef72fd391e87ce94fabbbbb7c34fd9c9
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_200
+    - name: Frame_200
       frameIndex: 200
       additiveSortOrder: 0
       cellRect:
@@ -6159,7 +6160,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 1fa81ac041a6d294ab9b48af62e9c088
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_201
+    - name: Frame_201
       frameIndex: 201
       additiveSortOrder: 0
       cellRect:
@@ -6168,7 +6169,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 9887a70accb973d40be48ae754524cec
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_202
+    - name: Frame_202
       frameIndex: 202
       additiveSortOrder: 0
       cellRect:
@@ -6177,7 +6178,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 49d80cde338498f438d290eb56422827
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_203
+    - name: Frame_203
       frameIndex: 203
       additiveSortOrder: 0
       cellRect:
@@ -6186,7 +6187,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 31f124b577336fc4fb8a2794a70e9328
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_204
+    - name: Frame_204
       frameIndex: 204
       additiveSortOrder: 0
       cellRect:
@@ -6195,7 +6196,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 3a4df21ecff90354fb34ab2667d62db7
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_205
+    - name: Frame_205
       frameIndex: 205
       additiveSortOrder: 0
       cellRect:
@@ -6204,7 +6205,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 0f22ac123b6645146889949cdea48079
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_206
+    - name: Frame_206
       frameIndex: 206
       additiveSortOrder: 0
       cellRect:
@@ -6213,7 +6214,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 612c1e53a627a344b90af7485e03c4b0
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_207
+    - name: Frame_207
       frameIndex: 207
       additiveSortOrder: 0
       cellRect:
@@ -6222,7 +6223,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: dd188c2af3acc8f4eb346d6470ad7abd
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_208
+    - name: Frame_208
       frameIndex: 208
       additiveSortOrder: 0
       cellRect:
@@ -6231,7 +6232,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 9f5559dc259c35843a2bc129b3ffac2d
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_209
+    - name: Frame_209
       frameIndex: 209
       additiveSortOrder: 0
       cellRect:
@@ -6240,7 +6241,7 @@ ScriptedImporter:
         width: 136
         height: 128
       spriteId: 77462376142f4334cac35c224003d2d4
-    - name: sunnyside_world_chatacter_anim_GOBLIN_Frame_210
+    - name: Frame_210
       frameIndex: 210
       additiveSortOrder: 0
       cellRect:
@@ -6268,3 +6269,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 64}
+  previousTextureSize: {x: 2048, y: 4096}
