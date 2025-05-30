@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartTime: 0
   EnemiesToSpawn:
+  - {fileID: 11400000, guid: 23415a3d709ebe74a863858f718b8e3b, type: 2}
   - {fileID: 11400000, guid: 645bb606af71aa746b2ffe065dff1426, type: 2}

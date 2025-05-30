@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave1_ScoutSpawn
   m_EditorClassIdentifier: 
   EnemyType: Scout
-  Count: 3
+  Count: 6
   SpawnInterval: 1.7

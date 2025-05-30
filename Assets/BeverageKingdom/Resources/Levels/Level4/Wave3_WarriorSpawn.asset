@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyType: Warrior
   Count: 10
-  SpawnInterval: 1.7
+  SpawnInterval: 1.55

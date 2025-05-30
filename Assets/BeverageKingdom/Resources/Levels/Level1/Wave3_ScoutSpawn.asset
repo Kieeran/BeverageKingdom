@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f4ff769f5c1fd4db7993df4fa272fe, type: 3}
-  m_Name: Wave1_WarriorSpawn 1
+  m_Name: Wave3_ScoutSpawn
   m_EditorClassIdentifier: 
-  EnemyType: boss
-  Count: 10
-  SpawnInterval: 0.5
+  EnemyType: Scout
+  Count: 2
+  SpawnInterval: 2

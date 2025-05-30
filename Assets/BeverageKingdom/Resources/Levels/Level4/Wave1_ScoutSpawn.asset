@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyType: Scout
   Count: 8
-  SpawnInterval: 1.6
+  SpawnInterval: 1.55
