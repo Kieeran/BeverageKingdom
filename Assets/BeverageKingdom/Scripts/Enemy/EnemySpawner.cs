@@ -54,10 +54,19 @@ public class EnemySpawner : Spawner
         var scoutData = Resources.Load<EnemySO>("Data/ScoutEnemy");
         var warriorData = Resources.Load<EnemySO>("Data/WarriorEnemy");
         var heavyData = Resources.Load<EnemySO>("Data/HeavyEnemy");
+        var Boss = Resources.Load<EnemySO>("Data/Boss");
+        var Extra = Resources.Load<EnemySO>("Data/Extra");
+  
+    
+
 
         if (scoutData != null) _enemyDataCache["scout"] = scoutData;
         if (warriorData != null) _enemyDataCache["warrior"] = warriorData;
         if (heavyData != null) _enemyDataCache["heavy"] = heavyData;
+        if (Boss!= null) _enemyDataCache["boss"] = Boss;
+        if (Extra!= null) _enemyDataCache["extra"] = Extra;
+
+   
 
         if (_enemyDataCache.Count == 0)
         {

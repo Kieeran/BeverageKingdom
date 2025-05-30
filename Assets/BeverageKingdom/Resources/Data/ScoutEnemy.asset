@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   enemyName: Scout
-  maxHealth: 4
-  speed: 4.5
-  dameAttack: 1
+  maxHealth: 5
+  speed: 3.8
+  dameAttack: 2
   moneyForDead: 2
   attackRange: 1.5
   attackCoolDown: 0.8

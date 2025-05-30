@@ -8,7 +8,7 @@ public class ItemSpawner : Spawner
     protected override void Awake()
     {
         Instance = this;
-        spawnRate = 90;
+        spawnRate = 30;
     }
 
     public void Spawn(Vector3 position, Quaternion rotation)

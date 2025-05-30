@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   enemyName: Warrior
-  maxHealth: 8
+  maxHealth: 10
   speed: 3
-  dameAttack: 2
+  dameAttack: 5
   moneyForDead: 3
   attackRange: 2
   attackCoolDown: 1

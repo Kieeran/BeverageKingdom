@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   enemyName: Heavy
-  maxHealth: 12
-  speed: 1.5
-  dameAttack: 3
+  maxHealth: 20
+  speed: 2.5
+  dameAttack: 7
   moneyForDead: 5
   attackRange: 2.5
   attackCoolDown: 1.5
   enemyScale: {x: 1.5, y: 1.5, z: 1.5}
-  enemyColor: {r: 0.28126293, g: 0.06448024, b: 0.6509434, a: 1}
+  enemyColor: {r: 0.10144645, g: 0.7075472, b: 0.043387346, a: 1}
