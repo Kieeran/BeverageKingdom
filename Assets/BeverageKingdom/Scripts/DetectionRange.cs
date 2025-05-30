@@ -8,11 +8,10 @@ public class DetectionRange : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Debug.Log("asdasd");
-
-        if (collision.CompareTag("Range"))
+        if (collision.CompareTag("BB"))
         {
+            Debug.Log("asdasd");
+
             OnInRange?.Invoke(collision.transform.parent);
         }
     }

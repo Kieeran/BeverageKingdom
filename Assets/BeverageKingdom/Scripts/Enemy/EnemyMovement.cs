@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         Init();
+        MoveSpeed = 3;
     }
 
     private void Init()
@@ -48,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
          {
              Vector3 directionToPlayer = (Target.position - transform.position).normalized;
              transform.parent.position += directionToPlayer * MoveSpeed * Time.deltaTime;
-             SetStage(2);
+             SetStage(3);
          }
          else
          {
