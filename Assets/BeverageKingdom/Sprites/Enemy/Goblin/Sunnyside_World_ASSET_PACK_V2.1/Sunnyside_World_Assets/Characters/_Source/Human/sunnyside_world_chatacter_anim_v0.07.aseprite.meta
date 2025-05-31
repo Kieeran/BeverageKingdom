@@ -122,27 +122,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_92
-    originalName: 
-    pivot: {x: 0.15217394, y: -3}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 63
-      y: 1001
-      width: 46
-      height: 19
-    spriteID: 0a2f8fd0442f2d147ae9d18a40eee7af
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 63, y: 1001}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_93
+  - name: Frame_93
     originalName: 
     pivot: {x: 0.10638295, y: -2.5909092}
     alignment: 9
@@ -153,7 +133,7 @@ ScriptedImporter:
       y: 203
       width: 47
       height: 22
-    spriteID: 66602857aa924b24e8b2c3c1c6712919
+    spriteID: d8803c4c6d1d79d4ea298b458df4e365
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -162,7 +142,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 203}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_94
+  - name: Frame_94
     originalName: 
     pivot: {x: 0.1020408, y: -2.375}
     alignment: 9
@@ -173,7 +153,7 @@ ScriptedImporter:
       y: 969
       width: 49
       height: 24
-    spriteID: db0c1cb8ece7c7d4189c0bb42ef95cf2
+    spriteID: 735d631e08c934643a52c3b68074495c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -182,7 +162,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 969}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_102
+  - name: Frame_102
     originalName: 
     pivot: {x: 0.15217394, y: -2.8500001}
     alignment: 9
@@ -193,7 +173,7 @@ ScriptedImporter:
       y: 324
       width: 46
       height: 20
-    spriteID: f99e9d09af5b04e47beca163d60c865c
+    spriteID: f95a2f46105078243a678964b5bfbd97
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -202,7 +182,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 324}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_103
+  - name: Frame_103
     originalName: 
     pivot: {x: 0.10638295, y: -2.5909092}
     alignment: 9
@@ -213,7 +193,7 @@ ScriptedImporter:
       y: 233
       width: 47
       height: 22
-    spriteID: 80bea97fce5128646add7da8d1b4efa1
+    spriteID: e33c009c4997f444c8663d34fc77f9eb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -222,7 +202,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 233}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_104
+  - name: Frame_104
     originalName: 
     pivot: {x: 0.1020408, y: -2.375}
     alignment: 9
@@ -233,7 +213,7 @@ ScriptedImporter:
       y: 4
       width: 49
       height: 24
-    spriteID: 0da4379559c62f3469573c14de8623b4
+    spriteID: f35f6a0da79ca084097112cbf3c3ef52
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -242,7 +222,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_136
+  - name: Frame_136
     originalName: 
     pivot: {x: 0.13636367, y: -2.153846}
     alignment: 9
@@ -253,7 +233,7 @@ ScriptedImporter:
       y: 36
       width: 44
       height: 26
-    spriteID: 733e68891c0fd154e8f4bdbc166b1f84
+    spriteID: e78ec2a779fc6f84b96f5c4dd7db174a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -262,7 +242,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 36}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_137
+  - name: Frame_137
     originalName: 
     pivot: {x: 0.10638295, y: -2.8}
     alignment: 9
@@ -273,7 +253,7 @@ ScriptedImporter:
       y: 296
       width: 47
       height: 20
-    spriteID: 95ce82bb14edd554186ca79534b170ba
+    spriteID: c3392009ddb2f5f48bde1a6c008ad27e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -282,7 +262,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 296}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_138
+  - name: Frame_138
     originalName: 
     pivot: {x: 0.09999998, y: -2.5909092}
     alignment: 9
@@ -293,7 +273,7 @@ ScriptedImporter:
       y: 4
       width: 50
       height: 22
-    spriteID: b13861f5c4a32e743b3ecfa705366bc6
+    spriteID: 5417f77f0a98e5444b8a4ea219e16fba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -302,7 +282,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_139
+  - name: Frame_139
     originalName: 
     pivot: {x: 0.115384646, y: -2.375}
     alignment: 9
@@ -313,7 +293,7 @@ ScriptedImporter:
       y: 865
       width: 52
       height: 24
-    spriteID: f5c9f633ca4281d4587783381e02d566
+    spriteID: a4a93a3ca5036a34a96b56d4022eb420
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -322,7 +302,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 865}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_146
+  - name: Frame_146
     originalName: 
     pivot: {x: 0.09302325, y: -1.8064514}
     alignment: 9
@@ -333,7 +313,7 @@ ScriptedImporter:
       y: 826
       width: 43
       height: 31
-    spriteID: d74c2fdde5514874bb27f4d458409a35
+    spriteID: 33b0b87769fd7724d8f03cc75b6c9a00
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -342,7 +322,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 826}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_147
+  - name: Frame_147
     originalName: 
     pivot: {x: 0.08695652, y: -2.4347825}
     alignment: 9
@@ -353,7 +333,7 @@ ScriptedImporter:
       y: 139
       width: 46
       height: 23
-    spriteID: 1437a242ea6291b4ea6a86f87eb2ced5
+    spriteID: 40a291c97f443d6428e7502ecebda980
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -362,7 +342,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 139}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_148
+  - name: Frame_148
     originalName: 
     pivot: {x: 0.08333333, y: -2.2399998}
     alignment: 9
@@ -373,7 +353,7 @@ ScriptedImporter:
       y: 936
       width: 48
       height: 25
-    spriteID: a4b1ca6c4efaafd4aad8df8aad9286ff
+    spriteID: 57678db41779eff4287416f0119e1ca3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -382,7 +362,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 936}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_91
+  - name: Frame_91
     originalName: 
     pivot: {x: 0.4358974, y: -2.28}
     alignment: 9
@@ -393,7 +373,7 @@ ScriptedImporter:
       y: 263
       width: 39
       height: 25
-    spriteID: 365c224d382f3de4fa65cb97801c9c20
+    spriteID: 5100033cc790bd84d999a04e038a2838
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -402,7 +382,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 263}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_101
+  - name: Frame_101
     originalName: 
     pivot: {x: 0.40476185, y: -2.28}
     alignment: 9
@@ -413,7 +393,7 @@ ScriptedImporter:
       y: 170
       width: 42
       height: 25
-    spriteID: 6924d50171d57814693e4edc1a17b889
+    spriteID: bcfa6a24dafda354abf1a0b584ce8c80
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -422,7 +402,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 170}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_145
+  - name: Frame_145
     originalName: 
     pivot: {x: 0.3589744, y: -1.8387096}
     alignment: 9
@@ -433,7 +413,7 @@ ScriptedImporter:
       y: 897
       width: 39
       height: 31
-    spriteID: 8c3af4117c540294b805d08c3bda51d7
+    spriteID: 8c2dbac6df73e7e44bd9bbfe0e2dc754
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -442,7 +422,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 897}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_205
+  - name: Frame_205
     originalName: 
     pivot: {x: 0.2692308, y: -3}
     alignment: 9
@@ -453,7 +433,7 @@ ScriptedImporter:
       y: 4
       width: 26
       height: 19
-    spriteID: b281572081caa34429238cc7ec4dbecb
+    spriteID: 7fc968ce581e1204faadcd5367a0e350
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -462,7 +442,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_206
+  - name: Frame_206
     originalName: 
     pivot: {x: 0.3214285, y: -2.375}
     alignment: 9
@@ -473,7 +453,7 @@ ScriptedImporter:
       y: 479
       width: 28
       height: 24
-    spriteID: d4fa13691c752e9438c3e1e6dbae497e
+    spriteID: 9e6d0e1f46981d648b8dbf47a35023e7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -482,7 +462,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 479}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_207
+  - name: Frame_207
     originalName: 
     pivot: {x: 0.43478268, y: -2.1111112}
     alignment: 9
@@ -493,7 +473,7 @@ ScriptedImporter:
       y: 629
       width: 23
       height: 27
-    spriteID: 8d441e3659ce6d0418557c2ae9eae5f1
+    spriteID: 2134e9d1e38ab5a479723dd40143ca2e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -502,7 +482,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 629}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_133
+  - name: Frame_133
     originalName: 
     pivot: {x: 0.70370376, y: -2.4782608}
     alignment: 9
@@ -513,7 +493,7 @@ ScriptedImporter:
       y: 664
       width: 27
       height: 23
-    spriteID: b9621a9960b5c73459dc228cd0aacbda
+    spriteID: 3fde82344ddb57441b8d7e503f9f2f69
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -522,7 +502,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 664}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_134
+  - name: Frame_134
     originalName: 
     pivot: {x: 0.5925926, y: -1.9}
     alignment: 9
@@ -533,7 +513,7 @@ ScriptedImporter:
       y: 382
       width: 27
       height: 30
-    spriteID: 8c5d01f2ed806cd47bd4fca075cff6cb
+    spriteID: 586ea4cc5b351ec4dbe81c94b0ad82ac
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -542,7 +522,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 382}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_135
+  - name: Frame_135
     originalName: 
     pivot: {x: 0.28571427, y: -2.1923077}
     alignment: 9
@@ -553,7 +533,7 @@ ScriptedImporter:
       y: 105
       width: 42
       height: 26
-    spriteID: 6ee4b38b20ba5204b93a7c4fad603383
+    spriteID: 88725ece495c1244ca2c1706bfe4f089
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -562,7 +542,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 105}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_0
+  - name: Frame_0
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -573,7 +553,7 @@ ScriptedImporter:
       y: 651
       width: 16
       height: 18
-    spriteID: 44fb73e22260706418f8224e4854a26f
+    spriteID: 8bdc5e396a3ba2543a38f366246ed1e9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -582,7 +562,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 651}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_1
+  - name: Frame_1
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -593,7 +573,7 @@ ScriptedImporter:
       y: 677
       width: 16
       height: 18
-    spriteID: 391be1f87ed5faa4ebf7ac1c15ce73da
+    spriteID: c2499604ee5c1bf48a0766844272ff4c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -602,7 +582,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 677}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_2
+  - name: Frame_2
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -613,7 +593,7 @@ ScriptedImporter:
       y: 703
       width: 16
       height: 18
-    spriteID: a0c0f523a0838c74db44a10affc3e129
+    spriteID: 6dc823a3eae392a469ea5ee556735842
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -622,7 +602,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 703}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_3
+  - name: Frame_3
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -633,7 +613,7 @@ ScriptedImporter:
       y: 138
       width: 16
       height: 19
-    spriteID: 1e7b6a4d6f1d79740a2339ba6d86ab98
+    spriteID: 96ec3f29957a62147a03639e069a2a8a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -642,7 +622,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 138}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_4
+  - name: Frame_4
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -653,7 +633,7 @@ ScriptedImporter:
       y: 729
       width: 16
       height: 18
-    spriteID: f726299226539cd4190582eb412167b0
+    spriteID: bd2682a7d755a5e429761d92a7420104
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -662,7 +642,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 729}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_5
+  - name: Frame_5
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -673,7 +653,7 @@ ScriptedImporter:
       y: 755
       width: 16
       height: 18
-    spriteID: 1b76ddc840a8781469eb7af9d0f2a331
+    spriteID: 08910991c44f55f44b3dbe033116aa5b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -682,7 +662,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 755}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_6
+  - name: Frame_6
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -693,7 +673,7 @@ ScriptedImporter:
       y: 781
       width: 16
       height: 18
-    spriteID: ed240e6351ff588469e1e1834b077881
+    spriteID: 8243ab9ff04a6fe4da9c32cf89bc3be2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -702,7 +682,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 781}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_7
+  - name: Frame_7
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -713,7 +693,7 @@ ScriptedImporter:
       y: 165
       width: 16
       height: 19
-    spriteID: 568487c028f54154a80261828f47f2cf
+    spriteID: 68efe99c24281d94fad9d69879f2e5cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -722,7 +702,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 165}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_8
+  - name: Frame_8
     originalName: 
     pivot: {x: 0.38888893, y: -2.0357144}
     alignment: 9
@@ -733,7 +713,7 @@ ScriptedImporter:
       y: 483
       width: 18
       height: 28
-    spriteID: c1e8cd87b09e01f4bbfae047b483e470
+    spriteID: 836784bb7561f564093bf60a246a5886
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -742,7 +722,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 483}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_9
+  - name: Frame_9
     originalName: 
     pivot: {x: 0.38888893, y: -2.0357144}
     alignment: 9
@@ -753,7 +733,7 @@ ScriptedImporter:
       y: 601
       width: 18
       height: 28
-    spriteID: f7939b7c1b4da0c47b76883be4b286e4
+    spriteID: a7f0d1f94f1254f41b34d0a050e08dc5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -762,7 +742,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 601}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_10
+  - name: Frame_10
     originalName: 
     pivot: {x: 0.38888893, y: -2.1111112}
     alignment: 9
@@ -773,7 +753,7 @@ ScriptedImporter:
       y: 629
       width: 18
       height: 27
-    spriteID: 6dc0c9b9d8789d44a839999f318b35fc
+    spriteID: 1abf766a52a7daf4d8b1a6582e98ad27
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -782,7 +762,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 156, y: 629}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_11
+  - name: Frame_11
     originalName: 
     pivot: {x: 0.38888893, y: -1.9655173}
     alignment: 9
@@ -793,7 +773,7 @@ ScriptedImporter:
       y: 483
       width: 18
       height: 29
-    spriteID: d31e7cdc65417324ead20664bf990113
+    spriteID: f5f95c4c0acfd684a94b5825ccf59de8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -802,7 +782,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 483}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_12
+  - name: Frame_12
     originalName: 
     pivot: {x: 0.38888893, y: -2.0357144}
     alignment: 9
@@ -813,7 +793,7 @@ ScriptedImporter:
       y: 637
       width: 18
       height: 28
-    spriteID: c7e712b81cd1e1a46ade59b2d782ecf7
+    spriteID: 64c858039ef67ad43a6f00d174786d15
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -822,7 +802,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 637}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_13
+  - name: Frame_13
     originalName: 
     pivot: {x: 0.38888893, y: -2.1111112}
     alignment: 9
@@ -833,7 +813,7 @@ ScriptedImporter:
       y: 745
       width: 18
       height: 27
-    spriteID: 9cd5b3a5b5319734e9ac16cdd473d80d
+    spriteID: f0e24de4e3152fb4186ca18cc52ca404
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -842,7 +822,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 745}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_14
+  - name: Frame_14
     originalName: 
     pivot: {x: 0.38888893, y: -2.0357144}
     alignment: 9
@@ -853,7 +833,7 @@ ScriptedImporter:
       y: 673
       width: 18
       height: 28
-    spriteID: 4b7d8bf817d9029418a5226cb2e86e1e
+    spriteID: 9483c405220040843ba69321ed3db9b9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -862,7 +842,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 673}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_15
+  - name: Frame_15
     originalName: 
     pivot: {x: 0.38888893, y: -2.0357144}
     alignment: 9
@@ -873,7 +853,7 @@ ScriptedImporter:
       y: 709
       width: 18
       height: 28
-    spriteID: d5244e9b75f9ce240bf0a4f407fe4597
+    spriteID: bf335f926c70746449662e4d9a7a36d5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -882,7 +862,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 709}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_16
+  - name: Frame_16
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -893,7 +873,7 @@ ScriptedImporter:
       y: 192
       width: 16
       height: 19
-    spriteID: 7f774fc055401664690d0390833a2dae
+    spriteID: 6618a8617b1f2734c9a09c3609620848
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -902,7 +882,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 192}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_17
+  - name: Frame_17
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -913,7 +893,7 @@ ScriptedImporter:
       y: 219
       width: 16
       height: 19
-    spriteID: 89c3b211e4caadb43a1852d5c10f6387
+    spriteID: bf9e51649cbd29747b5b748b39cde6fc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -922,7 +902,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 219}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_18
+  - name: Frame_18
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -933,7 +913,7 @@ ScriptedImporter:
       y: 246
       width: 16
       height: 19
-    spriteID: eb12f98c342844447ac62dd9990cd039
+    spriteID: f19921accce799f45a658b80e29d8b3c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -942,7 +922,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 246}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_19
+  - name: Frame_19
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -953,7 +933,7 @@ ScriptedImporter:
       y: 807
       width: 16
       height: 18
-    spriteID: 95c2983805f31a846b774a51c57a8bc1
+    spriteID: 76460cf7d444b894cab000cd1fbec1de
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -962,7 +942,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 807}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_20
+  - name: Frame_20
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -973,7 +953,7 @@ ScriptedImporter:
       y: 833
       width: 16
       height: 18
-    spriteID: 494b14f7b5f579b489e68e74145960af
+    spriteID: 29a1feaeb91b6b947b2ba9f402137a18
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -982,7 +962,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 833}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_21
+  - name: Frame_21
     originalName: 
     pivot: {x: 0.43750006, y: -3.3529413}
     alignment: 9
@@ -993,7 +973,7 @@ ScriptedImporter:
       y: 989
       width: 16
       height: 17
-    spriteID: 53ec37364696eeb4495e710c77f07f71
+    spriteID: 2c448c8795525ab4f837694b0005224a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1002,7 +982,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 989}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_22
+  - name: Frame_22
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -1013,7 +993,7 @@ ScriptedImporter:
       y: 859
       width: 16
       height: 18
-    spriteID: eaf028edfa26e9047a5355dcf8435478
+    spriteID: 0b4b2ebb6a5205d4db0ae48d09f807c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1022,7 +1002,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 859}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_23
+  - name: Frame_23
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -1033,7 +1013,7 @@ ScriptedImporter:
       y: 885
       width: 16
       height: 18
-    spriteID: 755b2905518c97746804ec6597475026
+    spriteID: 621bce6af80db5b4f88edbaba25b7a1a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1042,7 +1022,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 885}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_24
+  - name: Frame_24
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1053,7 +1033,7 @@ ScriptedImporter:
       y: 273
       width: 16
       height: 19
-    spriteID: 4093a457f2183fc44a3db66c894d979f
+    spriteID: fec0df9a57884c54098f6184c97b9a9f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1062,7 +1042,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 273}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_25
+  - name: Frame_25
     originalName: 
     pivot: {x: 0.25925928, y: -2.6190479}
     alignment: 9
@@ -1073,7 +1053,7 @@ ScriptedImporter:
       y: 61
       width: 27
       height: 21
-    spriteID: ce92b14a05d5dac458e472026dd59a84
+    spriteID: c814dd74e3ce4e048ac73d64bb645402
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1082,7 +1062,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 61}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_26
+  - name: Frame_26
     originalName: 
     pivot: {x: 0.25, y: -2.8}
     alignment: 9
@@ -1093,7 +1073,7 @@ ScriptedImporter:
       y: 119
       width: 28
       height: 20
-    spriteID: 2d412694142490a479c2b3089e9e0cc1
+    spriteID: 15673a12cb2b80a498e3a71264242473
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1102,7 +1082,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 119}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_27
+  - name: Frame_27
     originalName: 
     pivot: {x: 0.23333335, y: -2.4545455}
     alignment: 9
@@ -1113,7 +1093,7 @@ ScriptedImporter:
       y: 511
       width: 30
       height: 22
-    spriteID: 6341e3d3cf5a5ed4eb46bba54d05bc94
+    spriteID: 3b6423f1ae55dcd448ed4a223cd7000c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1122,7 +1102,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 511}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_28
+  - name: Frame_28
     originalName: 
     pivot: {x: 0.21875003, y: -2.4545455}
     alignment: 9
@@ -1133,7 +1113,7 @@ ScriptedImporter:
       y: 420
       width: 32
       height: 22
-    spriteID: 2fce6020213946b439900395692da19f
+    spriteID: 9b6ff111a0d1c40459d0415e6fe66270
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1142,7 +1122,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 420}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_29
+  - name: Frame_29
     originalName: 
     pivot: {x: 0.21212123, y: -2.6190479}
     alignment: 9
@@ -1153,7 +1133,7 @@ ScriptedImporter:
       y: 450
       width: 33
       height: 21
-    spriteID: 4f9238818a358564e80740e10027893c
+    spriteID: 709f96e2ce68d9947aa5de848685e8b3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1162,7 +1142,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 450}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_30
+  - name: Frame_30
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1173,7 +1153,7 @@ ScriptedImporter:
       y: 300
       width: 16
       height: 19
-    spriteID: a068e430f0a6c9b45a71130d00fd544d
+    spriteID: 7302c9847129e2e47a8de23c53f8d265
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1182,7 +1162,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 300}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_31
+  - name: Frame_31
     originalName: 
     pivot: {x: 0.42857152, y: -3.3529413}
     alignment: 9
@@ -1193,7 +1173,7 @@ ScriptedImporter:
       y: 338
       width: 14
       height: 17
-    spriteID: 652692e70257fcf4987133aefb587860
+    spriteID: cc3783f5901230a439a0e22a65457452
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1202,7 +1182,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 218, y: 338}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_32
+  - name: Frame_32
     originalName: 
     pivot: {x: 0.49999994, y: -2.8500001}
     alignment: 9
@@ -1213,7 +1193,7 @@ ScriptedImporter:
       y: 392
       width: 18
       height: 20
-    spriteID: ea4a1d88cda35aa4b9e30ddae152e242
+    spriteID: 720a1542e8c18fd49bbde5ac72c43491
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1222,7 +1202,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 214, y: 392}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_33
+  - name: Frame_33
     originalName: 
     pivot: {x: 0.49999994, y: -2.8500001}
     alignment: 9
@@ -1233,7 +1213,7 @@ ScriptedImporter:
       y: 909
       width: 18
       height: 20
-    spriteID: 7badfc1dcd2c1424ba2d7ee273fde0b2
+    spriteID: a0dfe0a35b9d47346aa47af67279d115
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1242,7 +1222,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 909}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_34
+  - name: Frame_34
     originalName: 
     pivot: {x: 0.41176474, y: -3}
     alignment: 9
@@ -1253,7 +1233,7 @@ ScriptedImporter:
       y: 861
       width: 17
       height: 19
-    spriteID: ff2d8a912a2da1e4ca873b6feb157caf
+    spriteID: 6446e2bff8ba009429cc76979990ba45
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1262,7 +1242,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 861}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_35
+  - name: Frame_35
     originalName: 
     pivot: {x: 0.43750006, y: -3.3529413}
     alignment: 9
@@ -1273,7 +1253,7 @@ ScriptedImporter:
       y: 55
       width: 16
       height: 17
-    spriteID: ba58b1e78c9c7a749817c58262ee8904
+    spriteID: cdb58b7923d531f4fb1524f95d37d520
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1282,7 +1262,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 55}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_36
+  - name: Frame_36
     originalName: 
     pivot: {x: 0.43750006, y: -3.3529413}
     alignment: 9
@@ -1293,7 +1273,7 @@ ScriptedImporter:
       y: 80
       width: 16
       height: 17
-    spriteID: 50fb11156920e564ab05cec01b464182
+    spriteID: 896adbb641a6f8a45a87d9ac7bcccd8d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1302,7 +1282,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 80}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_37
+  - name: Frame_37
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -1313,7 +1293,7 @@ ScriptedImporter:
       y: 911
       width: 16
       height: 18
-    spriteID: a5ed16cd0e7bdd74fb0742bf86ed9845
+    spriteID: 05b707b9e3f43f942a1e0fa940e31409
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1322,7 +1302,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 911}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_38
+  - name: Frame_38
     originalName: 
     pivot: {x: 0.3076923, y: -3.5625}
     alignment: 9
@@ -1333,7 +1313,7 @@ ScriptedImporter:
       y: 175
       width: 13
       height: 16
-    spriteID: 5d8218063776f354eb55cd326581d10f
+    spriteID: 8e04ad3024d65004f88a9ba9ee0e1eaa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1342,7 +1322,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 219, y: 175}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_39
+  - name: Frame_39
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1353,7 +1333,7 @@ ScriptedImporter:
       y: 327
       width: 16
       height: 19
-    spriteID: a119e9ca3940ea54c94a25b98aa003d4
+    spriteID: f6560833df6b4b94ba71218c0feb0410
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1362,7 +1342,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 327}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_40
+  - name: Frame_40
     originalName: 
     pivot: {x: 0.3076923, y: -3.5625}
     alignment: 9
@@ -1373,7 +1353,7 @@ ScriptedImporter:
       y: 202
       width: 13
       height: 16
-    spriteID: 1fe18f53f0f9f9a4c9d0bbcad610c5e5
+    spriteID: 4f1d2d22a23123b46a8e9d28e9bafb11
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1382,7 +1362,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 219, y: 202}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_41
+  - name: Frame_41
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1393,7 +1373,7 @@ ScriptedImporter:
       y: 354
       width: 16
       height: 19
-    spriteID: e84a5b61fc6eeb1429a327d8e980ba44
+    spriteID: e0c0e2e8f516d394492bb6b8b545c1d7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1402,7 +1382,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 354}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_42
+  - name: Frame_42
     originalName: 
     pivot: {x: 0.3076923, y: -3.5625}
     alignment: 9
@@ -1413,7 +1393,7 @@ ScriptedImporter:
       y: 229
       width: 13
       height: 16
-    spriteID: 3a44b55a83afabd4a9ac566afb2a4874
+    spriteID: 4a89e035e73fe7540bf5923200afa922
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1422,7 +1402,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 219, y: 229}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_51
+  - name: Frame_51
     originalName: 
     pivot: {x: 0.36842108, y: -2.8}
     alignment: 9
@@ -1433,7 +1413,7 @@ ScriptedImporter:
       y: 827
       width: 19
       height: 20
-    spriteID: 5a5d6a050d26c3940b02cdfbc66f4fa5
+    spriteID: 0d2ec44a3eaef4a40a2f2811d5818406
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1442,7 +1422,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 827}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_52
+  - name: Frame_52
     originalName: 
     pivot: {x: 0.35000002, y: -3}
     alignment: 9
@@ -1453,7 +1433,7 @@ ScriptedImporter:
       y: 855
       width: 20
       height: 19
-    spriteID: e05df7d2a77c17445acbbcdd0a96e778
+    spriteID: 4c834bc71098dcb449f3d4eefeb19dd4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1462,7 +1442,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 855}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_53
+  - name: Frame_53
     originalName: 
     pivot: {x: 0.35000002, y: -3.1666667}
     alignment: 9
@@ -1473,7 +1453,7 @@ ScriptedImporter:
       y: 937
       width: 20
       height: 18
-    spriteID: c2e17aed45fe9cd45a866897a7af4f9e
+    spriteID: b73c554d3afb2c947abca7da26069ad4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1482,7 +1462,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 937}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_54
+  - name: Frame_54
     originalName: 
     pivot: {x: 0.35000002, y: -3.1666667}
     alignment: 9
@@ -1493,7 +1473,7 @@ ScriptedImporter:
       y: 963
       width: 20
       height: 18
-    spriteID: 7e13fc39487064f45ade89c7a240ad0c
+    spriteID: 57ed53c7bb4fb754f832fdf6cfabef7a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1502,7 +1482,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 963}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_55
+  - name: Frame_55
     originalName: 
     pivot: {x: 0.38888893, y: -3.3529413}
     alignment: 9
@@ -1513,7 +1493,7 @@ ScriptedImporter:
       y: 942
       width: 18
       height: 17
-    spriteID: 9b8ce3b682377dd4a958bbcd2c408fbd
+    spriteID: b543b1fd4265c1746a8b84c646e17df7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1522,7 +1502,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 942}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_56
+  - name: Frame_56
     originalName: 
     pivot: {x: 0.38888893, y: -2.9473681}
     alignment: 9
@@ -1533,7 +1513,7 @@ ScriptedImporter:
       y: 780
       width: 18
       height: 19
-    spriteID: 603094a01ba2b4041b514bbc418f506e
+    spriteID: 25316107d8e304d4dbda7bb3d83b4ace
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1542,7 +1522,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 780}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_57
+  - name: Frame_57
     originalName: 
     pivot: {x: 0.38888893, y: -2.9473681}
     alignment: 9
@@ -1553,7 +1533,7 @@ ScriptedImporter:
       y: 807
       width: 18
       height: 19
-    spriteID: 8e0952666ecd73743b2d0f082e9116c9
+    spriteID: 2b05afab0a8b62d489acc612f4278299
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1562,7 +1542,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 807}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_58
+  - name: Frame_58
     originalName: 
     pivot: {x: 0.38888893, y: -2.8}
     alignment: 9
@@ -1573,7 +1553,7 @@ ScriptedImporter:
       y: 989
       width: 18
       height: 20
-    spriteID: 5e9a5d8e06ba3b246b84f3e975b7cc5d
+    spriteID: 845892cffab77b14f918b2d2a2d39098
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1582,7 +1562,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 989}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_59
+  - name: Frame_59
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1593,7 +1573,7 @@ ScriptedImporter:
       y: 381
       width: 16
       height: 19
-    spriteID: dc9a889c3acb1474082920861d621be2
+    spriteID: 6252d8584a2cc5a47918d05890b5d781
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1602,7 +1582,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 381}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_60
+  - name: Frame_60
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -1613,7 +1593,7 @@ ScriptedImporter:
       y: 937
       width: 16
       height: 18
-    spriteID: de7000ad415149a499cba54d016eb4ed
+    spriteID: 0c3bccc5fb9900e448a8b79e126ebbbb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1622,7 +1602,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 937}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_61
+  - name: Frame_61
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1633,7 +1613,7 @@ ScriptedImporter:
       y: 408
       width: 16
       height: 19
-    spriteID: c5ad803b4ae3c754fa3f6fcb5b5189b8
+    spriteID: d6e8b499474126b4a8197bfcd81b9786
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1642,7 +1622,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 408}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_64
+  - name: Frame_64
     originalName: 
     pivot: {x: 0.43750006, y: -3.1666667}
     alignment: 9
@@ -1653,7 +1633,7 @@ ScriptedImporter:
       y: 963
       width: 16
       height: 18
-    spriteID: 2c1e9c14258d5534d8d8b50f42cf5fb6
+    spriteID: 58c9613da2381e3428f4c1690faafe0c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1662,7 +1642,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 963}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_65
+  - name: Frame_65
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1673,7 +1653,7 @@ ScriptedImporter:
       y: 435
       width: 16
       height: 19
-    spriteID: 8bb314e180f840747a959e72b0be83e5
+    spriteID: f8b476261d0bf0243abc5c1d473e0c3b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1682,7 +1662,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 435}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_66
+  - name: Frame_66
     originalName: 
     pivot: {x: 0.43750006, y: -3.105263}
     alignment: 9
@@ -1693,7 +1673,7 @@ ScriptedImporter:
       y: 462
       width: 16
       height: 19
-    spriteID: 35d143cf0228b48459a91dfe257e6673
+    spriteID: f00d69d8dc0d1ae4a83365e3d48f45e9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1702,7 +1682,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 462}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_67
+  - name: Frame_67
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1713,7 +1693,7 @@ ScriptedImporter:
       y: 489
       width: 16
       height: 19
-    spriteID: 9053932dc04eb8c4dafc538ca46076a4
+    spriteID: 3e5f4aa7d4b02c34e8d681bd8d2274a4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1722,7 +1702,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 489}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_68
+  - name: Frame_68
     originalName: 
     pivot: {x: 0.41176474, y: -3.1666667}
     alignment: 9
@@ -1733,7 +1713,7 @@ ScriptedImporter:
       y: 967
       width: 17
       height: 18
-    spriteID: 57a66a08e3a77b74ea3b9261a59be698
+    spriteID: b5da05b438d922442a8c0e7c00df08ec
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1742,7 +1722,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 967}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_69
+  - name: Frame_69
     originalName: 
     pivot: {x: 0.4000001, y: -3}
     alignment: 9
@@ -1753,7 +1733,7 @@ ScriptedImporter:
       y: 520
       width: 15
       height: 19
-    spriteID: 5d11a41882d607b418074efe66918950
+    spriteID: 1843181f279efb9428637b90534b73da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1762,7 +1742,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 520}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_70
+  - name: Frame_70
     originalName: 
     pivot: {x: 0.4000001, y: -2.9}
     alignment: 9
@@ -1773,7 +1753,7 @@ ScriptedImporter:
       y: 310
       width: 15
       height: 20
-    spriteID: a634f73cae152944bb6e12b3b672d253
+    spriteID: 0129cdd38245e9448ae6ae7e1701a71c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1782,7 +1762,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 310}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_71
+  - name: Frame_71
     originalName: 
     pivot: {x: 0.43750006, y: -3.1578946}
     alignment: 9
@@ -1793,7 +1773,7 @@ ScriptedImporter:
       y: 516
       width: 16
       height: 19
-    spriteID: c303e468162afc545b2e972ebc674eb3
+    spriteID: fb29de149d05e214e89ce47b3418ef41
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1802,7 +1782,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 516}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_72
+  - name: Frame_72
     originalName: 
     pivot: {x: 0.44444442, y: -3.2105262}
     alignment: 9
@@ -1813,7 +1793,7 @@ ScriptedImporter:
       y: 834
       width: 18
       height: 19
-    spriteID: 0d8c5fbe8b550f74592b2f9bf2e867e7
+    spriteID: bcf94ea1f770c5949a5f3f1f097008c0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1822,7 +1802,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 834}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_73
+  - name: Frame_73
     originalName: 
     pivot: {x: 0.41176474, y: -3.2777777}
     alignment: 9
@@ -1833,7 +1813,7 @@ ScriptedImporter:
       y: 993
       width: 17
       height: 18
-    spriteID: 55192b12e27b9624eae921293af5291a
+    spriteID: 0bd8c1017dc61724b8d524af6b9a2c57
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1842,7 +1822,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 993}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_74
+  - name: Frame_74
     originalName: 
     pivot: {x: 0.4000001, y: -3.3529413}
     alignment: 9
@@ -1853,7 +1833,7 @@ ScriptedImporter:
       y: 61
       width: 15
       height: 17
-    spriteID: 785aa734961f59d4ca6c3f16da119c25
+    spriteID: 22b6a21862aface46974104af576df6a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1862,7 +1842,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 61}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_75
+  - name: Frame_75
     originalName: 
     pivot: {x: 0.4000001, y: -3}
     alignment: 9
@@ -1873,7 +1853,7 @@ ScriptedImporter:
       y: 547
       width: 15
       height: 19
-    spriteID: f3710951f63ff754d8c23152b716f444
+    spriteID: aad3a5a32278fb44b8a9dc6afe4256b8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1882,7 +1862,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 547}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_76
+  - name: Frame_76
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1893,7 +1873,7 @@ ScriptedImporter:
       y: 543
       width: 16
       height: 19
-    spriteID: 26efe1c5003076a41813e2859fe74f04
+    spriteID: 37a25ac75201c8040a263653a8cc1052
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1902,7 +1882,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 543}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_83
+  - name: Frame_83
     originalName: 
     pivot: {x: 0.35294127, y: -4.3846154}
     alignment: 9
@@ -1913,7 +1893,7 @@ ScriptedImporter:
       y: 431
       width: 17
       height: 13
-    spriteID: 931ff8f986b09e24b895f8e67664077b
+    spriteID: d4c1dba0b94357e46b7575a4d7617e5a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1922,7 +1902,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 431}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_84
+  - name: Frame_84
     originalName: 
     pivot: {x: 0.4000001, y: -3.1666667}
     alignment: 9
@@ -1933,7 +1913,7 @@ ScriptedImporter:
       y: 574
       width: 15
       height: 18
-    spriteID: 372305682d0710e4d959f61488e6d1c2
+    spriteID: 8e335c853bc95dd4d82ea5d2196bfda2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1942,7 +1922,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 217, y: 574}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_85
+  - name: Frame_85
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -1953,7 +1933,7 @@ ScriptedImporter:
       y: 570
       width: 16
       height: 19
-    spriteID: 421270dc4927e0d4194de9b9fc9927b7
+    spriteID: 0bc47a4c9d8014447ba46ff8bf79d341
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1962,7 +1942,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 570}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_86
+  - name: Frame_86
     originalName: 
     pivot: {x: 0.43750006, y: -2.7142859}
     alignment: 9
@@ -1973,7 +1953,7 @@ ScriptedImporter:
       y: 454
       width: 16
       height: 21
-    spriteID: 8113b3b1932dc934e91d4bbf37139e4a
+    spriteID: 9f63a1149d3993444b6978fd7d6d24df
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1982,7 +1962,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 215, y: 454}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_87
+  - name: Frame_87
     originalName: 
     pivot: {x: 0.52631587, y: -2.5909092}
     alignment: 9
@@ -1993,7 +1973,7 @@ ScriptedImporter:
       y: 742
       width: 19
       height: 22
-    spriteID: 386f6df00ba2aa04b98df48afd3cafe9
+    spriteID: f7fa6822688c1ba44ac311e2ac86c025
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2002,7 +1982,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 742}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_88
+  - name: Frame_88
     originalName: 
     pivot: {x: 0.67999995, y: -2.8500001}
     alignment: 9
@@ -2013,7 +1993,7 @@ ScriptedImporter:
       y: 4
       width: 25
       height: 20
-    spriteID: 19a2cec136ff62a48b05948d064334fd
+    spriteID: 6a230c3dfe958a94f911b1e707168b59
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2022,7 +2002,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 240, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_89
+  - name: Frame_89
     originalName: 
     pivot: {x: 0.7407407, y: -3.1666667}
     alignment: 9
@@ -2033,7 +2013,7 @@ ScriptedImporter:
       y: 4
       width: 27
       height: 18
-    spriteID: ed41374b4665076498424c250c5ccd36
+    spriteID: 37e370b277526554da94b3bb406e74e8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2042,7 +2022,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_90
+  - name: Frame_90
     originalName: 
     pivot: {x: 0.7692308, y: -3}
     alignment: 9
@@ -2053,7 +2033,7 @@ ScriptedImporter:
       y: 31
       width: 26
       height: 19
-    spriteID: 3ed1909ce1a94064bb8dccbb57585732
+    spriteID: ef09fffcc0e71ee4b94b701c350e935f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2062,7 +2042,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 31}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_95
+  - name: Frame_95
     originalName: 
     pivot: {x: 0.23076929, y: -3}
     alignment: 9
@@ -2073,7 +2053,7 @@ ScriptedImporter:
       y: 58
       width: 26
       height: 19
-    spriteID: 9df70f1abd34225428c242fe5fa10451
+    spriteID: 3d4b0f328e903d74bac95a44b6a6296a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2082,7 +2062,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 58}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_96
+  - name: Frame_96
     originalName: 
     pivot: {x: 0.55, y: -2.8500001}
     alignment: 9
@@ -2093,7 +2073,7 @@ ScriptedImporter:
       y: 772
       width: 20
       height: 20
-    spriteID: d2c13bec73dbbb5478df52dec57c4b1d
+    spriteID: 1e124d1f7dd5c98439db7d624a431479
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2102,7 +2082,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 772}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_97
+  - name: Frame_97
     originalName: 
     pivot: {x: 0.625, y: -2.7142859}
     alignment: 9
@@ -2113,7 +2093,7 @@ ScriptedImporter:
       y: 601
       width: 24
       height: 21
-    spriteID: 4bfb495b16a68d7439f6daf64ee21bb4
+    spriteID: fd325230dab9dcb4f84e5957c83b1c15
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2122,7 +2102,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 601}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_98
+  - name: Frame_98
     originalName: 
     pivot: {x: 0.70370376, y: -3}
     alignment: 9
@@ -2133,7 +2113,7 @@ ScriptedImporter:
       y: 520
       width: 27
       height: 19
-    spriteID: a522cd41bca51e84f84eb5dfb1d9d876
+    spriteID: 4a4a0937ef5cd5f418e6fb11aa7b9d75
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2142,7 +2122,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 520}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_99
+  - name: Frame_99
     originalName: 
     pivot: {x: 0.7407407, y: -2.5714288}
     alignment: 9
@@ -2153,7 +2133,7 @@ ScriptedImporter:
       y: 90
       width: 27
       height: 21
-    spriteID: 6e6acc02012b8d645b8ccbb908267f62
+    spriteID: d692b4a659f64a94c8ecb87f6517672c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2162,7 +2142,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 90}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_100
+  - name: Frame_100
     originalName: 
     pivot: {x: 0.7692308, y: -2.1666667}
     alignment: 9
@@ -2173,7 +2153,7 @@ ScriptedImporter:
       y: 597
       width: 26
       height: 24
-    spriteID: d270cc97564982641a2ab3d82aef32cf
+    spriteID: ca47ef8d9af4c14499d719974ef8df64
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2182,7 +2162,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 597}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_105
+  - name: Frame_105
     originalName: 
     pivot: {x: 0.20689662, y: -3}
     alignment: 9
@@ -2193,7 +2173,7 @@ ScriptedImporter:
       y: 175
       width: 29
       height: 19
-    spriteID: 2b8b19a653f837b40b7537dc71bafea4
+    spriteID: 1fe57e7f5e0140f4eaeea029727063bb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2202,7 +2182,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 175}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_118
+  - name: Frame_118
     originalName: 
     pivot: {x: 0.21212123, y: -3}
     alignment: 9
@@ -2213,7 +2193,7 @@ ScriptedImporter:
       y: 570
       width: 33
       height: 19
-    spriteID: be454032accf1d246abd7c1aaac83011
+    spriteID: 49d1fab7a6c02c54eb9571359cd79612
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2222,7 +2202,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 570}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_119
+  - name: Frame_119
     originalName: 
     pivot: {x: 0.21875003, y: -3}
     alignment: 9
@@ -2233,7 +2213,7 @@ ScriptedImporter:
       y: 753
       width: 32
       height: 19
-    spriteID: 5969b625f69b24147ad2563ce5fb50ac
+    spriteID: ae72c9d4961365741bea48720525ca5f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2242,7 +2222,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 753}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_123
+  - name: Frame_123
     originalName: 
     pivot: {x: 0.67999995, y: -3}
     alignment: 9
@@ -2253,7 +2233,7 @@ ScriptedImporter:
       y: 85
       width: 25
       height: 19
-    spriteID: 93978e0d2fd0fdf469cdc9e58a202849
+    spriteID: c3ac5b1b090ae8d4fa2a96c6c636c09b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2262,7 +2242,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 85}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_124
+  - name: Frame_124
     originalName: 
     pivot: {x: 0.75862074, y: -3}
     alignment: 9
@@ -2273,7 +2253,7 @@ ScriptedImporter:
       y: 202
       width: 29
       height: 19
-    spriteID: b7237718fc6c3b84b98a2b14d43f7d6b
+    spriteID: a8f8765f9aa005a46bf99c902b81f571
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2282,7 +2262,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 202}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_125
+  - name: Frame_125
     originalName: 
     pivot: {x: 0.79999995, y: -3}
     alignment: 9
@@ -2293,7 +2273,7 @@ ScriptedImporter:
       y: 923
       width: 30
       height: 19
-    spriteID: 76a14a3ec2e3d1a4b8cf838a07a57356
+    spriteID: c5c2902ceb89a054b99b443440019e36
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2302,7 +2282,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 923}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_126
+  - name: Frame_126
     originalName: 
     pivot: {x: 0.78124994, y: -3}
     alignment: 9
@@ -2313,7 +2293,7 @@ ScriptedImporter:
       y: 780
       width: 32
       height: 19
-    spriteID: 8fed8e90f5dc9534aa93dc6fb63da33a
+    spriteID: 5fe475b86379455438b77606f90cda51
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2322,7 +2302,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 780}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_127
+  - name: Frame_127
     originalName: 
     pivot: {x: 0.75, y: -3}
     alignment: 9
@@ -2333,7 +2313,7 @@ ScriptedImporter:
       y: 807
       width: 32
       height: 19
-    spriteID: 94d23c112c7a1f845a3a4aa9c90bd421
+    spriteID: 6be762f2644a9cd4385f3ed8589acc4d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2342,7 +2322,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 807}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_128
+  - name: Frame_128
     originalName: 
     pivot: {x: 0.73333335, y: -3}
     alignment: 9
@@ -2353,7 +2333,7 @@ ScriptedImporter:
       y: 950
       width: 30
       height: 19
-    spriteID: 9d78a7bad3c8e924792f2a9af312c060
+    spriteID: 05ec8a19f1d16ed4caadde6757d88a01
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2362,7 +2342,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 950}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_129
+  - name: Frame_129
     originalName: 
     pivot: {x: 0.7241379, y: -3}
     alignment: 9
@@ -2373,7 +2353,7 @@ ScriptedImporter:
       y: 229
       width: 29
       height: 19
-    spriteID: e934368a9b68cdc409518c644dc8fd85
+    spriteID: 79c0a481080114d43abdb04974d52169
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2382,7 +2362,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 229}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_130
+  - name: Frame_130
     originalName: 
     pivot: {x: 0.7241379, y: -3}
     alignment: 9
@@ -2393,7 +2373,7 @@ ScriptedImporter:
       y: 256
       width: 29
       height: 19
-    spriteID: 150697fdb200714468102b0efc2db548
+    spriteID: e50b432e6e6a4234587d7953705a56a6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2402,7 +2382,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 256}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_131
+  - name: Frame_131
     originalName: 
     pivot: {x: 0.6999999, y: -3}
     alignment: 9
@@ -2413,7 +2393,7 @@ ScriptedImporter:
       y: 977
       width: 30
       height: 19
-    spriteID: 4cddc5f36402b4f409156bb665d82ace
+    spriteID: ce632ad169367b347a5561790b3912c7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2422,7 +2402,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 977}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_132
+  - name: Frame_132
     originalName: 
     pivot: {x: 0.6999999, y: -3}
     alignment: 9
@@ -2433,7 +2413,7 @@ ScriptedImporter:
       y: 34
       width: 30
       height: 19
-    spriteID: cc5a9f733ee8381419a065b7f64875de
+    spriteID: 4710cb141a1fcf54ca1cdebfab51071d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2442,7 +2422,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 34}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_140
+  - name: Frame_140
     originalName: 
     pivot: {x: 0.14583334, y: -3}
     alignment: 9
@@ -2453,7 +2433,7 @@ ScriptedImporter:
       y: 1001
       width: 48
       height: 19
-    spriteID: 8301858f606c2ae4ea3003e52a58a707
+    spriteID: b0ba8880d0c176f4c976c9da8b86e972
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2462,7 +2442,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 1001}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_141
+  - name: Frame_141
     originalName: 
     pivot: {x: 0.4705882, y: -3}
     alignment: 9
@@ -2473,7 +2453,7 @@ ScriptedImporter:
       y: 888
       width: 17
       height: 19
-    spriteID: 19df2601e196ad04293110c3800ecb1c
+    spriteID: 6cfb69cadc9348a4ba656bdd322f84a5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2482,7 +2462,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 888}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_142
+  - name: Frame_142
     originalName: 
     pivot: {x: 0.625, y: -2.5909092}
     alignment: 9
@@ -2493,7 +2473,7 @@ ScriptedImporter:
       y: 392
       width: 24
       height: 22
-    spriteID: 5dc76c6c994e3004fab2b8b9aacc0e4f
+    spriteID: dc5d9fe96464b9743a19dade43e30ac8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2502,7 +2482,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 392}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_143
+  - name: Frame_143
     originalName: 
     pivot: {x: 0.7142857, y: -3}
     alignment: 9
@@ -2513,7 +2493,7 @@ ScriptedImporter:
       y: 338
       width: 28
       height: 19
-    spriteID: a4f1a20de1f7bc04299322a02646f306
+    spriteID: c239bfbfe85bde44bbf474fe7539cb48
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2522,7 +2502,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 338}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_144
+  - name: Frame_144
     originalName: 
     pivot: {x: 0.7407407, y: -3.3529413}
     alignment: 9
@@ -2533,7 +2513,7 @@ ScriptedImporter:
       y: 30
       width: 27
       height: 17
-    spriteID: 33f56787f10d40746acdcc38ed97abe8
+    spriteID: d8acc5b699a489a4692a61319eb065ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2542,7 +2522,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 30}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_149
+  - name: Frame_149
     originalName: 
     pivot: {x: 0.26086965, y: -3}
     alignment: 9
@@ -2553,7 +2533,7 @@ ScriptedImporter:
       y: 688
       width: 23
       height: 19
-    spriteID: 5f2e4cf02239f20449ba4a6047e70e90
+    spriteID: 93ade2cfc0c6d6d43b9f22d87e32c1ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2562,7 +2542,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 688}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_150
+  - name: Frame_150
     originalName: 
     pivot: {x: 0.4705882, y: -3}
     alignment: 9
@@ -2573,7 +2553,7 @@ ScriptedImporter:
       y: 915
       width: 17
       height: 19
-    spriteID: 0ba8127057e98b145b380d546743ed20
+    spriteID: 608ba9c5023c45044a3e71fa654e230c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2582,7 +2562,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 915}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_151
+  - name: Frame_151
     originalName: 
     pivot: {x: 0.25, y: -2.6190479}
     alignment: 9
@@ -2593,7 +2573,7 @@ ScriptedImporter:
       y: 861
       width: 28
       height: 21
-    spriteID: e67e407925383f54ca9b7ccac350c3ab
+    spriteID: 0c87c48d87e5bfb4b817e76fbddf7969
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2602,7 +2582,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 861}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_157
+  - name: Frame_157
     originalName: 
     pivot: {x: 0.2580645, y: -2.7142859}
     alignment: 9
@@ -2613,7 +2593,7 @@ ScriptedImporter:
       y: 541
       width: 31
       height: 21
-    spriteID: ebee09ed1d4b70c41906e6f0b9334d94
+    spriteID: ae017f226a73d3b4fbe810128e23b146
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2622,7 +2602,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 541}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_158
+  - name: Frame_158
     originalName: 
     pivot: {x: 0.15789478, y: -2.5000002}
     alignment: 9
@@ -2633,7 +2613,7 @@ ScriptedImporter:
       y: 352
       width: 38
       height: 22
-    spriteID: 9042bfb9ebadc584a856ed5c12a20888
+    spriteID: 21abc27c579c8e34190969fc1bfcdba8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2642,7 +2622,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 352}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_159
+  - name: Frame_159
     originalName: 
     pivot: {x: 0.1463415, y: -1.8148149}
     alignment: 9
@@ -2653,7 +2633,7 @@ ScriptedImporter:
       y: 70
       width: 41
       height: 27
-    spriteID: b0f0a17b89bf3684297c99b2c4c7724f
+    spriteID: 240bbae4115b57a469e0602297ad51c5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2662,7 +2642,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 70}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_160
+  - name: Frame_160
     originalName: 
     pivot: {x: 0.17073172, y: -1}
     alignment: 9
@@ -2673,7 +2653,7 @@ ScriptedImporter:
       y: 635
       width: 41
       height: 38
-    spriteID: 49e6ecb8394a356469740f64bcd6aa87
+    spriteID: 1ba8bd4e07c45fd479d65f91d35e75c2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2682,7 +2662,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 635}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_161
+  - name: Frame_161
     originalName: 
     pivot: {x: 0.14285718, y: -0.85365856}
     alignment: 9
@@ -2693,7 +2673,7 @@ ScriptedImporter:
       y: 510
       width: 42
       height: 41
-    spriteID: 648be1ca5c661404298f493583fd1251
+    spriteID: cf6a558c3ae08db4792118332a34d769
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2702,7 +2682,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 510}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_162
+  - name: Frame_162
     originalName: 
     pivot: {x: 0.13636367, y: -0.85365856}
     alignment: 9
@@ -2713,7 +2693,7 @@ ScriptedImporter:
       y: 363
       width: 44
       height: 41
-    spriteID: ed2debea9e9ddd34f9ebd9e639fd884d
+    spriteID: 2704270071f017146bc3c15ab09575c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2722,7 +2702,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 363}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_163
+  - name: Frame_163
     originalName: 
     pivot: {x: 0.13043483, y: -0.8095238}
     alignment: 9
@@ -2733,7 +2713,7 @@ ScriptedImporter:
       y: 313
       width: 46
       height: 42
-    spriteID: e55025b3501f6c24e94d0c1d1c2aa622
+    spriteID: 054e078ccbcb1674fb74cd8dfd4977ea
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2742,7 +2722,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 313}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_164
+  - name: Frame_164
     originalName: 
     pivot: {x: 0.14583334, y: -0.8095238}
     alignment: 9
@@ -2753,7 +2733,7 @@ ScriptedImporter:
       y: 214
       width: 48
       height: 42
-    spriteID: de98d01a1903d9344a643667a31eed1d
+    spriteID: 8b4b27623b1f9504ebe7545a7836b337
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2762,7 +2742,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 214}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_165
+  - name: Frame_165
     originalName: 
     pivot: {x: 0.14285715, y: -0.85365856}
     alignment: 9
@@ -2773,7 +2753,7 @@ ScriptedImporter:
       y: 264
       width: 49
       height: 41
-    spriteID: bf57500f22d4a614a83f32fa3cd02bd4
+    spriteID: 77854459f02036744b99197502323c81
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2782,7 +2762,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 264}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_166
+  - name: Frame_166
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -2793,7 +2773,7 @@ ScriptedImporter:
       y: 854
       width: 40
       height: 41
-    spriteID: a7fae4d8bbd9ede408812d4530744853
+    spriteID: f2f86ee2cffa87140a66ca475ee6b5f7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2802,7 +2782,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 854}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_167
+  - name: Frame_167
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -2813,7 +2793,7 @@ ScriptedImporter:
       y: 903
       width: 40
       height: 41
-    spriteID: 9c9e2a2a5569ce0459e69f61483c0df0
+    spriteID: 1787a8a6e3dbd5a43896b2e9e6568a76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2822,7 +2802,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 903}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_168
+  - name: Frame_168
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -2833,7 +2813,7 @@ ScriptedImporter:
       y: 952
       width: 40
       height: 41
-    spriteID: 778f2f7e1f7f9b14686674ab93cc02c4
+    spriteID: aef3f080755d20a4e9a9cd04f72088a1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2842,7 +2822,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 952}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_169
+  - name: Frame_169
     originalName: 
     pivot: {x: 0.17500001, y: -0.87500006}
     alignment: 9
@@ -2853,7 +2833,7 @@ ScriptedImporter:
       y: 251
       width: 40
       height: 40
-    spriteID: 3a357453d2b396f4fb0d0268cd114b67
+    spriteID: 94049db20e1af0b44a656c4002f7fba8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2862,7 +2842,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 251}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_170
+  - name: Frame_170
     originalName: 
     pivot: {x: 0.17500001, y: -0.87500006}
     alignment: 9
@@ -2873,7 +2853,7 @@ ScriptedImporter:
       y: 299
       width: 40
       height: 40
-    spriteID: 3664f31e633b37d46b6b2626a9b25bad
+    spriteID: ff4039452727c28459ff18339cc2b8a4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2882,7 +2862,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 299}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_171
+  - name: Frame_171
     originalName: 
     pivot: {x: 0.17500001, y: -0.89743596}
     alignment: 9
@@ -2893,7 +2873,7 @@ ScriptedImporter:
       y: 540
       width: 40
       height: 39
-    spriteID: 4bd9d80da5e768640b9590ab7d213325
+    spriteID: c5c69713e79c9cc42b6176a645e1869f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2902,7 +2882,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 540}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_172
+  - name: Frame_172
     originalName: 
     pivot: {x: 0.17500001, y: -0.87500006}
     alignment: 9
@@ -2913,7 +2893,7 @@ ScriptedImporter:
       y: 347
       width: 40
       height: 40
-    spriteID: a9ed4c8a033e5464782faa6c06d4b469
+    spriteID: fefbb9af785bdfe47b6d3d52ecf0cbba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2922,7 +2902,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 347}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_173
+  - name: Frame_173
     originalName: 
     pivot: {x: 0.17500001, y: -0.87500006}
     alignment: 9
@@ -2933,7 +2913,7 @@ ScriptedImporter:
       y: 395
       width: 40
       height: 40
-    spriteID: 11137a66326e7a44394fd03f7f48fd9b
+    spriteID: 9a016addcc60c524e9061c07e2977c22
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2942,7 +2922,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 395}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_174
+  - name: Frame_174
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -2953,7 +2933,7 @@ ScriptedImporter:
       y: 55
       width: 40
       height: 41
-    spriteID: ccf81d80c4cb4d14bae4b1b555ef20ad
+    spriteID: 3700c547efa53d541ad2fd2c4b024b22
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2962,7 +2942,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 55}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_175
+  - name: Frame_175
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -2973,7 +2953,7 @@ ScriptedImporter:
       y: 104
       width: 40
       height: 41
-    spriteID: 57c98d3bb0e8bcf42ba0f9baeac234e2
+    spriteID: 5080615b435dbe7408d0849bbc773885
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -2982,7 +2962,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 104}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_176
+  - name: Frame_176
     originalName: 
     pivot: {x: 0.19512194, y: -0.85365856}
     alignment: 9
@@ -2993,7 +2973,7 @@ ScriptedImporter:
       y: 707
       width: 41
       height: 41
-    spriteID: e989af7f97d703d44ae3399d96af3231
+    spriteID: b01e33bebc1417046a57f6b937c71f93
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3002,7 +2982,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 707}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_177
+  - name: Frame_177
     originalName: 
     pivot: {x: 0.19512194, y: -0.85365856}
     alignment: 9
@@ -3013,7 +2993,7 @@ ScriptedImporter:
       y: 756
       width: 41
       height: 41
-    spriteID: ba83fe47bbe4dc34cb6d260b90da0818
+    spriteID: 9fa0a3ca859d8734eacba93530f6f853
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3022,7 +3002,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 756}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_178
+  - name: Frame_178
     originalName: 
     pivot: {x: 0.21428569, y: -0.85365856}
     alignment: 9
@@ -3033,7 +3013,7 @@ ScriptedImporter:
       y: 559
       width: 42
       height: 41
-    spriteID: f15e70dd2049c2e458d8cfc9763cede5
+    spriteID: 209e62173fb610b408fa4011b637a2c2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3042,7 +3022,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 559}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_179
+  - name: Frame_179
     originalName: 
     pivot: {x: 0.23255818, y: -0.85365856}
     alignment: 9
@@ -3053,7 +3033,7 @@ ScriptedImporter:
       y: 412
       width: 43
       height: 41
-    spriteID: 780949248aa460d4d896cd1b80e802e3
+    spriteID: 295f09ea2a20dad4f8b1931fd7c03df2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3062,7 +3042,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 412}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_180
+  - name: Frame_180
     originalName: 
     pivot: {x: 0.23255818, y: -0.85365856}
     alignment: 9
@@ -3073,7 +3053,7 @@ ScriptedImporter:
       y: 461
       width: 43
       height: 41
-    spriteID: 9f7078d8bb173814292f3a9bcfb6a879
+    spriteID: 5d9acffcace90764fa038ff1c1c212ec
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3082,7 +3062,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 461}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_181
+  - name: Frame_181
     originalName: 
     pivot: {x: 0.21428569, y: -0.85365856}
     alignment: 9
@@ -3093,7 +3073,7 @@ ScriptedImporter:
       y: 608
       width: 42
       height: 41
-    spriteID: e09473df719724143b14a588fccd87f9
+    spriteID: fb7466e993581434da02b121ddfa6dcc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3102,7 +3082,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 608}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_182
+  - name: Frame_182
     originalName: 
     pivot: {x: 0.17500001, y: -0.87500006}
     alignment: 9
@@ -3113,7 +3093,7 @@ ScriptedImporter:
       y: 443
       width: 40
       height: 40
-    spriteID: b1b46b36aba2ffc41ae4b4684208f8e0
+    spriteID: cd2b4472e86633847bd8134658cf1e9a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3122,7 +3102,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 443}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_183
+  - name: Frame_183
     originalName: 
     pivot: {x: 0.1538462, y: -0.87500006}
     alignment: 9
@@ -3133,7 +3113,7 @@ ScriptedImporter:
       y: 587
       width: 39
       height: 40
-    spriteID: 935430fea28ac27478f9d9733deceb59
+    spriteID: fb1433127273fc44aaf2a258c354e0a4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3142,7 +3122,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 587}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_184
+  - name: Frame_184
     originalName: 
     pivot: {x: 0.13157892, y: -0.87500006}
     alignment: 9
@@ -3153,7 +3133,7 @@ ScriptedImporter:
       y: 730
       width: 38
       height: 40
-    spriteID: b0f294c098909624aad14232a2027a8a
+    spriteID: 1bb949462ecc31445b1c47da818f2122
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3162,7 +3142,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 730}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_185
+  - name: Frame_185
     originalName: 
     pivot: {x: 0.13157892, y: -0.87500006}
     alignment: 9
@@ -3173,7 +3153,7 @@ ScriptedImporter:
       y: 778
       width: 38
       height: 40
-    spriteID: 5c54c4efb2855254d9c3fb2b74cd828f
+    spriteID: 32ff067bac59abe4bbe33bb58e623224
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3182,7 +3162,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 778}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_186
+  - name: Frame_186
     originalName: 
     pivot: {x: 0.13157892, y: -0.85365856}
     alignment: 9
@@ -3193,7 +3173,7 @@ ScriptedImporter:
       y: 681
       width: 38
       height: 41
-    spriteID: 555963b269eb43c439f122c4cf5451c7
+    spriteID: 5f8663e80f6a05440990b8113b9097ee
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3202,7 +3182,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 681}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_187
+  - name: Frame_187
     originalName: 
     pivot: {x: 0.1538462, y: -0.85365856}
     alignment: 9
@@ -3213,7 +3193,7 @@ ScriptedImporter:
       y: 491
       width: 39
       height: 41
-    spriteID: 069f774dfa6828449ab4176765b8dfe1
+    spriteID: 5622d6c26ffb491479bfd910c1e3d5c5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3222,7 +3202,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 491}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_188
+  - name: Frame_188
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -3233,7 +3213,7 @@ ScriptedImporter:
       y: 153
       width: 40
       height: 41
-    spriteID: 67f4fe44bbaf2eb41b8e81aab616f0af
+    spriteID: 2bb7526cc77ccb14c9d4b5348bc19221
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3242,7 +3222,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 153}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_189
+  - name: Frame_189
     originalName: 
     pivot: {x: 0.17500001, y: -0.85365856}
     alignment: 9
@@ -3253,7 +3233,7 @@ ScriptedImporter:
       y: 202
       width: 40
       height: 41
-    spriteID: 06d2707de6f8645449320b11c5797649
+    spriteID: 66af4550518a66045872e4c5e551d043
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3262,7 +3242,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 202}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_190
+  - name: Frame_190
     originalName: 
     pivot: {x: 0.19512194, y: -0.85365856}
     alignment: 9
@@ -3273,7 +3253,7 @@ ScriptedImporter:
       y: 805
       width: 41
       height: 41
-    spriteID: 417d1304ad6cea143a7c47b5a0126539
+    spriteID: b9f697e6be6b0634bb540c825e299c4c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3282,7 +3262,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 805}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_197
+  - name: Frame_197
     originalName: 
     pivot: {x: 0.2580645, y: -2.8}
     alignment: 9
@@ -3293,7 +3273,7 @@ ScriptedImporter:
       y: 695
       width: 31
       height: 20
-    spriteID: 59e66301f594c7247b83182789cafd26
+    spriteID: e5385d867c16b134f91789c98fe6feda
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3302,7 +3282,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 695}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_200
+  - name: Frame_200
     originalName: 
     pivot: {x: 0.28000003, y: -2.6666667}
     alignment: 9
@@ -3313,7 +3293,7 @@ ScriptedImporter:
       y: 454
       width: 25
       height: 21
-    spriteID: e606ccb74a546b6469e27593061a0404
+    spriteID: 09c913361d7a9bb4fbec325570e86a42
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3322,7 +3302,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 454}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_201
+  - name: Frame_201
     originalName: 
     pivot: {x: 0.25925928, y: -2.8}
     alignment: 9
@@ -3333,7 +3313,7 @@ ScriptedImporter:
       y: 310
       width: 27
       height: 20
-    spriteID: b8652d6ef77db0845ad816f9574a5dac
+    spriteID: e9c98871937fc5347abc46a8a68978a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3342,7 +3322,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 310}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_202
+  - name: Frame_202
     originalName: 
     pivot: {x: 0.22222228, y: -2.9473681}
     alignment: 9
@@ -3353,7 +3333,7 @@ ScriptedImporter:
       y: 547
       width: 27
       height: 19
-    spriteID: 885c9c36cbeb4cf46b75758741a8208c
+    spriteID: 86cff19d4fbaa9e47b1f16dd2101eb60
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3362,7 +3342,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 547}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_203
+  - name: Frame_203
     originalName: 
     pivot: {x: 0.25, y: -2.9473681}
     alignment: 9
@@ -3373,7 +3353,7 @@ ScriptedImporter:
       y: 365
       width: 28
       height: 19
-    spriteID: ce9e370910b55c9419a2ccb73c570dd0
+    spriteID: c5f727b5d16a4d04da8aac65ee33f30e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3382,7 +3362,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 365}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_204
+  - name: Frame_204
     originalName: 
     pivot: {x: 0.25, y: -2.8}
     alignment: 9
@@ -3393,7 +3373,7 @@ ScriptedImporter:
       y: 147
       width: 28
       height: 20
-    spriteID: a1de7402a0961a44f971d741615bf788
+    spriteID: 41b893ce4d17a2f43a70c74012e60b0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3402,7 +3382,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 147}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_208
+  - name: Frame_208
     originalName: 
     pivot: {x: 0.5, y: -2.375}
     alignment: 9
@@ -3413,7 +3393,7 @@ ScriptedImporter:
       y: 422
       width: 22
       height: 24
-    spriteID: 91101faec620ec04aa0907f8fa4104f2
+    spriteID: 5cf6570a0c9b509499f66d6cd149caf5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3422,7 +3402,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 422}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_209
+  - name: Frame_209
     originalName: 
     pivot: {x: 0.4285714, y: -2.5909092}
     alignment: 9
@@ -3433,7 +3413,7 @@ ScriptedImporter:
       y: 723
       width: 28
       height: 22
-    spriteID: 3559b4b02f8e356458eb6e499ac50ae0
+    spriteID: 6edfa4826d67dd1449ef4b42a77d5fdd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3442,7 +3422,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 723}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_62
+  - name: Frame_62
     originalName: 
     pivot: {x: 0.43750006, y: -3.105263}
     alignment: 9
@@ -3453,7 +3433,7 @@ ScriptedImporter:
       y: 597
       width: 16
       height: 19
-    spriteID: 69d7bc315e3ba114e8247e6e58983dfc
+    spriteID: 7199a43a21dc6874f99193817fe1f7ac
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3462,7 +3442,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 597}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_63
+  - name: Frame_63
     originalName: 
     pivot: {x: 0.43750006, y: -3}
     alignment: 9
@@ -3473,7 +3453,7 @@ ScriptedImporter:
       y: 624
       width: 16
       height: 19
-    spriteID: d423b5519ab81e54cabe0db5b4927f9a
+    spriteID: bc46161ffcf3bfc4bb138f3595cf7269
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3482,7 +3462,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 624}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_77
+  - name: Frame_77
     originalName: 
     pivot: {x: 0.29411757, y: -3.1666667}
     alignment: 9
@@ -3493,7 +3473,7 @@ ScriptedImporter:
       y: 112
       width: 17
       height: 18
-    spriteID: 4163ccadfc2a99b4f8b75748413b8695
+    spriteID: 17c3d6dd2aae68647a5b77e96a713055
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3502,7 +3482,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 273, y: 112}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_82
+  - name: Frame_82
     originalName: 
     pivot: {x: 0.33333343, y: -4.75}
     alignment: 9
@@ -3513,7 +3493,7 @@ ScriptedImporter:
       y: 452
       width: 18
       height: 12
-    spriteID: fe5c7f0121266b944a096457d43d2aad
+    spriteID: f04712518abbf2d408d072193a588359
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3522,7 +3502,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 452}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_106
+  - name: Frame_106
     originalName: 
     pivot: {x: 0.43750006, y: -3.4705882}
     alignment: 9
@@ -3533,7 +3513,7 @@ ScriptedImporter:
       y: 105
       width: 16
       height: 17
-    spriteID: 98c7db359da8f5341a023fd0fe03f656
+    spriteID: 0319791da9bbf6742a6ba824eff07e90
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3542,7 +3522,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 105}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_107
+  - name: Frame_107
     originalName: 
     pivot: {x: 0.43750006, y: -3.4705882}
     alignment: 9
@@ -3553,7 +3533,7 @@ ScriptedImporter:
       y: 130
       width: 16
       height: 17
-    spriteID: d6b45830d0e796b46ac8fb325bbc23a8
+    spriteID: a0fde54ef71685a499e2ff81dd0bf86f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3562,7 +3542,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 130}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_108
+  - name: Frame_108
     originalName: 
     pivot: {x: 0.43750006, y: -3.6875}
     alignment: 9
@@ -3573,7 +3553,7 @@ ScriptedImporter:
       y: 1004
       width: 16
       height: 16
-    spriteID: e22e72e305f151542a7b9851a881993a
+    spriteID: e1c19899a4e9185499752a55a2d42111
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3582,7 +3562,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 1004}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_109
+  - name: Frame_109
     originalName: 
     pivot: {x: 0.43750006, y: -3.6875}
     alignment: 9
@@ -3593,7 +3573,7 @@ ScriptedImporter:
       y: 1004
       width: 16
       height: 16
-    spriteID: 1c58810a532f5f044b18b2570e31381f
+    spriteID: 3e98a359627d69744bca3548d742927e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3602,7 +3582,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 149, y: 1004}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_116
+  - name: Frame_116
     originalName: 
     pivot: {x: 0.43750006, y: -3.6875}
     alignment: 9
@@ -3613,7 +3593,7 @@ ScriptedImporter:
       y: 155
       width: 16
       height: 16
-    spriteID: 88c3f910842be994098fa45f524ed1ed
+    spriteID: 7d1dc2d3abdaa524a811ad565b90e953
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3622,7 +3602,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 155}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_117
+  - name: Frame_117
     originalName: 
     pivot: {x: 0.43750006, y: -3.6875}
     alignment: 9
@@ -3633,7 +3613,7 @@ ScriptedImporter:
       y: 179
       width: 16
       height: 16
-    spriteID: 4a147d0258669474d8418c64416d9045
+    spriteID: bf01aa8082ed5d74e801d815ac1e2ed4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3642,7 +3622,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 179}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_120
+  - name: Frame_120
     originalName: 
     pivot: {x: 0.22580647, y: -3}
     alignment: 9
@@ -3653,7 +3633,7 @@ ScriptedImporter:
       y: 834
       width: 31
       height: 19
-    spriteID: 493ed67b54662cb43927020eb6f3519c
+    spriteID: 0c6369a211d9ae14a90f4ab26e63add5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3662,7 +3642,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 834}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_121
+  - name: Frame_121
     originalName: 
     pivot: {x: 0.25925928, y: -3}
     alignment: 9
@@ -3673,7 +3653,7 @@ ScriptedImporter:
       y: 574
       width: 27
       height: 19
-    spriteID: e86b96bc8b01452469b94f5e690d6ef3
+    spriteID: 4539948493599214d9ccd39f51cc915d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3682,7 +3662,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 574}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_122
+  - name: Frame_122
     originalName: 
     pivot: {x: 0.30434787, y: -3}
     alignment: 9
@@ -3693,7 +3673,7 @@ ScriptedImporter:
       y: 715
       width: 23
       height: 19
-    spriteID: 39ebc96649f690c44b5f055ae641dbf0
+    spriteID: 8c013934be688844e96f98013e02b6e1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3702,7 +3682,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 715}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_152
+  - name: Frame_152
     originalName: 
     pivot: {x: 0.36363634, y: -2.8}
     alignment: 9
@@ -3713,7 +3693,7 @@ ScriptedImporter:
       y: 660
       width: 22
       height: 20
-    spriteID: 325182cf98dd47f409f31e80b2f1c29f
+    spriteID: 5e6dd5b04aeede84c87de9e586d6317b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3722,7 +3702,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 660}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_153
+  - name: Frame_153
     originalName: 
     pivot: {x: 0.5882354, y: -2.3333333}
     alignment: 9
@@ -3733,7 +3713,7 @@ ScriptedImporter:
       y: 890
       width: 17
       height: 24
-    spriteID: d31c726d9e318754ca055d2feca26752
+    spriteID: 0ce20dd7dbe484346bc5bde73574e073
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3742,7 +3722,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 156, y: 890}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_154
+  - name: Frame_154
     originalName: 
     pivot: {x: 0.6499999, y: -2.375}
     alignment: 9
@@ -3753,7 +3733,7 @@ ScriptedImporter:
       y: 422
       width: 20
       height: 24
-    spriteID: d8df7659b7777564b9abc089863a00c1
+    spriteID: a785c25bd537dd94781c32ed1e077cbb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3762,7 +3742,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 212, y: 422}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_155
+  - name: Frame_155
     originalName: 
     pivot: {x: 0.6956522, y: -2.28}
     alignment: 9
@@ -3773,7 +3753,7 @@ ScriptedImporter:
       y: 890
       width: 23
       height: 25
-    spriteID: ba1bde909f89e0049b9297d4c4a2c5dc
+    spriteID: 3d268daa0d18da440aba61fbc56dbead
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3782,7 +3762,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 125, y: 890}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_156
+  - name: Frame_156
     originalName: 
     pivot: {x: 0.47619054, y: -2.5909092}
     alignment: 9
@@ -3793,7 +3773,7 @@ ScriptedImporter:
       y: 630
       width: 21
       height: 22
-    spriteID: d61a1e69aa828e5478f6474033a7098b
+    spriteID: cab0c8e166eb1e3469ddfd0794eb51f6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3802,7 +3782,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 630}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_191
+  - name: Frame_191
     originalName: 
     pivot: {x: 0.19512194, y: -0.8333334}
     alignment: 9
@@ -3813,7 +3793,7 @@ ScriptedImporter:
       y: 657
       width: 41
       height: 42
-    spriteID: 6b4272e9a3d421c43bcd4e9681ea95fe
+    spriteID: b51d4bb8b23572543a08b62f110fc39b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3822,7 +3802,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 657}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_192
+  - name: Frame_192
     originalName: 
     pivot: {x: 0.21739134, y: -0.8181819}
     alignment: 9
@@ -3833,7 +3813,7 @@ ScriptedImporter:
       y: 162
       width: 46
       height: 44
-    spriteID: ee772aec9357d654bb688924bb74525e
+    spriteID: f64ef8ba1b19ac84188d77a8e330277e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3842,7 +3822,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 162}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_193
+  - name: Frame_193
     originalName: 
     pivot: {x: 0.25490195, y: -0.92857146}
     alignment: 9
@@ -3853,7 +3833,7 @@ ScriptedImporter:
       y: 112
       width: 51
       height: 42
-    spriteID: 8c300646847339048b365a14925b4785
+    spriteID: fc010a8976cbefe43907bd691b03fa87
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3862,7 +3842,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 112}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_194
+  - name: Frame_194
     originalName: 
     pivot: {x: 0.25925928, y: -0.9302326}
     alignment: 9
@@ -3873,7 +3853,7 @@ ScriptedImporter:
       y: 4
       width: 54
       height: 43
-    spriteID: bc92b3f52c81be14ebb3222cb40290da
+    spriteID: 07ac7d40a19db9a479e11b5e41208c4f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3882,7 +3862,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 63, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_195
+  - name: Frame_195
     originalName: 
     pivot: {x: 0.19607846, y: -0.826087}
     alignment: 9
@@ -3893,7 +3873,7 @@ ScriptedImporter:
       y: 4
       width: 51
       height: 46
-    spriteID: 601a82f3693bc144a93940ace67829e6
+    spriteID: 55e6b43b8339c2942b14a122cd13e0a2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3902,7 +3882,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_196
+  - name: Frame_196
     originalName: 
     pivot: {x: 0.16, y: -0.8043478}
     alignment: 9
@@ -3913,7 +3893,7 @@ ScriptedImporter:
       y: 58
       width: 50
       height: 46
-    spriteID: 2ddefc3cea3f6084ba5d4660a61612b2
+    spriteID: 0ec9daf8cbb85b340994621f5be7ff8b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3922,7 +3902,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 58}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_198
+  - name: Frame_198
     originalName: 
     pivot: {x: 0.33333337, y: -3}
     alignment: 9
@@ -3933,7 +3913,7 @@ ScriptedImporter:
       y: 800
       width: 21
       height: 19
-    spriteID: aaad1fc6ecfbcd143b14f503ae80df0c
+    spriteID: 6bde494338a760947beab149996aae30
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3942,7 +3922,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 800}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_199
+  - name: Frame_199
     originalName: 
     pivot: {x: 0.35000002, y: -3}
     alignment: 9
@@ -3953,7 +3933,7 @@ ScriptedImporter:
       y: 882
       width: 20
       height: 19
-    spriteID: 1b145ee240bd2d34f87bac8e3db6ea80
+    spriteID: acc49a62c3efbff44950c114a867733c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3962,7 +3942,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 208, y: 882}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_210
+  - name: Frame_210
     originalName: 
     pivot: {x: 0.41379312, y: -3}
     alignment: 9
@@ -3973,7 +3953,7 @@ ScriptedImporter:
       y: 283
       width: 29
       height: 19
-    spriteID: 910b4d34cf9524c41803c11272897d28
+    spriteID: 392a31a4dd85de24ba051444584a4423
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -3982,7 +3962,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 182, y: 283}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_78
+  - name: Frame_78
     originalName: 
     pivot: {x: 0.31249994, y: -3.8}
     alignment: 9
@@ -3993,7 +3973,7 @@ ScriptedImporter:
       y: 203
       width: 16
       height: 15
-    spriteID: ad65554746e3aa64886eb53faf7d489d
+    spriteID: 54c814b6f0097544bbf90d20bd46aa7c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4002,7 +3982,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 203}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_79
+  - name: Frame_79
     originalName: 
     pivot: {x: 0.31249994, y: -3.8}
     alignment: 9
@@ -4013,7 +3993,7 @@ ScriptedImporter:
       y: 226
       width: 16
       height: 15
-    spriteID: c7595a3bd2cc5df4c8434bb6b1cb5fa2
+    spriteID: f26707f574367ea4ab1a97afa714a3e3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4022,7 +4002,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 226}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_80
+  - name: Frame_80
     originalName: 
     pivot: {x: 0.31249994, y: -3.8}
     alignment: 9
@@ -4033,7 +4013,7 @@ ScriptedImporter:
       y: 249
       width: 16
       height: 15
-    spriteID: 87f73c4c95f290a40b6e86eb5b49be9b
+    spriteID: 843f4a449132a364b9ec4baa16017358
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4042,7 +4022,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 249}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_81
+  - name: Frame_81
     originalName: 
     pivot: {x: 0.31249994, y: -3.8}
     alignment: 9
@@ -4053,7 +4033,7 @@ ScriptedImporter:
       y: 272
       width: 16
       height: 15
-    spriteID: 523a16f7493a4ee459063c9ece64cb3e
+    spriteID: 1ba85e96256d5b04a920545c8c92f873
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4062,7 +4042,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 272}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_110
+  - name: Frame_110
     originalName: 
     pivot: {x: 0.43750006, y: -3.9333332}
     alignment: 9
@@ -4073,7 +4053,7 @@ ScriptedImporter:
       y: 295
       width: 16
       height: 15
-    spriteID: cefeb355a54b87048a3008422c2c8fd0
+    spriteID: 251cd61a5730cee47a270473da62fb94
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4082,7 +4062,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 295}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_111
+  - name: Frame_111
     originalName: 
     pivot: {x: 0.43750006, y: -3.9333332}
     alignment: 9
@@ -4093,7 +4073,7 @@ ScriptedImporter:
       y: 318
       width: 16
       height: 15
-    spriteID: d54c3a257e6ca6745aa936b30e2f5930
+    spriteID: 369386223bbbe1d4882a2ce6fdf6b4d5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4102,7 +4082,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 318}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_112
+  - name: Frame_112
     originalName: 
     pivot: {x: 0.41176474, y: -4.214286}
     alignment: 9
@@ -4113,7 +4093,7 @@ ScriptedImporter:
       y: 387
       width: 17
       height: 14
-    spriteID: 1c5628feb9117d947b1ab4ef067d681f
+    spriteID: 70103ac8f8fd59b4185b7d7eb90bcaa2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4122,7 +4102,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 387}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_113
+  - name: Frame_113
     originalName: 
     pivot: {x: 0.41176474, y: -4.214286}
     alignment: 9
@@ -4133,7 +4113,7 @@ ScriptedImporter:
       y: 409
       width: 17
       height: 14
-    spriteID: 740afc0966382ba40b80408071004fed
+    spriteID: 92d69f0bf0fecc54e9b4f773900e9e90
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4142,7 +4122,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 409}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_114
+  - name: Frame_114
     originalName: 
     pivot: {x: 0.43750006, y: -3.9333332}
     alignment: 9
@@ -4153,7 +4133,7 @@ ScriptedImporter:
       y: 341
       width: 16
       height: 15
-    spriteID: 8718e4e61cd505d44acca30bf069ea95
+    spriteID: 68a2a07e186a6ba4ca2ea48a5c60637a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4162,7 +4142,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 341}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_115
+  - name: Frame_115
     originalName: 
     pivot: {x: 0.43750006, y: -3.9333332}
     alignment: 9
@@ -4173,7 +4153,7 @@ ScriptedImporter:
       y: 364
       width: 16
       height: 15
-    spriteID: c3fe585eb884bbb418779973b5a96048
+    spriteID: 23ab0e97c27a883479b24c58854545a3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4182,7 +4162,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 307, y: 364}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_43
+  - name: Frame_43
     originalName: 
     pivot: {x: 0.27272734, y: -5.909091}
     alignment: 9
@@ -4193,7 +4173,7 @@ ScriptedImporter:
       y: 950
       width: 11
       height: 11
-    spriteID: 10338fa5bb1b98349833bda1d2628858
+    spriteID: 83d224fdd4d970246995e542a1801210
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4202,7 +4182,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 163, y: 950}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_44
+  - name: Frame_44
     originalName: 
     pivot: {x: 0.27272734, y: -6.6000004}
     alignment: 9
@@ -4213,7 +4193,7 @@ ScriptedImporter:
       y: 977
       width: 11
       height: 10
-    spriteID: ba0756315459e404b8c8a1f039fc4c6e
+    spriteID: 63f89214e0e6794479d15c6a68de3255
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4222,7 +4202,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 163, y: 977}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_45
+  - name: Frame_45
     originalName: 
     pivot: {x: 0.27272734, y: -6.5}
     alignment: 9
@@ -4233,7 +4213,7 @@ ScriptedImporter:
       y: 34
       width: 11
       height: 10
-    spriteID: 4ef3a769c23ad6d498331a2d4ff235ad
+    spriteID: 0c0386e26a39eef4897839d08ff16073
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4242,7 +4222,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 220, y: 34}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_46
+  - name: Frame_46
     originalName: 
     pivot: {x: 0.27272734, y: -4.75}
     alignment: 9
@@ -4253,7 +4233,7 @@ ScriptedImporter:
       y: 923
       width: 11
       height: 12
-    spriteID: 1f169649398d833458eead0429acd37c
+    spriteID: d3721b77de67f0f4b85643ca30f746bd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4262,7 +4242,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 163, y: 923}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_47
+  - name: Frame_47
     originalName: 
     pivot: {x: 0.28571427, y: -8.142858}
     alignment: 9
@@ -4273,7 +4253,7 @@ ScriptedImporter:
       y: 119
       width: 14
       height: 7
-    spriteID: 59f4eae8d244d514ea3e169d22efbfb2
+    spriteID: 43eb065bd0598e24bbd4240b70438546
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4282,7 +4262,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 218, y: 119}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_48
+  - name: Frame_48
     originalName: 
     pivot: {x: 0.27272734, y: -6}
     alignment: 9
@@ -4293,7 +4273,7 @@ ScriptedImporter:
       y: 256
       width: 11
       height: 10
-    spriteID: 08fb97ab88221e244a5c23da6e62af34
+    spriteID: 226879ecb5f25cc4a85db87b49acd732
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4302,7 +4282,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 219, y: 256}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_49
+  - name: Frame_49
     originalName: 
     pivot: {x: 0.27272734, y: -5.7000003}
     alignment: 9
@@ -4313,7 +4293,7 @@ ScriptedImporter:
       y: 283
       width: 11
       height: 10
-    spriteID: ba98bbcc6c912e14db9bca789889ff7b
+    spriteID: 3f832e8018652424caa2ad65c9223a13
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4322,7 +4302,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 219, y: 283}
-  - name: sunnyside_world_chatacter_anim_v0.07_Frame_50
+  - name: Frame_50
     originalName: 
     pivot: {x: 0.27272734, y: -5.7000003}
     alignment: 9
@@ -4333,7 +4313,7 @@ ScriptedImporter:
       y: 365
       width: 11
       height: 10
-    spriteID: 00a547c041ecd724ab0889937ad51629
+    spriteID: fe954b82ee087b847ad9e6456ef9d7be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -4342,6 +4322,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 218, y: 365}
+  - name: Frame_92
+    originalName: 
+    pivot: {x: 0.15217394, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 1001
+      width: 46
+      height: 19
+    spriteID: 380ad24793588b249a9fee79ddfac5c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 1001}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -4359,7 +4359,7 @@ ScriptedImporter:
         y: 57
         width: 46
         height: 19
-      spriteId: 0a2f8fd0442f2d147ae9d18a40eee7af
+      spriteId: 00000000000000000000000000000000
     - name: Frame_93
       frameIndex: 93
       additiveSortOrder: 0
@@ -4368,7 +4368,7 @@ ScriptedImporter:
         y: 57
         width: 47
         height: 22
-      spriteId: 66602857aa924b24e8b2c3c1c6712919
+      spriteId: d8803c4c6d1d79d4ea298b458df4e365
     - name: Frame_94
       frameIndex: 94
       additiveSortOrder: 0
@@ -4377,7 +4377,7 @@ ScriptedImporter:
         y: 57
         width: 49
         height: 24
-      spriteId: db0c1cb8ece7c7d4189c0bb42ef95cf2
+      spriteId: 735d631e08c934643a52c3b68074495c
     - name: Frame_102
       frameIndex: 102
       additiveSortOrder: 0
@@ -4386,7 +4386,7 @@ ScriptedImporter:
         y: 57
         width: 46
         height: 20
-      spriteId: f99e9d09af5b04e47beca163d60c865c
+      spriteId: f95a2f46105078243a678964b5bfbd97
     - name: Frame_103
       frameIndex: 103
       additiveSortOrder: 0
@@ -4395,7 +4395,7 @@ ScriptedImporter:
         y: 57
         width: 47
         height: 22
-      spriteId: 80bea97fce5128646add7da8d1b4efa1
+      spriteId: e33c009c4997f444c8663d34fc77f9eb
     - name: Frame_104
       frameIndex: 104
       additiveSortOrder: 0
@@ -4404,7 +4404,7 @@ ScriptedImporter:
         y: 57
         width: 49
         height: 24
-      spriteId: 0da4379559c62f3469573c14de8623b4
+      spriteId: f35f6a0da79ca084097112cbf3c3ef52
     - name: Frame_136
       frameIndex: 136
       additiveSortOrder: 0
@@ -4413,7 +4413,7 @@ ScriptedImporter:
         y: 56
         width: 44
         height: 26
-      spriteId: 733e68891c0fd154e8f4bdbc166b1f84
+      spriteId: e78ec2a779fc6f84b96f5c4dd7db174a
     - name: Frame_137
       frameIndex: 137
       additiveSortOrder: 0
@@ -4422,7 +4422,7 @@ ScriptedImporter:
         y: 56
         width: 47
         height: 20
-      spriteId: 95ce82bb14edd554186ca79534b170ba
+      spriteId: c3392009ddb2f5f48bde1a6c008ad27e
     - name: Frame_138
       frameIndex: 138
       additiveSortOrder: 0
@@ -4431,7 +4431,7 @@ ScriptedImporter:
         y: 57
         width: 50
         height: 22
-      spriteId: b13861f5c4a32e743b3ecfa705366bc6
+      spriteId: 5417f77f0a98e5444b8a4ea219e16fba
     - name: Frame_139
       frameIndex: 139
       additiveSortOrder: 0
@@ -4440,7 +4440,7 @@ ScriptedImporter:
         y: 57
         width: 52
         height: 24
-      spriteId: f5c9f633ca4281d4587783381e02d566
+      spriteId: a4a93a3ca5036a34a96b56d4022eb420
     - name: Frame_146
       frameIndex: 146
       additiveSortOrder: 0
@@ -4449,7 +4449,7 @@ ScriptedImporter:
         y: 56
         width: 43
         height: 31
-      spriteId: d74c2fdde5514874bb27f4d458409a35
+      spriteId: 33b0b87769fd7724d8f03cc75b6c9a00
     - name: Frame_147
       frameIndex: 147
       additiveSortOrder: 0
@@ -4458,7 +4458,7 @@ ScriptedImporter:
         y: 56
         width: 46
         height: 23
-      spriteId: 1437a242ea6291b4ea6a86f87eb2ced5
+      spriteId: 40a291c97f443d6428e7502ecebda980
     - name: Frame_148
       frameIndex: 148
       additiveSortOrder: 0
@@ -4467,7 +4467,7 @@ ScriptedImporter:
         y: 56
         width: 48
         height: 25
-      spriteId: a4b1ca6c4efaafd4aad8df8aad9286ff
+      spriteId: 57678db41779eff4287416f0119e1ca3
     - name: Frame_91
       frameIndex: 91
       additiveSortOrder: 0
@@ -4476,7 +4476,7 @@ ScriptedImporter:
         y: 57
         width: 39
         height: 25
-      spriteId: 365c224d382f3de4fa65cb97801c9c20
+      spriteId: 5100033cc790bd84d999a04e038a2838
     - name: Frame_101
       frameIndex: 101
       additiveSortOrder: 0
@@ -4485,7 +4485,7 @@ ScriptedImporter:
         y: 57
         width: 42
         height: 25
-      spriteId: 6924d50171d57814693e4edc1a17b889
+      spriteId: bcfa6a24dafda354abf1a0b584ce8c80
     - name: Frame_145
       frameIndex: 145
       additiveSortOrder: 0
@@ -4494,7 +4494,7 @@ ScriptedImporter:
         y: 57
         width: 39
         height: 31
-      spriteId: 8c3af4117c540294b805d08c3bda51d7
+      spriteId: 8c2dbac6df73e7e44bd9bbfe0e2dc754
     - name: Frame_205
       frameIndex: 205
       additiveSortOrder: 0
@@ -4503,7 +4503,7 @@ ScriptedImporter:
         y: 57
         width: 26
         height: 19
-      spriteId: b281572081caa34429238cc7ec4dbecb
+      spriteId: 7fc968ce581e1204faadcd5367a0e350
     - name: Frame_206
       frameIndex: 206
       additiveSortOrder: 0
@@ -4512,7 +4512,7 @@ ScriptedImporter:
         y: 57
         width: 28
         height: 24
-      spriteId: d4fa13691c752e9438c3e1e6dbae497e
+      spriteId: 9e6d0e1f46981d648b8dbf47a35023e7
     - name: Frame_207
       frameIndex: 207
       additiveSortOrder: 0
@@ -4521,7 +4521,7 @@ ScriptedImporter:
         y: 57
         width: 23
         height: 27
-      spriteId: 8d441e3659ce6d0418557c2ae9eae5f1
+      spriteId: 2134e9d1e38ab5a479723dd40143ca2e
     - name: Frame_133
       frameIndex: 133
       additiveSortOrder: 0
@@ -4530,7 +4530,7 @@ ScriptedImporter:
         y: 57
         width: 27
         height: 23
-      spriteId: b9621a9960b5c73459dc228cd0aacbda
+      spriteId: 3fde82344ddb57441b8d7e503f9f2f69
     - name: Frame_134
       frameIndex: 134
       additiveSortOrder: 0
@@ -4539,7 +4539,7 @@ ScriptedImporter:
         y: 57
         width: 27
         height: 30
-      spriteId: 8c5d01f2ed806cd47bd4fca075cff6cb
+      spriteId: 586ea4cc5b351ec4dbe81c94b0ad82ac
     - name: Frame_135
       frameIndex: 135
       additiveSortOrder: 0
@@ -4548,7 +4548,7 @@ ScriptedImporter:
         y: 57
         width: 42
         height: 26
-      spriteId: 6ee4b38b20ba5204b93a7c4fad603383
+      spriteId: 88725ece495c1244ca2c1706bfe4f089
     - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
@@ -4557,7 +4557,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 44fb73e22260706418f8224e4854a26f
+      spriteId: 8bdc5e396a3ba2543a38f366246ed1e9
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -4566,7 +4566,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 391be1f87ed5faa4ebf7ac1c15ce73da
+      spriteId: c2499604ee5c1bf48a0766844272ff4c
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -4575,7 +4575,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: a0c0f523a0838c74db44a10affc3e129
+      spriteId: 6dc823a3eae392a469ea5ee556735842
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -4584,7 +4584,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 1e7b6a4d6f1d79740a2339ba6d86ab98
+      spriteId: 96ec3f29957a62147a03639e069a2a8a
     - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -4593,7 +4593,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: f726299226539cd4190582eb412167b0
+      spriteId: bd2682a7d755a5e429761d92a7420104
     - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -4602,7 +4602,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 1b76ddc840a8781469eb7af9d0f2a331
+      spriteId: 08910991c44f55f44b3dbe033116aa5b
     - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -4611,7 +4611,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: ed240e6351ff588469e1e1834b077881
+      spriteId: 8243ab9ff04a6fe4da9c32cf89bc3be2
     - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -4620,7 +4620,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 568487c028f54154a80261828f47f2cf
+      spriteId: 68efe99c24281d94fad9d69879f2e5cf
     - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -4629,7 +4629,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 28
-      spriteId: c1e8cd87b09e01f4bbfae047b483e470
+      spriteId: 836784bb7561f564093bf60a246a5886
     - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -4638,7 +4638,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 28
-      spriteId: f7939b7c1b4da0c47b76883be4b286e4
+      spriteId: a7f0d1f94f1254f41b34d0a050e08dc5
     - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
@@ -4647,7 +4647,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 27
-      spriteId: 6dc0c9b9d8789d44a839999f318b35fc
+      spriteId: 1abf766a52a7daf4d8b1a6582e98ad27
     - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -4656,7 +4656,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 29
-      spriteId: d31e7cdc65417324ead20664bf990113
+      spriteId: f5f95c4c0acfd684a94b5825ccf59de8
     - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -4665,7 +4665,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 28
-      spriteId: c7e712b81cd1e1a46ade59b2d782ecf7
+      spriteId: 64c858039ef67ad43a6f00d174786d15
     - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
@@ -4674,7 +4674,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 27
-      spriteId: 9cd5b3a5b5319734e9ac16cdd473d80d
+      spriteId: f0e24de4e3152fb4186ca18cc52ca404
     - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
@@ -4683,7 +4683,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 28
-      spriteId: 4b7d8bf817d9029418a5226cb2e86e1e
+      spriteId: 9483c405220040843ba69321ed3db9b9
     - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
@@ -4692,7 +4692,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 28
-      spriteId: d5244e9b75f9ce240bf0a4f407fe4597
+      spriteId: bf335f926c70746449662e4d9a7a36d5
     - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
@@ -4701,7 +4701,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 7f774fc055401664690d0390833a2dae
+      spriteId: 6618a8617b1f2734c9a09c3609620848
     - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
@@ -4710,7 +4710,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 89c3b211e4caadb43a1852d5c10f6387
+      spriteId: bf9e51649cbd29747b5b748b39cde6fc
     - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
@@ -4719,7 +4719,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: eb12f98c342844447ac62dd9990cd039
+      spriteId: f19921accce799f45a658b80e29d8b3c
     - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
@@ -4728,7 +4728,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 95c2983805f31a846b774a51c57a8bc1
+      spriteId: 76460cf7d444b894cab000cd1fbec1de
     - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
@@ -4737,7 +4737,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 494b14f7b5f579b489e68e74145960af
+      spriteId: 29a1feaeb91b6b947b2ba9f402137a18
     - name: Frame_21
       frameIndex: 21
       additiveSortOrder: 0
@@ -4746,7 +4746,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 17
-      spriteId: 53ec37364696eeb4495e710c77f07f71
+      spriteId: 2c448c8795525ab4f837694b0005224a
     - name: Frame_22
       frameIndex: 22
       additiveSortOrder: 0
@@ -4755,7 +4755,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: eaf028edfa26e9047a5355dcf8435478
+      spriteId: 0b4b2ebb6a5205d4db0ae48d09f807c9
     - name: Frame_23
       frameIndex: 23
       additiveSortOrder: 0
@@ -4764,7 +4764,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 755b2905518c97746804ec6597475026
+      spriteId: 621bce6af80db5b4f88edbaba25b7a1a
     - name: Frame_24
       frameIndex: 24
       additiveSortOrder: 0
@@ -4773,7 +4773,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 4093a457f2183fc44a3db66c894d979f
+      spriteId: fec0df9a57884c54098f6184c97b9a9f
     - name: Frame_25
       frameIndex: 25
       additiveSortOrder: 0
@@ -4782,7 +4782,7 @@ ScriptedImporter:
         y: 55
         width: 27
         height: 21
-      spriteId: ce92b14a05d5dac458e472026dd59a84
+      spriteId: c814dd74e3ce4e048ac73d64bb645402
     - name: Frame_26
       frameIndex: 26
       additiveSortOrder: 0
@@ -4791,7 +4791,7 @@ ScriptedImporter:
         y: 56
         width: 28
         height: 20
-      spriteId: 2d412694142490a479c2b3089e9e0cc1
+      spriteId: 15673a12cb2b80a498e3a71264242473
     - name: Frame_27
       frameIndex: 27
       additiveSortOrder: 0
@@ -4800,7 +4800,7 @@ ScriptedImporter:
         y: 54
         width: 30
         height: 22
-      spriteId: 6341e3d3cf5a5ed4eb46bba54d05bc94
+      spriteId: 3b6423f1ae55dcd448ed4a223cd7000c
     - name: Frame_28
       frameIndex: 28
       additiveSortOrder: 0
@@ -4809,7 +4809,7 @@ ScriptedImporter:
         y: 54
         width: 32
         height: 22
-      spriteId: 2fce6020213946b439900395692da19f
+      spriteId: 9b6ff111a0d1c40459d0415e6fe66270
     - name: Frame_29
       frameIndex: 29
       additiveSortOrder: 0
@@ -4818,7 +4818,7 @@ ScriptedImporter:
         y: 55
         width: 33
         height: 21
-      spriteId: 4f9238818a358564e80740e10027893c
+      spriteId: 709f96e2ce68d9947aa5de848685e8b3
     - name: Frame_30
       frameIndex: 30
       additiveSortOrder: 0
@@ -4827,7 +4827,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: a068e430f0a6c9b45a71130d00fd544d
+      spriteId: 7302c9847129e2e47a8de23c53f8d265
     - name: Frame_31
       frameIndex: 31
       additiveSortOrder: 0
@@ -4836,7 +4836,7 @@ ScriptedImporter:
         y: 57
         width: 14
         height: 17
-      spriteId: 652692e70257fcf4987133aefb587860
+      spriteId: cc3783f5901230a439a0e22a65457452
     - name: Frame_32
       frameIndex: 32
       additiveSortOrder: 0
@@ -4845,7 +4845,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 20
-      spriteId: ea4a1d88cda35aa4b9e30ddae152e242
+      spriteId: 720a1542e8c18fd49bbde5ac72c43491
     - name: Frame_33
       frameIndex: 33
       additiveSortOrder: 0
@@ -4854,7 +4854,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 20
-      spriteId: 7badfc1dcd2c1424ba2d7ee273fde0b2
+      spriteId: a0dfe0a35b9d47346aa47af67279d115
     - name: Frame_34
       frameIndex: 34
       additiveSortOrder: 0
@@ -4863,7 +4863,7 @@ ScriptedImporter:
         y: 57
         width: 17
         height: 19
-      spriteId: ff2d8a912a2da1e4ca873b6feb157caf
+      spriteId: 6446e2bff8ba009429cc76979990ba45
     - name: Frame_35
       frameIndex: 35
       additiveSortOrder: 0
@@ -4872,7 +4872,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 17
-      spriteId: ba58b1e78c9c7a749817c58262ee8904
+      spriteId: cdb58b7923d531f4fb1524f95d37d520
     - name: Frame_36
       frameIndex: 36
       additiveSortOrder: 0
@@ -4881,7 +4881,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 17
-      spriteId: 50fb11156920e564ab05cec01b464182
+      spriteId: 896adbb641a6f8a45a87d9ac7bcccd8d
     - name: Frame_37
       frameIndex: 37
       additiveSortOrder: 0
@@ -4890,7 +4890,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: a5ed16cd0e7bdd74fb0742bf86ed9845
+      spriteId: 05b707b9e3f43f942a1e0fa940e31409
     - name: Frame_38
       frameIndex: 38
       additiveSortOrder: 0
@@ -4899,7 +4899,7 @@ ScriptedImporter:
         y: 57
         width: 13
         height: 16
-      spriteId: 5d8218063776f354eb55cd326581d10f
+      spriteId: 8e04ad3024d65004f88a9ba9ee0e1eaa
     - name: Frame_39
       frameIndex: 39
       additiveSortOrder: 0
@@ -4908,7 +4908,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: a119e9ca3940ea54c94a25b98aa003d4
+      spriteId: f6560833df6b4b94ba71218c0feb0410
     - name: Frame_40
       frameIndex: 40
       additiveSortOrder: 0
@@ -4917,7 +4917,7 @@ ScriptedImporter:
         y: 57
         width: 13
         height: 16
-      spriteId: 1fe18f53f0f9f9a4c9d0bbcad610c5e5
+      spriteId: 4f1d2d22a23123b46a8e9d28e9bafb11
     - name: Frame_41
       frameIndex: 41
       additiveSortOrder: 0
@@ -4926,7 +4926,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: e84a5b61fc6eeb1429a327d8e980ba44
+      spriteId: e0c0e2e8f516d394492bb6b8b545c1d7
     - name: Frame_42
       frameIndex: 42
       additiveSortOrder: 0
@@ -4935,7 +4935,7 @@ ScriptedImporter:
         y: 57
         width: 13
         height: 16
-      spriteId: 3a44b55a83afabd4a9ac566afb2a4874
+      spriteId: 4a89e035e73fe7540bf5923200afa922
     - name: Frame_51
       frameIndex: 51
       additiveSortOrder: 0
@@ -4944,7 +4944,7 @@ ScriptedImporter:
         y: 56
         width: 19
         height: 20
-      spriteId: 5a5d6a050d26c3940b02cdfbc66f4fa5
+      spriteId: 0d2ec44a3eaef4a40a2f2811d5818406
     - name: Frame_52
       frameIndex: 52
       additiveSortOrder: 0
@@ -4953,7 +4953,7 @@ ScriptedImporter:
         y: 57
         width: 20
         height: 19
-      spriteId: e05df7d2a77c17445acbbcdd0a96e778
+      spriteId: 4c834bc71098dcb449f3d4eefeb19dd4
     - name: Frame_53
       frameIndex: 53
       additiveSortOrder: 0
@@ -4962,7 +4962,7 @@ ScriptedImporter:
         y: 57
         width: 20
         height: 18
-      spriteId: c2e17aed45fe9cd45a866897a7af4f9e
+      spriteId: b73c554d3afb2c947abca7da26069ad4
     - name: Frame_54
       frameIndex: 54
       additiveSortOrder: 0
@@ -4971,7 +4971,7 @@ ScriptedImporter:
         y: 57
         width: 20
         height: 18
-      spriteId: 7e13fc39487064f45ade89c7a240ad0c
+      spriteId: 57ed53c7bb4fb754f832fdf6cfabef7a
     - name: Frame_55
       frameIndex: 55
       additiveSortOrder: 0
@@ -4980,7 +4980,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 17
-      spriteId: 9b8ce3b682377dd4a958bbcd2c408fbd
+      spriteId: b543b1fd4265c1746a8b84c646e17df7
     - name: Frame_56
       frameIndex: 56
       additiveSortOrder: 0
@@ -4989,7 +4989,7 @@ ScriptedImporter:
         y: 56
         width: 18
         height: 19
-      spriteId: 603094a01ba2b4041b514bbc418f506e
+      spriteId: 25316107d8e304d4dbda7bb3d83b4ace
     - name: Frame_57
       frameIndex: 57
       additiveSortOrder: 0
@@ -4998,7 +4998,7 @@ ScriptedImporter:
         y: 56
         width: 18
         height: 19
-      spriteId: 8e0952666ecd73743b2d0f082e9116c9
+      spriteId: 2b05afab0a8b62d489acc612f4278299
     - name: Frame_58
       frameIndex: 58
       additiveSortOrder: 0
@@ -5007,7 +5007,7 @@ ScriptedImporter:
         y: 56
         width: 18
         height: 20
-      spriteId: 5e9a5d8e06ba3b246b84f3e975b7cc5d
+      spriteId: 845892cffab77b14f918b2d2a2d39098
     - name: Frame_59
       frameIndex: 59
       additiveSortOrder: 0
@@ -5016,7 +5016,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: dc9a889c3acb1474082920861d621be2
+      spriteId: 6252d8584a2cc5a47918d05890b5d781
     - name: Frame_60
       frameIndex: 60
       additiveSortOrder: 0
@@ -5025,7 +5025,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: de7000ad415149a499cba54d016eb4ed
+      spriteId: 0c3bccc5fb9900e448a8b79e126ebbbb
     - name: Frame_61
       frameIndex: 61
       additiveSortOrder: 0
@@ -5034,7 +5034,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: c5ad803b4ae3c754fa3f6fcb5b5189b8
+      spriteId: d6e8b499474126b4a8197bfcd81b9786
     - name: Frame_64
       frameIndex: 64
       additiveSortOrder: 0
@@ -5043,7 +5043,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 18
-      spriteId: 2c1e9c14258d5534d8d8b50f42cf5fb6
+      spriteId: 58c9613da2381e3428f4c1690faafe0c
     - name: Frame_65
       frameIndex: 65
       additiveSortOrder: 0
@@ -5052,7 +5052,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 8bb314e180f840747a959e72b0be83e5
+      spriteId: f8b476261d0bf0243abc5c1d473e0c3b
     - name: Frame_66
       frameIndex: 66
       additiveSortOrder: 0
@@ -5061,7 +5061,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 19
-      spriteId: 35d143cf0228b48459a91dfe257e6673
+      spriteId: f00d69d8dc0d1ae4a83365e3d48f45e9
     - name: Frame_67
       frameIndex: 67
       additiveSortOrder: 0
@@ -5070,7 +5070,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 9053932dc04eb8c4dafc538ca46076a4
+      spriteId: 3e5f4aa7d4b02c34e8d681bd8d2274a4
     - name: Frame_68
       frameIndex: 68
       additiveSortOrder: 0
@@ -5079,7 +5079,7 @@ ScriptedImporter:
         y: 57
         width: 17
         height: 18
-      spriteId: 57a66a08e3a77b74ea3b9261a59be698
+      spriteId: b5da05b438d922442a8c0e7c00df08ec
     - name: Frame_69
       frameIndex: 69
       additiveSortOrder: 0
@@ -5088,7 +5088,7 @@ ScriptedImporter:
         y: 57
         width: 15
         height: 19
-      spriteId: 5d11a41882d607b418074efe66918950
+      spriteId: 1843181f279efb9428637b90534b73da
     - name: Frame_70
       frameIndex: 70
       additiveSortOrder: 0
@@ -5097,7 +5097,7 @@ ScriptedImporter:
         y: 58
         width: 15
         height: 20
-      spriteId: a634f73cae152944bb6e12b3b672d253
+      spriteId: 0129cdd38245e9448ae6ae7e1701a71c
     - name: Frame_71
       frameIndex: 71
       additiveSortOrder: 0
@@ -5106,7 +5106,7 @@ ScriptedImporter:
         y: 60
         width: 16
         height: 19
-      spriteId: c303e468162afc545b2e972ebc674eb3
+      spriteId: fb29de149d05e214e89ce47b3418ef41
     - name: Frame_72
       frameIndex: 72
       additiveSortOrder: 0
@@ -5115,7 +5115,7 @@ ScriptedImporter:
         y: 61
         width: 18
         height: 19
-      spriteId: 0d8c5fbe8b550f74592b2f9bf2e867e7
+      spriteId: bcf94ea1f770c5949a5f3f1f097008c0
     - name: Frame_73
       frameIndex: 73
       additiveSortOrder: 0
@@ -5124,7 +5124,7 @@ ScriptedImporter:
         y: 59
         width: 17
         height: 18
-      spriteId: 55192b12e27b9624eae921293af5291a
+      spriteId: 0bd8c1017dc61724b8d524af6b9a2c57
     - name: Frame_74
       frameIndex: 74
       additiveSortOrder: 0
@@ -5133,7 +5133,7 @@ ScriptedImporter:
         y: 57
         width: 15
         height: 17
-      spriteId: 785aa734961f59d4ca6c3f16da119c25
+      spriteId: 22b6a21862aface46974104af576df6a
     - name: Frame_75
       frameIndex: 75
       additiveSortOrder: 0
@@ -5142,7 +5142,7 @@ ScriptedImporter:
         y: 57
         width: 15
         height: 19
-      spriteId: f3710951f63ff754d8c23152b716f444
+      spriteId: aad3a5a32278fb44b8a9dc6afe4256b8
     - name: Frame_76
       frameIndex: 76
       additiveSortOrder: 0
@@ -5151,7 +5151,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 26efe1c5003076a41813e2859fe74f04
+      spriteId: 37a25ac75201c8040a263653a8cc1052
     - name: Frame_83
       frameIndex: 83
       additiveSortOrder: 0
@@ -5160,7 +5160,7 @@ ScriptedImporter:
         y: 57
         width: 17
         height: 13
-      spriteId: 931ff8f986b09e24b895f8e67664077b
+      spriteId: d4c1dba0b94357e46b7575a4d7617e5a
     - name: Frame_84
       frameIndex: 84
       additiveSortOrder: 0
@@ -5169,7 +5169,7 @@ ScriptedImporter:
         y: 57
         width: 15
         height: 18
-      spriteId: 372305682d0710e4d959f61488e6d1c2
+      spriteId: 8e335c853bc95dd4d82ea5d2196bfda2
     - name: Frame_85
       frameIndex: 85
       additiveSortOrder: 0
@@ -5178,7 +5178,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: 421270dc4927e0d4194de9b9fc9927b7
+      spriteId: 0bc47a4c9d8014447ba46ff8bf79d341
     - name: Frame_86
       frameIndex: 86
       additiveSortOrder: 0
@@ -5187,7 +5187,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 21
-      spriteId: 8113b3b1932dc934e91d4bbf37139e4a
+      spriteId: 9f63a1149d3993444b6978fd7d6d24df
     - name: Frame_87
       frameIndex: 87
       additiveSortOrder: 0
@@ -5196,7 +5196,7 @@ ScriptedImporter:
         y: 57
         width: 19
         height: 22
-      spriteId: 386f6df00ba2aa04b98df48afd3cafe9
+      spriteId: f7fa6822688c1ba44ac311e2ac86c025
     - name: Frame_88
       frameIndex: 88
       additiveSortOrder: 0
@@ -5205,7 +5205,7 @@ ScriptedImporter:
         y: 57
         width: 25
         height: 20
-      spriteId: 19a2cec136ff62a48b05948d064334fd
+      spriteId: 6a230c3dfe958a94f911b1e707168b59
     - name: Frame_89
       frameIndex: 89
       additiveSortOrder: 0
@@ -5214,7 +5214,7 @@ ScriptedImporter:
         y: 57
         width: 27
         height: 18
-      spriteId: ed41374b4665076498424c250c5ccd36
+      spriteId: 37e370b277526554da94b3bb406e74e8
     - name: Frame_90
       frameIndex: 90
       additiveSortOrder: 0
@@ -5223,7 +5223,7 @@ ScriptedImporter:
         y: 57
         width: 26
         height: 19
-      spriteId: 3ed1909ce1a94064bb8dccbb57585732
+      spriteId: ef09fffcc0e71ee4b94b701c350e935f
     - name: Frame_95
       frameIndex: 95
       additiveSortOrder: 0
@@ -5232,7 +5232,7 @@ ScriptedImporter:
         y: 57
         width: 26
         height: 19
-      spriteId: 9df70f1abd34225428c242fe5fa10451
+      spriteId: 3d4b0f328e903d74bac95a44b6a6296a
     - name: Frame_96
       frameIndex: 96
       additiveSortOrder: 0
@@ -5241,7 +5241,7 @@ ScriptedImporter:
         y: 57
         width: 20
         height: 20
-      spriteId: d2c13bec73dbbb5478df52dec57c4b1d
+      spriteId: 1e124d1f7dd5c98439db7d624a431479
     - name: Frame_97
       frameIndex: 97
       additiveSortOrder: 0
@@ -5250,7 +5250,7 @@ ScriptedImporter:
         y: 57
         width: 24
         height: 21
-      spriteId: 4bfb495b16a68d7439f6daf64ee21bb4
+      spriteId: fd325230dab9dcb4f84e5957c83b1c15
     - name: Frame_98
       frameIndex: 98
       additiveSortOrder: 0
@@ -5259,7 +5259,7 @@ ScriptedImporter:
         y: 57
         width: 27
         height: 19
-      spriteId: a522cd41bca51e84f84eb5dfb1d9d876
+      spriteId: 4a4a0937ef5cd5f418e6fb11aa7b9d75
     - name: Frame_99
       frameIndex: 99
       additiveSortOrder: 0
@@ -5268,7 +5268,7 @@ ScriptedImporter:
         y: 54
         width: 27
         height: 21
-      spriteId: 6e6acc02012b8d645b8ccbb908267f62
+      spriteId: d692b4a659f64a94c8ecb87f6517672c
     - name: Frame_100
       frameIndex: 100
       additiveSortOrder: 0
@@ -5277,7 +5277,7 @@ ScriptedImporter:
         y: 52
         width: 26
         height: 24
-      spriteId: d270cc97564982641a2ab3d82aef32cf
+      spriteId: ca47ef8d9af4c14499d719974ef8df64
     - name: Frame_105
       frameIndex: 105
       additiveSortOrder: 0
@@ -5286,7 +5286,7 @@ ScriptedImporter:
         y: 57
         width: 29
         height: 19
-      spriteId: 2b8b19a653f837b40b7537dc71bafea4
+      spriteId: 1fe57e7f5e0140f4eaeea029727063bb
     - name: Frame_118
       frameIndex: 118
       additiveSortOrder: 0
@@ -5295,7 +5295,7 @@ ScriptedImporter:
         y: 57
         width: 33
         height: 19
-      spriteId: be454032accf1d246abd7c1aaac83011
+      spriteId: 49d1fab7a6c02c54eb9571359cd79612
     - name: Frame_119
       frameIndex: 119
       additiveSortOrder: 0
@@ -5304,7 +5304,7 @@ ScriptedImporter:
         y: 57
         width: 32
         height: 19
-      spriteId: 5969b625f69b24147ad2563ce5fb50ac
+      spriteId: ae72c9d4961365741bea48720525ca5f
     - name: Frame_123
       frameIndex: 123
       additiveSortOrder: 0
@@ -5313,7 +5313,7 @@ ScriptedImporter:
         y: 57
         width: 25
         height: 19
-      spriteId: 93978e0d2fd0fdf469cdc9e58a202849
+      spriteId: c3ac5b1b090ae8d4fa2a96c6c636c09b
     - name: Frame_124
       frameIndex: 124
       additiveSortOrder: 0
@@ -5322,7 +5322,7 @@ ScriptedImporter:
         y: 57
         width: 29
         height: 19
-      spriteId: b7237718fc6c3b84b98a2b14d43f7d6b
+      spriteId: a8f8765f9aa005a46bf99c902b81f571
     - name: Frame_125
       frameIndex: 125
       additiveSortOrder: 0
@@ -5331,7 +5331,7 @@ ScriptedImporter:
         y: 57
         width: 30
         height: 19
-      spriteId: 76a14a3ec2e3d1a4b8cf838a07a57356
+      spriteId: c5c2902ceb89a054b99b443440019e36
     - name: Frame_126
       frameIndex: 126
       additiveSortOrder: 0
@@ -5340,7 +5340,7 @@ ScriptedImporter:
         y: 57
         width: 32
         height: 19
-      spriteId: 8fed8e90f5dc9534aa93dc6fb63da33a
+      spriteId: 5fe475b86379455438b77606f90cda51
     - name: Frame_127
       frameIndex: 127
       additiveSortOrder: 0
@@ -5349,7 +5349,7 @@ ScriptedImporter:
         y: 57
         width: 32
         height: 19
-      spriteId: 94d23c112c7a1f845a3a4aa9c90bd421
+      spriteId: 6be762f2644a9cd4385f3ed8589acc4d
     - name: Frame_128
       frameIndex: 128
       additiveSortOrder: 0
@@ -5358,7 +5358,7 @@ ScriptedImporter:
         y: 57
         width: 30
         height: 19
-      spriteId: 9d78a7bad3c8e924792f2a9af312c060
+      spriteId: 05ec8a19f1d16ed4caadde6757d88a01
     - name: Frame_129
       frameIndex: 129
       additiveSortOrder: 0
@@ -5367,7 +5367,7 @@ ScriptedImporter:
         y: 57
         width: 29
         height: 19
-      spriteId: e934368a9b68cdc409518c644dc8fd85
+      spriteId: 79c0a481080114d43abdb04974d52169
     - name: Frame_130
       frameIndex: 130
       additiveSortOrder: 0
@@ -5376,7 +5376,7 @@ ScriptedImporter:
         y: 57
         width: 29
         height: 19
-      spriteId: 150697fdb200714468102b0efc2db548
+      spriteId: e50b432e6e6a4234587d7953705a56a6
     - name: Frame_131
       frameIndex: 131
       additiveSortOrder: 0
@@ -5385,7 +5385,7 @@ ScriptedImporter:
         y: 57
         width: 30
         height: 19
-      spriteId: 4cddc5f36402b4f409156bb665d82ace
+      spriteId: ce632ad169367b347a5561790b3912c7
     - name: Frame_132
       frameIndex: 132
       additiveSortOrder: 0
@@ -5394,7 +5394,7 @@ ScriptedImporter:
         y: 57
         width: 30
         height: 19
-      spriteId: cc5a9f733ee8381419a065b7f64875de
+      spriteId: 4710cb141a1fcf54ca1cdebfab51071d
     - name: Frame_140
       frameIndex: 140
       additiveSortOrder: 0
@@ -5403,7 +5403,7 @@ ScriptedImporter:
         y: 57
         width: 48
         height: 19
-      spriteId: 8301858f606c2ae4ea3003e52a58a707
+      spriteId: b0ba8880d0c176f4c976c9da8b86e972
     - name: Frame_141
       frameIndex: 141
       additiveSortOrder: 0
@@ -5412,7 +5412,7 @@ ScriptedImporter:
         y: 57
         width: 17
         height: 19
-      spriteId: 19df2601e196ad04293110c3800ecb1c
+      spriteId: 6cfb69cadc9348a4ba656bdd322f84a5
     - name: Frame_142
       frameIndex: 142
       additiveSortOrder: 0
@@ -5421,7 +5421,7 @@ ScriptedImporter:
         y: 57
         width: 24
         height: 22
-      spriteId: 5dc76c6c994e3004fab2b8b9aacc0e4f
+      spriteId: dc5d9fe96464b9743a19dade43e30ac8
     - name: Frame_143
       frameIndex: 143
       additiveSortOrder: 0
@@ -5430,7 +5430,7 @@ ScriptedImporter:
         y: 57
         width: 28
         height: 19
-      spriteId: a4f1a20de1f7bc04299322a02646f306
+      spriteId: c239bfbfe85bde44bbf474fe7539cb48
     - name: Frame_144
       frameIndex: 144
       additiveSortOrder: 0
@@ -5439,7 +5439,7 @@ ScriptedImporter:
         y: 57
         width: 27
         height: 17
-      spriteId: 33f56787f10d40746acdcc38ed97abe8
+      spriteId: d8acc5b699a489a4692a61319eb065ed
     - name: Frame_149
       frameIndex: 149
       additiveSortOrder: 0
@@ -5448,7 +5448,7 @@ ScriptedImporter:
         y: 57
         width: 23
         height: 19
-      spriteId: 5f2e4cf02239f20449ba4a6047e70e90
+      spriteId: 93ade2cfc0c6d6d43b9f22d87e32c1ed
     - name: Frame_150
       frameIndex: 150
       additiveSortOrder: 0
@@ -5457,7 +5457,7 @@ ScriptedImporter:
         y: 57
         width: 17
         height: 19
-      spriteId: 0ba8127057e98b145b380d546743ed20
+      spriteId: 608ba9c5023c45044a3e71fa654e230c
     - name: Frame_151
       frameIndex: 151
       additiveSortOrder: 0
@@ -5466,7 +5466,7 @@ ScriptedImporter:
         y: 55
         width: 28
         height: 21
-      spriteId: e67e407925383f54ca9b7ccac350c3ab
+      spriteId: 0c87c48d87e5bfb4b817e76fbddf7969
     - name: Frame_157
       frameIndex: 157
       additiveSortOrder: 0
@@ -5475,7 +5475,7 @@ ScriptedImporter:
         y: 57
         width: 31
         height: 21
-      spriteId: ebee09ed1d4b70c41906e6f0b9334d94
+      spriteId: ae017f226a73d3b4fbe810128e23b146
     - name: Frame_158
       frameIndex: 158
       additiveSortOrder: 0
@@ -5484,7 +5484,7 @@ ScriptedImporter:
         y: 55
         width: 38
         height: 22
-      spriteId: 9042bfb9ebadc584a856ed5c12a20888
+      spriteId: 21abc27c579c8e34190969fc1bfcdba8
     - name: Frame_159
       frameIndex: 159
       additiveSortOrder: 0
@@ -5493,7 +5493,7 @@ ScriptedImporter:
         y: 49
         width: 41
         height: 27
-      spriteId: b0f0a17b89bf3684297c99b2c4c7724f
+      spriteId: 240bbae4115b57a469e0602297ad51c5
     - name: Frame_160
       frameIndex: 160
       additiveSortOrder: 0
@@ -5502,7 +5502,7 @@ ScriptedImporter:
         y: 38
         width: 41
         height: 38
-      spriteId: 49e6ecb8394a356469740f64bcd6aa87
+      spriteId: 1ba8bd4e07c45fd479d65f91d35e75c2
     - name: Frame_161
       frameIndex: 161
       additiveSortOrder: 0
@@ -5511,7 +5511,7 @@ ScriptedImporter:
         y: 35
         width: 42
         height: 41
-      spriteId: 648be1ca5c661404298f493583fd1251
+      spriteId: cf6a558c3ae08db4792118332a34d769
     - name: Frame_162
       frameIndex: 162
       additiveSortOrder: 0
@@ -5520,7 +5520,7 @@ ScriptedImporter:
         y: 35
         width: 44
         height: 41
-      spriteId: ed2debea9e9ddd34f9ebd9e639fd884d
+      spriteId: 2704270071f017146bc3c15ab09575c6
     - name: Frame_163
       frameIndex: 163
       additiveSortOrder: 0
@@ -5529,7 +5529,7 @@ ScriptedImporter:
         y: 34
         width: 46
         height: 42
-      spriteId: e55025b3501f6c24e94d0c1d1c2aa622
+      spriteId: 054e078ccbcb1674fb74cd8dfd4977ea
     - name: Frame_164
       frameIndex: 164
       additiveSortOrder: 0
@@ -5538,7 +5538,7 @@ ScriptedImporter:
         y: 34
         width: 48
         height: 42
-      spriteId: de98d01a1903d9344a643667a31eed1d
+      spriteId: 8b4b27623b1f9504ebe7545a7836b337
     - name: Frame_165
       frameIndex: 165
       additiveSortOrder: 0
@@ -5547,7 +5547,7 @@ ScriptedImporter:
         y: 35
         width: 49
         height: 41
-      spriteId: bf57500f22d4a614a83f32fa3cd02bd4
+      spriteId: 77854459f02036744b99197502323c81
     - name: Frame_166
       frameIndex: 166
       additiveSortOrder: 0
@@ -5556,7 +5556,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: a7fae4d8bbd9ede408812d4530744853
+      spriteId: f2f86ee2cffa87140a66ca475ee6b5f7
     - name: Frame_167
       frameIndex: 167
       additiveSortOrder: 0
@@ -5565,7 +5565,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: 9c9e2a2a5569ce0459e69f61483c0df0
+      spriteId: 1787a8a6e3dbd5a43896b2e9e6568a76
     - name: Frame_168
       frameIndex: 168
       additiveSortOrder: 0
@@ -5574,7 +5574,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: 778f2f7e1f7f9b14686674ab93cc02c4
+      spriteId: aef3f080755d20a4e9a9cd04f72088a1
     - name: Frame_169
       frameIndex: 169
       additiveSortOrder: 0
@@ -5583,7 +5583,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 40
-      spriteId: 3a357453d2b396f4fb0d0268cd114b67
+      spriteId: 94049db20e1af0b44a656c4002f7fba8
     - name: Frame_170
       frameIndex: 170
       additiveSortOrder: 0
@@ -5592,7 +5592,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 40
-      spriteId: 3664f31e633b37d46b6b2626a9b25bad
+      spriteId: ff4039452727c28459ff18339cc2b8a4
     - name: Frame_171
       frameIndex: 171
       additiveSortOrder: 0
@@ -5601,7 +5601,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 39
-      spriteId: 4bd9d80da5e768640b9590ab7d213325
+      spriteId: c5c69713e79c9cc42b6176a645e1869f
     - name: Frame_172
       frameIndex: 172
       additiveSortOrder: 0
@@ -5610,7 +5610,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 40
-      spriteId: a9ed4c8a033e5464782faa6c06d4b469
+      spriteId: fefbb9af785bdfe47b6d3d52ecf0cbba
     - name: Frame_173
       frameIndex: 173
       additiveSortOrder: 0
@@ -5619,7 +5619,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 40
-      spriteId: 11137a66326e7a44394fd03f7f48fd9b
+      spriteId: 9a016addcc60c524e9061c07e2977c22
     - name: Frame_174
       frameIndex: 174
       additiveSortOrder: 0
@@ -5628,7 +5628,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: ccf81d80c4cb4d14bae4b1b555ef20ad
+      spriteId: 3700c547efa53d541ad2fd2c4b024b22
     - name: Frame_175
       frameIndex: 175
       additiveSortOrder: 0
@@ -5637,7 +5637,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: 57c98d3bb0e8bcf42ba0f9baeac234e2
+      spriteId: 5080615b435dbe7408d0849bbc773885
     - name: Frame_176
       frameIndex: 176
       additiveSortOrder: 0
@@ -5646,7 +5646,7 @@ ScriptedImporter:
         y: 35
         width: 41
         height: 41
-      spriteId: e989af7f97d703d44ae3399d96af3231
+      spriteId: b01e33bebc1417046a57f6b937c71f93
     - name: Frame_177
       frameIndex: 177
       additiveSortOrder: 0
@@ -5655,7 +5655,7 @@ ScriptedImporter:
         y: 35
         width: 41
         height: 41
-      spriteId: ba83fe47bbe4dc34cb6d260b90da0818
+      spriteId: 9fa0a3ca859d8734eacba93530f6f853
     - name: Frame_178
       frameIndex: 178
       additiveSortOrder: 0
@@ -5664,7 +5664,7 @@ ScriptedImporter:
         y: 35
         width: 42
         height: 41
-      spriteId: f15e70dd2049c2e458d8cfc9763cede5
+      spriteId: 209e62173fb610b408fa4011b637a2c2
     - name: Frame_179
       frameIndex: 179
       additiveSortOrder: 0
@@ -5673,7 +5673,7 @@ ScriptedImporter:
         y: 35
         width: 43
         height: 41
-      spriteId: 780949248aa460d4d896cd1b80e802e3
+      spriteId: 295f09ea2a20dad4f8b1931fd7c03df2
     - name: Frame_180
       frameIndex: 180
       additiveSortOrder: 0
@@ -5682,7 +5682,7 @@ ScriptedImporter:
         y: 35
         width: 43
         height: 41
-      spriteId: 9f7078d8bb173814292f3a9bcfb6a879
+      spriteId: 5d9acffcace90764fa038ff1c1c212ec
     - name: Frame_181
       frameIndex: 181
       additiveSortOrder: 0
@@ -5691,7 +5691,7 @@ ScriptedImporter:
         y: 35
         width: 42
         height: 41
-      spriteId: e09473df719724143b14a588fccd87f9
+      spriteId: fb7466e993581434da02b121ddfa6dcc
     - name: Frame_182
       frameIndex: 182
       additiveSortOrder: 0
@@ -5700,7 +5700,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 40
-      spriteId: b1b46b36aba2ffc41ae4b4684208f8e0
+      spriteId: cd2b4472e86633847bd8134658cf1e9a
     - name: Frame_183
       frameIndex: 183
       additiveSortOrder: 0
@@ -5709,7 +5709,7 @@ ScriptedImporter:
         y: 35
         width: 39
         height: 40
-      spriteId: 935430fea28ac27478f9d9733deceb59
+      spriteId: fb1433127273fc44aaf2a258c354e0a4
     - name: Frame_184
       frameIndex: 184
       additiveSortOrder: 0
@@ -5718,7 +5718,7 @@ ScriptedImporter:
         y: 35
         width: 38
         height: 40
-      spriteId: b0f294c098909624aad14232a2027a8a
+      spriteId: 1bb949462ecc31445b1c47da818f2122
     - name: Frame_185
       frameIndex: 185
       additiveSortOrder: 0
@@ -5727,7 +5727,7 @@ ScriptedImporter:
         y: 35
         width: 38
         height: 40
-      spriteId: 5c54c4efb2855254d9c3fb2b74cd828f
+      spriteId: 32ff067bac59abe4bbe33bb58e623224
     - name: Frame_186
       frameIndex: 186
       additiveSortOrder: 0
@@ -5736,7 +5736,7 @@ ScriptedImporter:
         y: 35
         width: 38
         height: 41
-      spriteId: 555963b269eb43c439f122c4cf5451c7
+      spriteId: 5f8663e80f6a05440990b8113b9097ee
     - name: Frame_187
       frameIndex: 187
       additiveSortOrder: 0
@@ -5745,7 +5745,7 @@ ScriptedImporter:
         y: 35
         width: 39
         height: 41
-      spriteId: 069f774dfa6828449ab4176765b8dfe1
+      spriteId: 5622d6c26ffb491479bfd910c1e3d5c5
     - name: Frame_188
       frameIndex: 188
       additiveSortOrder: 0
@@ -5754,7 +5754,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: 67f4fe44bbaf2eb41b8e81aab616f0af
+      spriteId: 2bb7526cc77ccb14c9d4b5348bc19221
     - name: Frame_189
       frameIndex: 189
       additiveSortOrder: 0
@@ -5763,7 +5763,7 @@ ScriptedImporter:
         y: 35
         width: 40
         height: 41
-      spriteId: 06d2707de6f8645449320b11c5797649
+      spriteId: 66af4550518a66045872e4c5e551d043
     - name: Frame_190
       frameIndex: 190
       additiveSortOrder: 0
@@ -5772,7 +5772,7 @@ ScriptedImporter:
         y: 35
         width: 41
         height: 41
-      spriteId: 417d1304ad6cea143a7c47b5a0126539
+      spriteId: b9f697e6be6b0634bb540c825e299c4c
     - name: Frame_197
       frameIndex: 197
       additiveSortOrder: 0
@@ -5781,7 +5781,7 @@ ScriptedImporter:
         y: 56
         width: 31
         height: 20
-      spriteId: 59e66301f594c7247b83182789cafd26
+      spriteId: e5385d867c16b134f91789c98fe6feda
     - name: Frame_200
       frameIndex: 200
       additiveSortOrder: 0
@@ -5790,7 +5790,7 @@ ScriptedImporter:
         y: 56
         width: 25
         height: 21
-      spriteId: e606ccb74a546b6469e27593061a0404
+      spriteId: 09c913361d7a9bb4fbec325570e86a42
     - name: Frame_201
       frameIndex: 201
       additiveSortOrder: 0
@@ -5799,7 +5799,7 @@ ScriptedImporter:
         y: 56
         width: 27
         height: 20
-      spriteId: b8652d6ef77db0845ad816f9574a5dac
+      spriteId: e9c98871937fc5347abc46a8a68978a9
     - name: Frame_202
       frameIndex: 202
       additiveSortOrder: 0
@@ -5808,7 +5808,7 @@ ScriptedImporter:
         y: 56
         width: 27
         height: 19
-      spriteId: 885c9c36cbeb4cf46b75758741a8208c
+      spriteId: 86cff19d4fbaa9e47b1f16dd2101eb60
     - name: Frame_203
       frameIndex: 203
       additiveSortOrder: 0
@@ -5817,7 +5817,7 @@ ScriptedImporter:
         y: 56
         width: 28
         height: 19
-      spriteId: ce9e370910b55c9419a2ccb73c570dd0
+      spriteId: c5f727b5d16a4d04da8aac65ee33f30e
     - name: Frame_204
       frameIndex: 204
       additiveSortOrder: 0
@@ -5826,7 +5826,7 @@ ScriptedImporter:
         y: 56
         width: 28
         height: 20
-      spriteId: a1de7402a0961a44f971d741615bf788
+      spriteId: 41b893ce4d17a2f43a70c74012e60b0a
     - name: Frame_208
       frameIndex: 208
       additiveSortOrder: 0
@@ -5835,7 +5835,7 @@ ScriptedImporter:
         y: 57
         width: 22
         height: 24
-      spriteId: 91101faec620ec04aa0907f8fa4104f2
+      spriteId: 5cf6570a0c9b509499f66d6cd149caf5
     - name: Frame_209
       frameIndex: 209
       additiveSortOrder: 0
@@ -5844,7 +5844,7 @@ ScriptedImporter:
         y: 57
         width: 28
         height: 22
-      spriteId: 3559b4b02f8e356458eb6e499ac50ae0
+      spriteId: 6edfa4826d67dd1449ef4b42a77d5fdd
     - name: Frame_62
       frameIndex: 62
       additiveSortOrder: 0
@@ -5853,7 +5853,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 19
-      spriteId: 69d7bc315e3ba114e8247e6e58983dfc
+      spriteId: 7199a43a21dc6874f99193817fe1f7ac
     - name: Frame_63
       frameIndex: 63
       additiveSortOrder: 0
@@ -5862,7 +5862,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 19
-      spriteId: d423b5519ab81e54cabe0db5b4927f9a
+      spriteId: bc46161ffcf3bfc4bb138f3595cf7269
     - name: Frame_77
       frameIndex: 77
       additiveSortOrder: 0
@@ -5871,7 +5871,7 @@ ScriptedImporter:
         y: 57
         width: 17
         height: 18
-      spriteId: 4163ccadfc2a99b4f8b75748413b8695
+      spriteId: 17c3d6dd2aae68647a5b77e96a713055
     - name: Frame_82
       frameIndex: 82
       additiveSortOrder: 0
@@ -5880,7 +5880,7 @@ ScriptedImporter:
         y: 57
         width: 18
         height: 12
-      spriteId: fe5c7f0121266b944a096457d43d2aad
+      spriteId: f04712518abbf2d408d072193a588359
     - name: Frame_106
       frameIndex: 106
       additiveSortOrder: 0
@@ -5889,7 +5889,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 17
-      spriteId: 98c7db359da8f5341a023fd0fe03f656
+      spriteId: 0319791da9bbf6742a6ba824eff07e90
     - name: Frame_107
       frameIndex: 107
       additiveSortOrder: 0
@@ -5898,7 +5898,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 17
-      spriteId: d6b45830d0e796b46ac8fb325bbc23a8
+      spriteId: a0fde54ef71685a499e2ff81dd0bf86f
     - name: Frame_108
       frameIndex: 108
       additiveSortOrder: 0
@@ -5907,7 +5907,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 16
-      spriteId: e22e72e305f151542a7b9851a881993a
+      spriteId: e1c19899a4e9185499752a55a2d42111
     - name: Frame_109
       frameIndex: 109
       additiveSortOrder: 0
@@ -5916,7 +5916,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 16
-      spriteId: 1c58810a532f5f044b18b2570e31381f
+      spriteId: 3e98a359627d69744bca3548d742927e
     - name: Frame_116
       frameIndex: 116
       additiveSortOrder: 0
@@ -5925,7 +5925,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 16
-      spriteId: 88c3f910842be994098fa45f524ed1ed
+      spriteId: 7d1dc2d3abdaa524a811ad565b90e953
     - name: Frame_117
       frameIndex: 117
       additiveSortOrder: 0
@@ -5934,7 +5934,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 16
-      spriteId: 4a147d0258669474d8418c64416d9045
+      spriteId: bf01aa8082ed5d74e801d815ac1e2ed4
     - name: Frame_120
       frameIndex: 120
       additiveSortOrder: 0
@@ -5943,7 +5943,7 @@ ScriptedImporter:
         y: 57
         width: 31
         height: 19
-      spriteId: 493ed67b54662cb43927020eb6f3519c
+      spriteId: 0c6369a211d9ae14a90f4ab26e63add5
     - name: Frame_121
       frameIndex: 121
       additiveSortOrder: 0
@@ -5952,7 +5952,7 @@ ScriptedImporter:
         y: 57
         width: 27
         height: 19
-      spriteId: e86b96bc8b01452469b94f5e690d6ef3
+      spriteId: 4539948493599214d9ccd39f51cc915d
     - name: Frame_122
       frameIndex: 122
       additiveSortOrder: 0
@@ -5961,7 +5961,7 @@ ScriptedImporter:
         y: 57
         width: 23
         height: 19
-      spriteId: 39ebc96649f690c44b5f055ae641dbf0
+      spriteId: 8c013934be688844e96f98013e02b6e1
     - name: Frame_152
       frameIndex: 152
       additiveSortOrder: 0
@@ -5970,7 +5970,7 @@ ScriptedImporter:
         y: 56
         width: 22
         height: 20
-      spriteId: 325182cf98dd47f409f31e80b2f1c29f
+      spriteId: 5e6dd5b04aeede84c87de9e586d6317b
     - name: Frame_153
       frameIndex: 153
       additiveSortOrder: 0
@@ -5979,7 +5979,7 @@ ScriptedImporter:
         y: 56
         width: 17
         height: 24
-      spriteId: d31c726d9e318754ca055d2feca26752
+      spriteId: 0ce20dd7dbe484346bc5bde73574e073
     - name: Frame_154
       frameIndex: 154
       additiveSortOrder: 0
@@ -5988,7 +5988,7 @@ ScriptedImporter:
         y: 57
         width: 20
         height: 24
-      spriteId: d8df7659b7777564b9abc089863a00c1
+      spriteId: a785c25bd537dd94781c32ed1e077cbb
     - name: Frame_155
       frameIndex: 155
       additiveSortOrder: 0
@@ -5997,7 +5997,7 @@ ScriptedImporter:
         y: 57
         width: 23
         height: 25
-      spriteId: ba1bde909f89e0049b9297d4c4a2c5dc
+      spriteId: 3d268daa0d18da440aba61fbc56dbead
     - name: Frame_156
       frameIndex: 156
       additiveSortOrder: 0
@@ -6006,7 +6006,7 @@ ScriptedImporter:
         y: 57
         width: 21
         height: 22
-      spriteId: d61a1e69aa828e5478f6474033a7098b
+      spriteId: cab0c8e166eb1e3469ddfd0794eb51f6
     - name: Frame_191
       frameIndex: 191
       additiveSortOrder: 0
@@ -6015,7 +6015,7 @@ ScriptedImporter:
         y: 35
         width: 41
         height: 42
-      spriteId: 6b4272e9a3d421c43bcd4e9681ea95fe
+      spriteId: b51d4bb8b23572543a08b62f110fc39b
     - name: Frame_192
       frameIndex: 192
       additiveSortOrder: 0
@@ -6024,7 +6024,7 @@ ScriptedImporter:
         y: 36
         width: 46
         height: 44
-      spriteId: ee772aec9357d654bb688924bb74525e
+      spriteId: f64ef8ba1b19ac84188d77a8e330277e
     - name: Frame_193
       frameIndex: 193
       additiveSortOrder: 0
@@ -6033,7 +6033,7 @@ ScriptedImporter:
         y: 39
         width: 51
         height: 42
-      spriteId: 8c300646847339048b365a14925b4785
+      spriteId: fc010a8976cbefe43907bd691b03fa87
     - name: Frame_194
       frameIndex: 194
       additiveSortOrder: 0
@@ -6042,7 +6042,7 @@ ScriptedImporter:
         y: 40
         width: 54
         height: 43
-      spriteId: bc92b3f52c81be14ebb3222cb40290da
+      spriteId: 07ac7d40a19db9a479e11b5e41208c4f
     - name: Frame_195
       frameIndex: 195
       additiveSortOrder: 0
@@ -6051,7 +6051,7 @@ ScriptedImporter:
         y: 38
         width: 51
         height: 46
-      spriteId: 601a82f3693bc144a93940ace67829e6
+      spriteId: 55e6b43b8339c2942b14a122cd13e0a2
     - name: Frame_196
       frameIndex: 196
       additiveSortOrder: 0
@@ -6060,7 +6060,7 @@ ScriptedImporter:
         y: 37
         width: 50
         height: 46
-      spriteId: 2ddefc3cea3f6084ba5d4660a61612b2
+      spriteId: 0ec9daf8cbb85b340994621f5be7ff8b
     - name: Frame_198
       frameIndex: 198
       additiveSortOrder: 0
@@ -6069,7 +6069,7 @@ ScriptedImporter:
         y: 57
         width: 21
         height: 19
-      spriteId: aaad1fc6ecfbcd143b14f503ae80df0c
+      spriteId: 6bde494338a760947beab149996aae30
     - name: Frame_199
       frameIndex: 199
       additiveSortOrder: 0
@@ -6078,7 +6078,7 @@ ScriptedImporter:
         y: 57
         width: 20
         height: 19
-      spriteId: 1b145ee240bd2d34f87bac8e3db6ea80
+      spriteId: acc49a62c3efbff44950c114a867733c
     - name: Frame_210
       frameIndex: 210
       additiveSortOrder: 0
@@ -6087,7 +6087,7 @@ ScriptedImporter:
         y: 57
         width: 29
         height: 19
-      spriteId: 910b4d34cf9524c41803c11272897d28
+      spriteId: 392a31a4dd85de24ba051444584a4423
     - name: Frame_78
       frameIndex: 78
       additiveSortOrder: 0
@@ -6096,7 +6096,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 15
-      spriteId: ad65554746e3aa64886eb53faf7d489d
+      spriteId: 54c814b6f0097544bbf90d20bd46aa7c
     - name: Frame_79
       frameIndex: 79
       additiveSortOrder: 0
@@ -6105,7 +6105,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 15
-      spriteId: c7595a3bd2cc5df4c8434bb6b1cb5fa2
+      spriteId: f26707f574367ea4ab1a97afa714a3e3
     - name: Frame_80
       frameIndex: 80
       additiveSortOrder: 0
@@ -6114,7 +6114,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 15
-      spriteId: 87f73c4c95f290a40b6e86eb5b49be9b
+      spriteId: 843f4a449132a364b9ec4baa16017358
     - name: Frame_81
       frameIndex: 81
       additiveSortOrder: 0
@@ -6123,7 +6123,7 @@ ScriptedImporter:
         y: 57
         width: 16
         height: 15
-      spriteId: 523a16f7493a4ee459063c9ece64cb3e
+      spriteId: 1ba85e96256d5b04a920545c8c92f873
     - name: Frame_110
       frameIndex: 110
       additiveSortOrder: 0
@@ -6132,7 +6132,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 15
-      spriteId: cefeb355a54b87048a3008422c2c8fd0
+      spriteId: 251cd61a5730cee47a270473da62fb94
     - name: Frame_111
       frameIndex: 111
       additiveSortOrder: 0
@@ -6141,7 +6141,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 15
-      spriteId: d54c3a257e6ca6745aa936b30e2f5930
+      spriteId: 369386223bbbe1d4882a2ce6fdf6b4d5
     - name: Frame_112
       frameIndex: 112
       additiveSortOrder: 0
@@ -6150,7 +6150,7 @@ ScriptedImporter:
         y: 59
         width: 17
         height: 14
-      spriteId: 1c5628feb9117d947b1ab4ef067d681f
+      spriteId: 70103ac8f8fd59b4185b7d7eb90bcaa2
     - name: Frame_113
       frameIndex: 113
       additiveSortOrder: 0
@@ -6159,7 +6159,7 @@ ScriptedImporter:
         y: 59
         width: 17
         height: 14
-      spriteId: 740afc0966382ba40b80408071004fed
+      spriteId: 92d69f0bf0fecc54e9b4f773900e9e90
     - name: Frame_114
       frameIndex: 114
       additiveSortOrder: 0
@@ -6168,7 +6168,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 15
-      spriteId: 8718e4e61cd505d44acca30bf069ea95
+      spriteId: 68a2a07e186a6ba4ca2ea48a5c60637a
     - name: Frame_115
       frameIndex: 115
       additiveSortOrder: 0
@@ -6177,7 +6177,7 @@ ScriptedImporter:
         y: 59
         width: 16
         height: 15
-      spriteId: c3fe585eb884bbb418779973b5a96048
+      spriteId: 23ab0e97c27a883479b24c58854545a3
     - name: Frame_43
       frameIndex: 43
       additiveSortOrder: 0
@@ -6186,7 +6186,7 @@ ScriptedImporter:
         y: 65
         width: 11
         height: 11
-      spriteId: 10338fa5bb1b98349833bda1d2628858
+      spriteId: 83d224fdd4d970246995e542a1801210
     - name: Frame_44
       frameIndex: 44
       additiveSortOrder: 0
@@ -6195,7 +6195,7 @@ ScriptedImporter:
         y: 66
         width: 11
         height: 10
-      spriteId: ba0756315459e404b8c8a1f039fc4c6e
+      spriteId: 63f89214e0e6794479d15c6a68de3255
     - name: Frame_45
       frameIndex: 45
       additiveSortOrder: 0
@@ -6204,7 +6204,7 @@ ScriptedImporter:
         y: 65
         width: 11
         height: 10
-      spriteId: 4ef3a769c23ad6d498331a2d4ff235ad
+      spriteId: 0c0386e26a39eef4897839d08ff16073
     - name: Frame_46
       frameIndex: 46
       additiveSortOrder: 0
@@ -6213,7 +6213,7 @@ ScriptedImporter:
         y: 57
         width: 11
         height: 12
-      spriteId: 1f169649398d833458eead0429acd37c
+      spriteId: d3721b77de67f0f4b85643ca30f746bd
     - name: Frame_47
       frameIndex: 47
       additiveSortOrder: 0
@@ -6222,7 +6222,7 @@ ScriptedImporter:
         y: 57
         width: 14
         height: 7
-      spriteId: 59f4eae8d244d514ea3e169d22efbfb2
+      spriteId: 43eb065bd0598e24bbd4240b70438546
     - name: Frame_48
       frameIndex: 48
       additiveSortOrder: 0
@@ -6231,7 +6231,7 @@ ScriptedImporter:
         y: 60
         width: 11
         height: 10
-      spriteId: 08fb97ab88221e244a5c23da6e62af34
+      spriteId: 226879ecb5f25cc4a85db87b49acd732
     - name: Frame_49
       frameIndex: 49
       additiveSortOrder: 0
@@ -6240,7 +6240,7 @@ ScriptedImporter:
         y: 57
         width: 11
         height: 10
-      spriteId: ba98bbcc6c912e14db9bca789889ff7b
+      spriteId: 3f832e8018652424caa2ad65c9223a13
     - name: Frame_50
       frameIndex: 50
       additiveSortOrder: 0
@@ -6249,7 +6249,7 @@ ScriptedImporter:
         y: 57
         width: 11
         height: 10
-      spriteId: 00a547c041ecd724ab0889937ad51629
+      spriteId: fe954b82ee087b847ad9e6456ef9d7be
     linkedCells: []
     parentIndex: -1
   platformSettings:

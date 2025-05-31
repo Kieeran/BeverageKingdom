@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d096232a37b3814bb9a51784f2c4fd8, type: 3}
   m_Name: Wave2
   m_EditorClassIdentifier: 
-  StartTime: 7.5
+  StartTime: 12
   EnemiesToSpawn:
-  - {fileID: 11400000, guid: c8b1376a222ffca41b527f9b5dd0970e, type: 2}
   - {fileID: 11400000, guid: c1903dc203397db4f86991fe5872ed0a, type: 2}
-  - {fileID: 11400000, guid: 817168a0073e3e349a909d13b56f79e4, type: 2}
+  - {fileID: 11400000, guid: c8b1376a222ffca41b527f9b5dd0970e, type: 2}
