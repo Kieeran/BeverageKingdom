@@ -16,7 +16,7 @@ MonoBehaviour:
   enemyName: Warrior
   maxHealth: 20
   speed: 2
-  dameAttack: 5
+  dameAttack: 10
   moneyForDead: 3
   attackRange: 2
   attackCoolDown: 1
