@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
+    public Enemy Enemy;
+
     private Enemy enemyComponent;
     private bool hasHitHouse = false;
 
@@ -19,7 +21,7 @@ public class EnemyCollision : MonoBehaviour
             if (collision.transform.TryGetComponent<House>(out var house))
             {
                 hasHitHouse = true;
-                house.DecreaseHouseHP();
+                house.ApplyDamageHouse(Enemy.Damage);
 
                 // If the enemy is still alive, destroy it
                 if (enemyComponent != null)

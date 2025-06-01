@@ -20,11 +20,11 @@ public class House : MonoBehaviour
         HPText.gameObject.SetActive(false);
     }
 
-    public void DecreaseHouseHP()
+    public void ApplyDamageHouse(int damage)
     {
         if (HP == 0) return;
 
-        HP--;
+        HP -= damage;
         HealthBarFillUI.fillAmount = HP / MaxHP;
         if (HP == 0)
         {

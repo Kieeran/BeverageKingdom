@@ -23,7 +23,8 @@ public class Enemy : TriBehaviour
 
     bool IsDoneAttack = false;
 
-    public float maxHealth;
+    [HideInInspector]
+    public float MaxHealth;
     [HideInInspector]
     public float CurrentHealth;
     public Animator animator;
@@ -31,8 +32,10 @@ public class Enemy : TriBehaviour
 
     [HideInInspector]
     public float AttackRange;
+    [HideInInspector]
     public float AttackCoolDown;
     float _coolDownTimer;
+    [HideInInspector]
     public int Damage;
 
     bool IsDead = false;
@@ -105,7 +108,7 @@ public class Enemy : TriBehaviour
             AttackRange = 2f;
             AttackCoolDown = 1f;
             Damage = 1;
-            maxHealth = 6f;
+            MaxHealth = 6f;
             if (EnemyMovement != null)
                 EnemyMovement.MoveSpeed = 4f;
 
@@ -119,7 +122,7 @@ public class Enemy : TriBehaviour
             AttackRange = enemyData.attackRange;
             AttackCoolDown = enemyData.attackCoolDown;
             Damage = enemyData.dameAttack;
-            maxHealth = enemyData.maxHealth;
+            MaxHealth = enemyData.maxHealth;
             if (EnemyMovement != null)
                 EnemyMovement.MoveSpeed = enemyData.speed;
 
@@ -129,7 +132,7 @@ public class Enemy : TriBehaviour
                 _spriteRenderer.color = enemyData.enemyColor;
         }
 
-        CurrentHealth = maxHealth;
+        CurrentHealth = MaxHealth;
     }
 
     void SetAnimator(int index)
@@ -307,13 +310,13 @@ public class Enemy : TriBehaviour
     public override void OnEnable()
     {
         base.OnEnable();
-        CurrentHealth = maxHealth;
+        CurrentHealth = MaxHealth;
     }
 
     public void Deduct(int amount)
     {
         CurrentHealth -= amount;
-        HealthBarFillUI.DOFillAmount(CurrentHealth / maxHealth, 0.5f)
+        HealthBarFillUI.DOFillAmount(CurrentHealth / MaxHealth, 0.5f)
             .SetEase(Ease.OutBounce);
 
         if (_enemyEffect != null)

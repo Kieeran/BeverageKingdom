@@ -13,7 +13,7 @@ public class Goblin : Enemy
             AttackRange = 2.3f;
             AttackCoolDown = 1.5f;
             Damage = 4;
-            maxHealth = 14f;
+            MaxHealth = 14f;
         }
         else
         {
