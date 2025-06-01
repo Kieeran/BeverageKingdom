@@ -23,16 +23,18 @@ public class EnemyCollision : MonoBehaviour
                 hasHitHouse = true;
                 house.ApplyDamageHouse(Enemy.Damage);
 
-                // If the enemy is still alive, destroy it
-                if (enemyComponent != null)
-                {
-                    enemyComponent.Die();
-                }
+                Destroy(transform.parent.gameObject);
 
-                else
-                {
-                    Destroy(transform.parent.gameObject);
-                }
+                // If the enemy is still alive, destroy it
+                // if (enemyComponent != null)
+                // {
+                //     enemyComponent.Die();
+                // }
+
+                // else
+                // {
+                //     Destroy(transform.parent.gameObject);
+                // }
             }
         }
     }
