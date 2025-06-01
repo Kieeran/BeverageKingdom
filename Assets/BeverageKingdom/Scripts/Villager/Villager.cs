@@ -50,18 +50,36 @@ public class Villager : MonoBehaviour
         DetectionRangeVisual.gameObject.SetActive(false);
         BoundingBoxVisual.gameObject.SetActive(false);
 
-        Controller.Instance.VisualizeDetectionRange.OnValueChanged += (oldVal, newVal) =>
-        {
+        // Controller.Instance.VisualizeDetectionRange.OnValueChanged += (oldVal, newVal) =>
+        // {
+        //     DetectionRangeVisual.gameObject.SetActive(newVal);
+        // };
+
+        // Controller.Instance.VisualizeBoundingBox.OnValueChanged += (oldVal, newVal) =>
+        // {
+        //     BoundingBoxVisual.gameObject.SetActive(newVal);
+        // };
+
+        Controller.Instance.VisualizeDetectionRange.OnValueChanged += UpdateVisualizeDetectionRange;
+        Controller.Instance.VisualizeBoundingBox.OnValueChanged += UpdateVisualizeBoundingBox;
+    }
+
+    void UpdateVisualizeDetectionRange(bool oldVal, bool newVal)
+    {
+        if (DetectionRangeVisual != null && DetectionRangeVisual.gameObject != null)
             DetectionRangeVisual.gameObject.SetActive(newVal);
-        };
+    }
 
-        Controller.Instance.VisualizeBoundingBox.OnValueChanged += (oldVal, newVal) =>
-        {
+    void UpdateVisualizeBoundingBox(bool oldVal, bool newVal)
+    {
+        if (BoundingBoxVisual != null && BoundingBoxVisual.gameObject != null)
             BoundingBoxVisual.gameObject.SetActive(newVal);
-        };
+    }
 
-        // DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
-        // BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
+    void OnDestroy()
+    {
+        Controller.Instance.VisualizeDetectionRange.OnValueChanged -= UpdateVisualizeDetectionRange;
+        Controller.Instance.VisualizeBoundingBox.OnValueChanged -= UpdateVisualizeBoundingBox;
     }
 
     void Start()

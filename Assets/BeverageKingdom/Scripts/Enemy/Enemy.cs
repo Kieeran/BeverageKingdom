@@ -60,9 +60,6 @@ public class Enemy : TriBehaviour
 
         Controller.Instance.VisualizeDetectionRange.OnValueChanged += UpdateVisualizeDetectionRange;
         Controller.Instance.VisualizeBoundingBox.OnValueChanged += UpdateVisualizeBoundingBox;
-
-        // DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
-        // BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
     }
 
     void UpdateVisualizeDetectionRange(bool oldVal, bool newVal)
