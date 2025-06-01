@@ -401,6 +401,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
+      propertyPath: _itemSpawner
+      value: 
+      objectReference: {fileID: 1561152676760957522, guid: 4aea69c666d58d04a8a1e1809fba6c2e, type: 3}
+    - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
+      propertyPath: _hotSpotManager
+      value: 
+      objectReference: {fileID: 3208399954895783616, guid: d9e11e90a1f76fd4da8a3569f41a1ed0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

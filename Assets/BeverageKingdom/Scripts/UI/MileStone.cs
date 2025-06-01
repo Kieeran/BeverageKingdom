@@ -19,15 +19,14 @@ public class MileStone : MonoBehaviour
 
     public void UpdateCompleteMileStone(int index)
     {
+        if (index < 0 || index > transform.childCount - 1) return;
+
         Image mileStone = transform.GetChild(index).GetComponent<Image>();
         mileStone.color = Color.white;
     }
 
     public void ClearTimeMarker()
     {
-        // Vì chứa cả prefab marker đã disabled nên nếu có ít hơn 2 obj tức là hiện đang không có marker nào active
-        if (transform.childCount <= 1) return;
-
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
@@ -46,7 +45,7 @@ public class MileStone : MonoBehaviour
         marker.gameObject.SetActive(true);
 
         RectTransform markerRect = marker.GetComponent<RectTransform>();
-        markerRect.anchoredPosition = new Vector2(-localX, 0f);
+        markerRect.anchoredPosition = new Vector2(localX, 0f);
 
         return markerRect;
     }

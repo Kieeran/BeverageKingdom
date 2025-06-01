@@ -147,7 +147,7 @@ public class LevelController : MonoBehaviour
         if (timer >= wave.StartTime)
         {
             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}, Starting Wave {currentWaveIndex + 1}/{_currentLevelData.Waves.Count} at time {timer:F1}s");
-            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
+            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex - 1);
 
             StartCoroutine(EnemySpawner.Instance.SpawnWave(
                 wave,

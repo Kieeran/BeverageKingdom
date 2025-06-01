@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _gameSystem;
     [SerializeField] Transform _levelController;
     [SerializeField] Transform _itemSpawner;
+    [SerializeField] Transform _hotSpotManager;
 
     public ObservableVariable<bool> VisualizeDetectionRange = new(false);
     public ObservableVariable<bool> VisualizeBoundingBox = new(false);
@@ -70,6 +71,7 @@ public class Controller : MonoBehaviour
         Instantiate(_gameSystem.gameObject);
         Instantiate(_levelController.gameObject);
         Instantiate(_itemSpawner.gameObject);
+        Instantiate(_hotSpotManager.gameObject);
         Instantiate(_spawnEnemy.gameObject);
 
         Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
