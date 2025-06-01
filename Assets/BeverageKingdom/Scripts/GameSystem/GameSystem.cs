@@ -30,7 +30,6 @@ public class GameSystem : MonoBehaviour
     public void GameWin()
     {
         Time.timeScale = 0f;
-        Controller.Instance.CurrentLevelIndex++;
         OnGameWin?.Invoke();
     }
 }

@@ -15,14 +15,12 @@ public class GameWinOverPopup : MonoBehaviour
         PlayAgainButton.onClick.AddListener(() =>
         {
             Time.timeScale = 1f;
-            Controller.Instance.CurrentLevelIndex--;
             Controller.Instance.ChangeScene("PlayScene");
         });
 
         ExitButton.onClick.AddListener(() =>
         {
             Time.timeScale = 1f;
-
             SoundManager.Instance?.StopSound();
             Controller.Instance.ChangeScene("HomeScene");
         });
@@ -30,7 +28,7 @@ public class GameWinOverPopup : MonoBehaviour
         ContinueButton.onClick.AddListener(() =>
         {
             Time.timeScale = 1f;
-
+            Controller.Instance.CurrentLevelIndex++;
             Controller.Instance.ChangeScene("PlayScene");
         });
     }
