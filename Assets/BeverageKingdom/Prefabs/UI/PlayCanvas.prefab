@@ -1670,7 +1670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetButton: {fileID: 0}
-  cooldownTime: 70
+  cooldownTime: 25
   imageFrame: {fileID: 7297499187089270503}
 --- !u!1 &4054192177395861416
 GameObject:
@@ -4866,7 +4866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetButton: {fileID: 0}
-  cooldownTime: 20
+  cooldownTime: 10
   imageFrame: {fileID: 9083494243670188534}
 --- !u!1 &8164763979619484100
 GameObject:

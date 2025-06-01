@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    ItemDespawn itemDespawn;
+    private ItemDespawn itemDespawn;
 
     private float height = 0f;
     private float verticalSpeed = 5f;
@@ -46,10 +46,9 @@ public class Item : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.CompareTag("Player"))
         {
             PickUp();
-            itemDespawn.DeSpawnObj(); // Call the despawn method to handle item removal
         }
             
     }
@@ -57,6 +56,5 @@ public class Item : MonoBehaviour
     {
 
         itemDespawn.DeSpawnObj(); // Call the despawn method to handle item removal
-        Destroy(gameObject); // Destroy the item after pickup
     }
 }

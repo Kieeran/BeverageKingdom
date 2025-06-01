@@ -241,8 +241,8 @@ public class Enemy : TriBehaviour
 
             if (ItemSpawner != null)
             {
-                // ItemSpawner.Spawn(transform.position, Quaternion.identity);
-                _ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
+                 ItemSpawner.Spawn(transform.position, Quaternion.identity);
+                //_ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
             }
             Destroy(gameObject, 1f);
         }

@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 6419031940353153695}
   m_Layer: 17
   m_Name: BoundingBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: 
-  damage: 5
+  damage: 10
   fireOrigin: {fileID: 3996528971548036216}
   attackLength: 1.39
   attackWidth: 2.5
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   WeaponController: {fileID: 8029644660301429030}
   inputMangager: {fileID: 0}
   JoystickMove: {fileID: 3667071518967296704}
-  moveSpeed: 3.7
+  moveSpeed: 6
   playerSword: {fileID: 22100000, guid: 61ed2d81f8d9ed244990d4b7c6c0a25f, type: 2}
   playerGun: {fileID: 22100000, guid: 1884c9b546c8c794f9f461b39ebd15eb, type: 2}
   playerSwordSpr: {fileID: -309207110, guid: b2929214a1c71434389a55af0c807214, type: 3}
@@ -1266,7 +1266,7 @@ MonoBehaviour:
   IsDead: 0
   MaxHP: 0
   HP: 100
-  AttackCoolDown: 0.8
+  AttackCoolDown: 0.5
   shield: {fileID: 3873248692582247751}
   DetectionRangeVisual: {fileID: 8559638188146458547}
   BoundingBoxVisual: {fileID: 3128112426063204360}

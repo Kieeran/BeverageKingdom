@@ -36,9 +36,7 @@ public class Projectile : MonoBehaviour
         {
             return;
         }
-
-        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBB")
-)
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
             if (enemy != null)
