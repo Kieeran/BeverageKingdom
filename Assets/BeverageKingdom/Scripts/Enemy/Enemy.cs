@@ -55,8 +55,32 @@ public class Enemy : TriBehaviour
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
 
-        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
-        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
+        DetectionRangeVisual.gameObject.SetActive(false);
+        BoundingBoxVisual.gameObject.SetActive(false);
+
+        Controller.Instance.VisualizeDetectionRange.OnValueChanged += UpdateVisualizeDetectionRange;
+        Controller.Instance.VisualizeBoundingBox.OnValueChanged += UpdateVisualizeBoundingBox;
+
+        // DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        // BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
+    }
+
+    void UpdateVisualizeDetectionRange(bool oldVal, bool newVal)
+    {
+        if (DetectionRangeVisual != null && DetectionRangeVisual.gameObject != null)
+            DetectionRangeVisual.gameObject.SetActive(newVal);
+    }
+
+    void UpdateVisualizeBoundingBox(bool oldVal, bool newVal)
+    {
+        if (BoundingBoxVisual != null && BoundingBoxVisual.gameObject != null)
+            BoundingBoxVisual.gameObject.SetActive(newVal);
+    }
+
+    void OnDestroy()
+    {
+        Controller.Instance.VisualizeDetectionRange.OnValueChanged -= UpdateVisualizeDetectionRange;
+        Controller.Instance.VisualizeBoundingBox.OnValueChanged -= UpdateVisualizeBoundingBox;
     }
 
     protected override void Start()
@@ -241,8 +265,7 @@ public class Enemy : TriBehaviour
 
             if (ItemSpawner != null)
             {
-                 ItemSpawner.Spawn(transform.position, Quaternion.identity);
-                //_ItemSpawner.Instance.SpawnRandomItemAtPos(transform.position);
+                ItemSpawner.Spawn(transform.position, Quaternion.identity);
             }
             Destroy(gameObject, 1f);
         }

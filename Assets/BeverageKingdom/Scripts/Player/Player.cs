@@ -74,8 +74,21 @@ public class Player : MonoBehaviour
         dead = new PlayerStateDead(stateMachine, this, "Dead");
         hit = new PlayerStateHit(stateMachine, this, "Hit");
 
-        DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
-        BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
+        DetectionRangeVisual.gameObject.SetActive(false);
+        BoundingBoxVisual.gameObject.SetActive(false);
+
+        Controller.Instance.VisualizeDetectionRange.OnValueChanged += (oldVal, newVal) =>
+        {
+            DetectionRangeVisual.gameObject.SetActive(newVal);
+        };
+
+        Controller.Instance.VisualizeBoundingBox.OnValueChanged += (oldVal, newVal) =>
+        {
+            BoundingBoxVisual.gameObject.SetActive(newVal);
+        };
+
+        // DetectionRangeVisual.gameObject.SetActive(Controller.Instance.VisualizeDetectionRange);
+        // BoundingBoxVisual.gameObject.SetActive(Controller.Instance.VisualizeBoundingBox);
     }
 
     private void Start()

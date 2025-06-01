@@ -123,6 +123,9 @@ public class MainCanvas : MonoBehaviour
         _cheatButton.onClick.AddListener(() =>
         {
             Cheater.Instance.ToggleVisualizeHp();
+
+            Controller.Instance.VisualizeDetectionRange.Value = !Controller.Instance.VisualizeDetectionRange.Value;
+            Controller.Instance.VisualizeBoundingBox.Value = !Controller.Instance.VisualizeBoundingBox.Value;
         });
     }
 

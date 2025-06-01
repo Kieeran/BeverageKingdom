@@ -17,8 +17,8 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _levelController;
     [SerializeField] Transform _itemSpawner;
 
-    public bool VisualizeDetectionRange;
-    public bool VisualizeBoundingBox;
+    public ObservableVariable<bool> VisualizeDetectionRange = new(false);
+    public ObservableVariable<bool> VisualizeBoundingBox = new(false);
 
     public Action<string> OnSceneChange;
 
