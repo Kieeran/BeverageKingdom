@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -53,6 +54,8 @@ public class Player : MonoBehaviour
     public Transform DetectionRangeVisual;
     public Transform BoundingBoxVisual;
 
+    public TMP_Text playerHPText;
+
     private void Awake()
     {
         if (instance == null)
@@ -90,6 +93,9 @@ public class Player : MonoBehaviour
         isSpeed = false;
         isShield = false;
         // UIManager.Instance.MainCanvas.OnAttack += OnAttack;
+
+        playerHPText.text = $"{HP}/{MaxHP}";
+        playerHPText.gameObject.SetActive(false);
     }
     IEnumerator DisableAfterDelay(GameObject obj, float delay)
     {
@@ -123,8 +129,10 @@ public class Player : MonoBehaviour
             WeaponController.gameObject.SetActive(false);
             IsDead = true;
 
-            Invoke("OnPlayerAfterDead", 2f);
+            Invoke(nameof(OnPlayerAfterDead), 2f);
         }
+
+        playerHPText.text = $"{HP}/{MaxHP}";
     }
 
     void OnPlayerAfterDead()

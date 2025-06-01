@@ -126,4 +126,7 @@ public class Controller : MonoBehaviour
 
         OnChangeGD?.Invoke();
     }
+
+    public Env GetEnv() { return Env.GetComponent<Env>(); }
+    public Player GetPlayer() { return Player.GetComponent<Player>(); }
 }

@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class House : MonoBehaviour
 {
     public Image HealthBarFillUI;
+    public TMP_Text HPText;
 
     [HideInInspector]
     public float HP;
@@ -13,6 +15,9 @@ public class House : MonoBehaviour
     void Start()
     {
         MaxHP = HP;
+
+        HPText.text = $"{HP}/{MaxHP}";
+        HPText.gameObject.SetActive(false);
     }
 
     public void DecreaseHouseHP()
@@ -25,6 +30,8 @@ public class House : MonoBehaviour
         {
             Invoke("DelayAndGameOver", 1f);
         }
+
+        HPText.text = $"{HP}/{MaxHP}";
     }
 
     void DelayAndGameOver()

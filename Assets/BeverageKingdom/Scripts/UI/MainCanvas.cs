@@ -14,6 +14,8 @@ public class MainCanvas : MonoBehaviour
     [SerializeField] Button _spawnVillagerAtSlot2Button;
     [SerializeField] Button _spawnVillagerAtSlot3Button;
 
+    [SerializeField] Button _cheatButton;
+
     public Button SpawnVillagerButton;
     public Button ActiveSkill;
     public Button AttackButton;
@@ -117,7 +119,13 @@ public class MainCanvas : MonoBehaviour
         {
             OnAttack?.Invoke();
         });
+
+        _cheatButton.onClick.AddListener(() =>
+        {
+            Cheater.Instance.ToggleVisualizeHp();
+        });
     }
+
     public void ShowNextWave(int wave, int enemyCount)
     {
         // Kill sequence trước đó nếu đang chạy

@@ -2292,6 +2292,7 @@ MonoBehaviour:
   _levelGD2Button: {fileID: 4234309806143135059}
   _levelGD1Image: {fileID: 2209432626303400052}
   _levelGD2Image: {fileID: 3496480884321858418}
+  EnableCheat: 1
   LevelNumber: 10
 --- !u!1 &7481321538960013052
 GameObject:
