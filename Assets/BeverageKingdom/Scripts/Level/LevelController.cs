@@ -9,8 +9,7 @@ public class LevelController : MonoBehaviour
 
     MileStone _mileStoneProgressBar;
 
-   // [HideInInspector]
-    public List<LevelData> LevelDatas;
+    List<LevelData> _levelDatas;
     LevelData _currentLevelData;
 
     private int currentWaveIndex = 0;
@@ -32,18 +31,21 @@ public class LevelController : MonoBehaviour
         {
             totalLevels = levelConfig.TotalLevels;
         }
-    }   
+    }
+
     void Start()
     {
         LoadLevelData();
         int currentLevelIndex = Controller.Instance.CurrentLevelIndex;
         Debug.Log($"Starting Level {currentLevelIndex + 1}");
-        if (currentLevelIndex < LevelDatas.Count)
+
+        if (currentLevelIndex < _levelDatas.Count)
         {
-            _currentLevelData = LevelDatas[currentLevelIndex];
+            _currentLevelData = _levelDatas[currentLevelIndex];
             InitLevel();
             UIManager.Instance.PlayCanvas.UpdateLevelText(currentLevelIndex + 1);
         }
+
         else
         {
             Debug.LogError($"Level {currentLevelIndex + 1} not found!");
@@ -52,7 +54,7 @@ public class LevelController : MonoBehaviour
 
     void LoadLevelData()
     {
-        LevelDatas = new List<LevelData>();
+        _levelDatas = new List<LevelData>();
         bool anyLevelsFound = false;
 
         for (int i = 1; i <= totalLevels; i++)
@@ -62,10 +64,11 @@ public class LevelController : MonoBehaviour
 
             if (levelData != null)
             {
-                LevelDatas.Add(levelData);
+                _levelDatas.Add(levelData);
                 anyLevelsFound = true;
                 Debug.Log($"Successfully loaded {levelPath}");
             }
+
             else
             {
                 Debug.LogError($"Could not load {levelPath}. Make sure to generate levels using the Level Data Helper tool (Tools > Level Data Helper).");
@@ -76,7 +79,9 @@ public class LevelController : MonoBehaviour
         {
             Debug.LogError("No level data found! Please generate levels using Tools > Level Data Helper in the Unity Editor.");
         }
-    }    void InitLevel()
+    }
+
+    void InitLevel()
     {
         // Reset all level state
         _levelDuration = _currentLevelData.Waves[^1].StartTime;
@@ -106,14 +111,16 @@ public class LevelController : MonoBehaviour
                 _mileStoneProgressBar.UpsizeMarker(markerRect, 50f);
             }
         }
-    }    void Update()
+    }
+
+    void Update()
     {
         // Only check for level completion if all enemies have been spawned and there are none left
         if (_isSpawnAllEnemies)
         {
             bool hasEnemies = EnemySpawner.Instance.IsAnyEnemyInContainer();
             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completion check - Enemies remaining: {(hasEnemies ? "Yes" : "No")}, All waves spawned: {_isSpawnAllEnemies}, Level complete: {_isLevelComplete}");
-            
+
             if (!hasEnemies && !_isLevelComplete)
             {
                 _isLevelComplete = true;
@@ -133,10 +140,16 @@ public class LevelController : MonoBehaviour
         if (timer <= _levelDuration)
         {
             UIManager.Instance.PlayCanvas.UpdateLevelProgressBar(timer / _levelDuration);
-        }        WaveData wave = _currentLevelData.Waves[currentWaveIndex];        if (timer >= wave.StartTime)
+        }
+
+        WaveData wave = _currentLevelData.Waves[currentWaveIndex];
+
+        if (timer >= wave.StartTime)
         {
             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}, Starting Wave {currentWaveIndex + 1}/{_currentLevelData.Waves.Count} at time {timer:F1}s");
-            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);            StartCoroutine(EnemySpawner.Instance.SpawnWave(
+            _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex);
+
+            StartCoroutine(EnemySpawner.Instance.SpawnWave(
                 wave,
                 currentWaveIndex + 1,
                 (waveIndex) =>

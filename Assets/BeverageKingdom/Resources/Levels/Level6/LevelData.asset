@@ -15,5 +15,5 @@ MonoBehaviour:
   Waves:
   - {fileID: 11400000, guid: 5fd3ae15802e4564f88656b66bba3ac9, type: 2}
   - {fileID: 11400000, guid: 076c7776041290a4f95fc7e1161c266b, type: 2}
-  - {fileID: 11400000, guid: 7387b2c7bb281bc41921d840156cc920, type: 2}
+  - {fileID: 11400000, guid: 5004212dbc7bda641b603962c3586db6, type: 2}
   - {fileID: 11400000, guid: dda68727b1f323348b6d7dfbd0fb545c, type: 2}

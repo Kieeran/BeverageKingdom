@@ -15,6 +15,7 @@ public class GameWinOverPopup : MonoBehaviour
         PlayAgainButton.onClick.AddListener(() =>
         {
             Time.timeScale = 1f;
+            Controller.Instance.CurrentLevelIndex--;
             Controller.Instance.ChangeScene("PlayScene");
         });
 

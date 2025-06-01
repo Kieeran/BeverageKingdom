@@ -44,14 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef7f5939afd78b44969664209506869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelDatas:
-  - {fileID: 0}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
-  - {fileID: 11400000, guid: d68def2ec24208c4db1c9f75524b4c8e, type: 2}
+  LevelDatas: []

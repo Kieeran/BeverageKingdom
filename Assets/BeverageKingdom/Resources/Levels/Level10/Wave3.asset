@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartTime: 24
   EnemiesToSpawn:
-  - {fileID: 11400000, guid: 9ba97f30f98fafd4b8d407d9e978f66d, type: 2}
-  - {fileID: 11400000, guid: f12e0e14acb33ee4b8e39f208c779f94, type: 2}
+  - {fileID: 11400000, guid: 3933feaf2b16c60418a21b66831bff4a, type: 2}
+  - {fileID: 11400000, guid: e1ee5605b5ea6814aa3088f5a96aa390, type: 2}
   - {fileID: 11400000, guid: 2696afd8daeabfa49bc9539484b826e2, type: 2}
