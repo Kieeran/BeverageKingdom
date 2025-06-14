@@ -17,6 +17,7 @@ public class Controller : MonoBehaviour
     [SerializeField] Transform _levelController;
     [SerializeField] Transform _itemSpawner;
     [SerializeField] Transform _hotSpotManager;
+    [SerializeField] Transform _cheater;
 
     public ObservableVariable<bool> VisualizeDetectionRange = new(false);
     public ObservableVariable<bool> VisualizeBoundingBox = new(false);
@@ -36,6 +37,8 @@ public class Controller : MonoBehaviour
     public bool IsGD1Active = true;
 
     public static Controller Instance { get; private set; }
+
+    public bool Cheat;
 
     void Awake()
     {
@@ -73,6 +76,8 @@ public class Controller : MonoBehaviour
         Instantiate(_itemSpawner.gameObject);
         Instantiate(_hotSpotManager.gameObject);
         Instantiate(_spawnEnemy.gameObject);
+
+        if (Cheat) Instantiate(_cheater.gameObject);
 
         Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
     }

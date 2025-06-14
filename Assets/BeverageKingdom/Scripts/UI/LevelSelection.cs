@@ -12,8 +12,6 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] Image _levelGD1Image;
     [SerializeField] Image _levelGD2Image;
 
-    public bool EnableCheat;
-
     public int LevelNumber = 10; // Set to 10 levels
 
     void Awake()
@@ -70,7 +68,7 @@ public class LevelSelection : MonoBehaviour
             levelItemUI.UpdateLevelItemUIText((i + 1).ToString());
             levelItemUI.SetLevelIndex(i);
 
-            if (EnableCheat)
+            if (Cheater.Instance != null)
             {
                 levelItemUI.EnableLevelItemUI();
             }

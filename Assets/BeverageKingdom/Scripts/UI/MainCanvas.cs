@@ -127,6 +127,11 @@ public class MainCanvas : MonoBehaviour
             Controller.Instance.VisualizeDetectionRange.Value = !Controller.Instance.VisualizeDetectionRange.Value;
             Controller.Instance.VisualizeBoundingBox.Value = !Controller.Instance.VisualizeBoundingBox.Value;
         });
+
+        if (Cheater.Instance == null)
+        {
+            _cheatButton.gameObject.SetActive(false);
+        }
     }
 
     public void ShowNextWave(int wave, int enemyCount)
