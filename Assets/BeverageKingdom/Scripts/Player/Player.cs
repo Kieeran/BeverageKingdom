@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
 
     void OnPlayerAfterDead()
     {
-        GameSystem.instance.GameOver();
+        GameSystem.Instance.GameOver();
     }
 
     void OnAttack()

@@ -125,7 +125,7 @@ public class LevelController : MonoBehaviour
             {
                 _isLevelComplete = true;
                 Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1} completed. All waves done and enemies defeated. Triggering GameWin.");
-                GameSystem.instance.GameWin();
+                GameSystem.Instance.GameWin();
                 return;
             }
         }

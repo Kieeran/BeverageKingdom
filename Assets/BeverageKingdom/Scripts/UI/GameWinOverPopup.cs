@@ -31,6 +31,8 @@ public class GameWinOverPopup : MonoBehaviour
             Controller.Instance.CurrentLevelIndex++;
             Controller.Instance.ChangeScene("PlayScene");
         });
+
+        gameObject.SetActive(false);
     }
 
     public void OnGameOver()

@@ -8,12 +8,12 @@ public class GameSystem : MonoBehaviour
     public Action OnGameOver;
     public Action OnGameWin;
 
-    public static GameSystem instance;
+    public static GameSystem Instance;
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
@@ -31,5 +31,15 @@ public class GameSystem : MonoBehaviour
     {
         Time.timeScale = 0f;
         OnGameWin?.Invoke();
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void ContinueGame()
+    {
+        Time.timeScale = 1f;
     }
 }

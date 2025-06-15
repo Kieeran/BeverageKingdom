@@ -36,6 +36,6 @@ public class House : MonoBehaviour
 
     void DelayAndGameOver()
     {
-        GameSystem.instance.GameOver();
+        GameSystem.Instance.GameOver();
     }
 }

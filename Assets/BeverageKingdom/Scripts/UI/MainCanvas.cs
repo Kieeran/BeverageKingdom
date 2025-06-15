@@ -55,10 +55,8 @@ public class MainCanvas : MonoBehaviour
 
     void Start()
     {
-        GameWinOverPopup.gameObject.SetActive(false);
-
-        GameSystem.instance.OnGameOver += OnGameOver;
-        GameSystem.instance.OnGameWin += OnGameWin;
+        GameSystem.Instance.OnGameOver += OnGameOver;
+        GameSystem.Instance.OnGameWin += OnGameWin;
     }
 
     void OnGameOver()
