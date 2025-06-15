@@ -1069,7 +1069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5245189740093232976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2292,7 +2292,6 @@ MonoBehaviour:
   _levelGD2Button: {fileID: 4234309806143135059}
   _levelGD1Image: {fileID: 2209432626303400052}
   _levelGD2Image: {fileID: 3496480884321858418}
-  EnableCheat: 1
   LevelNumber: 10
 --- !u!1 &7481321538960013052
 GameObject:

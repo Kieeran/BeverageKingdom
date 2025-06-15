@@ -15,6 +15,7 @@ public class LevelItemUI : MonoBehaviour
         _selectLevelButton.onClick.AddListener(() =>
         {
             Controller.Instance.CurrentLevelIndex = LevelIndex;
+            Controller.Instance.ChangeScene("PlayScene");
         });
     }
 

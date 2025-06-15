@@ -37,12 +37,13 @@ public class HomeSceneCanvas : MonoBehaviour
 
         StartGameButton.onClick.AddListener(() =>
         {
-            Controller.Instance.ChangeScene("PlayScene");
-        });
-
-        LevelSelectionButton.onClick.AddListener(() =>
-        {
+            // Controller.Instance.ChangeScene("PlayScene");
             LevelSelection.gameObject.SetActive(true);
         });
+
+        // LevelSelectionButton.onClick.AddListener(() =>
+        // {
+        //     LevelSelection.gameObject.SetActive(true);
+        // });
     }
 }
