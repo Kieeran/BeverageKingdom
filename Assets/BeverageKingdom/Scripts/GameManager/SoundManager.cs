@@ -8,26 +8,29 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     [Header("Audio Mixer Groups")]
-    [SerializeField] private AudioMixerGroup musicMixerGroup;
-    [SerializeField] private AudioMixerGroup sfxMixerGroup;
+    [SerializeField] AudioMixerGroup _musicMixerGroup;
+    [SerializeField] AudioMixerGroup _sfxMixerGroup;
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource audioSourceLoop;
-    [SerializeField] private AudioSource audioSourceUnLoop;
+    [SerializeField] AudioSource _audioSourceLoop;
+    [SerializeField] AudioSource _audioSourceUnLoop;
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip HomeMenuSE;
-    [SerializeField] private AudioClip InGameSE;
-    [SerializeField] private AudioClip MeleeAttackSE;
-    [SerializeField] private AudioClip ThunderSoundFx;
-    [SerializeField] private AudioClip IceSoundFx;
+    [SerializeField] AudioClip _homeMenuSE;
+    [SerializeField] AudioClip _inGameSE;
+    [SerializeField] AudioClip _meleeAttackSE;
+    [SerializeField] AudioClip _thunderSoundFx;
+    [SerializeField] AudioClip _iceSoundFx;
 
     // Public properties to access audio clips
-    public AudioClip HomeMenuSound => HomeMenuSE;
-    public AudioClip InGameSound => InGameSE;
-    public AudioClip MeleeAttackSound => MeleeAttackSE;
-    public AudioClip ThunderSound => ThunderSoundFx;
-    public AudioClip IceSound => IceSoundFx;
+    public AudioClip HomeMenuSound => _homeMenuSE;
+    public AudioClip InGameSound => _inGameSE;
+    public AudioClip MeleeAttackSound => _meleeAttackSE;
+    public AudioClip ThunderSound => _thunderSoundFx;
+    public AudioClip IceSound => _iceSoundFx;
+
+    bool _soundToggle;
+    bool _musicToggle;
 
     private void Awake()
     {
@@ -41,21 +44,40 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // Ensure AudioSources are set up
-        if (audioSourceLoop == null)
+        if (_audioSourceLoop == null)
         {
-            audioSourceLoop = gameObject.AddComponent<AudioSource>();
+            _audioSourceLoop = gameObject.AddComponent<AudioSource>();
             Debug.LogWarning("SoundManager: audioSourceLoop was not assigned, creating new AudioSource");
         }
 
-        if (audioSourceUnLoop == null)
+        if (_audioSourceUnLoop == null)
         {
-            audioSourceUnLoop = gameObject.AddComponent<AudioSource>();
+            _audioSourceUnLoop = gameObject.AddComponent<AudioSource>();
             Debug.LogWarning("SoundManager: audioSourceUnLoop was not assigned, creating new AudioSource");
         }
 
         // Set up AudioSource properties
-        SetupAudioSource(audioSourceLoop, true);
-        SetupAudioSource(audioSourceUnLoop, false);
+        SetupAudioSource(_audioSourceLoop, true);
+        SetupAudioSource(_audioSourceUnLoop, false);
+
+        _soundToggle = true;
+        _musicToggle = true;
+    }
+
+    public void ToggleSound(bool b)
+    {
+        _soundToggle = b;
+
+        float volume = _soundToggle ? 0f : -80f; // -80f là mức gần như tắt tiếng
+        _sfxMixerGroup.audioMixer.SetFloat("SFXVolume", volume);
+    }
+
+    public void ToggleMusic(bool b)
+    {
+        _musicToggle = b;
+
+        float volume = _musicToggle ? 0f : -80f;
+        _musicMixerGroup.audioMixer.SetFloat("MusicVolume", volume);
     }
 
     private void SetupAudioSource(AudioSource source, bool isLoop)
@@ -63,16 +85,16 @@ public class SoundManager : MonoBehaviour
         source.playOnAwake = false;
         source.loop = isLoop;
         source.spatialBlend = 0f; // 2D sound
-        source.outputAudioMixerGroup = isLoop ? musicMixerGroup : sfxMixerGroup;
+        source.outputAudioMixerGroup = isLoop ? _musicMixerGroup : _sfxMixerGroup;
     }
 
     public void StopSound()
     {
-        if (audioSourceLoop != null && audioSourceLoop.isPlaying)
+        if (_audioSourceLoop != null && _audioSourceLoop.isPlaying)
         {
-            audioSourceLoop.Stop();
-            audioSourceLoop.loop = false;
-        }   
+            _audioSourceLoop.Stop();
+            _audioSourceLoop.loop = false;
+        }
     }
 
     public void PlaySound(AudioClip clip, bool loop)
@@ -84,11 +106,11 @@ public class SoundManager : MonoBehaviour
 
         if (loop)
         {
-            if (audioSourceLoop != null)
+            if (_audioSourceLoop != null)
             {
-                audioSourceLoop.clip = clip;
-                audioSourceLoop.loop = loop;
-                audioSourceLoop.Play();
+                _audioSourceLoop.clip = clip;
+                _audioSourceLoop.loop = loop;
+                _audioSourceLoop.Play();
             }
             else
             {
@@ -96,11 +118,11 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
-            if (audioSourceUnLoop != null)
+            if (_audioSourceUnLoop != null)
             {
-                audioSourceUnLoop.clip = clip;
-                audioSourceUnLoop.loop = loop;
-                audioSourceUnLoop.Play();
+                _audioSourceUnLoop.clip = clip;
+                _audioSourceUnLoop.loop = loop;
+                _audioSourceUnLoop.Play();
             }
             else
             {

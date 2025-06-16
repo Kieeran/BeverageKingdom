@@ -36,7 +36,8 @@ public class PauseGamePopUp : MonoBehaviour
             SoundOn.gameObject.SetActive(false);
             SoundOff.gameObject.SetActive(true);
 
-            Debug.Log("Turn on sound");
+            SoundManager.Instance.ToggleSound(false);
+            Debug.Log("Turn off sound");
         });
 
         SoundOff.onClick.AddListener(() =>
@@ -44,7 +45,8 @@ public class PauseGamePopUp : MonoBehaviour
             SoundOn.gameObject.SetActive(true);
             SoundOff.gameObject.SetActive(false);
 
-            Debug.Log("Turn off sound");
+            SoundManager.Instance.ToggleSound(true);
+            Debug.Log("Turn on sound");
         });
 
         MusicOn.onClick.AddListener(() =>
@@ -52,7 +54,8 @@ public class PauseGamePopUp : MonoBehaviour
             MusicOn.gameObject.SetActive(false);
             MusicOff.gameObject.SetActive(true);
 
-            Debug.Log("Turn on music");
+            SoundManager.Instance.ToggleMusic(false);
+            Debug.Log("Turn off music");
         });
 
         MusicOff.onClick.AddListener(() =>
@@ -60,7 +63,8 @@ public class PauseGamePopUp : MonoBehaviour
             MusicOn.gameObject.SetActive(true);
             MusicOff.gameObject.SetActive(false);
 
-            Debug.Log("Turn off music");
+            SoundManager.Instance.ToggleMusic(true);
+            Debug.Log("Turn on music");
         });
 
         SoundOff.gameObject.SetActive(false);

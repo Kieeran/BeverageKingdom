@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad263a5a641895418424545154b86e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: 2532585409711524239, guid: 561ebcc1f6ef5964eaa251ce9b7d5b95, type: 2}
+  sfxMixerGroup: {fileID: -3945857021561244794, guid: 561ebcc1f6ef5964eaa251ce9b7d5b95, type: 2}
   audioSourceLoop: {fileID: 8577891064688456016}
   audioSourceUnLoop: {fileID: 5277044302636932573}
   HomeMenuSE: {fileID: 8300000, guid: b73fe0c27a5cbf44194f02b646bc8a67, type: 3}

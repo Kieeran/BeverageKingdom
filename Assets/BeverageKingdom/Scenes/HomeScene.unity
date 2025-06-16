@@ -122,16 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!82 &236201608 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8577891064688456016, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-  m_PrefabInstance: {fileID: 3987047100074969604}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &236201611 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5277044302636932573, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-  m_PrefabInstance: {fileID: 3987047100074969604}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &804335266
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,26 +363,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 606271919527773000, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: sfxMixerGroup
+      propertyPath: _inGameSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b989e5ced306f549b6b77872934866a, type: 3}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: _homeMenuSE
+      value: 
+      objectReference: {fileID: 8300000, guid: b73fe0c27a5cbf44194f02b646bc8a67, type: 3}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: _iceSoundFx
+      value: 
+      objectReference: {fileID: 8300000, guid: 49ce9ec1842db7544b5b839110376c43, type: 3}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: _meleeAttackSE
+      value: 
+      objectReference: {fileID: 8300000, guid: f6c6cae059c8f8c4b90017fd6381c6a5, type: 3}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: _sfxMixerGroup
       value: 
       objectReference: {fileID: -3945857021561244794, guid: 561ebcc1f6ef5964eaa251ce9b7d5b95, type: 2}
     - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: audioSourceLoop
+      propertyPath: _thunderSoundFx
       value: 
-      objectReference: {fileID: 236201608}
+      objectReference: {fileID: 8300000, guid: c67fc45e2dc1b0741b752f82aa4b0c7c, type: 3}
     - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: musicMixerGroup
+      propertyPath: _audioSourceLoop
+      value: 
+      objectReference: {fileID: 3987047100074969606}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: _musicMixerGroup
       value: 
       objectReference: {fileID: 2532585409711524239, guid: 561ebcc1f6ef5964eaa251ce9b7d5b95, type: 2}
     - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: audioSourceUnLoop
+      propertyPath: _audioSourceUnLoop
       value: 
-      objectReference: {fileID: 236201611}
+      objectReference: {fileID: 3987047100074969605}
     - target: {fileID: 5894024506333679704, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -438,6 +444,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+--- !u!82 &3987047100074969605 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5277044302636932573, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+  m_PrefabInstance: {fileID: 3987047100074969604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3987047100074969606 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8577891064688456016, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+  m_PrefabInstance: {fileID: 3987047100074969604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8891136413185241201
 PrefabInstance:
   m_ObjectHideFlags: 0
