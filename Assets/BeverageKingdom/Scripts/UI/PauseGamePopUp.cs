@@ -23,6 +23,7 @@ public class PauseGamePopUp : MonoBehaviour
 
         ExitButton.onClick.AddListener(() =>
         {
+            GameSystem.Instance.ContinueGame();
             Controller.Instance.ChangeScene("HomeScene");
         });
 
@@ -67,8 +68,12 @@ public class PauseGamePopUp : MonoBehaviour
             Debug.Log("Turn on music");
         });
 
-        SoundOff.gameObject.SetActive(false);
-        MusicOff.gameObject.SetActive(false);
+        SoundOn.gameObject.SetActive(SoundManager.Instance.SoundToggle);
+        SoundOff.gameObject.SetActive(!SoundManager.Instance.SoundToggle);
+
+        MusicOn.gameObject.SetActive(SoundManager.Instance.MusicToggle);
+        MusicOff.gameObject.SetActive(!SoundManager.Instance.MusicToggle);
+
         gameObject.SetActive(false);
     }
 

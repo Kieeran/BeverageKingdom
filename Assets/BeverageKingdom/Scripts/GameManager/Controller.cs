@@ -53,7 +53,10 @@ public class Controller : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
 
+    void Start()
+    {
         InitHome();
     }
 
@@ -80,6 +83,8 @@ public class Controller : MonoBehaviour
         if (Cheat) Instantiate(_cheater.gameObject);
 
         Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
+
+        SoundManager.Instance?.PlaySoundWithDelay(SoundManager.Instance?.InGameSound, true, 0.3f);
     }
 
     public void ChangeScene(string sceneName)

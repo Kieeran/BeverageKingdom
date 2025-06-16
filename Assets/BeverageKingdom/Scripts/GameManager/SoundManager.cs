@@ -29,8 +29,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip ThunderSound => _thunderSoundFx;
     public AudioClip IceSound => _iceSoundFx;
 
-    bool _soundToggle;
-    bool _musicToggle;
+    public bool SoundToggle;
+    public bool MusicToggle;
 
     private void Awake()
     {
@@ -60,23 +60,23 @@ public class SoundManager : MonoBehaviour
         SetupAudioSource(_audioSourceLoop, true);
         SetupAudioSource(_audioSourceUnLoop, false);
 
-        _soundToggle = true;
-        _musicToggle = true;
+        SoundToggle = true;
+        MusicToggle = true;
     }
 
     public void ToggleSound(bool b)
     {
-        _soundToggle = b;
+        SoundToggle = b;
 
-        float volume = _soundToggle ? 0f : -80f; // -80f là mức gần như tắt tiếng
+        float volume = SoundToggle ? 0f : -80f; // -80f là mức gần như tắt tiếng
         _sfxMixerGroup.audioMixer.SetFloat("SFXVolume", volume);
     }
 
     public void ToggleMusic(bool b)
     {
-        _musicToggle = b;
+        MusicToggle = b;
 
-        float volume = _musicToggle ? 0f : -80f;
+        float volume = MusicToggle ? 0f : -80f;
         _musicMixerGroup.audioMixer.SetFloat("MusicVolume", volume);
     }
 
@@ -108,12 +108,10 @@ public class SoundManager : MonoBehaviour
         {
             if (_audioSourceLoop != null)
             {
+                _audioSourceLoop.Stop();
                 _audioSourceLoop.clip = clip;
-                _audioSourceLoop.loop = loop;
+                _audioSourceLoop.loop = true;
                 _audioSourceLoop.Play();
-            }
-            else
-            {
             }
         }
         else
