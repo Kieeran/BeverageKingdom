@@ -18,7 +18,7 @@ MonoBehaviour:
   speed: 2
   dameAttack: 10
   moneyForDead: 3
-  attackRange: 2
+  attackRange: 1
   attackCoolDown: 1
   enemyScale: {x: 1, y: 1, z: 1}
   enemyColor: {r: 0.9150943, g: 0.8592732, b: 0.13381095, a: 1}

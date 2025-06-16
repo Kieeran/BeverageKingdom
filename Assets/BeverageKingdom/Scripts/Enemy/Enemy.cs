@@ -260,9 +260,9 @@ public class Enemy : TriBehaviour
                 Destroy(EnemyDetectionRange.gameObject);
             }
 
-            if (EnemyDetectionRange != null && EnemyDetectionRange.gameObject != null)
+            if (EnemyCollision != null && EnemyCollision.gameObject != null)
             {
-                Destroy(EnemyDetectionRange.gameObject);
+                Destroy(EnemyCollision.gameObject);
             }
 
             if (ItemSpawner != null)
