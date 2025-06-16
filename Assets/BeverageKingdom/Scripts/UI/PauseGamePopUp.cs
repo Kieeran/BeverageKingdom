@@ -8,7 +8,10 @@ public class PauseGamePopUp : MonoBehaviour
     public Button ResumeButton;
     public Button ExitButton;
     public Button TutorialButton;
-    public Button ToggleSound;
+    public Button SoundOn;
+    public Button SoundOff;
+    public Button MusicOn;
+    public Button MusicOff;
 
     void Awake()
     {
@@ -28,11 +31,40 @@ public class PauseGamePopUp : MonoBehaviour
             Tutorial.gameObject.SetActive(true);
         });
 
-        ToggleSound.onClick.AddListener(() =>
+        SoundOn.onClick.AddListener(() =>
         {
-            Debug.Log("Toggle sound");
+            SoundOn.gameObject.SetActive(false);
+            SoundOff.gameObject.SetActive(true);
+
+            Debug.Log("Turn on sound");
         });
 
+        SoundOff.onClick.AddListener(() =>
+        {
+            SoundOn.gameObject.SetActive(true);
+            SoundOff.gameObject.SetActive(false);
+
+            Debug.Log("Turn off sound");
+        });
+
+        MusicOn.onClick.AddListener(() =>
+        {
+            MusicOn.gameObject.SetActive(false);
+            MusicOff.gameObject.SetActive(true);
+
+            Debug.Log("Turn on music");
+        });
+
+        MusicOff.onClick.AddListener(() =>
+        {
+            MusicOn.gameObject.SetActive(true);
+            MusicOff.gameObject.SetActive(false);
+
+            Debug.Log("Turn off music");
+        });
+
+        SoundOff.gameObject.SetActive(false);
+        MusicOff.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
 
