@@ -7,8 +7,6 @@ public class HomeSceneCanvas : MonoBehaviour
     public Button StartGameButton;
     public Button ExitGameButton;
     public Button TutorialButton;
-
-    public Button LevelSelectionButton;
     public LevelSelection LevelSelection;
 
     public RectTransform TutorialPanel;
@@ -37,13 +35,7 @@ public class HomeSceneCanvas : MonoBehaviour
 
         StartGameButton.onClick.AddListener(() =>
         {
-            // Controller.Instance.ChangeScene("PlayScene");
             LevelSelection.gameObject.SetActive(true);
         });
-
-        // LevelSelectionButton.onClick.AddListener(() =>
-        // {
-        //     LevelSelection.gameObject.SetActive(true);
-        // });
     }
 }

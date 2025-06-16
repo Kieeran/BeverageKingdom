@@ -21,19 +21,13 @@ public class Tutorial : MonoBehaviour
             gameObject.SetActive(false);
         });
 
-        gameObject.SetActive(SceneManager.GetActiveScene().name == "PlayScene");
+        gameObject.SetActive(false);
     }
 
     void OnEnable()
     {
-        Time.timeScale = 0f;
         currentPage = 0;
         SetPage(currentPage);
-    }
-
-    void OnDisable()
-    {
-        Time.timeScale = 1f;
     }
 
     void UpdateTutorialPage(int index)
