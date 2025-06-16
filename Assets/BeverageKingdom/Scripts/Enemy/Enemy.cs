@@ -50,6 +50,8 @@ public class Enemy : TriBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
+    public float dropItemChance;
+
     protected override void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -265,7 +267,7 @@ public class Enemy : TriBehaviour
 
             if (ItemSpawner != null)
             {
-                ItemSpawner.Spawn(transform.position, Quaternion.identity);
+                ItemSpawner.Spawn(dropItemChance, transform.position, Quaternion.identity);
             }
             Destroy(gameObject, 1f);
         }

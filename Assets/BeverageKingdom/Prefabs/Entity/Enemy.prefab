@@ -223,7 +223,7 @@ MonoBehaviour:
   EnemyAnimation: {fileID: 910250489033305400}
   EnemyDetectionRange: {fileID: 6019219554763910641}
   EnemyCollision: {fileID: 7954088939533346405}
-  maxHealth: 6
+  MaxHealth: 0
   CurrentHealth: 2
   animator: {fileID: 2996638185219542788}
   animatorOverride: {fileID: 22100000, guid: a21be8fd490265048b2d5b3475c86d5e, type: 2}
@@ -233,6 +233,7 @@ MonoBehaviour:
   HealthBarFillUI: {fileID: 6053659228006615538}
   DetectionRangeVisual: {fileID: 2679746658650681788}
   BoundingBoxVisual: {fileID: 4082269498850593074}
+  dropItemChance: 50
 --- !u!50 &1581289313147508839
 Rigidbody2D:
   serializedVersion: 4

@@ -2,6 +2,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class LevelController : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class LevelController : MonoBehaviour
 
     private LevelConfiguration levelConfig;
     private int totalLevels = 10; // Default fallback value
+
+    public Action<int> StartWave;
 
     private void Awake()
     {
@@ -148,6 +151,8 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log($"Level {Controller.Instance.CurrentLevelIndex + 1}, Starting Wave {currentWaveIndex + 1}/{_currentLevelData.Waves.Count} at time {timer:F1}s");
             _mileStoneProgressBar.UpdateCompleteMileStone(currentWaveIndex - 1);
+
+            StartWave?.Invoke(currentWaveIndex);
 
             StartCoroutine(EnemySpawner.Instance.SpawnWave(
                 wave,

@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7c0d99c043b3b4cb1f5e5055efced2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemy: {fileID: 0}
 --- !u!1 &4321744141246412417
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +375,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6541270993995674041}
-  - component: {fileID: 7688910542455383166}
   - component: {fileID: 270391615487167224}
+  - component: {fileID: 7688910542455383166}
   - component: {fileID: 9113909019627376567}
   m_Layer: 0
   m_Name: Goblin
@@ -404,24 +405,6 @@ Transform:
   - {fileID: 1776766787011401854}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7688910542455383166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7508368098532413865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b8e8942ca069c64d9976d71a84a6f21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeDuration: 2
-  slowFactor: 0.5
-  flashColor: {r: 0, g: 1, b: 1, a: 1}
-  flashInterval: 0.1
-  knockbackForce: 5
-  knockbackDuration: 0.2
 --- !u!114 &270391615487167224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,7 +423,7 @@ MonoBehaviour:
   EnemyAnimation: {fileID: 3584930264691911656}
   EnemyDetectionRange: {fileID: 0}
   EnemyCollision: {fileID: 0}
-  maxHealth: 37.9
+  MaxHealth: 0
   CurrentHealth: 0
   animator: {fileID: 3584840274293437326}
   animatorOverride: {fileID: 22100000, guid: 02ee384db226dcf44a101c1acf511242, type: 2}
@@ -450,6 +433,25 @@ MonoBehaviour:
   HealthBarFillUI: {fileID: 3989404406180398907}
   DetectionRangeVisual: {fileID: 2798532503065087948}
   BoundingBoxVisual: {fileID: 7696601335793081828}
+  dropItemChance: 75
+--- !u!114 &7688910542455383166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7508368098532413865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8e8942ca069c64d9976d71a84a6f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeDuration: 2
+  slowFactor: 0.5
+  flashColor: {r: 0, g: 1, b: 1, a: 1}
+  flashInterval: 0.1
+  knockbackForce: 5
+  knockbackDuration: 0.2
 --- !u!50 &9113909019627376567
 Rigidbody2D:
   serializedVersion: 4
