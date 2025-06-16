@@ -92,8 +92,8 @@ public class Enemy : TriBehaviour
         Init();
         _enemyEffect = GetComponent<EnemyEffect>();
         ItemSpawner = ItemSpawner.Instance;
-
     }
+
     public void SetEnemyData(EnemySO data)
     {
         enemyData = data;

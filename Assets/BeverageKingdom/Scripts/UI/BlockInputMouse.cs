@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +10,15 @@ public class BlockInputMouse : MonoBehaviour
     private bool isCoolingDown = false;
     [SerializeField] private Image imageFrame;
 
+    public TMP_Text CoolDownNum;
+
     void Start()
-    {   
+    {
         targetButton = GetComponent<Button>();
         targetButton.onClick.AddListener(OnButtonClick);
         imageFrame.fillAmount = 0;
+
+        CoolDownNum.text = "";
     }
 
     void OnButtonClick()
@@ -31,11 +36,22 @@ public class BlockInputMouse : MonoBehaviour
 
         float timeRemaining = cooldownTime;
 
+        CoolDownNum.text = ((int)cooldownTime).ToString();
+
+        int lastRemainingTime = (int)cooldownTime;
+
         while (timeRemaining > 0)
         {
             imageFrame.fillAmount = timeRemaining / cooldownTime; // Cập nhật hình ảnh khung
 
             timeRemaining -= Time.deltaTime;
+
+            if ((int)timeRemaining != lastRemainingTime)
+            {
+                CoolDownNum.text = ((int)timeRemaining).ToString();
+                lastRemainingTime = (int)timeRemaining;
+            }
+
             yield return null;
         }
 
@@ -44,5 +60,7 @@ public class BlockInputMouse : MonoBehaviour
 
         targetButton.interactable = true;
         isCoolingDown = false;
+
+        CoolDownNum.text = "";
     }
 }
