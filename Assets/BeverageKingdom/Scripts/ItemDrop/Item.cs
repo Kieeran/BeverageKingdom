@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
@@ -13,7 +12,7 @@ public class Item : MonoBehaviour
     private void Start()
     {
         itemDespawn = GetComponent<ItemDespawn>();
-       
+
     }
     private void OnEnable()
     {
@@ -50,11 +49,10 @@ public class Item : MonoBehaviour
         {
             PickUp();
         }
-            
     }
+
     protected virtual void PickUp()
     {
-
         itemDespawn.DeSpawnObj(); // Call the despawn method to handle item removal
     }
 }

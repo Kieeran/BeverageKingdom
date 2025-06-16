@@ -334,18 +334,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
-      propertyPath: _cheater
-      value: 
-      objectReference: {fileID: 745942370547395389, guid: 6c50a61264487e24b9c648084dc6b801, type: 3}
-    - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
-      propertyPath: _itemSpawner
-      value: 
-      objectReference: {fileID: 1561152676760957522, guid: 4aea69c666d58d04a8a1e1809fba6c2e, type: 3}
-    - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
-      propertyPath: _hotSpotManager
-      value: 
-      objectReference: {fileID: 3208399954895783616, guid: d9e11e90a1f76fd4da8a3569f41a1ed0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -363,42 +351,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _inGameSE
-      value: 
-      objectReference: {fileID: 8300000, guid: 2b989e5ced306f549b6b77872934866a, type: 3}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _homeMenuSE
-      value: 
-      objectReference: {fileID: 8300000, guid: b73fe0c27a5cbf44194f02b646bc8a67, type: 3}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _iceSoundFx
-      value: 
-      objectReference: {fileID: 8300000, guid: 49ce9ec1842db7544b5b839110376c43, type: 3}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _meleeAttackSE
-      value: 
-      objectReference: {fileID: 8300000, guid: f6c6cae059c8f8c4b90017fd6381c6a5, type: 3}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _sfxMixerGroup
-      value: 
-      objectReference: {fileID: -3945857021561244794, guid: 561ebcc1f6ef5964eaa251ce9b7d5b95, type: 2}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _thunderSoundFx
-      value: 
-      objectReference: {fileID: 8300000, guid: c67fc45e2dc1b0741b752f82aa4b0c7c, type: 3}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _audioSourceLoop
-      value: 
-      objectReference: {fileID: 3987047100074969606}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _musicMixerGroup
-      value: 
-      objectReference: {fileID: 2532585409711524239, guid: 561ebcc1f6ef5964eaa251ce9b7d5b95, type: 2}
-    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-      propertyPath: _audioSourceUnLoop
-      value: 
-      objectReference: {fileID: 3987047100074969605}
     - target: {fileID: 5894024506333679704, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -444,16 +396,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
---- !u!82 &3987047100074969605 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5277044302636932573, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-  m_PrefabInstance: {fileID: 3987047100074969604}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &3987047100074969606 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8577891064688456016, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
-  m_PrefabInstance: {fileID: 3987047100074969604}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8891136413185241201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,14 +404,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 47292045738340688, guid: 95a6eaadb854c554391cccdddd8608ab, type: 3}
-      propertyPath: _homeCanvasPrefab
-      value: 
-      objectReference: {fileID: 6075498405728850597, guid: f671e99d7f4fa0641a98c76ac16e0a9f, type: 3}
-    - target: {fileID: 47292045738340688, guid: 95a6eaadb854c554391cccdddd8608ab, type: 3}
-      propertyPath: _playCanvasPrefab
-      value: 
-      objectReference: {fileID: 5600984219391760075, guid: bce2f475c2c0dd4478951140c828a74d, type: 3}
     - target: {fileID: 2487010451457294303, guid: 95a6eaadb854c554391cccdddd8608ab, type: 3}
       propertyPath: m_Name
       value: UIManager

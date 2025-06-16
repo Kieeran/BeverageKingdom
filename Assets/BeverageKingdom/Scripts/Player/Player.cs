@@ -39,7 +39,6 @@ public class Player : MonoBehaviour
     public Image HealthBarFillUI;
 
     public bool IsDead = false;
-    [HideInInspector]
     public float MaxHP;
     public float HP;
     public float AttackCoolDown;
@@ -50,6 +49,8 @@ public class Player : MonoBehaviour
     private bool isShield;
     [SerializeField] private Transform shield;
     private bool isSpeed;
+
+    Coroutine shieldCoroutine;
 
     public Transform DetectionRangeVisual;
     public Transform BoundingBoxVisual;
@@ -76,16 +77,6 @@ public class Player : MonoBehaviour
 
         DetectionRangeVisual.gameObject.SetActive(false);
         BoundingBoxVisual.gameObject.SetActive(false);
-
-        // Controller.Instance.VisualizeDetectionRange.OnValueChanged += (oldVal, newVal) =>
-        // {
-        //     DetectionRangeVisual.gameObject.SetActive(newVal);
-        // };
-
-        // Controller.Instance.VisualizeBoundingBox.OnValueChanged += (oldVal, newVal) =>
-        // {
-        //     BoundingBoxVisual.gameObject.SetActive(newVal);
-        // };
 
         Controller.Instance.VisualizeDetectionRange.OnValueChanged += UpdateVisualizeDetectionRange;
         Controller.Instance.VisualizeBoundingBox.OnValueChanged += UpdateVisualizeBoundingBox;
@@ -141,9 +132,15 @@ public class Player : MonoBehaviour
             shield.GetComponent<Animator>().SetBool("Break", true);
             StartCoroutine(DisableAfterDelay(shield.gameObject, 0.1f));
 
-            DeactiveShield();
+            ShieldOff();
+            if (shieldCoroutine != null)
+            {
+                StopCoroutine(shieldCoroutine);
+            }
+
             return;
         }
+
         HP -= damage;
         HealthBarFillUI.fillAmount = HP / MaxHP;
 
@@ -273,33 +270,56 @@ public class Player : MonoBehaviour
             playerSpr.sprite = playerGunSpr;
         }
     }
-    public void RecoverHp(int hp)
+
+    public void RecoverHp(float hp)
     {
         HP += hp;
-        Debug.Log("Level up");
+
+        if (HP > MaxHP) HP = MaxHP;
+
+        Debug.Log("Health + " + hp);
         HealthBarFillUI.fillAmount = HP / MaxHP;
     }
-    public void ActiveShield()
+
+    public void ActiveShield(float buffDuration)
+    {
+        shieldCoroutine = StartCoroutine(StartShield(buffDuration));
+    }
+
+    public IEnumerator StartShield(float buffDuration)
+    {
+        if (isShield)
+            yield break;
+        ShieldOn();
+        yield return new WaitForSeconds(buffDuration);
+        ShieldOff();
+        Debug.Log("shield");
+    }
+
+    void ShieldOn()
     {
         shield.gameObject.SetActive(true);
         isShield = true;
-
-        Debug.Log("shield");
-
     }
-    private void DeactiveShield()
+
+    void ShieldOff()
     {
         shield.gameObject.SetActive(false);
         isShield = false;
-
     }
-    public IEnumerator SetSpeed(float addSpeed)
+
+    public void SetSpeed(float addSpeed, float buffDuration)
+    {
+        StartCoroutine(StartSpeeding(addSpeed, buffDuration));
+    }
+
+    public IEnumerator StartSpeeding(float addSpeed, float buffDuration)
     {
         if (isSpeed)
             yield break;
         isSpeed = true;
         moveSpeed += addSpeed;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(buffDuration);
         moveSpeed -= addSpeed;
         isSpeed = false;
     }
