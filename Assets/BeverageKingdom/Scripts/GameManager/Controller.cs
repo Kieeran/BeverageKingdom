@@ -94,6 +94,7 @@ public class Controller : MonoBehaviour
 
     IEnumerator LoadScene(string sceneName)
     {
+        SoundManager.Instance.StopSound();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
         // Chờ đến khi load xong
