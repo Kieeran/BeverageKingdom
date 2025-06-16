@@ -336,5 +336,4 @@ public class Enemy : TriBehaviour
         // EnemySpawner.Instance.Despawm(transform);
         ChangeState(EnemyState.Dead);
     }
-
 }

@@ -16,6 +16,19 @@ public class EnemyEffect : MonoBehaviour
     private Coroutine freezeRoutine;
     private Coroutine knockbackRoutine;
 
+    SpriteRenderer _spriteRenderer;
+    Color _originalColor;
+
+    void Awake()
+    {
+        _spriteRenderer = transform.Find("Model").GetComponentInChildren<SpriteRenderer>();
+    }
+
+    void Start()
+    {
+        _originalColor = _spriteRenderer.color;
+    }
+
     public void ApplyFreezeEffect()
     {
         if (freezeRoutine != null) StopCoroutine(freezeRoutine);
@@ -37,37 +50,33 @@ public class EnemyEffect : MonoBehaviour
 
     private IEnumerator HitEffectCoroutine()
     {
-        var sr = transform.Find("Model").GetComponentInChildren<SpriteRenderer>();
-        if (sr == null) yield break;
+        if (_spriteRenderer == null) yield break;
 
-        Color originalColor = sr.color;
-        sr.color = Color.red;
+        _spriteRenderer.color = Color.red;
 
         yield return new WaitForSeconds(0.1f); // Thời gian đổi màu đỏ
 
-        sr.color = originalColor;
+        _spriteRenderer.color = _originalColor;
     }
+
     private IEnumerator FreezeCoroutine()
     {
         var enemy = GetComponent<Enemy>();
         float originalSpeed = enemy.EnemyMovement.MoveSpeed;
         enemy.EnemyMovement.MoveSpeed *= slowFactor;
 
-        var sr = transform.Find("Model").GetComponentInChildren<SpriteRenderer>();
-        Color originalColor = sr.color;
-
         float elapsed = 0f;
         while (elapsed < freezeDuration)
         {
-            sr.color = flashColor;
+            _spriteRenderer.color = flashColor;
             yield return new WaitForSeconds(flashInterval);
-            sr.color = originalColor;
+            _spriteRenderer.color = _originalColor;
             yield return new WaitForSeconds(flashInterval);
             elapsed += flashInterval * 2f;
         }
 
         enemy.EnemyMovement.MoveSpeed = originalSpeed;
-        sr.color = originalColor;
+        _spriteRenderer.color = _originalColor;
         freezeRoutine = null;
     }
 
