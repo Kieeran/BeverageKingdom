@@ -18,7 +18,7 @@ public class HotSpotManager : MonoBehaviour
 
     private void Start()
     {
-        // TrySpawnHotSpots();
+        TrySpawnHotSpots();
     }
 
     private IEnumerator SpawnRoutine()
