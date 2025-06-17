@@ -16,3 +16,5 @@ MonoBehaviour:
   EnemiesToSpawn:
   - {fileID: 11400000, guid: 0b79f17571ea5fb4998315a7a14f1111, type: 2}
   - {fileID: 11400000, guid: 6fc4b02defe07d14d89ed8585fd81da3, type: 2}
+  HotSpotsToSpawn:
+  - {fileID: 11400000, guid: b3c0f6d15801dfa4381d8cfb3af3b579, type: 2}

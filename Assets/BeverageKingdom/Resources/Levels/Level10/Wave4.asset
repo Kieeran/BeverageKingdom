@@ -17,3 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a41b4197457823349801fbf2705ff834, type: 2}
   - {fileID: 11400000, guid: 125a94f7e830c0c40a4ff4f415079666, type: 2}
   - {fileID: 11400000, guid: 5c8b9d3d0b5f9374b9c92c5e6494ea1c, type: 2}
+  HotSpotsToSpawn:
+  - {fileID: 11400000, guid: 95fd0ab820e4f9b489aecefd90e67d1e, type: 2}
+  - {fileID: 11400000, guid: cda282070e1bb2d4bb36fbb09201f18c, type: 2}
