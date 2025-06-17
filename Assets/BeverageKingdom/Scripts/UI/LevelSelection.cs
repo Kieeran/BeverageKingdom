@@ -51,6 +51,8 @@ public class LevelSelection : MonoBehaviour
 
         _levelGD1Image.color = Color.white;
         _levelGD2Image.color = new Color32(0x6A, 0x6A, 0x6A, 0xFF);
+
+        gameObject.SetActive(false);
     }
 
     void CreateLevelSelection()

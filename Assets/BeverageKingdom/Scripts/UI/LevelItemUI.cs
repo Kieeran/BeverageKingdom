@@ -14,8 +14,11 @@ public class LevelItemUI : MonoBehaviour
     {
         _selectLevelButton.onClick.AddListener(() =>
         {
-            Controller.Instance.CurrentLevelIndex = LevelIndex;
-            Controller.Instance.ChangeScene("PlayScene");
+            if (!_lock.gameObject.activeSelf)
+            {
+                Controller.Instance.CurrentLevelIndex = LevelIndex;
+                Controller.Instance.ChangeScene("PlayScene");
+            }
         });
     }
 
