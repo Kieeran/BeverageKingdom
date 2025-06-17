@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 3208399954895783616}
   - component: {fileID: 3114769205148484863}
   m_Layer: 0
-  m_Name: HotSpotManager
+  m_Name: HotSpotSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HotSpotManager : MonoBehaviour
+public class HotSpotSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject hotSpotPrefab;
     [SerializeField] private List<Transform> spawnZones; // 9 vùng
