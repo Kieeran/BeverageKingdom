@@ -6,4 +6,5 @@ public class WaveData : ScriptableObject
 {
     public float StartTime;
     public List<EnemySpawnData> EnemiesToSpawn;
+    public List<HotSpotSpawnData> HotSpotsToSpawn;
 }
