@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d440dc90973c04ca6a194606c0dffc, type: 3}
   m_Name: Wave4_Hotspot Spawn_5
   m_EditorClassIdentifier: 
-  Count: 2
-  LocalStartTime: 8
+  Count: 5
+  LocalStartTime: 10
