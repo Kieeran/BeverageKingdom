@@ -4,44 +4,66 @@ using UnityEngine;
 
 public class HotSpotSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject hotSpotPrefab;
-    [SerializeField] private List<Transform> spawnZones; // 9 vùng
-    [SerializeField] private int maxHotSpots = 2;
+    public static HotSpotSpawner Instance;
+    [SerializeField] GameObject _hotSpotPrefab;
+    [SerializeField] List<Transform> _spawnZones; // 9 vùng
+    [SerializeField] float _hotspotSpawnDelay;
 
-    private bool isSpawning = false;
+    bool _isSpawning = false;
+    float _timer = 0f;
+    int index;
+    WaveData currentWaveData;
 
-    public void TrySpawnHotSpots()
+    private void Awake()
     {
-        if (!isSpawning)
-            StartCoroutine(SpawnRoutine());
+        Instance = this;
     }
 
-    private void Start()
+    void Update()
     {
-        TrySpawnHotSpots();
+        if (!_isSpawning) return;
+
+        _timer += Time.deltaTime;
+        if (_timer >= currentWaveData.HotSpotsToSpawn[index].LocalStartTime)
+        {
+            StartCoroutine(SpawnRoutine(currentWaveData.HotSpotsToSpawn[index].Count));
+            index++;
+
+            if (index == currentWaveData.HotSpotsToSpawn.Count)
+            {
+                _isSpawning = false;
+            }
+        }
     }
 
-    private IEnumerator SpawnRoutine()
+    public void SpawnWave(WaveData waveData)
     {
-        isSpawning = true;
+        currentWaveData = waveData;
 
-        int spawnCount = Mathf.Min(maxHotSpots, spawnZones.Count);
-        List<Transform> selectedZones = new List<Transform>();
+        if (currentWaveData.HotSpotsToSpawn.Count <= 0) return;
+
+        _timer = 0;
+        _isSpawning = true;
+        index = 0;
+    }
+
+    IEnumerator SpawnRoutine(int count)
+    {
+        int spawnCount = Mathf.Min(count, _spawnZones.Count);
+        List<Transform> selectedZones = new();
 
         while (selectedZones.Count < spawnCount)
         {
-            Transform zone = spawnZones[Random.Range(0, spawnZones.Count)];
+            Transform zone = _spawnZones[Random.Range(0, _spawnZones.Count)];
             if (!selectedZones.Contains(zone))
                 selectedZones.Add(zone);
         }
 
         foreach (var zone in selectedZones)
         {
-            GameObject hotSpot = Instantiate(hotSpotPrefab, zone.position, Quaternion.Euler(0, 0, 180));
-            hotSpot.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.5f); // delay giữa các hotspot nếu cần
+            GameObject hotSpot = Instantiate(_hotSpotPrefab, zone.position, Quaternion.Euler(0, 0, 180));
+            hotSpot.SetActive(true);
+            yield return new WaitForSeconds(_hotspotSpawnDelay); // delay giữa các hotspot
         }
-
-        isSpawning = false;
     }
 }

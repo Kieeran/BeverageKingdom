@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3712569863774113428}
   m_Layer: 0
-  m_Name: Light 2D (1)
+  m_Name: Point_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2869843298838365209}
   m_Layer: 0
-  m_Name: Light 2D (8)
+  m_Name: Point_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7896642888285071257}
   m_Layer: 0
-  m_Name: Light 2D (6)
+  m_Name: Point_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3836803964438115296}
   m_Layer: 0
-  m_Name: Light 2D (3)
+  m_Name: Point_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2520442296003128468}
   m_Layer: 0
-  m_Name: Light 2D (4)
+  m_Name: Point_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6342948667099929928}
   m_Layer: 0
-  m_Name: Light 2D (2)
+  m_Name: Point_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 4557641975184917938}
   - component: {fileID: 8432824943840286041}
   m_Layer: 0
-  m_Name: Light 2D (9)
+  m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8711105137414274328}
   m_Layer: 0
-  m_Name: Light 2D (5)
+  m_Name: Point_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7409123945924252506}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Point_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,8 +567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff94100e8151b04388e34143c01a896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotSpotPrefab: {fileID: 6298477035152981333}
-  spawnZones:
+  _hotSpotPrefab: {fileID: 6298477035152981333}
+  _spawnZones:
   - {fileID: 7409123945924252506}
   - {fileID: 3836803964438115296}
   - {fileID: 7896642888285071257}
@@ -578,7 +578,7 @@ MonoBehaviour:
   - {fileID: 6342948667099929928}
   - {fileID: 8711105137414274328}
   - {fileID: 2869843298838365209}
-  maxHotSpots: 2
+  _hotspotSpawnDelay: 1
 --- !u!1 &9211626245619747646
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923101887327030763}
   m_Layer: 0
-  m_Name: Light 2D (7)
+  m_Name: Point_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

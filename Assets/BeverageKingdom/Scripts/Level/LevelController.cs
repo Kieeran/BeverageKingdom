@@ -167,6 +167,8 @@ public class LevelController : MonoBehaviour
                     }
                 }
             ));
+            HotSpotSpawner.Instance.SpawnWave(wave);
+
             currentWaveIndex++;
         }
     }

@@ -15,3 +15,5 @@ MonoBehaviour:
   StartTime: 12
   EnemiesToSpawn:
   - {fileID: 11400000, guid: 31071c045b633f9488a139da05dea41a, type: 2}
+  HotSpotsToSpawn:
+  - {fileID: 11400000, guid: f9a9e766c0ca1004da69042de95c71db, type: 2}

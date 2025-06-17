@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d096232a37b3814bb9a51784f2c4fd8, type: 3}
-  m_Name: Wave4
+  m_Script: {fileID: 11500000, guid: e8d440dc90973c04ca6a194606c0dffc, type: 3}
+  m_Name: Wave1_HotSpot Spawn
   m_EditorClassIdentifier: 
-  StartTime: 36
-  EnemiesToSpawn:
-  - {fileID: 11400000, guid: fabd4c3657da2e9469ed576adf2004d2, type: 2}
-  HotSpotsToSpawn:
-  - {fileID: 11400000, guid: d6107e9f38dfd1c45b53212b57239c86, type: 2}
+  Count: 2
+  LocalStartTime: 3
