@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
@@ -58,7 +57,7 @@ public class Tutorial : MonoBehaviour
 
     void UpdateButtons(int index)
     {
-        NextButton.gameObject.SetActive(index == 0 || index == 1);
-        PreviousButton.gameObject.SetActive(index == 1 || index == 2);
+        NextButton.gameObject.SetActive(index >= 0 && index <= TutorialPages.Count - 2);
+        PreviousButton.gameObject.SetActive(index >= 1 && index <= TutorialPages.Count - 1);
     }
 }
