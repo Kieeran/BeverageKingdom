@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _homeCanvasPrefab;
 
     public HomeSceneCanvas HomeCanvas { get; private set; }
-    public MainCanvas PlayCanvas { get; private set; }
+    public PlayCanvas PlayCanvas { get; private set; }
 
     public static UIManager Instance { get; private set; }
 
@@ -51,6 +51,6 @@ public class UIManager : MonoBehaviour
     public void InitInGame()
     {
         GameObject mainCanvas = Instantiate(_playCanvasPrefab);
-        PlayCanvas = mainCanvas.GetComponent<MainCanvas>();
+        PlayCanvas = mainCanvas.GetComponent<PlayCanvas>();
     }
 }

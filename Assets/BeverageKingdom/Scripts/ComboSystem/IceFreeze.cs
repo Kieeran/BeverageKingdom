@@ -1,27 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IceFreeze : ComboSkill
 {
-    [Header("C?u h?nh Ice Freeze")]
-    [SerializeField] private int shardCount = 5;         
+    [Header("Cau hinh Ice Freeze")]
+    [SerializeField] private int shardCount = 5;
     [SerializeField] private float verticalSpacing = 1f;
 
-    private MainCanvas mainCanvas;
+    private PlayCanvas playCanvas;
     protected override void Start()
     {
         base.Start();
         color = Color.blue;
-        mainCanvas = MainCanvas.instance;
-        mainCanvas.OnActiveSkill += ActivateComboSkill;
+        playCanvas = PlayCanvas.Instance;
+        playCanvas.OnActiveSkill += ActivateComboSkill;
     }
 
     public override void ActivateComboSkill()
     {
         base.ActivateComboSkill();
         SoundManager.Instance?.PlaySound(SoundManager.Instance?.IceSound, false);
-        
+
         float centerOffset = (shardCount - 1) / 2f;
         for (int i = 0; i < shardCount; i++)
         {

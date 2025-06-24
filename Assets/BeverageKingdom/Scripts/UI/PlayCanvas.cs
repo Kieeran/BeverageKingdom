@@ -4,9 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainCanvas : MonoBehaviour
+public class PlayCanvas : MonoBehaviour
 {
-    public static MainCanvas instance;
+    public static PlayCanvas Instance;
 
     [SerializeField] Joystick _joystick;
     [SerializeField] RectTransform _pickSlotSpawnVillager;
@@ -19,6 +19,9 @@ public class MainCanvas : MonoBehaviour
     public Button SpawnVillagerButton;
     public Button ActiveSkill;
     public Button AttackButton;
+
+    public Button PauseGameButton;
+    public Transform PauseGamePopUp;
 
     public GameWinOverPopup GameWinOverPopup;
     public MileStone MileStoneProgressBar;
@@ -40,17 +43,17 @@ public class MainCanvas : MonoBehaviour
     public TextMeshProUGUI levelText;
 
     [Header("Animation Wave Settings")]
-    [SerializeField] private TextMeshProUGUI nextWave;
-    [SerializeField] private float fadeDuration = 0.5f;
-    [SerializeField] private float displayDuration = 2f;
-    [SerializeField] private Ease fadeEase = Ease.Linear;
+    [SerializeField] TextMeshProUGUI _nextWave;
+    [SerializeField] float _fadeDuration = 0.5f;
+    [SerializeField] float _displayDuration = 2f;
+    [SerializeField] Ease _fadeEase = Ease.Linear;
 
     [Header("")]
     private Sequence waveSequence;
     void Awake()
     {
         InitListener();
-        instance = this;
+        Instance = this;
     }
 
     void Start()
@@ -126,6 +129,11 @@ public class MainCanvas : MonoBehaviour
             Controller.Instance.VisualizeBoundingBox.Value = !Controller.Instance.VisualizeBoundingBox.Value;
         });
 
+        PauseGameButton.onClick.AddListener(() =>
+        {
+            PauseGamePopUp.gameObject.SetActive(true);
+        });
+
         if (Cheater.Instance == null)
         {
             _cheatButton.gameObject.SetActive(false);
@@ -139,14 +147,14 @@ public class MainCanvas : MonoBehaviour
             waveSequence.Kill();
 
         // Cài đặt text và reset alpha
-        nextWave.text = $"Wave {wave}: {enemyCount} Enemies";
-        nextWave.color = new Color(nextWave.color.r, nextWave.color.g, nextWave.color.b, 0f);
+        _nextWave.text = $"Wave {wave}: {enemyCount} Enemies";
+        _nextWave.color = new Color(_nextWave.color.r, _nextWave.color.g, _nextWave.color.b, 0f);
 
         // Tạo và chạy sequence animation
         waveSequence = DOTween.Sequence()
-            .Append(nextWave.DOFade(1f, fadeDuration).SetEase(fadeEase))
-            .AppendInterval(displayDuration)
-            .Append(nextWave.DOFade(0f, fadeDuration).SetEase(fadeEase))
+            .Append(_nextWave.DOFade(1f, _fadeDuration).SetEase(_fadeEase))
+            .AppendInterval(_displayDuration)
+            .Append(_nextWave.DOFade(0f, _fadeDuration).SetEase(_fadeEase))
             .OnComplete(() => waveSequence = null);
     }
 
@@ -160,14 +168,14 @@ public class MainCanvas : MonoBehaviour
             waveSequence.Kill();
 
         // Cài đặt text và reset alpha
-        nextWave.text = "All waves completed!";
-        nextWave.color = new Color(nextWave.color.r, nextWave.color.g, nextWave.color.b, 0f);
+        _nextWave.text = "All waves completed!";
+        _nextWave.color = new Color(_nextWave.color.r, _nextWave.color.g, _nextWave.color.b, 0f);
 
         // Tạo và chạy sequence animation
         waveSequence = DOTween.Sequence()
-            .Append(nextWave.DOFade(1f, fadeDuration).SetEase(fadeEase))
-            .AppendInterval(displayDuration)
-            .Append(nextWave.DOFade(0f, fadeDuration).SetEase(fadeEase))
+            .Append(_nextWave.DOFade(1f, _fadeDuration).SetEase(_fadeEase))
+            .AppendInterval(_displayDuration)
+            .Append(_nextWave.DOFade(0f, _fadeDuration).SetEase(_fadeEase))
             .OnComplete(() => waveSequence = null);
     }
 

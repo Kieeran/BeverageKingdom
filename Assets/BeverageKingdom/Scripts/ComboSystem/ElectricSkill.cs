@@ -13,7 +13,7 @@ public class ElectricSkill : ComboSkill
     [SerializeField] private int baseEnemyCount = 1;       // Số lượng quái đánh tại ngưỡng thấp
     [SerializeField] private float maxComboRadius = 15f;   // Bán kính sét đánh tối đa tại ngưỡng cao
 
-    private MainCanvas mainCanvas;
+    private PlayCanvas playCanvas;
     private ComboBar comboBar;
 
     protected override void Start()
@@ -21,10 +21,10 @@ public class ElectricSkill : ComboSkill
         base.Start();
         color = Color.yellow;
         electricGun = GetComponentInChildren<ElectricGun>();
-        mainCanvas = MainCanvas.instance;
-        if (mainCanvas != null)
+        playCanvas = PlayCanvas.Instance;
+        if (playCanvas != null)
         {
-            comboBar = mainCanvas.comboBar;
+            comboBar = playCanvas.comboBar;
             comboBar.OnComboMax += ActivateComboSkill;
         }
         else
@@ -35,11 +35,11 @@ public class ElectricSkill : ComboSkill
     public override void ActivateComboSkill()
     {
         base.ActivateComboSkill();
-        
+
         // Lấy số combo hiện tại
         int currentCombo = ComboController.Instance.CurrentCombo;
         int maxCombo = ComboController.Instance.maxCombo;
-        
+
         // Tính toán số lượng quái để đánh dựa trên ngưỡng combo
         int enemiesToHit;
         if (currentCombo >= comboBar.HighThreshold)
@@ -56,7 +56,7 @@ public class ElectricSkill : ComboSkill
         }
 
         float currentRadius = Mathf.Lerp(damageRadius, maxComboRadius, (float)currentCombo / maxCombo);
-        
+
         // Lấy tất cả quái trong scene
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (allEnemies.Length == 0)
@@ -102,7 +102,7 @@ public class ElectricSkill : ComboSkill
         float actualRadius = isMaxCombo ? radius : 0.1f;
         Collider2D[] hits = Physics2D.OverlapCircleAll(position, actualRadius);
         int enemyCount = 0;
-        
+
         foreach (var col in hits)
         {
             if (col.CompareTag("Enemy"))

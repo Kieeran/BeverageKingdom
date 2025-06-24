@@ -24,14 +24,14 @@ public class ComboSkill : MonoBehaviour
     private Sequence skillSequence;
     protected virtual void Start()
     {
-        tmpPro = MainCanvas.instance.tmp; ;
+        tmpPro = PlayCanvas.Instance.tmp; ;
     }
 
     public virtual void TriggerComboSkill(int currentCombo)
     {
         if (currentCombo % comboIntTrigger == 0)
         {
-           ActivateComboSkill();
+            ActivateComboSkill();
         }
     }
 
