@@ -6,10 +6,9 @@ public class HomeSceneCanvas : MonoBehaviour
 {
     public Button StartGameButton;
     public Button ExitGameButton;
-    public Button TutorialButton;
-    public LevelSelection LevelSelection;
-
-    public RectTransform TutorialPanel;
+    public Button SettingsButton;
+    public Transform LevelSelection;
+    public Transform SettingsPopUp;
 
     void Awake()
     {
@@ -25,17 +24,15 @@ public class HomeSceneCanvas : MonoBehaviour
 
     void Start()
     {
-        TutorialPanel.gameObject.SetActive(false);
-        LevelSelection.gameObject.SetActive(false);
-
-        TutorialButton.onClick.AddListener(() =>
+        SettingsButton.onClick.AddListener(() =>
         {
-            TutorialPanel.gameObject.SetActive(true);
+            SettingsPopUp.gameObject.SetActive(true);
         });
-
         StartGameButton.onClick.AddListener(() =>
         {
             LevelSelection.gameObject.SetActive(true);
         });
+
+        LevelSelection.gameObject.SetActive(false);
     }
 }
