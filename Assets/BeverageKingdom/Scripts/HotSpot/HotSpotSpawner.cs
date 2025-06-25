@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HotSpotSpawner : MonoBehaviour
 {
@@ -9,14 +11,21 @@ public class HotSpotSpawner : MonoBehaviour
     [SerializeField] List<Transform> _spawnZones; // 9 vùng
     [SerializeField] float _hotspotSpawnDelay;
 
+    [Header("Warning Effect")]
+    public GameObject WarningEffectPrefab;
+    [SerializeField] float _warningDuration;
+    [SerializeField] float _blinkInterval;
+
     bool _isSpawning = false;
     float _timer = 0f;
     int index;
     WaveData currentWaveData;
 
-    private void Awake()
+    void Awake()
     {
         Instance = this;
+
+        WarningEffectPrefab.transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 0);
     }
 
     void Update()
@@ -26,7 +35,7 @@ public class HotSpotSpawner : MonoBehaviour
         _timer += Time.deltaTime;
         if (_timer >= currentWaveData.HotSpotsToSpawn[index].LocalStartTime)
         {
-            StartCoroutine(SpawnRoutine(currentWaveData.HotSpotsToSpawn[index].Count));
+            SpawnRoutine(currentWaveData.HotSpotsToSpawn[index].Count);
             index++;
 
             if (index == currentWaveData.HotSpotsToSpawn.Count)
@@ -47,7 +56,7 @@ public class HotSpotSpawner : MonoBehaviour
         index = 0;
     }
 
-    IEnumerator SpawnRoutine(int count)
+    void SpawnRoutine(int count)
     {
         int spawnCount = Mathf.Min(count, _spawnZones.Count);
         List<Transform> selectedZones = new();
@@ -59,11 +68,39 @@ public class HotSpotSpawner : MonoBehaviour
                 selectedZones.Add(zone);
         }
 
+        StartCoroutine(SpawnHotSpots(selectedZones));
+    }
+
+    IEnumerator SpawnHotSpots(List<Transform> selectedZones)
+    {
         foreach (var zone in selectedZones)
         {
-            GameObject hotSpot = Instantiate(_hotSpotPrefab, zone.position, Quaternion.Euler(0, 0, 180));
-            hotSpot.SetActive(true);
+            StartCoroutine(SpawnHotSpot(zone));
+
             yield return new WaitForSeconds(_hotspotSpawnDelay); // delay giữa các hotspot
         }
+    }
+
+    IEnumerator SpawnHotSpot(Transform zone)
+    {
+        GameObject warningEffect = Instantiate(WarningEffectPrefab, zone);
+        warningEffect.transform.localPosition = Vector3.zero;
+        Image warningEffectImage = warningEffect.transform.GetChild(0).GetComponent<Image>();
+
+        float timer = 0f;
+        bool visible = true;
+        float interval = Mathf.Max(_blinkInterval, 0.01f);
+
+        while (timer < _warningDuration)
+        {
+            visible = !visible;
+            warningEffectImage.color = new Color(1, 1, 1, visible ? 1f : 0f);
+            yield return new WaitForSeconds(interval);
+            timer += interval;
+        }
+        Destroy(warningEffect);
+
+        GameObject hotSpot = Instantiate(_hotSpotPrefab, zone.position, Quaternion.Euler(0, 0, 180));
+        hotSpot.SetActive(true);
     }
 }

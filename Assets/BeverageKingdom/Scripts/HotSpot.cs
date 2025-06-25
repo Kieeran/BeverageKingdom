@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.Rendering.Universal; // BẮT BUỘC để dùng Light2D
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -47,12 +46,12 @@ public class HotSpot : MonoBehaviour
 
     IEnumerator LifeCycle()
     {
-        // 🔶 Warning phase
-        sr.color = new Color(1f, 1f, 0.5f, 0.5f); // Vàng mờ
+        // // Warning phase
+        // sr.color = new Color(1f, 1f, 0.5f, 0.5f); // Vàng mờ
         if (spotLight != null) spotLight.enabled = true;
-        yield return new WaitForSeconds(warnTime);
+        // yield return new WaitForSeconds(warnTime);
 
-        // 🔷 Grow phase
+        // Grow phase
         float t = 0;
         while (t < growTime)
         {
@@ -78,7 +77,7 @@ public class HotSpot : MonoBehaviour
         float activeTime = Random.Range(activeTimeMin, activeTimeMax);
         yield return new WaitForSeconds(activeTime);
 
-        // 🔻 Despawn phase
+        // Despawn phase
         col.enabled = false;
         t = 0;
         while (t < 0.5f)
@@ -112,7 +111,7 @@ public class HotSpot : MonoBehaviour
         else if (other.gameObject.CompareTag("Enemy"))
         {
 
-            other.transform.parent.GetComponentInChildren<EnemyMovement>().MoveSpeed =3; // tăng tốc
+            other.transform.parent.GetComponentInChildren<EnemyMovement>().MoveSpeed = 3; // tăng tốc
         }
     }
 
@@ -124,7 +123,7 @@ public class HotSpot : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
-            other.transform.parent.GetComponentInChildren<EnemyMovement>().MoveSpeed =2; // hoặc giá trị mặc định
+            other.transform.parent.GetComponentInChildren<EnemyMovement>().MoveSpeed = 2; // hoặc giá trị mặc định
         }
     }
 
