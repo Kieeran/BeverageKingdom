@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip _meleeAttackSE;
     [SerializeField] AudioClip _thunderSoundFx;
     [SerializeField] AudioClip _iceSoundFx;
+    [SerializeField] AudioClip _warningHotSpotFx;
 
     // Public properties to access audio clips
     public AudioClip HomeMenuSound => _homeMenuSE;
@@ -28,6 +29,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip MeleeAttackSound => _meleeAttackSE;
     public AudioClip ThunderSound => _thunderSoundFx;
     public AudioClip IceSound => _iceSoundFx;
+    public AudioClip WarningHotSpotSound => _warningHotSpotFx;
 
     public bool SoundToggle = true;
     public bool MusicToggle = true;
@@ -97,12 +99,40 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip clip, bool loop)
+    // public void PlaySound(AudioClip clip, bool loop)
+    // {
+    //     if (clip == null)
+    //     {
+    //         return;
+    //     }
+
+    //     if (loop)
+    //     {
+    //         if (_audioSourceLoop != null)
+    //         {
+    //             _audioSourceLoop.Stop();
+    //             _audioSourceLoop.clip = clip;
+    //             _audioSourceLoop.loop = true;
+    //             _audioSourceLoop.Play();
+    //         }
+    //     }
+    //     else
+    //     {
+    //         if (_audioSourceUnLoop != null)
+    //         {
+    //             _audioSourceUnLoop.clip = clip;
+    //             _audioSourceUnLoop.loop = loop;
+    //             _audioSourceUnLoop.Play();
+    //         }
+    //         else
+    //         {
+    //         }
+    //     }
+    // }
+
+    public void PlayAudio(AudioClip clip, bool loop)
     {
-        if (clip == null)
-        {
-            return;
-        }
+        if (clip == null) return;
 
         if (loop)
         {
@@ -116,16 +146,31 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
-            if (_audioSourceUnLoop != null)
+            if (_audioSourceUnLoop != null && !_audioSourceUnLoop.isPlaying)
             {
                 _audioSourceUnLoop.clip = clip;
-                _audioSourceUnLoop.loop = loop;
+                _audioSourceUnLoop.loop = false;
                 _audioSourceUnLoop.Play();
             }
             else
             {
+                // Tạo AudioSource mới nếu nguồn chính đang bận
+                AudioSource extraSource = gameObject.AddComponent<AudioSource>();
+                SetupAudioSource(extraSource, false);
+                extraSource.clip = clip;
+                extraSource.loop = false;
+                extraSource.Play();
+
+                // Tự động xóa AudioSource sau khi phát xong
+                StartCoroutine(DestroyWhenFinished(extraSource));
             }
         }
+    }
+
+    IEnumerator DestroyWhenFinished(AudioSource source)
+    {
+        yield return new WaitWhile(() => source.isPlaying);
+        Destroy(source);
     }
 
     public void PlaySoundWithDelay(AudioClip clip, bool loop, float delay)
@@ -140,7 +185,7 @@ public class SoundManager : MonoBehaviour
     private IEnumerator PlayAfterDelay(AudioClip clip, bool loop, float delay)
     {
         yield return new WaitForSeconds(delay);
-        PlaySound(clip, loop);
+        PlayAudio(clip, loop);
     }
 
     private void Start()

@@ -758,8 +758,8 @@ MonoBehaviour:
   - {fileID: 2869843298838365209}
   _hotspotSpawnDelay: 1
   WarningEffectPrefab: {fileID: 4903090316091035549}
-  _warningDuration: 2
-  _blinkInterval: 0.2
+  _warningDuration: 2.4
+  _blinkInterval: 0.3
 --- !u!1 &9211626245619747646
 GameObject:
   m_ObjectHideFlags: 0

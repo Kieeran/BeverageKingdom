@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
     {
         if (_coolDownTimer != 0) return;
 
-        SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSound, false);
+        SoundManager.Instance?.PlayAudio(SoundManager.Instance?.MeleeAttackSound, false);
         WeaponController.Attack();
         stateMachine.ChangeState(attack);
         stateMachine.currentState.Update();
@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
         if (_coolDownTimer <= 0)
         {
             // _coolDownTimer = 0;
-            SoundManager.Instance?.PlaySound(SoundManager.Instance?.MeleeAttackSound, false);
+            SoundManager.Instance?.PlayAudio(SoundManager.Instance?.MeleeAttackSound, false);
             WeaponController.Attack();
             stateMachine.ChangeState(attack);
             stateMachine.currentState.Update();

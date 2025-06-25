@@ -94,7 +94,7 @@ public class ElectricSkill : ComboSkill
 
     private void StrikeEnemy(Vector3 position, float radius, bool isMaxCombo)
     {
-        SoundManager.Instance?.PlaySound(SoundManager.Instance?.ThunderSound, false);
+        SoundManager.Instance?.PlayAudio(SoundManager.Instance?.ThunderSound, false);
 
         EffectSpawner.instance.Spawn(EffectSpawner.Lightning, position + Vector3.up, Quaternion.identity);
 

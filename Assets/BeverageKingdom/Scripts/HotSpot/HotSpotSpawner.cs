@@ -83,6 +83,8 @@ public class HotSpotSpawner : MonoBehaviour
 
     IEnumerator SpawnHotSpot(Transform zone)
     {
+        SoundManager.Instance?.PlayAudio(SoundManager.Instance?.WarningHotSpotSound, false);
+
         GameObject warningEffect = Instantiate(WarningEffectPrefab, zone);
         warningEffect.transform.localPosition = Vector3.zero;
         Image warningEffectImage = warningEffect.transform.GetChild(0).GetComponent<Image>();

@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7545183537509528727, guid: 6709c85779117d043a504affb3fce82d, type: 3}
       propertyPath: Cheat
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -355,6 +355,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: MusicToggle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4760657536629014215, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
+      propertyPath: _warningHotSpotFx
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b1c6624ba9bc4747a761437ec901719, type: 3}
     - target: {fileID: 5894024506333679704, guid: c4a2046994ebd08489c4ad3d15d0b4de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
