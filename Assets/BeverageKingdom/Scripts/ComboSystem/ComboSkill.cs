@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class ComboSkill : MonoBehaviour
 {
@@ -11,20 +12,18 @@ public class ComboSkill : MonoBehaviour
     [SerializeField] private int comboIntTrigger;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI tmpPro;
     [SerializeField] protected Color color;
 
     [Header("Animation Settings")]
     [SerializeField] private float fadeDuration = 0.3f;
     [SerializeField] private float displayDuration = 1.2f;
     [SerializeField] private float punchDuration = 0.5f;
-    [SerializeField] private Vector3 punchScale = Vector3.one * 1.5f;
+    [SerializeField] private Vector3 punchScale = Vector3.one * 1.2f;
     [SerializeField] private Ease punchEase = Ease.OutBack;
 
     private Sequence skillSequence;
     protected virtual void Start()
     {
-        tmpPro = PlayCanvas.Instance.tmp; ;
     }
 
     public virtual void TriggerComboSkill(int currentCombo)
@@ -39,24 +38,45 @@ public class ComboSkill : MonoBehaviour
     {
         if (skillSequence != null && skillSequence.IsActive())
             skillSequence.Kill();
-        if (tmpPro == null)
-            Debug.Log("Text skill not found");
-        tmpPro.text = comboName;
-        tmpPro.color = color;
-        tmpPro.transform.localScale = Vector3.one;
 
-        // Tạo sequence mới
+        Image currentSkillVisualize;
+        if (comboName == "Electric")
+        {
+            currentSkillVisualize = PlayCanvas.Instance.SkillVisualize.ThunderSkillVisualize;
+        }
+
+        else if (comboName == "Ice Freeze")
+        {
+            currentSkillVisualize = PlayCanvas.Instance.SkillVisualize.IceSkillVisualize;
+        }
+        else
+        {
+            Debug.LogWarning($"Skill '{comboName}' not found or not valid");
+            return;
+        }
+
+        // Bật image trước khi hiệu ứng
+        currentSkillVisualize.gameObject.SetActive(true);
+
+        // Reset trạng thái image
+        Color originalColor = currentSkillVisualize.color;
+        currentSkillVisualize.color = new Color(
+            originalColor.r, originalColor.g, originalColor.b, 0f);
+
+        currentSkillVisualize.transform.localScale = Vector3.one;
+
+        // Tạo hiệu ứng DOTween
         skillSequence = DOTween.Sequence()
-            // Fade in + punch scale đồng thời
-            .Append(tmpPro.DOFade(1f, fadeDuration))
-            .Join(tmpPro.transform
+            .Append(currentSkillVisualize.DOFade(1f, fadeDuration))
+            .Join(currentSkillVisualize.transform
                 .DOPunchScale(punchScale, punchDuration, vibrato: 1, elasticity: 0.5f)
                 .SetEase(punchEase))
-            // Giữ nguyên trong displayDuration giây
             .AppendInterval(displayDuration)
-            // Fade out
-            .Append(tmpPro.DOFade(0f, fadeDuration))
-            // Hủy reference khi xong
-            .OnComplete(() => skillSequence = null);
+            .Append(currentSkillVisualize.DOFade(0f, fadeDuration))
+            .OnComplete(() =>
+            {
+                currentSkillVisualize.gameObject.SetActive(false); // Tắt sau khi hoàn thành
+                skillSequence = null;
+            });
     }
 }

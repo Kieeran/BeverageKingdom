@@ -26,7 +26,7 @@ public class PlayCanvas : MonoBehaviour
     public GameWinOverPopup GameWinOverPopup;
     public MileStone MileStoneProgressBar;
 
-    public TextMeshProUGUI tmp;
+    public SkillVisualize SkillVisualize;
     public Image LevelProgressFillUI;
 
     public Action OnSpawnVillagerAtSlot1;
