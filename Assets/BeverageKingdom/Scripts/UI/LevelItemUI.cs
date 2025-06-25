@@ -16,7 +16,7 @@ public class LevelItemUI : MonoBehaviour
         {
             if (!_lock.gameObject.activeSelf)
             {
-                Controller.Instance.CurrentLevelIndex = LevelIndex;
+                Controller.Instance.SetCurrentLevelIndex(LevelIndex);
                 Controller.Instance.ChangeScene("PlayScene");
             }
         });

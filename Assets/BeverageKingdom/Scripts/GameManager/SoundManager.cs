@@ -29,8 +29,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip ThunderSound => _thunderSoundFx;
     public AudioClip IceSound => _iceSoundFx;
 
-    public bool SoundToggle;
-    public bool MusicToggle;
+    public bool SoundToggle = true;
+    public bool MusicToggle = true;
 
     private void Awake()
     {

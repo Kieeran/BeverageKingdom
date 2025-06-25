@@ -21,4 +21,4 @@ MonoBehaviour:
   attackRange: 1
   attackCoolDown: 1
   enemyScale: {x: 1, y: 1, z: 1}
-  enemyColor: {r: 0.9150943, g: 0.8592732, b: 0.13381095, a: 1}
+  enemyColor: {r: 1, g: 1, b: 1, a: 1}

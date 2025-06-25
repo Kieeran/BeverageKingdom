@@ -14,7 +14,7 @@ public class SettingsPopUp : MonoBehaviour
     public Button MusicOn;
     public Button MusicOff;
 
-    void Awake()
+    void Start()
     {
         ExitButton.onClick.AddListener(() =>
         {
@@ -36,7 +36,7 @@ public class SettingsPopUp : MonoBehaviour
             SoundOn.gameObject.SetActive(false);
             SoundOff.gameObject.SetActive(true);
 
-            SoundManager.Instance?.ToggleSound(false);
+            SoundManager.Instance.ToggleSound(false);
             Debug.Log("Turn off sound");
         });
 
@@ -45,7 +45,7 @@ public class SettingsPopUp : MonoBehaviour
             SoundOn.gameObject.SetActive(true);
             SoundOff.gameObject.SetActive(false);
 
-            SoundManager.Instance?.ToggleSound(true);
+            SoundManager.Instance.ToggleSound(true);
             Debug.Log("Turn on sound");
         });
 
@@ -54,7 +54,7 @@ public class SettingsPopUp : MonoBehaviour
             MusicOn.gameObject.SetActive(false);
             MusicOff.gameObject.SetActive(true);
 
-            SoundManager.Instance?.ToggleMusic(false);
+            SoundManager.Instance.ToggleMusic(false);
             Debug.Log("Turn off music");
         });
 
@@ -63,15 +63,15 @@ public class SettingsPopUp : MonoBehaviour
             MusicOn.gameObject.SetActive(true);
             MusicOff.gameObject.SetActive(false);
 
-            SoundManager.Instance?.ToggleMusic(true);
+            SoundManager.Instance.ToggleMusic(true);
             Debug.Log("Turn on music");
         });
 
         SoundOn.gameObject.SetActive(SoundManager.Instance.SoundToggle);
-        SoundOff.gameObject.SetActive(!SoundManager.Instance.SoundToggle);
+        SoundOff.gameObject.SetActive(SoundManager.Instance.SoundToggle);
 
         MusicOn.gameObject.SetActive(SoundManager.Instance.MusicToggle);
-        MusicOff.gameObject.SetActive(!SoundManager.Instance.MusicToggle);
+        MusicOff.gameObject.SetActive(SoundManager.Instance.MusicToggle);
 
         gameObject.SetActive(false);
     }

@@ -27,8 +27,12 @@ public class Controller : MonoBehaviour
     public Transform Player { get; private set; }
     public Transform Env { get; private set; }
 
-    [HideInInspector]
-    public int CurrentLevelIndex = 0;
+    public int CurrentLevelIndex { get; private set; }
+    public void SetCurrentLevelIndex(int index)
+    {
+        CurrentLevelIndex = index;
+    }
+
     [HideInInspector]
     public int CurrentLevelIndexGD1 = 0;
     [HideInInspector]
@@ -53,10 +57,14 @@ public class Controller : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        CurrentLevelIndex = 0;
     }
 
     void Start()
     {
+        if (Cheat) Instantiate(_cheater.gameObject);
+
         InitHome();
     }
 
@@ -79,8 +87,6 @@ public class Controller : MonoBehaviour
         Instantiate(_itemSpawner.gameObject);
         Instantiate(_hotSpotManager.gameObject);
         Instantiate(_spawnEnemy.gameObject);
-
-        if (Cheat) Instantiate(_cheater.gameObject);
 
         Player.GetComponent<JoystickMove>().SetJoystick(UIManager.Instance.PlayCanvas.GetJoystick());
 
