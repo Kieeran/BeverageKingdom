@@ -36,8 +36,8 @@ Finished
 ## Sample results
 ### Scene 1: Home Menu
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ec49e300-1257-4a18-adbb-e4469862270a" width="250"/>
-  <img src="https://github.com/user-attachments/assets/71be03a3-3a15-43ad-9765-612c5cc91c8c" width="250"/>
+  <img src="https://github.com/user-attachments/assets/ec49e300-1257-4a18-adbb-e4469862270a" width="250" width="49.5%"/>
+  <img src="https://github.com/user-attachments/assets/71be03a3-3a15-43ad-9765-612c5cc91c8c" width="49.5%"/>
 </p>
 
 ## Current Limitations
