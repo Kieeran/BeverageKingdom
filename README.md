@@ -34,6 +34,8 @@ Finished
 - No Unity Editor or installation required
 
 ## Sample results
+### Scene 1: Home Menu
+<img src="https://github.com/user-attachments/assets/ec49e300-1257-4a18-adbb-e4469862270a" width="300"/>
 
 ## Current Limitations
 - Combo-skill mechanic may be confusing for first-time players
