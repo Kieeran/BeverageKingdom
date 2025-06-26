@@ -44,6 +44,9 @@ Finished
 ### Scene 2: In Game
 ![Capture2](https://github.com/user-attachments/assets/da907559-1053-447f-85f7-4b0fb666e447)
 
+## Play the Game
+[Download Windows Build (.apk)](https://drive.google.com/file/d/1QeeREilSByt548u9N-Olsv3kOAbvtAU6/view?usp=sharing)
+
 ## Current Limitations
 - Combo-skill mechanic may be confusing for first-time players
 - Only one gameplay mode (basic survival)
