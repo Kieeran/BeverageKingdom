@@ -1,4 +1,5 @@
 # BeverageKingdom
+![Capture](https://github.com/user-attachments/assets/ec49e300-1257-4a18-adbb-e4469862270a)
 
 ## Description
 **Beverage Kingdom** is a 2D action-defense game with a vibrant summer theme, created during a 48-hour game jam.  
@@ -13,14 +14,13 @@ The game blends light strategy and quick action into a short but energetic gamep
 ## Status
 Finished
 ## Features
-- Real-time action-defense gameplay — no static towers, you move and fight
-- Vibrant summer-themed visuals with fun, quirky enemies
+- Defense gameplay with direct character control, rather than traditional static tower placement
+- Bright summer-themed visuals featuring a variety of quirky, beverage-inspired enemies
 - Dynamic combo system that rewards aggressive play with power-ups
 - Defend 3 lanes of your base — if any fall, it's game over
 - Summon “Juice Warriors” to assist in specific zones
 - Basic power-ups: shield, heal, speed boost
 - Combo and progress bars for visual feedback
-- Designed and built in 48 hours for a game jam
 
 ## How to Run
 ### In Unity Editor
