@@ -35,7 +35,10 @@ Finished
 
 ## Sample results
 ### Scene 1: Home Menu
-<img src="https://github.com/user-attachments/assets/ec49e300-1257-4a18-adbb-e4469862270a" width="300"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ec49e300-1257-4a18-adbb-e4469862270a" width="250"/>
+  <img src="https://github.com/user-attachments/assets/71be03a3-3a15-43ad-9765-612c5cc91c8c" width="250"/>
+</p>
 
 ## Current Limitations
 - Combo-skill mechanic may be confusing for first-time players
