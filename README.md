@@ -18,6 +18,7 @@ Finished
 - Bright summer-themed visuals featuring a variety of quirky, beverage-inspired enemies
 - Dynamic combo system that rewards aggressive play with power-ups
 - Defend 3 lanes of your base — if any fall, it's game over
+- Game designed with 15 handcrafted levels, progressing from easy to challenging
 - Summon “Juice Warriors” to assist in specific zones
 - Basic power-ups: shield, heal, speed boost
 - Combo and progress bars for visual feedback
