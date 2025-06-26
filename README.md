@@ -40,6 +40,9 @@ Finished
   <img src="https://github.com/user-attachments/assets/71be03a3-3a15-43ad-9765-612c5cc91c8c" width="49.5%"/>
 </p>
 
+### Scene 2: In Game
+![Capture2](https://github.com/user-attachments/assets/da907559-1053-447f-85f7-4b0fb666e447)
+
 ## Current Limitations
 - Combo-skill mechanic may be confusing for first-time players
 - Only one gameplay mode (basic survival)
