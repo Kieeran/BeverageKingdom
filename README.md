@@ -51,3 +51,14 @@ Finished
 - Limited enemy variety and level design
 - Combo and upgrade systems are simple
 ## Credits
+Originally developed during a 48-hour game jam by:
+- [Sealthed](https://github.com/Sealthed) - Game Design (Team Leader)
+- [Zanniefung](https://github.com/Zanniefung) - Game Design
+- [Kieeran](https://github.com/Kieeran) - Game Development
+- [HoangAnh217](https://github.com/HoangAnh217) - Game Development
+
+The project was later refined to enhance gameplay mechanics, level design, and overall balance.
+Special thanks to everyone who contributed with feedback, testing, or support during and after the jam.
+Extra thanks to our mentors for their valuable guidance and encouragement throughout the project.
+
+
